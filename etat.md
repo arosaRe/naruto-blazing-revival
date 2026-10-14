@@ -1,12 +1,12 @@
 # État actuel
-- Phase : nettoyage limité du VPS autorisé et confié au développeur ; critère 6 ouvert.
-- Stocks neufs à zéro publiés avec approbation humaine limitée ; sauvegardes et imports existants préservés.
-- Prompt réutilisable, références natives et fusion photo sûre livrés sur nightly ; critères 2 et 3 révisés satisfaits.
-- Formulaire et relais Discord intégrés et validés par relecture ; essais navigateur avec Discord simulé rapportés réussis.
-- Contrôle sécurité indépendant favorable : confiance proxy bornée, adresses validées, quotas séparés et limites globales conservées.
-- Régressions et build réussis selon les jobs développeur et relecteur/app ; non relancés par le manager.
-- Accès SSH et sudo disponibles avec la clé autorisée ; deux services tiers actifs. Webhook indisponible, endpoint non configuré, réception réelle non vérifiée.
-- Publication du seul formulaire et relais Discord autorisée ; changements à isoler. Aucun déploiement dans ce cycle.
+- Critères 1 à 5 satisfaits, avec 2 et 3 révisés ; critère 6 ouvert.
+- Stocks neufs à zéro publiés ; références, prompt et import photo sûr disponibles sur nightly.
+- Formulaire et relais relus ; essais simulés et contrôle sécurité favorables selon les jobs.
+- VPS nettoyé après sauvegarde protégée et restauration isolée vérifiée ; ressources incertaines conservées.
+- Prochaine tâche : service interne Node 24, sans exposition publique ni webhook réel.
+- Publication du seul formulaire/relais autorisée, à isoler de l’import photo ; aucun déploiement public dans ce cycle.
+- Webhook indisponible dans cette session, HTTPS et endpoint non configurés, réception réelle non vérifiée.
+- Aucun arbitrage demandé au PDG pour préparer le service interne.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -37,35 +37,22 @@
 - 2026-10-14 à 22:38 — Le PDG autorise l’arrêt et la suppression de MADFUT et Tradispo : services/unités systemd, code sous /opt, données sous /var/lib, configurations sous /etc et journaux applicatifs identifiés. Avant suppression : sauvegarde cohérente et restaurable des données, configurations, secrets, unités, code et permissions, hors dépôt en emplacement protégé ; restauration vérifiée. Préserver Ubuntu, SSH, comptes et clés ; aucune purge générale ni modification réseau. Cette autorisation seule ne couvre pas la publication des retours. Message transcrit : « oui tu peux les supprimer ».
 - 2026-10-14 à 22:39 — Le PDG autorise la publication du seul formulaire de retours et de son relais Discord sécurisé : secret serveur, quotas anti-abus, confirmations et erreurs compréhensibles conservés. Exclure l’import photo et toute fusion globale de nightly ; isoler et vérifier les changements publiés. Utiliser le VPS proposé si accès autorisé disponible ; configurer HTTPS et le secret par canal protégé. Vérifier réception Discord réelle, confirmations, erreurs et anti-abus avant de satisfaire le critère 6. Aucune suppression générale : présenter le nettoyage après inventaire, préserver Ubuntu et SSH. Messages transcrits : demande de configuration/VPS, proposition SSH et suppression, clé de l’ordinateur, lancement du manager, chemin public id_ed25519_madfut27.pub, « et oui je valide ce que tu m’avais demandé initialement ».
 # Décisions structurantes
-- Site statique en JavaScript natif, HTML et CSS ; Node.js 24 et Python 3 pour le build.
-- nightly est la branche de travail ; main est la production protégée par approbation humaine. La publication autorisée du 14 octobre isole les stocks neufs à zéro et leurs tests, sans fusion globale de nightly.
-- Sauvegardes compatibles ; une donnée absente, illisible ou ambiguë reste inconnue.
-- Les identifiants de personnages viennent des identifiants natifs vérifiés du catalogue ; jamais d’inférence depuis un portrait ambigu.
-- lancer.json décrit le build et le serveur statique ; son manifeste doit être un JSON lisible par MakeProject et utiliser PORT.
-- L’import photo fusionne les champs observés et préserve les valeurs absentes ou nulles ; la restauration d’une sauvegarde complète est distincte.
-
-- Retours Discord : relais Node.js 24 séparé du site GitHub Pages, secret en environnement serveur, endpoint public configurable et contrat POST /feedback ; essais avec Discord simulé avant configuration réelle.
-
+- Dépôt original conservé ; nightly pour le travail, main pour la production avec approbation humaine. Isoler les seules fonctionnalités autorisées, sans fusion globale de nightly.
+- JavaScript natif, HTML/CSS ; Node 24 et Python 3. lancer.json : JSON MakeProject utilisant PORT, aligné sur le build et le serveur statique.
+- Sauvegardes compatibles ; champ absent, illisible ou ambigu inconnu. Identifiants natifs vérifiés uniquement, jamais déduits d’un portrait ambigu.
+- Import photo : fusion des champs observés, préservation des absents/nulls ; restauration complète distincte.
+- Relais Node 24 séparé de GitHub Pages ; POST /feedback, endpoint public configurable, secret serveur, une seule instance et quotas globaux conservés.
 # Pièges et consignes
-- La référence d’import décrit le jeu, pas une box personnelle ; ne jamais laisser croire que des captures ou un compte ont été consultés.
-- Le prompt distingue les observations d’image, les références du catalogue et les inférences impossibles.
-- Un import photo vide ne vide pas la box ; vérifier le comportement réel avant de décrire toute procédure d’import.
-- Les contrôles doivent utiliser les critères 2 et 3 remplacés par le PDG ; ne pas réintroduire les demandes personnelles abandonnées et interdites.
-- Le résumé doit compter les observations validées reçues, pas la collection après fusion.
-
-- CORS ne suffit pas contre les abus ; limiter les envois côté serveur et maîtriser les adresses IP derrière un proxy. Ne jamais recopier le webhook en issue, log ou artefact.
-- Un quota fondé sur la socket du reverse proxy pénalise tous ses visiteurs ; distinguer les clients seulement via une frontière de confiance explicite, sans accepter les en-têtes falsifiés en accès direct.
-- Après un échec de job, examiner les branches de secours et conserver le travail ; vérifier la configuration Git locale autorisée avant commit.
-- Une transcription de consigne fournie au manager doit être identifiée comme telle ; ne pas fabriquer de lien vers une discussion originale inaccessible.
-
+- Référence du jeu distincte d’une box personnelle ; aucune consultation des pièces personnelles interdites. Utiliser les critères 2 et 3 révisés.
+- Distinguer observations, catalogue et inconnues ; compter les observations reçues, pas la collection fusionnée. Un import photo vide préserve la box.
+- CORS ne suffit pas : quotas serveur et frontière proxy explicite, remplacement des en-têtes visiteurs, aucun accès public au port interne. Ne jamais publier webhook, clés ou archives.
+- Après échec, conserver branches et modifications ; contrôler l’identité Git locale autorisée. Identifier comme telles les consignes transcrites.
+- Préserver la sauvegarde protégée du retrait et les ressources incertaines ; procédure de restauration dans le dépôt. Horloge VPS décalée signalée ; ne pas s’y fier pour dater les interventions.
 # Dette connue
-- Aucune dette mineure identifiée à traiter pour le périmètre révisé ; les données personnelles restent hors périmètre par décision du PDG.
-
+- Échec fwupd-refresh signalé, hors périmètre ; laissé intact, sans impact applicatif établi.
 # Prochaines étapes
-- Publier uniquement le formulaire et son relais sécurisé selon l’autorisation reçue, après préparation et relecture du périmètre isolé ; exclure l’import photo et toute fusion globale de nightly.
-- Exécuter le nettoyage autorisé de madfut27-watcher et tradispo, avec sauvegarde protégée et restauration isolée vérifiée avant suppression ; conserver toute ressource partagée ou incertaine.
-- Nettoyage proposé après accord et sauvegarde restaurable protégée hors dépôt : services et unités systemd madfut27-watcher/tradispo, répertoires /opt et /var/lib associés, configurations /etc associées (variantes MADFUT comprises), journaux applicatifs identifiés. Préserver Ubuntu, SSH, comptes et clés ; aucune purge générale. Sauvegarder SQLite de façon cohérente, états JSON, configurations secrètes, unités, code et permissions ; vérifier la restauration avant suppression.
-- Hébergement observé : environ 52 Go libres, Node 22 installé, Nginx et Docker indisponibles, UFW actif avec SSH seul autorisé. Préparer Node 24, HTTPS et URL publique dans un travail distinct autorisé ; ne pas modifier le réseau durant le nettoyage.
-- Configurer le webhook par un canal serveur protégé, jamais dans une issue, le dépôt ou une discussion publique ; isoler et faire relire le périmètre de publication avant de toucher main.
-- Après autorisation et configuration, vérifier la réception dans le salon réel, la confirmation et les erreurs sur le site ainsi que les protections réseau et anti-abus ; les simulations ne suffisent pas au critère 6.
-- Contrôler les six critères avec 2 et 3 révisés ; aucune consultation des pièces personnelles du PDG.
+- Préparer le service interne Node 24 sur le VPS, version identifiable, compte dédié, configuration protégée et retour arrière ; sans réseau public ni secret réel.
+- Puis configurer HTTPS et URL publique, vérifier l’horloge avant TLS ; préserver SSH. Dernier inventaire : Node 22 partagé, pas de Nginx/Docker, UFW limité à SSH.
+- Fournir un canal serveur protégé pour le webhook absent ; ne jamais demander sa valeur dans GitHub ou une discussion publique.
+- Préparer et faire relire le périmètre de publication isolé formulaire/relais avant main ; exclure import photo et fusion globale de nightly.
+- Vérifier sur le site publié réception Discord réelle, confirmation, erreurs, quotas et frontière réseau avant de satisfaire le critère 6 ; les simulations seules ne suffisent pas.
