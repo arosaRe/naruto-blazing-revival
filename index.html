@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
+  <meta name="generator" content="MakeProject · Release 33">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#11141b">
@@ -22,6 +23,7 @@
       <button data-nav="plan" class="nav-item"><span>↗</span> Plan & stocks</button>
       <button data-nav="guide" class="nav-item"><span>?</span> Guide & missions</button>
       <button data-nav="sources" class="nav-item"><span>◎</span> Sources & sauvegarde</button>
+      <button id="feedback-open" class="nav-item" aria-haspopup="dialog"><span aria-hidden="true">?</span> Envoyer un retour</button>
     </nav>
     <button class="button compact" data-action="export">↓ Sauvegarder</button>
   </header>
@@ -31,6 +33,18 @@
     <footer>Naruto Blazing Revival · Client NBRC3.00.032 & références communautaires · <button data-nav="sources">Sources et limites des calculs</button></footer>
   </div>
   <dialog id="character-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <dialog id="feedback-dialog" aria-labelledby="feedback-title" aria-describedby="feedback-privacy">
+    <div class="feedback-heading"><h2 id="feedback-title">Envoyer un retour</h2><button id="feedback-close" class="button compact" type="button" aria-label="Fermer le formulaire">Fermer</button></div>
+    <p id="feedback-privacy">Une idée ou un problème ? Seul ton message sera transmis à l’équipe via Discord. N’inclus aucune donnée sensible. Ta box et tes sauvegardes ne sont pas envoyées.</p>
+    <form id="feedback-form" novalidate>
+      <label for="feedback-message">Ton message (obligatoire)</label>
+      <p id="feedback-limit">Maximum 1 800 unités UTF-16 ; un emoji peut compter pour deux.</p>
+      <textarea id="feedback-message" name="message" rows="7" maxlength="1800" required aria-describedby="feedback-limit feedback-count feedback-status"></textarea>
+      <p id="feedback-count">0 / 1 800</p>
+      <p id="feedback-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <button id="feedback-send" class="button primary" type="submit" disabled>Envoyer le retour</button>
+    </form>
+  </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script type="module" src="app.js?v=20261014-public-import1"></script>
 </body>

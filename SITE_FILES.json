@@ -1,5 +1,7 @@
 [
   "app.js",
+  "feedback.js",
+  "feedback-config.js",
   "arosa.json",
   "asset-map.json",
   "availability-audit.json",
