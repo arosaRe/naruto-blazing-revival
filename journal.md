@@ -70,3 +70,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, cycle manager : mémoire condensée sans retrait des retours du PDG. Phases achevées : stocks zéro publiés ; références/prompt/import sûr sur nightly ; VPS nettoyé après sauvegarde/restauration ; HTTPS/proxy validés ; candidate isolée relue.
 14.10.2026, cycle manager : #33 et PR #34 validées, relais en service sans activation au boot ; contrôle ISSUE33-CONTROLE-20261014T215551Z accepté par API, constat Discord demandé avant publication isolée ; critère 6 ouvert.
 14.10.2026, cycle manager : #33 fermée ; #35 préparée pour publication isolée après constat Discord et relecture finale.
+
+15.10.2026 : r?ception Discord confirm?e par le PDG ; #35 confi?e pour publication isol?e autoris?e et contr?les publics. Crit?re 6 toujours ouvert.
