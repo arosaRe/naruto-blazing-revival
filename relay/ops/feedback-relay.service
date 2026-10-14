@@ -1,0 +1,40 @@
+[Unit]
+Description=Naruto Blazing feedback relay (internal)
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=feedback-relay
+Group=feedback-relay
+WorkingDirectory=/opt/feedback-relay/current
+EnvironmentFile=/etc/feedback-relay/config.env
+EnvironmentFile=/etc/feedback-relay/secret.env
+ExecStart=/opt/feedback-relay/node-v24.22.0-linux-x64/bin/node --preserve-symlinks-main /opt/feedback-relay/current/server.mjs
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+RestrictSUIDSGID=yes
+RestrictRealtime=yes
+LockPersonality=yes
+RestrictNamespaces=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+AmbientCapabilities=
+TasksMax=32
+MemoryMax=256M
+LimitNOFILE=256
+
+[Install]
+WantedBy=multi-user.target
