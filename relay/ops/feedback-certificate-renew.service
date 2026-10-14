@@ -1,0 +1,9 @@
+[Unit]
+Description=Renew only the feedback HTTPS certificate
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+UMask=0077
+ExecStart=/usr/bin/certbot renew --quiet --cert-name retours.179-237-102-19.sslip.io

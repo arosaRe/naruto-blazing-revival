@@ -1,0 +1,11 @@
+[Unit]
+Description=Check feedback certificate renewal twice daily
+
+[Timer]
+OnCalendar=*-*-* 00,12:00:00
+RandomizedDelaySec=3600
+Persistent=true
+Unit=feedback-certificate-renew.service
+
+[Install]
+WantedBy=timers.target
