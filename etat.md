@@ -1,13 +1,12 @@
 # État actuel
-- Phase : correction de la protection anti-abus des retours Discord ; critère 6 encore ouvert.
-- Stocks neufs à zéro publiés avec approbation humaine limitée ; imports et sauvegardes existants préservés.
-- Prompt réutilisable, références natives et fusion photo sûre livrés sur nightly ; critères 2 et 3 remplacés par décision du PDG.
-- Critères applicables et approbation limitée documentés, avec provenance et limites de preuve.
-- Relais Discord séparé livré et validé par relecture ; validations réussies rapportées par le développeur, résultat du tester de l’app non connu.
-- Formulaire intégré sur nightly et validé par relecture ; essais navigateur et Discord simulé réussis rapportés, sans relance par le relecteur.
-- Audit sécurité : quota partagé derrière le proxy, permettant à un visiteur de bloquer les autres ; correction prioritaire avant présentation.
-- Webhook et accès d’hébergement non accessibles ; aucune réception dans le salon réel vérifiée.
-- Aucune nouvelle publication autorisée ; aucune décision immédiate attendue du PDG.
+- Phase : contrôle indépendant de la correction anti-abus avant présentation des retours Discord ; critère 6 ouvert.
+- Stocks neufs à zéro publiés avec approbation humaine limitée ; sauvegardes et imports existants préservés.
+- Prompt réutilisable, références natives et fusion photo sûre livrés sur nightly ; critères 2 et 3 révisés satisfaits.
+- Formulaire et relais Discord intégrés et validés par relecture ; essais navigateur avec Discord simulé rapportés réussis.
+- Correction du quota partagé intégrée et relue : confiance proxy bornée, adresses validées et quotas conservés.
+- Régressions et build réussis selon les jobs développeur et relecteur/app ; non relancés par le manager.
+- Webhook et accès d’hébergement non accessibles ; endpoint public non configuré et aucune réception Discord réelle vérifiée.
+- Aucune nouvelle publication autorisée ; aucune décision immédiate attendue du PDG avant le contrôle ciblé.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -57,8 +56,8 @@
 - Aucune dette mineure identifiée à traiter pour le périmètre révisé ; les données personnelles restent hors périmètre par décision du PDG.
 
 # Prochaines étapes
-- Corriger le quota partagé derrière le proxy : identité client fiable, configuration de confiance explicite, quotas globaux conservés et régressions sur deux IP et les en-têtes falsifiés.
-- Faire relire la correction de sécurité et vérifier la levée du constat avant présentation au PDG.
-- Préparer une présentation concrète et une demande d’approbation avec besoins d’hébergement/configuration protégée ; ne jamais demander le secret dans une issue publique.
-- Configurer et vérifier la réception réelle seulement dans le périmètre autorisé ; une simulation ne remplit pas à elle seule le critère 6 sur le site réel.
-- Contrôler ensuite les six critères, avec 2 et 3 révisés ; ne demander ni consulter aucune pièce personnelle du PDG. Toute publication supplémentaire nécessite son approbation.
+- Faire confirmer indépendamment la levée du constat de quota partagé et la frontière de confiance proxy, sans déploiement ni webhook réel.
+- Si le contrôle est favorable, présenter le formulaire, les confirmations/erreurs et les protections au PDG ; demander l’approbation du périmètre précis avant toute publication.
+- Définir l’hébergement HTTPS mono-instance, l’URL publique et les accès autorisés ; configurer le webhook par un canal serveur protégé, jamais dans une issue ou une discussion publique.
+- Après autorisation et configuration, vérifier la réception dans le salon réel ainsi que les erreurs sur le site ; les simulations ne suffisent pas au critère 6.
+- Contrôler les six critères avec 2 et 3 révisés ; aucune consultation des pièces personnelles du PDG.
