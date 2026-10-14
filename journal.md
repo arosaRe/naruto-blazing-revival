@@ -17,3 +17,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 
 2026-10-14 — Cycle 9 : PR #10 fusionnée et issue #4 fermée ; prompt réutilisable livré, données personnelles toujours non vérifiables ; état actualisé sur nightly.
 
+
+14.10.2026 : nightly synchronisée ; prompt livré confirmé. Proposition au PDG de remplacer les critères personnels par des critères du prompt réutilisable. Aucune production.

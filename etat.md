@@ -3,7 +3,7 @@
 - Le prompt réutilisable d’import est disponible depuis Sources & sauvegarde.
 - Les stocks d’une box neuve sont initialisés à zéro ; l’import photo fusionne les observations connues avec l’état existant.
 - L’objectif personnel a été remplacé par le prompt réutilisable ; le PDG ne fournira ni captures ni fichier personnel.
-- Les personnages, stocks, ryō et monnaie premium d’une box personnelle ne sont donc pas vérifiés.
+- Les données personnelles restent non vérifiées ; les critères 2 et 3 attendent leur alignement sur le nouvel objectif par le PDG.
 - Aucune mise en production sans approbation humaine.
 
 # Retours du PDG
@@ -35,8 +35,8 @@
 
 # Dette connue
 - Les stocks, 59 700 950 ryō, la monnaie premium et les ressources d’une box personnelle restent non vérifiés faute de captures/fichier fournis.
-- Aucun framework de test séparé n’est configuré.
+- Les régressions utilisent le lanceur natif de Node.js, sans framework externe.
 
 # Prochaines étapes
-- Attendre une nouvelle priorité ; le prompt réutilisable demandé est livré et aucune issue n’est ouverte.
+- Faire valider le remplacement des critères 2 et 3 : référence accessible et limites documentées ; prompt copiable/téléchargeable demandant un JSON photo compatible, procédure sûre et conservation des données existantes. Aucune vérification personnelle exigée.
 - Ne proposer aucune mise en production avant approbation humaine.
