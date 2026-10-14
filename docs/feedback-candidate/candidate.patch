@@ -1,0 +1,187 @@
+diff --git a/SITE_FILES.json b/SITE_FILES.json
+index 81e6df3..7ff0005 100644
+--- a/SITE_FILES.json
++++ b/SITE_FILES.json
+@@ -1,5 +1,7 @@
+ [
+   "app.js",
++  "feedback.js",
++  "feedback-config.js",
+   "arosa.json",
+   "asset-map.json",
+   "availability-audit.json",
+diff --git a/app.js b/app.js
+index 6820701..56fcbf8 100644
+--- a/app.js
++++ b/app.js
+@@ -1,3 +1,6 @@
++import {mountFeedback} from './feedback.js';
++import {feedbackEndpoint} from './feedback-config.js';
++mountFeedback(document, feedbackEndpoint);
+ import {ELEMENTS,STORAGE_KEY,initialPersonalState,validateBackup,resourcePlanFor,aggregateResourcePlan,resourceInfo as baseResourceInfo,resourceStockKeys,stockFor,maximumStat,backup,catalogCharacters,ultimateStatus,planningCharacter,canPlanCharacter,CURRENT_MAX_STARS} from './model.js?v=20261014-public-import1';
+ import {displayForm,levelDisplay,addedProgress} from './card-state.js?v=20261014-public-import1';
+ import {normalizeSearch,createCharacterSearchIndex,matchesCharacterSearch,collectionFilterSummary,resetCollectionFilters} from './collection-search.js?v=20261014-public-import1';
+diff --git a/feedback-config.js b/feedback-config.js
+new file mode 100644
+index 0000000..a1eef60
+--- /dev/null
++++ b/feedback-config.js
+@@ -0,0 +1,2 @@
++﻿// Public relay URL only. The static build replaces this value from FEEDBACK_ENDPOINT.
++export const feedbackEndpoint = '';
+diff --git a/feedback.js b/feedback.js
+new file mode 100644
+index 0000000..0abb01a
+--- /dev/null
++++ b/feedback.js
+@@ -0,0 +1,63 @@
++﻿export const MAX_FEEDBACK_LENGTH = 1800;
++export function publicFeedbackEndpoint(value) {
++  try {
++    const url = new URL(value);
++    if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash || /(?:^|\.)discord(?:app)?\.com$/i.test(url.hostname) || /webhooks/i.test(url.pathname)) return '';
++    return url.href;
++  } catch { return ''; }
++}
++export function feedbackValidation(message) {
++  if (!message.trim()) return 'Écris un message avant de l’envoyer.';
++  if (message.length > MAX_FEEDBACK_LENGTH) return 'Ton message dépasse la limite de 1 800 unités UTF-16.';
++  if (/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/.test(message)) return 'Retire les caractères de contrôle de ton message.';
++  return '';
++}
++export function feedbackError(status) {
++  return ({400:'Le relais a refusé le message. Vérifie son contenu et la configuration du relais.',413:'Le message est trop volumineux. Raccourcis-le avant de réessayer.',429:'Trop de retours ont été envoyés. Attends au moins 60 secondes avant de réessayer.',502:'Discord est indisponible ou sa réponse a été perdue. Ton retour a peut-être été reçu.',503:'Le relais est occupé. Réessaie plus tard.'})[status] || 'La réception du retour n’a pas pu être confirmée.';
++}
++export function mountFeedback(doc, configuredEndpoint, fetchImpl = fetch) {
++  const endpoint = publicFeedbackEndpoint(configuredEndpoint);
++  const dialog = doc.querySelector('#feedback-dialog'), form = doc.querySelector('#feedback-form');
++  const field = doc.querySelector('#feedback-message'), send = doc.querySelector('#feedback-send');
++  const status = doc.querySelector('#feedback-status'), count = doc.querySelector('#feedback-count');
++  const unavailable = 'L’envoi de retours est indisponible : aucun relais HTTPS valide n’est configuré.';
++  let pending = false;
++  status.textContent = endpoint ? '' : unavailable;
++  send.disabled = !endpoint;
++  doc.querySelector('#feedback-open').addEventListener('click', () => { dialog.showModal(); field.focus(); });
++  doc.querySelector('#feedback-close').addEventListener('click', () => dialog.close());
++  dialog.addEventListener('keydown', event => {
++    if (event.key !== 'Tab') return;
++    const controls = [...dialog.querySelectorAll('button:not(:disabled), textarea')];
++    const first = controls[0], last = controls.at(-1);
++    if (event.shiftKey && doc.activeElement === first) { event.preventDefault(); last.focus(); }
++    else if (!event.shiftKey && doc.activeElement === last) { event.preventDefault(); first.focus(); }
++  });
++  field.addEventListener('input', () => {
++    count.textContent = `${field.value.length} / 1 800`;
++    field.removeAttribute('aria-invalid');
++    status.textContent = endpoint ? '' : unavailable;
++  });
++  form.addEventListener('submit', async event => {
++    event.preventDefault();
++    if (pending) return;
++    if (!endpoint) { status.textContent = unavailable; return; }
++    const message = field.value, error = feedbackValidation(message);
++    if (error) { field.setAttribute('aria-invalid', 'true'); status.textContent = error; field.focus(); return; }
++    pending = true; send.disabled = true; field.readOnly = true;
++    form.setAttribute('aria-busy', 'true');
++    status.textContent = 'Envoi en cours… Attends la confirmation du relais.';
++    try {
++      const response = await fetchImpl(endpoint, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({message}), credentials:'omit', redirect:'error', referrerPolicy:'no-referrer', signal:AbortSignal.timeout(15000)});
++      if (response.status !== 200) throw new Error(feedbackError(response.status));
++      let body; try { body = await response.json(); } catch { throw new Error(feedbackError()); }
++      if (body?.ok !== true) throw new Error(feedbackError());
++      field.value = ''; count.textContent = '0 / 1 800';
++      status.textContent = 'Merci ! Ton retour a été reçu par Discord.';
++    } catch (error) {
++      status.textContent = (error instanceof TypeError || error.name === 'TimeoutError' || error.name === 'AbortError' ? 'Connexion interrompue ou délai dépassé. La réception de ton retour est incertaine.' : error.message) + ' Ton texte est conservé. Aucune nouvelle tentative automatique ; tu peux réessayer manuellement.';
++    } finally {
++      pending = false; send.disabled = false; field.readOnly = false; form.removeAttribute('aria-busy');
++    }
++  });
++}
+diff --git a/index.html b/index.html
+index 1ba3665..badfb59 100644
+--- a/index.html
++++ b/index.html
+@@ -1,6 +1,7 @@
+ <!doctype html>
+ <html lang="fr">
+ <head>
++  <meta name="generator" content="MakeProject · Release 33">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <meta name="theme-color" content="#11141b">
+@@ -22,6 +23,7 @@
+       <button data-nav="plan" class="nav-item"><span>↗</span> Plan & stocks</button>
+       <button data-nav="guide" class="nav-item"><span>?</span> Guide & missions</button>
+       <button data-nav="sources" class="nav-item"><span>◎</span> Sources & sauvegarde</button>
++      <button id="feedback-open" class="nav-item" aria-haspopup="dialog"><span aria-hidden="true">?</span> Envoyer un retour</button>
+     </nav>
+     <button class="button compact" data-action="export">↓ Sauvegarder</button>
+   </header>
+@@ -31,6 +33,18 @@
+     <footer>Naruto Blazing Revival · Client NBRC3.00.032 & références communautaires · <button data-nav="sources">Sources et limites des calculs</button></footer>
+   </div>
+   <dialog id="character-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
++  <dialog id="feedback-dialog" aria-labelledby="feedback-title" aria-describedby="feedback-privacy">
++    <div class="feedback-heading"><h2 id="feedback-title">Envoyer un retour</h2><button id="feedback-close" class="button compact" type="button" aria-label="Fermer le formulaire">Fermer</button></div>
++    <p id="feedback-privacy">Une idée ou un problème ? Seul ton message sera transmis à l’équipe via Discord. N’inclus aucune donnée sensible. Ta box et tes sauvegardes ne sont pas envoyées.</p>
++    <form id="feedback-form" novalidate>
++      <label for="feedback-message">Ton message (obligatoire)</label>
++      <p id="feedback-limit">Maximum 1 800 unités UTF-16 ; un emoji peut compter pour deux.</p>
++      <textarea id="feedback-message" name="message" rows="7" maxlength="1800" required aria-describedby="feedback-limit feedback-count feedback-status"></textarea>
++      <p id="feedback-count">0 / 1 800</p>
++      <p id="feedback-status" role="status" aria-live="polite" aria-atomic="true"></p>
++      <button id="feedback-send" class="button primary" type="submit" disabled>Envoyer le retour</button>
++    </form>
++  </dialog>
+   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+   <script type="module" src="app.js?v=20261014-public-import1"></script>
+ </body>
+diff --git a/player-experience.css b/player-experience.css
+index 8ea6a68..d531d68 100644
+--- a/player-experience.css
++++ b/player-experience.css
+@@ -465,3 +465,21 @@ button.filter-chip { min-height: 44px; }
+   .guide-reference dl { grid-template-columns: 1fr; gap: 0; }
+   .guide-reference dd { margin-bottom: 8px; }
+ }
++
++/* Feedback remains independent of collection rendering and personal state. */
++#feedback-dialog { width: min(620px, calc(100% - 24px)); padding: 24px; }
++.feedback-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
++#feedback-dialog p { margin: 10px 0; color: var(--ink); }
++#feedback-form { margin-top: 20px; }
++#feedback-form label { display: block; font-weight: 650; }
++#feedback-message { width: 100%; resize: vertical; margin-top: 6px; }
++#feedback-count { text-align: right; font-variant-numeric: tabular-nums; }
++#feedback-status { min-height: 3em; }
++#feedback-message[aria-invalid="true"] { border: 2px solid #f29787; }
++#feedback-dialog :focus-visible { outline: 3px solid #f8c965; outline-offset: 3px; }
++#feedback-send:disabled { cursor: default; }
++@media (max-width: 480px) {
++  #feedback-dialog { padding: 18px; }
++  #feedback-title { font-size: 21px; }
++  #feedback-send { width: 100%; }
++}
+diff --git a/scripts/build-github-site.mjs b/scripts/build-github-site.mjs
+index f6a5036..563af98 100644
+--- a/scripts/build-github-site.mjs
++++ b/scripts/build-github-site.mjs
+@@ -3,6 +3,9 @@ import path from 'node:path';
+ import {fileURLToPath} from 'node:url';
+ import {execFileSync} from 'node:child_process';
+ 
++import {publicFeedbackEndpoint} from '../feedback.js';
++const configuredFeedback = process.env.FEEDBACK_ENDPOINT || 'https://retours.179-237-102-19.sslip.io/feedback';
++if (!publicFeedbackEndpoint(configuredFeedback)) throw Error('FEEDBACK_ENDPOINT must be a public HTTPS relay URL');
+ const root=fileURLToPath(new URL('../',import.meta.url));
+ const output=path.resolve(root,'dist');
+ if(path.dirname(output)!==path.resolve(root)||path.basename(output)!=='dist')throw Error('Unsafe build destination');
+@@ -15,6 +18,7 @@ for(const name of files){
+   const source=path.join(root,name);if((await fs.lstat(source)).isSymbolicLink())throw Error('Runtime files must not be symlinks');
+   await fs.copyFile(source,path.join(output,name));
+ }
++await fs.writeFile(path.join(output,'feedback-config.js'), `export const feedbackEndpoint = ${JSON.stringify(publicFeedbackEndpoint(configuredFeedback))};\n`);
+ let python;
+ for(const candidate of process.env.PYTHON?[process.env.PYTHON]:process.platform==='win32'?['python','python3']:['python3','python']){
+   try{execFileSync(candidate,['--version'],{stdio:'pipe'});python=candidate;break;}catch{}

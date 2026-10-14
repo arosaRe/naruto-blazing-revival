@@ -1,0 +1,15 @@
+{
+  "issue": 31,
+  "base": "687740008edb57b224b27c49ff3f3b96ea128d9d",
+  "endpoint": "https://retours.179-237-102-19.sslip.io/feedback",
+  "patchSha256": "59bbde06a95bc373642e7987eaee273d513ca9e288aeee85f38b854644df2194",
+  "files": [
+    "app.js",
+    "feedback.js",
+    "feedback-config.js",
+    "index.html",
+    "player-experience.css",
+    "SITE_FILES.json",
+    "scripts/build-github-site.mjs"
+  ]
+}
