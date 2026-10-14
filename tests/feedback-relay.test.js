@@ -110,3 +110,68 @@ test('acceptance 3: configuration rejects unsafe destinations, startup logs reda
   assert.equal(run.status, 1); assert.equal(run.stderr.trim(), 'Invalid relay configuration');
   assert.ok(!`${run.stdout}${run.stderr}`.includes('secret-sentinel'));
 });
+
+const proxy = {trustedProxies: ['127.0.0.1']};
+const ipHeaders = ip => ({'X-Real-IP': ip});
+test('trusted proxy separates clients and canonicalizes mapped IPv4 and IPv6', async t => {
+  const f = await fixture(t, proxy);
+  for (const ip of ['198.51.100.1', '::ffff:198.51.100.1', '::ffff:c633:6401']) assert.equal((await f.send(undefined, ipHeaders(ip))).status, 200);
+  assert.equal((await f.send(undefined, ipHeaders('198.51.100.1'))).status, 429);
+  assert.equal((await f.send(undefined, ipHeaders('203.0.113.9'))).status, 200);
+  for (const ip of ['2001:db8::1', '2001:0db8:0:0:0:0:0:1', '2001:db8::1']) assert.equal((await f.send(undefined, ipHeaders(ip))).status, 200);
+  assert.equal((await f.send(undefined, ipHeaders('2001:db8::1'))).status, 429);
+  assert.equal(f.calls.length, 7);
+});
+test('trusted proxy refuses absent, invalid, ambiguous and duplicate identities', async t => {
+  const f = await fixture(t, proxy);
+  for (const headers of [{}, {'Forwarded': 'for=198.51.100.1'}, {'X-Forwarded-For': '198.51.100.1'}, ...['', 'unknown', 'localhost', '127.1', '198.51.100.1:80', '[2001:db8::1]', 'fe80::1%eth0', '198.51.100.1, 203.0.113.9'].map(ipHeaders)]) {
+    const res = await f.send(undefined, headers);
+    assert.equal(res.status, 400); assert.deepEqual(await res.json(), {error: 'invalid_client_address'});
+  }
+  const status = await new Promise((resolve, reject) => {
+    const req = http.request('http://127.0.0.1:9101/feedback', {method: 'POST', headers: {Origin: origin, 'Content-Type': 'application/json', 'X-Real-IP': ['198.51.100.1', '203.0.113.9']}}, res => {res.resume(); resolve(res.statusCode);});
+    req.on('error', reject); req.end(JSON.stringify({message: 'ok'}));
+  });
+  assert.equal(status, 400); assert.equal(f.calls.length, 0);
+  assert.equal((await f.send(undefined, ipHeaders('198.51.100.1'))).status, 200);
+});
+test('direct and unauthorized peers cannot spoof any forwarding header', async t => {
+  for (const trustedProxies of [[], ['192.0.2.1']]) await t.test(String(trustedProxies), async t => {
+    const f = await fixture(t, {trustedProxies});
+    for (let i = 1; i <= 4; i++) {
+      const ip = `198.51.100.${i}`;
+      assert.equal((await f.send(undefined, {...ipHeaders(ip), 'X-Forwarded-For': ip, Forwarded: `for=${ip}`})).status, i <= 3 ? 200 : 429);
+    }
+    assert.equal(f.calls.length, 3);
+  });
+});
+test('proxy identities retain global quota, bounded table, expiry and concurrency', async t => {
+  await t.test('global', async t => {
+    const f = await fixture(t, {...proxy, globalLimit: 2});
+    for (let i = 1; i <= 3; i++) assert.equal((await f.send(undefined, ipHeaders(`198.51.100.${i}`))).status, i <= 2 ? 200 : 429);
+    assert.equal(f.calls.length, 2);
+  });
+  await t.test('memory and expiry', async t => {
+    const f = await fixture(t, {...proxy, maxClients: 1, windowMs: 100});
+    assert.equal((await f.send(undefined, ipHeaders('198.51.100.1'))).status, 200);
+    assert.equal((await f.send(undefined, ipHeaders('198.51.100.2'))).status, 429);
+    assert.equal((await f.send(undefined, ipHeaders('198.51.100.1'))).status, 200);
+    await new Promise(r => setTimeout(r, 120));
+    assert.equal((await f.send(undefined, ipHeaders('198.51.100.2'))).status, 200);
+  });
+  await t.test('concurrency', async t => {
+    const f = await fixture(t, {...proxy, concurrency: 1}, 'delay');
+    const pending = f.send(undefined, ipHeaders('198.51.100.1'));
+    while (!f.calls.length) await new Promise(r => setTimeout(r, 5));
+    assert.equal((await f.send(undefined, ipHeaders('198.51.100.2'))).status, 503);
+    f.accept(); assert.equal((await pending).status, 200);
+    assert.equal((await f.send(undefined, ipHeaders('198.51.100.2'))).status, 200);
+  });
+});
+test('proxy trust configuration is explicit, exact and bounded', () => {
+  const env = {DISCORD_WEBHOOK_URL: 'https://discord.com/api/webhooks/1/example', FEEDBACK_ORIGINS: origin};
+  assert.deepEqual(readConfig(env).trustedProxies, []);
+  assert.deepEqual(readConfig({...env, FEEDBACK_TRUSTED_PROXIES: '127.0.0.1, ::1'}).trustedProxies, ['127.0.0.1', '::1']);
+  for (const value of ['', '*', 'true', '127.0.0.0/8', 'localhost', '127.0.0.1,', 'fe80::1%lo', Array(33).fill('127.0.0.1').join(',')]) assert.throws(() => readConfig({...env, FEEDBACK_TRUSTED_PROXIES: value}), /Invalid relay configuration/);
+  assert.throws(() => createRelay({trustedProxies: ['*']}), /Invalid relay configuration/);
+});
