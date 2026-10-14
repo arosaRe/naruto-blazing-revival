@@ -68,11 +68,11 @@ export function importStockKeyMap(catalogue){
  * Missing observations remain null; absent stocks remain unknown (not zero).
  * Neither the incoming object nor the shared catalogue is modified.
  */
-export function importPhotoBox(raw,catalogue){
+export function importPhotoBox(raw,catalogue,existingState=null){
   assertFields(raw,['format','version','username','characters','stocks','notes'],'L’import');
   if(raw.format!==PHOTO_BOX_FORMAT||raw.version!==PHOTO_BOX_VERSION)throw new Error('Format d’import non reconnu. Utilise naruto-blazing-box, version 1.');
   if(!Array.isArray(raw.characters))throw new Error('characters doit être une liste d’observations.');
-  if(!object(raw.stocks))throw new Error('stocks doit être un objet de quantités observées.');
+  if(own(raw,'stocks')&&!object(raw.stocks))throw new Error('stocks doit être un objet de quantités observées.');
   if(own(raw,'username')&&(typeof raw.username!=='string'||!raw.username.trim()||raw.username.length>80||/[\u0000-\u001f\u007f]/.test(raw.username)))throw new Error('username doit être un pseudo non vide de 80 caractères maximum.');
   if(own(raw,'notes')&&(!Array.isArray(raw.notes)||raw.notes.length>200||raw.notes.some(note=>typeof note!=='string'||note.length>2000)))throw new Error('notes doit être une liste de 200 textes maximum, chacun limité à 2 000 caractères.');
   const ninjas=model.catalogCharacters(catalogue),units=new Map();
@@ -103,7 +103,7 @@ export function importPhotoBox(raw,catalogue){
     observations.push({n,form,progress});
   }
   const allowedStocks=importStockKeyMap(catalogue),stocks={},seenStocks=new Set();
-  for(const [key,value] of Object.entries(raw.stocks)){
+  for(const [key,value] of Object.entries(raw.stocks||{})){
     if(!allowedStocks.has(key))throw new Error(`Stock inconnu : « ${key} ». Utilise une clé de la référence d’import.`);
     if(value!==null&&!known(value))throw new Error(`Stock « ${key} » : indique un entier positif ou nul, ou null si inconnu.`);
     const target=allowedStocks.get(key);
@@ -114,10 +114,27 @@ export function importPhotoBox(raw,catalogue){
   const state=model.initialPersonalState(catalogue);
   if(own(raw,'username'))state.username=raw.username.trim();
   state.importedAt=new Date().toISOString();
-  state.importNotes=[...(raw.notes||[])];
+  state.importNotes=own(raw,'notes')?[...raw.notes]:[];
   state.stocks=stocks;
   for(const {n,form,progress} of observations)Object.assign(state.characters[n.id],progress,{unitId:form.client.unitId,stars:form.stars,owned:true,planned:form.stars<=model.CURRENT_MAX_STARS&&model.canPlanCharacter(n),progressEdited:true,ownedEdited:true,abilitiesEdited:true});
-  return state;
+  if(!existingState)return state;
+  // Photo JSON is an observation patch. Work on a copy so even a later failure
+  // cannot mutate the saved account, and treat null/absent values as unknown.
+  const merged=JSON.parse(JSON.stringify(existingState));
+  if(merged.accountMode!=='personal')merged.username=state.username;
+  merged.accountMode='personal';
+  if(own(raw,'username'))merged.username=raw.username.trim();
+  if(own(raw,'notes'))merged.importNotes=[...raw.notes];
+  merged.importedAt=state.importedAt;
+  for(const [key,value] of Object.entries(stocks))merged.stocks[key]=value;
+  for(const {n,form,progress} of observations){
+    const prior=merged.characters[n.id]||state.characters[n.id],wasPresent=!!merged.characters[n.id];
+    for(const field of observationFields)if(progress[field]!==null)prior[field]=progress[field];
+    Object.assign(prior,{unitId:form.client.unitId,stars:form.stars,owned:true,progressEdited:true,ownedEdited:true,abilitiesEdited:true});
+    if(!wasPresent)prior.planned=form.stars<=model.CURRENT_MAX_STARS&&model.canPlanCharacter(n);
+    merged.characters[n.id]=prior;
+  }
+  return merged;
 }
 
 /** Public reference generation reuses the importer's exact identities/caps. */
