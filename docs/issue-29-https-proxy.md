@@ -133,8 +133,10 @@ Le relais reste stopped/disabled sans secret durant tout retour arrière.
 3. **Partiel** : frontière et limites préparées seulement ; 9101 inaccessible
    depuis le client externe, mais proxy/erreur backend non testés en production.
 4. **Partiel** : SSH, relais sans secret et sauvegarde contrôlés ; aucune
-   configuration publique modifiée. Vérification finale des empreintes et bilan
-   du déploiement restent à réaliser. Site public, main et lancer.json inchangés.
+   configuration publique modifiée. Vérification finale des empreintes réussie
+   (`sha256sum --quiet -c`), nouvelle connexion SSH et `sshd -t` réussis,
+   relais inactive/disabled sans secret ni listener 9101. Bilan du déploiement
+   encore absent. Site public, main et lancer.json inchangés.
 
 Validation locale : `npm.cmd test` — 34 tests réussis. La configuration Nginx
 préparée n’a pas été validée par `nginx -t` : binaire absent du VPS.
