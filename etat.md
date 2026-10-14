@@ -1,6 +1,6 @@
 # État actuel
-- Clôture suspendue : le relais refuse les origines MakeProject ; correction à préparer sans déploiement.
-- Import personnel abandonné sur décision du PDG ; critères substitués à réconcilier avec l’audit.
+- Clôture bloquée : CORS MakeProject refusé.
+- Import personnel abandonné ; réaudit des critères substitués.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -47,12 +47,11 @@
 # Décisions structurantes
 - Dépôt original, nightly ; production sur accord humain. JS ES/HTML/CSS, Node 24/Python 3.
 - Import fusionné ; inconnus null/absents, unitId vérifiés ; sauvegardes compatibles.
-- Une issue et une PR relue par sujet.
 # Pièges et consignes
 - Interception ≠ CORS réel ≠ réception Discord ; mentions non vérifiées, réserve acceptée.
 - Webhook serveur seul ; préserver VPS/SSH/secrets et 8101 ; essais sur 9101 puis arrêt.
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Corriger CORS MakeProject puis réconcilier l’audit avec les critères remplacés ; réaudit avant clôture.
-- Aucune publication ni nouvel envoi Discord ; serveur actif non réinspecté par l’audit sécurité.
+- Corriger CORS puis réconcilier et réauditer les critères.
+- Aucun déploiement/envoi Discord ; serveur actif non réinspecté.
