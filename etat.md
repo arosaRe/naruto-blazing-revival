@@ -1,10 +1,7 @@
 # État actuel
-- Critères 1 à 5 satisfaits (2/3 révisés) ; critère 6 ouvert.
-- Stocks zéro et formulaire publiés ; import sûr et prompt sur nightly.
-- Parcours public et confirmation vérifiés ; erreurs/quotas simulés, sans rafale.
-- Réception Discord publique confirmée ; absence de mention indésirable non confirmée.
-- Relais HTTPS actif et relu, non activé au boot.
-- Candidate des balises HTML validée ; publication non autorisée.
+- Critères 1–5 satisfaits (2/3 révisés) ; 6 ouvert : mention non vérifiée.
+- Stocks/formulaire publiés ; import/prompt sur nightly. Réception Discord confirmée.
+- Candidate HTML relue, publication autorisée ; relais actif, sans démarrage au boot.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -39,20 +36,17 @@
 - 2026-10-14 à 23:53 — Le PDG confirme l’injection privée via le script masqué (injection faite), après une première commande échouée avec un point final ajouté à inject-secret.py. Reprendre la mise en service sécurisée, puis publier la candidate isolée validée. Secret uniquement serveur ; conserver quotas, confirmations et erreurs compréhensibles ; exclure import photo et fusion globale de nightly. Critère 6 seulement après parcours public vérifié et réception réelle observée dans le salon Discord, distincte de la réponse API.
 - 2026-10-15 à 00:00 — Le PDG confirme voir ISSUE33-CONTROLE-20261014T215551Z dans le salon Discord prévu (« oui »). Reprendre la publication de la seule candidate isolée autorisée : formulaire et relais sécurisé, sans import photo ni fusion globale de nightly. Critère 6 seulement après parcours public, confirmations, erreurs et protections anti-abus vérifiés.
 - 2026-10-15 à 00:26 — Le PDG confirme voir ISSUE35-CONTROLE-20261014T220717Z dans le salon prévu (« oui je le vois »), sans préciser la présence éventuelle d’une notification de mention indésirable. Consigner la réception sans nouvel envoi ; vérifier les éléments restants avant de satisfaire le critère 6. Cette confirmation n’autorise pas la publication de la correction des balises HTML.
+- 2026-10-15 à 00:35 — Publication autorisée de la candidate relue : seule balise generator « MakeProject · Release 33 » aux 182 références HTML ; 3 105 autres fichiers identiques. Exclure import photo et fusion globale de nightly ; vérifier et rapporter la version publiée. Ne clôture pas le critère 6 : absence de mention indésirable à confirmer, sans nouvel envoi Discord. Messages : « j’ai pas compris », « accepter ».
+- 2026-10-15 à 00:36 — Notifications acceptables pour les vrais retours du formulaire. Absence de notification de mention indésirable sur ISSUE35-CONTROLE-20261014T220717Z non confirmée : ne pas la présenter comme vérifiée ; consigner sans nouveau test. N’autorise pas les balises HTML. Messages : « alors pour l'issues c'est chiant mais si c'est pour des vrai retours envoyer par le formularie alors ça va » ; deux messages Captain Hook reçus (#33 et #35).
 # Décisions structurantes
-- Dépôt original ; nightly au travail ; main limité au périmètre approuvé, sans fusion globale.
-- JS natif/HTML/CSS, Node 24, Python 3 ; lancer.json aligné sur build/PORT.
-- Sauvegardes compatibles ; inconnus absents/null ; unitId vérifiés ; import photo fusionné, restauration complète distincte.
-- Relais Node séparé de Pages : POST /feedback, secret serveur, instance unique, quotas globaux.
-- HTTPS gratuit retours.179-237-102-19.sslip.io ; dépendance IP/fournisseur/ACME ; comptes staging/production et conditions autorisés, aucun achat ni adresse personnelle sans accord.
+- Dépôt original/nightly ; main autorisé seulement.
+- JS natif, Node 24/Python 3 ; build/PORT.
+- Sauvegardes compatibles ; inconnus null ; unitId vérifiés ; photo fusionnée.
+- Relais Node unique ; secret serveur/quotas ; HTTPS sslip.io/IP/ACME.
 # Pièges et consignes
-- Pièces personnelles interdites ; catalogue distinct des observations ; import vide préserve la box.
-- CORS insuffisant : quotas, en-têtes remplacés, loopback ; aucun secret/archive publié.
-- Préserver Ubuntu, SSH, sauvegardes protégées et certificats ; anciennes dates VPS non fiables.
-- ACME après HTTP-01 externe ; identité Git locale autorisée ; conserver le travail après échec.
+- Pièces privées interdites ; vide préserve la box ; CORS insuffisant ; quotas/loopback.
+- Préserver Ubuntu/SSH/sauvegardes/certificats ; dates VPS douteuses ; ACME après HTTP externe.
 # Dette connue
-- fwupd-refresh en échec, hors périmètre, sans impact applicatif établi.
+- fwupd-refresh en échec, hors périmètre.
 # Prochaines étapes
-- Confirmer uniquement l’absence de notification de mention indésirable sur le message public déjà reçu ; aucun renvoi.
-- Obtenir une décision humaine sur la publication de la candidate limitée aux balises HTML, déjà validée.
-- Garder le critère 6 ouvert jusqu’à la levée du dernier constat attendu ; puis proposer la clôture indépendante.
+- Publier/vérifier la candidate HTML seule ; critère 6 ouvert ; aucun test Discord.

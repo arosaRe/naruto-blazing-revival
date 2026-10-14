@@ -76,3 +76,8 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 15.10.2026 : publication isolée de #35 relue et réalisée, issue fermée ; constat humain du contrôle public demandé sans renvoi. #37 créée pour une candidate limitée aux balises HTML, sans publication ; critère 6 ouvert.
 
 15.10.2026, cycle manager : réception Discord publique consignée ; absence de mention encore à confirmer. #37 fermée après validation et fusion de #38 ; candidate HTML en attente d’autorisation, aucune publication ni nouvel envoi.
+
+15.10.2026, synthèse des phases achevées : reprise du dépôt original, stocks neufs à zéro et import préservant les données ; objectif personnel remplacé par références et prompt réutilisable.
+15.10.2026, synthèse des phases achevées : publication isolée des stocks puis du formulaire ; inventaire/nettoyage autorisé du VPS, relais HTTPS sécurisé et réception Discord confirmée.
+15.10.2026, synthèse des phases achevées : candidate HTML préparée et relue ; attente d’autorisation levée, absence de mention sur le test non vérifiée.
+15.10.2026, cycle manager : #39 créée pour publier exclusivement la candidate HTML autorisée ; préférence notifications consignée, aucun nouveau test Discord ; critère 6 ouvert. État condensé sans retrait des retours du PDG.
