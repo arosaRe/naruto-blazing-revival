@@ -56,3 +56,7 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026 : clarification de #29 : seuls comptes techniques ACME production/staging autorisés, sans achat ni compte utilisateur ; reprise de la branche issue-29-https-proxy et de la PR #30 pour achever HTTPS, renouvellement et contrôles externes. Critère 6 ouvert.
 
 14.10.2026, cycle manager : #29 et PR #30 examinées ; proxy vérifié localement, blocage réseau amont probable. Intervention ou procédure hébergeur demandée au PDG ; aucun nouvel essai ACME ni lancement développeur avant clarification.
+
+14.10.2026, synthèse des phases achevées : stocks neufs à zéro publiés ; références natives, prompt et import photo sûr sur nightly.
+14.10.2026, synthèse infrastructure : formulaire/relais relus et simulés ; retrait ciblé sauvegardé avec restauration vérifiée ; Node isolé, horloge corrigée ; proxy local vérifié, HTTPS suspendu au réseau.
+14.10.2026, cycle manager : intervention Infomaniak confirmée ; reprise #29/PR #30 prescrite, HTTP externe avant ACME ; critère 6 ouvert. État condensé, retours du PDG conservés.

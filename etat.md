@@ -1,14 +1,11 @@
 # État actuel
 - Critères 1 à 5 satisfaits, avec 2 et 3 révisés ; critère 6 ouvert.
-- Stocks neufs à zéro publiés ; références, prompt et import photo sûr disponibles sur nightly.
-- Formulaire et relais relus ; simulations et audit favorables selon les jobs.
-- VPS nettoyé avec sauvegarde protégée et restauration vérifiée ; ressources incertaines conservées.
-- Service Node 24 isolé préparé, loopback ; arrêté/désactivé sans secret.
-- Horloge corrigée ; synchronisation mesurée après redémarrage de Chrony et compte rendu relu.
-- Publication du seul formulaire/relais autorisée, à isoler de l’import photo.
-- HTTPS, webhook et réception Discord réelle restent à vérifier.
-- Proxy HTTP vérifié localement ; HTTPS et renouvellement bloqués : TCP 80 inaccessible malgré UFW ouvert.
-- Attente du PDG : intervention ou procédure autorisée côté hébergeur pour vérifier filtrage/routage et ouvrir seulement TCP 80/443 si nécessaire.
+- Stocks neufs à zéro publiés ; références, prompt et import photo sûr sur nightly.
+- Formulaire/relais relus et audités en simulation ; publication isolée autorisée.
+- VPS nettoyé, sauvegarde protégée et restauration vérifiée ; horloge corrigée.
+- Node 24 isolé sur loopback ; relais arrêté/désactivé sans secret ; proxy HTTP vérifié localement.
+- Intervention réseau hébergeur confirmée ; HTTP externe à recontrôler avant HTTPS.
+- Restent HTTPS/renouvellement, secret protégé, publication isolée et réception Discord réelle.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -39,25 +36,26 @@
 - 2026-10-14 à 22:38 — Le PDG autorise l’arrêt et la suppression de MADFUT et Tradispo : services/unités systemd, code sous /opt, données sous /var/lib, configurations sous /etc et journaux applicatifs identifiés. Avant suppression : sauvegarde cohérente et restaurable des données, configurations, secrets, unités, code et permissions, hors dépôt en emplacement protégé ; restauration vérifiée. Préserver Ubuntu, SSH, comptes et clés ; aucune purge générale ni modification réseau. Cette autorisation seule ne couvre pas la publication des retours. Message transcrit : « oui tu peux les supprimer ».
 - 2026-10-14 à 22:39 — Le PDG autorise la publication du seul formulaire de retours et de son relais Discord sécurisé : secret serveur, quotas anti-abus, confirmations et erreurs compréhensibles conservés. Exclure l’import photo et toute fusion globale de nightly ; isoler et vérifier les changements publiés. Utiliser le VPS proposé si accès autorisé disponible ; configurer HTTPS et le secret par canal protégé. Vérifier réception Discord réelle, confirmations, erreurs et anti-abus avant de satisfaire le critère 6. Aucune suppression générale : présenter le nettoyage après inventaire, préserver Ubuntu et SSH. Messages transcrits : demande de configuration/VPS, proposition SSH et suppression, clé de l’ordinateur, lancement du manager, chemin public id_ed25519_madfut27.pub, « et oui je valide ce que tu m’avais demandé initialement ».
 - 2026-10-14 à 22:58 — Le PDG n’a pas de domaine ni d’accès DNS ; proposer un sous-domaine gratuit adapté au VPS avec contraintes et démarches. Si aucune solution ne convient, présenter achat et coût avant engagement. Correction de l’horloge indépendante. Messages transcrits : « j’ai pas de nom de domaine » et « mais pourquoi besoin d’https ? » (répété).
+- 2026-10-14 à 23:19 — Le PDG confirme « c’est fait » : filtrage Infomaniak vérifié et TCP entrant 80/443 ouvert si nécessaire, SSH et autres règles préservés. Reprendre #29 et la PR #30 existantes : contrôler HTTP externe avant HTTPS et renouvellement ; si toujours bloqué, rapporter les observations précises. Publication limitée au formulaire/relais sécurisé, sans import photo ni fusion globale de nightly. Critère 6 seulement après vérifications réelles, dont réception Discord.
 # Décisions structurantes
-- Dépôt original conservé ; nightly pour le travail, main pour la production avec approbation humaine. Isoler les seules fonctionnalités autorisées, sans fusion globale de nightly.
-- JavaScript natif, HTML/CSS ; Node 24 et Python 3. lancer.json : JSON MakeProject utilisant PORT, aligné sur le build et le serveur statique.
-- Sauvegardes compatibles ; champ absent, illisible ou ambigu inconnu. Identifiants natifs vérifiés uniquement, jamais déduits d’un portrait ambigu.
-- Import photo : fusion des champs observés, préservation des absents/nulls ; restauration complète distincte.
-- Relais Node 24 séparé de GitHub Pages ; POST /feedback, endpoint public configurable, secret serveur, une seule instance et quotas globaux conservés.
-- HTTPS gratuit retenu pour préparation : retours.179-237-102-19.sslip.io, DNS automatique sans compte ; dépendance au fournisseur, nom lié à l’IP et quotas ACME. Vérifier certificat et renouvellement avant usage ; aucun achat.
-- Comptes techniques ACME Let’s Encrypt production/staging autorisés pour HTTPS et son renouvellement, conditions techniques incluses ; aucun achat ni compte utilisateur. Clés protégées côté serveur, aucune adresse personnelle réutilisée sans accord.
+- Dépôt original ; nightly au travail, main pour le périmètre approuvé sans fusion globale.
+- JavaScript natif, HTML/CSS, Node 24, Python 3 ; lancer.json aligné sur build et PORT.
+- Sauvegardes compatibles ; inconnus absents/null ; unitId natifs vérifiés uniquement.
+- Import photo : fusion des observations préservant absents/nulls ; restauration complète distincte.
+- Relais Node 24 séparé de GitHub Pages : POST /feedback, endpoint configurable, secret serveur, instance unique et quotas globaux.
+- HTTPS gratuit : retours.179-237-102-19.sslip.io ; dépendance fournisseur/IP et quotas ACME ; aucun achat.
+- Comptes ACME production/staging et conditions autorisés ; clés protégées, aucune adresse personnelle sans accord.
 # Pièges et consignes
-- Référence du jeu distincte d’une box personnelle ; aucune consultation des pièces personnelles interdites. Utiliser les critères 2 et 3 révisés.
-- Distinguer observations, catalogue et inconnues ; compter les observations reçues, pas la collection fusionnée. Un import photo vide préserve la box.
-- Ne pas répéter ACME tant que la sonde HTTP-01 externe échoue ; limiter les ouvertures à TCP 80/443 et préserver SSH.
-- CORS ne suffit pas : quotas serveur et frontière proxy explicite, remplacement des en-têtes visiteurs, aucun accès public au port interne. Ne jamais publier webhook, clés ou archives.
-- Après échec, conserver branches et modifications ; contrôler l’identité Git locale autorisée. Identifier comme telles les consignes transcrites.
-- Préserver la sauvegarde protégée du retrait et les ressources incertaines ; procédure de restauration dans le dépôt. Horloge VPS décalée signalée ; ne pas s’y fier pour dater les interventions.
+- Référence native distincte d’une box personnelle ; pièces personnelles interdites, critères 2/3 révisés.
+- Distinguer observations/catalogue/inconnues ; compter les observations reçues ; import photo vide préserve la box.
+- Aucun nouvel ACME avant HTTP-01 externe réussi ; ouvertures TCP 80/443 seulement, SSH préservé.
+- CORS insuffisant : quotas serveur, remplacement des en-têtes visiteurs, port interne inaccessible ; aucun secret ni archive publié.
+- Conserver le travail après échec ; identité Git locale autorisée ; identifier les consignes transcrites.
+- Préserver sauvegarde protégée, restauration documentée et ressources incertaines ; anciennes dates VPS non fiables.
 # Dette connue
 - Échec fwupd-refresh signalé, hors périmètre ; laissé intact, sans impact applicatif établi.
 # Prochaines étapes
-- Obtenir une intervention ou procédure autorisée côté hébergeur pour lever le blocage réseau probable ; sa localisation exacte reste inconnue.
+- Recontrôler HTTP externe après intervention hébergeur ; rapporter les observations si échec.
 - Reprendre HTTPS après réussite de la sonde HTTP-01 externe ; valider renouvellement et proxy, SSH préservé et relais arrêté sans secret.
 - Faire injecter le webhook par terminal SSH privé avec saisie masquée ; jamais en discussion/GitHub.
 - Préparer et faire relire la publication isolée formulaire/relais, sans import photo ni fusion globale de nightly.
