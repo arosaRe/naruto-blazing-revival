@@ -1,5 +1,32 @@
 # Naruto Blazing Revival
 
+## Formulaire de retours
+
+La navigation propose « Envoyer un retour ». Seul le message saisi est envoyé,
+sans box, sauvegarde, cookie ni stockage local. Le relais confirme la réception
+uniquement par HTTP 200 avec `ok: true`. Le texte reste disponible après erreur ;
+aucune relance automatique n’est effectuée.
+
+Le build lit `FEEDBACK_ENDPOINT`, URL publique HTTPS du relais (par exemple
+`https://relay.example/feedback`), et génère `dist/feedback-config.js`.
+Sous PowerShell : `$env:FEEDBACK_ENDPOINT='https://relay.example/feedback'; npm.cmd run build`.
+Une URL invalide fait échouer le build. Sans variable, le formulaire explique
+l’indisponibilité et désactive l’envoi. `feedback-config.js` reste vide par défaut
+dans les sources ; ne configure jamais un webhook dans le frontend ou le build.
+Le relais doit autoriser l’origine du site ; voir [son contrat](relay/README.md).
+
+Vérification locale : `npm test`, `npm run build`, puis
+`node scripts/check-feedback-dist.mjs`. Pour les essais navigateur, installe
+Playwright **hors du dépôt**, avec Chromium (`playwright install chromium`), puis
+définis `PLAYWRIGHT_MODULE` sur le dossier absolu du module `playwright` contenant
+`index.mjs`. Exécute `node scripts/check-feedback-browser.mjs` après un build sans
+`FEEDBACK_ENDPOINT`. `PLAYWRIGHT_CHANNEL` est facultatif pour un navigateur installé.
+Le script sert le site sur 9101, ouvre des ports loopback éphémères pour le relais
+et Discord simulé, intercepte l’URL HTTPS fictive et ferme ses serveurs à la fin.
+Aucun secret réel ni déploiement : clavier, labels, statuts, mobile, validation,
+doubles envois, succès, erreurs et reprise manuelle sont vérifiés. Les captures
+`issue16-desktop.png` et `issue16-mobile.png` sont écrites dans le dossier temporaire.
+
 Site statique public : https://arosare.github.io/naruto-blazing-revival/
 
 GitHub Pages héberge gratuitement cette version du site. Choisis `GitHub Actions`

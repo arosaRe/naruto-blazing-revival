@@ -26,6 +26,13 @@ export function mountFeedback(doc, configuredEndpoint, fetchImpl = fetch) {
   send.disabled = !endpoint;
   doc.querySelector('#feedback-open').addEventListener('click', () => { dialog.showModal(); field.focus(); });
   doc.querySelector('#feedback-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('keydown', event => {
+    if (event.key !== 'Tab') return;
+    const controls = [...dialog.querySelectorAll('button:not(:disabled), textarea')];
+    const first = controls[0], last = controls.at(-1);
+    if (event.shiftKey && doc.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && doc.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
   field.addEventListener('input', () => {
     count.textContent = `${field.value.length} / 1 800`;
     field.removeAttribute('aria-invalid');
