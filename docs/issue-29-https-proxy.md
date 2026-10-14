@@ -1,142 +1,175 @@
-# Issue #29 — préparation HTTPS, décision ACME en attente
+﻿# Issue #29 — HTTP préparé, validation HTTPS bloquée par le réseau
 
-Contrôles du 14 octobre 2026 vers 21:02 UTC. **Issue incomplète : aucun
-proxy ni certificat déployé.** La consigne interdit toute création de compte ;
-Let’s Encrypt nécessite un compte technique ACME, y compris pour staging.
-Une clarification a été demandée avant cette création. Aucun achat, compte
-ACME, requête d’émission ou transmission Discord effectué.
+Observations du 14 octobre 2026, 21:02–21:13 UTC. **Issue incomplète ; PR #30
+reste en brouillon, sans demande de revue.** Autorisation reçue pour les seuls
+comptes techniques ACME production/staging, avec conditions techniques. Aucun
+achat, compte utilisateur, adresse personnelle, secret relais ou envoi Discord.
 
-## Observations et sauvegarde
+## Résultats obtenus et blocage
 
-Lecture des procédures #25, #27 et `relay/`. Connexions SSH exclusivement avec
-`C:\Users\antho\.ssh\id_ed25519_madfut27`, `IdentitiesOnly=yes`, `BatchMode=yes` ;
-aucune lecture, copie ou sortie du contenu de cette clé.
+- Nom `retours.179-237-102-19.sslip.io` : résolution A publique vers
+  `179.237.102.19` confirmée avec 1.1.1.1 (TTL 3600). Contrôle initial également
+  réalisé avec 8.8.8.8, Google DoH et le résolveur du VPS.
+- Ubuntu 26.04.1 LTS ; horloge `NTPSynchronized=yes` ; accès sortant ACME HTTPS
+  vérifié avec validation TLS. SSH exclusivement avec
+  `C:\Users\antho\.ssh\id_ed25519_madfut27`, `IdentitiesOnly=yes`, `BatchMode=yes`.
+  Aucun affichage ou copie du contenu de cette clé.
+- Installation APT ciblée `--no-install-recommends` : dix nouveaux paquets,
+  aucune mise à jour/suppression, aucun autoremove. Nginx installé
+  `1.28.3-2ubuntu1.11`, Certbot `4.0.0-4`. La simulation initiale sans cette
+  option annonçait onze paquets ; python3-icu n'a finalement pas été installé.
+- Nginx masqué pendant l'installation pour empêcher la page par défaut de
+  démarrer ; configuration initiale archivée hors dépôt avant adaptation.
+  Lien `sites-enabled/default` retiré. Nginx ensuite enabled/active : seuls
+  les blocs HTTP du candidat sont déployés dans `/etc/nginx/conf.d/feedback.conf`.
+  `nginx -t` et reload réussis. HTTP-01 servi depuis `/var/lib/feedback-acme` ;
+  nom exact redirigé vers HTTPS, hôtes inconnus 404. **HTTPS pas encore servi**.
+- UFW reste actif deny incoming/allow outgoing, SSH 22 IPv4/IPv6 préservé.
+  Seuls TCP 80/443 IPv4 ajoutés ; aucune ouverture 9101 ou IPv6 supplémentaire.
+  Nginx écoute publiquement sur 80 ; aucune écoute publique 443/9101.
+- HTTP répond localement 308 avec le bon Host. Depuis Windows externe,
+  HTTP par nom (15 s), puis par IP sans proxy (5 s/4 s) : timeout, HTTP 000.
+  HTTPS avec validation TLS active et 9101 : timeout de connexion (5 s).
+  Aucun certificat n'a donc pu être validé depuis l'extérieur.
+- Une seule demande staging, compte enregistré sans email, webroot HTTP-01 :
+  échec ACME `connection`, `Timeout during connect (likely firewall problem)`
+  vers `179.237.102.19:80`. Pas d'erreur quota/Retry-After observée ; pas de
+  seconde demande staging, aucune demande ni compte production.
+  La tentative staging a été lancée alors que la sonde externe précédente
+  avait expiré : ne pas la répéter avant résolution du blocage et réussite
+  d'une nouvelle sonde HTTP-01 externe.
+- Compteurs UFW ACCEPT 80/443 à zéro après essais ; règles nftables locales
+  inspectées. Capture temporaire bornée à 20 s, IPv4 destination VPS 80/443,
+  pendant deux nouvelles sondes externes : zéro paquet capturé, zéro perte
+  noyau (trois paquets signalés par le filtre, non capturés). Cela pointe vers
+  un filtrage/routage en amont ; ne prouve pas sa localisation exacte ni son
+  gestionnaire. Capture terminée, aucun pcap conservé. Accès/procédure du
+  pare-feu de l'hébergeur demandé pour vérifier uniquement TCP 80/443.
 
-- Résolveurs publics 1.1.1.1 et 8.8.8.8 : A = `179.237.102.19`, TTL 3600.
-  Google DNS-over-HTTPS confirme Status 0, même adresse, AD=false.
-  Le résolveur du VPS confirme également cette adresse.
-- Ubuntu 26.04.1 LTS ; `NTPSynchronized=yes`. ACME production accessible
-  depuis le VPS en HTTPS avec validation TLS, HTTP 200.
-- Nginx et Certbot absents. Candidats APT observés : Nginx
-  `1.28.3-2ubuntu1.11`, Certbot `4.0.0-4` ; **pas des versions installées**.
-- UFW actif : deny incoming, allow outgoing ; seules autorisations entrantes
-  TCP 22 IPv4/IPv6. Écoutes publiques SSH 22 ; DNS local uniquement.
-- Relais inactive/disabled, aucun `secret.env`, aucune écoute 9101.
-  `sshd -t` et nouvelles connexions SSH réussis.
-- Depuis Windows, curl avec validation TLS active vers HTTPS : expiration
-  connexion après 5 s, HTTP 000. Même expiration TCP vers 9101.
-  Cela démontre l’inaccessibilité depuis ce client, pas tous les réseaux.
+## Frontière proxy : tests locaux, portée explicite
 
-`relay/ops/snapshot-proxy-29.sh` exécuté avant toute modification serveur :
-`/root/feedback-proxy-29` root:root 0700, fichiers 0600. Archive des
-configurations UFW, SSH, netplan, Chrony, relais et unité ; absence initiale de
-Nginx/Let’s Encrypt consignée. Inventaires paquets/écoutes/UFW et empreintes
-des ressources conservées, sauvegardes #23/#25/#27, runtimes et comptes restent
-uniquement sur le serveur. Aucun secret ou archive ajouté au dépôt.
-Le script refuse d’écraser une sauvegarde existante.
+`relay/ops/check-proxy-29.py` exécuté sur le VPS, au premier plan. Il extrait
+les zones et le bloc TLS du candidat, retire seulement les directives TLS et
+remplace l'écoute par HTTP **127.0.0.1:443** pour une instance Nginx temporaire.
+Ce contrôle ne certifie ni TLS ni les réponses publiques. Aucune modification
+du relais ; aucun secret ; aucune transmission sortante dans le récepteur.
 
-## Configuration préparée, non activée
+Récepteur Python sur **127.0.0.1:9101**, limité à une requête et à 10 s
+ d'attente, fermé dans le nettoyage ; instance Nginx temporaire terminée aussi.
+Résultats :
 
-`relay/ops/retours.nginx.conf` est destiné au contexte `http` d’une installation
-Nginx dédiée, sans CDN, sans `real_ip_header` ni `set_real_ip_from`. Aucun site
-public existant ne doit être remplacé. Seul `/feedback` atteint
-`127.0.0.1:9101`; autres chemins HTTPS 404. HTTP sert uniquement HTTP-01 et
-redirige le nom exact ; hôte inconnu 404.
+- `X-Real-IP: 192.0.2.1` remplacé par `127.0.0.1`, adresse de la connexion.
+- Forwarded, X-Forwarded-For, Client-IP, True-Client-IP, CF-Connecting-IP,
+  X-Arbitrary-Visitor-IP, Cookie et Authorization absents du récepteur.
+  Liste blanche vérifiée, Origin/Content-Type/Content-Encoding et les deux
+  en-têtes de prévol conservés. Aucun `real_ip_header`/`set_real_ip_from`.
+- Récepteur arrêté : POST retourne exactement 503 JSON
+  `{"error":"relay_unavailable"}`, aucune confirmation de réception.
+- Autre chemin et mauvais Host : 404 ; corps de 8193 octets : 413 ; rafale
+  de six requêtes après les contrôles : présence de 429.
+- Nettoyage réussi ; pas de listener 9101/443 après test.
 
-Une liste blanche d’en-têtes (`proxy_pass_request_headers off`) retire tous
-les champs d’adresse visiteurs, y compris Forwarded, X-Forwarded-For,
-Client-IP et variantes arbitraires. X-Real-IP est recréé depuis `$remote_addr`.
-Origin, Content-Type, Content-Encoding et prévol CORS sont conservés pour
-permettre les refus du relais. Pas de retry proxy. Backend absent : 503 JSON
-`relay_unavailable`, jamais 200/confirmation de réception.
+Limites du candidat : corps 8 KiB, grands en-têtes 2 × 4 KiB ; délais
+header/body/send 5 s, backend connect 2 s/read 12 s ; keepalive 5 s/20 requêtes.
+6 requêtes/min/IP burst 3 ; 60/min global burst 10 ; simultanéité 4/IP et
+32 globale. OPTIONS et requêtes invalides comptent ; aucun retry upstream.
+Pas de journaux de requêtes ; diagnostics HTTP/TLS vers `/dev/null` pour
+éviter la conservation d'URI/en-têtes visiteurs.
 
-Corps 8 KiB ; en-têtes 2 × 4 KiB ; délais en-têtes/corps/envoi 5 s,
-connexion backend 2 s, lecture backend 12 s, keepalive 5 s/20 requêtes.
-Quotas Nginx : 6 requêtes/min/IP burst 3, 60/min global burst 10,
-4 requêtes simultanées/IP et 32 globales ; dépassements 429.
-Ils incluent OPTIONS et tentatives invalides. Quotas applicatifs conservés
-3 transmissions/min/IP, 30 globales, concurrence 4. NAT pénalisés,
-rotation IPv6 possible ; limites proxy par intervalles d’inactivité, pas
-deadline absolue du corps. Les connexions aux en-têtes incomplets ne sont
-pas comptées par limit_conn ; délais et capacité workers restent nécessaires.
-Pas de journaux de requêtes ; diagnostics HTTPS supprimés pour éviter
-URI/en-têtes utilisateur. Superviser codes/états et expiration séparément.
+**Non vérifiés dynamiquement** : quotas globaux multi-IP, simultanéité et
+expiration des délais ; leurs directives sont présentes mais les contrôles
+externes erreurs/quotas sont bloqués. Les délais Nginx sont par inactivité,
+pas une deadline absolue ; les en-têtes incomplets ne comptent pas dans
+limit_conn. NAT pénalisés et rotation IPv6 possible. Les limites applicatives
+restent 3 transmissions/min/IP, 30 globales, concurrence 4, sans démarrage ici.
 
-## Suite après clarification, pas exécutée
+## Renouvellement : préparé, non activé et non validé
 
-1. Contrôler les empreintes, les ports libres, DNS A/AAAA/CAA et horloge.
-   Prévisualiser les dépendances APT et préserver le runtime partagé ; ne pas
-   mettre à jour globalement le système. Installer uniquement Nginx/Certbot
-   nécessaires sans exposer la page par défaut. Sauvegarder leur configuration
-   initiale sous le même dossier protégé avant adaptation.
-2. Activer d’abord uniquement les blocs HTTP sans références aux certificats
-   inexistants ; valider `nginx -t`. Autoriser UFW TCP 80/443 IPv4 seulement
-   puisque le nom cible une IPv4 ; préserver 22 et deny incoming (9101).
-   Vérifier un jeton HTTP-01 depuis une autre machine puis le supprimer.
-3. Après autorisation des comptes techniques, demander une seule émission
-   staging dans des répertoires protégés séparés, puis une seule production
-   via `certbot certonly --webroot -w /var/lib/feedback-acme
-   -d retours.179-237-102-19.sslip.io`. Ne jamais servir le certificat staging.
-   Accepter les conditions ACME uniquement dans le périmètre autorisé.
-   En cas de quota/refus, consigner code et Retry-After, arrêter les essais ;
-   ne pas changer de domaine/CA pour contourner.
-4. Installer le bloc TLS et valider avant reload. Configurer le timer Certbot
-   et un deploy-hook root qui exécute `nginx -t && systemctl reload nginx`.
-   Exécuter une seule fois `certbot renew --dry-run --run-deploy-hooks`
-   ciblé sur le certificat ; vérifier timer enabled/active, prochaine échéance
-   et hook. Ce test n’est actuellement **pas réalisé**.
-5. Depuis l’extérieur sans `-k` : certificat SAN/chaîne/dates, HTTPS, POST
-   backend absent => 503, autres chemins => 404, corps >8192 =>413,
-   dépassement quota =>429, 9101 inaccessible. Tester la liste blanche et
-   l’adresse avec un récepteur factice loopback borné sans secret/Discord,
-   jamais en démarrant le relais ; arrêter ce récepteur après test.
-6. `sha256sum --quiet -c /root/feedback-proxy-29/preserved.sha256`, nouvelle
-   connexion SSH, `sshd -t`, états relais, absence secret/listener et bilan UFW.
-   Consigner les versions réellement installées et les résultats.
+Compte/clé staging uniquement sous `/root/feedback-acme-staging`, accès
+root exclusivement (permissions groupe/autres retirées récursivement).
+Logs ACME privés sur le serveur ; aucun compte/clé/archive ajouté au dépôt.
+Certbot général `certbot.timer` désactivé et arrêté : aucun certificat
+production à renouveler, ne pas annoncer un renouvellement opérationnel.
 
-Contrôle d’expiration une fois un certificat obtenu :
-`openssl x509 -in /etc/letsencrypt/live/retours.179-237-102-19.sslip.io/fullchain.pem
--noout -dates -checkend 2592000` (alerte si moins de 30 jours), plus contrôle
-externe TLS. Ne jamais afficher la clé privée ni l’environnement du relais.
+Candidats du dépôt : `feedback-certificate-renew.service`/`.timer`, ciblés
+sur ce seul certificat, deux contrôles/jour avec délai aléatoire ; hook
+`reload-feedback-certificate.sh` limité à sa lineage, nginx -t puis reload.
+Ils **ne sont pas installés/activés**, le dry-run n'a pas été exécuté.
 
-## Limites du DNS gratuit et références
+Après résolution réseau :
 
-Le nom dépend de l’opérateur sslip.io, de sa disponibilité et de ses politiques ;
-il encode une IP, sans propriété ni accès à la zone. Changement d’IP exige
-changement de nom et certificat ; certains résolveurs peuvent filtrer ces noms.
-Les quotas de certificats par domaine enregistré sont partagés avec d’autres
-utilisateurs ; ne pas supposer une capacité garantie. Pas de wildcard ni
-validation DNS-01 contrôlée ici.
+1. Contrôler DNS A/AAAA/CAA et HTTP-01 depuis un client externe, supprimer le
+   jeton de sonde ensuite. Pas de nouvelle demande ACME avant cette réussite.
+2. Faire une seule validation staging avec les mêmes répertoires/compte,
+   puis une seule émission production webroot, `--non-interactive --agree-tos
+   --register-unsafely-without-email`, même nom. Ne jamais servir staging.
+   En cas de quota respecter Retry-After, consigner son échéance et arrêter ;
+   ne pas changer de nom, compte ou CA pour contourner.
+3. Installer le candidat TLS seulement après émission, nginx -t puis reload.
+   Protéger les répertoires ACME et clés production root ; installer le hook
+   root:root 0700 dans `/etc/letsencrypt/renewal-hooks/deploy/`, les unités
+   root:root 0644 sous `/etc/systemd/system/`, daemon-reload puis enable --now
+   du timer dédié. Garder le timer général désactivé.
+4. Exécuter une seule fois `certbot renew --cert-name
+   retours.179-237-102-19.sslip.io --dry-run --run-deploy-hooks`, constater
+   succès et reload, timer enabled/active et prochaine échéance. Le dry-run
+   utilise staging ; ne pas modifier le serveur ACME production de la lineage.
+5. Vérifier extérieurement sans -k SAN/chaîne/dates, 503/404/413/429, adresse
+   client réelle et suppression des en-têtes avec le récepteur borné puis
+   arrêté ; compléter quotas/concurrence/délais et inaccessibilité 9101.
+6. Vérifier à nouveau SSH, ressources/sauvegardes, relais, absence secret et
+   bilan des seules ouvertures nécessaires. Alors seulement demander la revue.
 
-Sources : [opérateur nip.io/sslip.io](https://nip.io/),
-[quotas Let’s Encrypt](https://letsencrypt.org/docs/rate-limits/),
-[Certbot webroot et renouvellement](https://eff-certbot.readthedocs.io/en/stable/using.html),
-[en-têtes proxy Nginx](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_request_headers),
+Contrôle expiration : `openssl x509 -in
+/etc/letsencrypt/live/retours.179-237-102-19.sslip.io/fullchain.pem -noout
+-dates -checkend 2592000` (alerte sous 30 jours), plus validation TLS externe.
+Ne jamais afficher privkey.pem ni l'environnement du relais.
+
+## Préservation et retour arrière
+
+Sauvegarde initiale `/root/feedback-proxy-29` conservée, root:root 0700,
+archives privées 0600 ; `snapshot-proxy-29.sh` refuse de l'écraser.
+`config.before.tar`, inventaires UFW/paquets/listeners et preserved.sha256
+préexistants inchangés. Ajout de `nginx.installed.tar` avant adaptation,
+script de contrôle et candidat privés. Aucun effacement de sauvegardes.
+
+`sha256sum --quiet -c /root/feedback-proxy-29/preserved.sha256` réussi avant
+intervention et après tests : SSH/netplan/Chrony, ressources et sauvegardes
+#23/#25/#27, runtimes partagés et fichiers de comptes conservés. Nouvelles
+connexions SSH et `sshd -t` réussis ; relais inactive/disabled, sans
+`/etc/feedback-relay/secret.env` ni écoute 9101. Aucun changement du site,
+de main ou de lancer.json.
+
+Retour arrière de l'état actuel (si décidé) : sauvegarder l'état courant dans
+un nouvel emplacement root protégé ; `systemctl disable --now nginx` ; retirer
+uniquement les règles ajoutées `ufw delete allow proto tcp to 0.0.0.0/0 port 80`
+et idem 443. Ne pas toucher à OpenSSH ni restaurer toute l'archive sur `/`.
+Conserver compte/clé staging protégés jusqu'à décision explicite de suppression.
+Conserver les paquets ciblés pour éviter toute suppression de dépendance
+partagée ; pas d'autoremove. La config Nginx d'origine est dans
+nginx.installed.tar : ne pas réactiver sa page par défaut publiquement.
+Si TLS et timer sont activés plus tard, désactiver d'abord le timer dédié et
+retirer seulement son hook/unités après inventaire. Tester SSH et états après
+chaque retour arrière ; le relais reste arrêté/désactivé sans secret.
+
+## Quatre critères
+
+1. **Partiel** : DNS confirmé ; certificat/HTTPS externe impossibles actuellement.
+2. **Non satisfait** : comptes et unités préparés, aucun certificat production,
+   automatisme actif ou dry-run réussi.
+3. **Partiel** : frontière et erreurs/quota IP testés localement ; tests externes
+   impossibles ; 9101 inaccessible du client externe et absent des écoutes.
+4. **Satisfait pour les interventions réalisées** : SSH, empreintes, sauvegardes,
+   états relais et périmètre réseau contrôlés ; bilan final TLS encore à refaire.
+
+Dépendance sslip.io : pas de propriété de zone/DNS-01, disponibilité et
+politiques du fournisseur, filtrage par certains résolveurs, changement d'IP
+nécessitant nouveau nom/certificat. Quotas ACME partagés, capacité non garantie.
+Références relues : [quotas et Retry-After Let’s Encrypt](https://letsencrypt.org/docs/rate-limits/),
+[Certbot webroot/dry-run/hooks](https://eff-certbot.readthedocs.io/en/stable/using.html),
+[opérateur sslip.io](https://nip.io/),
+[liste blanche Nginx](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_request_headers),
 [quotas Nginx](https://nginx.org/en/docs/http/ngx_http_limit_req_module.html).
 
-## Retour arrière
-
-À ce stade seul le dossier de sauvegarde a été ajouté au serveur : aucun
-changement de configuration à annuler. Conserver cette sauvegarde.
-Si le déploiement est ensuite autorisé : sauvegarder l’état courant, arrêter
-le proxy dédié, désactiver son timer de renouvellement dédié, retirer seulement
-ses règles UFW 80/443 nouvellement ajoutées, restaurer ses fichiers sauvegardés
-après inventaire. Ne pas restaurer aveuglément toute l’archive sur `/`, ni
-retirer SSH, runtime ou dépendances partagées. Tester Nginx et SSH avant reload.
-Conserver clés/certificats protégés jusqu’à décision explicite de suppression.
-Le relais reste stopped/disabled sans secret durant tout retour arrière.
-
-## Quatre critères d’acceptation
-
-1. **Partiel** : DNS public correct ; certificat et HTTPS externe absents.
-2. **Non satisfait** : aucun certificat, timer ni dry-run réalisé.
-3. **Partiel** : frontière et limites préparées seulement ; 9101 inaccessible
-   depuis le client externe, mais proxy/erreur backend non testés en production.
-4. **Partiel** : SSH, relais sans secret et sauvegarde contrôlés ; aucune
-   configuration publique modifiée. Vérification finale des empreintes réussie
-   (`sha256sum --quiet -c`), nouvelle connexion SSH et `sshd -t` réussis,
-   relais inactive/disabled sans secret ni listener 9101. Bilan du déploiement
-   encore absent. Site public, main et lancer.json inchangés.
-
-Validation locale : `npm.cmd test` — 34 tests réussis. La configuration Nginx
-préparée n’a pas été validée par `nginx -t` : binaire absent du VPS.
+Validation locale du dépôt : npm.cmd test, 34 tests réussis. Le contrôle Python
+Nginx est distinct, exécuté uniquement sur le VPS avec le binaire installé.
