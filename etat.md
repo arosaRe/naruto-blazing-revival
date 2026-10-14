@@ -1,12 +1,13 @@
 # État actuel
 - Critères 1 à 5 satisfaits, avec 2 et 3 révisés ; critère 6 ouvert.
 - Stocks neufs à zéro publiés ; références, prompt et import photo sûr disponibles sur nightly.
-- Formulaire et relais relus ; essais simulés et contrôle sécurité favorables selon les jobs.
-- VPS nettoyé après sauvegarde protégée et restauration isolée vérifiée ; ressources incertaines conservées.
-- Prochaine tâche : service interne Node 24, sans exposition publique ni webhook réel.
-- Publication du seul formulaire/relais autorisée, à isoler de l’import photo ; aucun déploiement public dans ce cycle.
-- Webhook indisponible dans cette session, HTTPS et endpoint non configurés, réception réelle non vérifiée.
-- Aucun arbitrage demandé au PDG pour préparer le service interne.
+- Formulaire et relais relus ; simulations et contrôle sécurité favorables selon les jobs.
+- VPS nettoyé avec sauvegarde protégée et restauration vérifiée ; ressources incertaines conservées.
+- Service interne Node 24 isolé préparé et relu, compte dédié, loopback ; arrêté/désactivé sans secret.
+- Prochaine tâche : rétablir la synchronisation de l’horloge avant TLS.
+- Publication du seul formulaire/relais autorisée, à isoler de l’import photo.
+- HTTPS et endpoint non configurés, webhook absent, réception réelle non vérifiée.
+- Attendu du PDG : nom public du relais et possibilité de gérer son DNS.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -51,8 +52,8 @@
 # Dette connue
 - Échec fwupd-refresh signalé, hors périmètre ; laissé intact, sans impact applicatif établi.
 # Prochaines étapes
-- Préparer le service interne Node 24 sur le VPS, version identifiable, compte dédié, configuration protégée et retour arrière ; sans réseau public ni secret réel.
-- Puis configurer HTTPS et URL publique, vérifier l’horloge avant TLS ; préserver SSH. Dernier inventaire : Node 22 partagé, pas de Nginx/Docker, UFW limité à SSH.
-- Fournir un canal serveur protégé pour le webhook absent ; ne jamais demander sa valeur dans GitHub ou une discussion publique.
-- Préparer et faire relire le périmètre de publication isolé formulaire/relais avant main ; exclure import photo et fusion globale de nightly.
-- Vérifier sur le site publié réception Discord réelle, confirmation, erreurs, quotas et frontière réseau avant de satisfaire le critère 6 ; les simulations seules ne suffisent pas.
+- Rétablir et vérifier durablement la synchronisation de l’horloge, préserver SSH et relais arrêté.
+- Choisir avec le PDG le nom public et l’accès DNS ; préparer HTTPS, proxy et contrôles externes.
+- Faire injecter le webhook par terminal SSH privé avec la saisie masquée existante ; jamais en discussion/GitHub.
+- Préparer et faire relire la publication isolée formulaire/relais ; exclure import photo et fusion globale de nightly.
+- Vérifier réception Discord réelle, confirmation, erreurs, quotas et frontière réseau sur le site publié ; simulations insuffisantes.
