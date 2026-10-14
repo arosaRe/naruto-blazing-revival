@@ -81,3 +81,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 15.10.2026, synthèse des phases achevées : publication isolée des stocks puis du formulaire ; inventaire/nettoyage autorisé du VPS, relais HTTPS sécurisé et réception Discord confirmée.
 15.10.2026, synthèse des phases achevées : candidate HTML préparée et relue ; attente d’autorisation levée, absence de mention sur le test non vérifiée.
 15.10.2026, cycle manager : #39 créée pour publier exclusivement la candidate HTML autorisée ; préférence notifications consignée, aucun nouveau test Discord ; critère 6 ouvert. État condensé sans retrait des retours du PDG.
+
+15.10.2026, cycle manager : #39 fermée après validation de #40 ; Release 33 publiée sur 87ff642 et preuves publiques relues. Critère 6 ouvert : décision demandée sur l’acceptation de la limite de vérification des mentions, sans nouvel envoi Discord.

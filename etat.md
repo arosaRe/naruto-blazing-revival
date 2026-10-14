@@ -1,7 +1,7 @@
 # État actuel
 - Critères 1–5 satisfaits (2/3 révisés) ; 6 ouvert : mention non vérifiée.
 - Stocks/formulaire publiés ; import/prompt sur nightly. Réception Discord confirmée.
-- Candidate HTML relue, publication autorisée ; relais actif, sans démarrage au boot.
+- Balises HTML autorisées publiées et vérifiées ; relais actif, sans démarrage au boot.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -49,4 +49,5 @@
 # Dette connue
 - fwupd-refresh en échec, hors périmètre.
 # Prochaines étapes
-- Publier/vérifier la candidate HTML seule ; critère 6 ouvert ; aucun test Discord.
+- Attendre la décision du PDG sur la clôture du critère 6 avec absence de mention explicitement non vérifiée ; aucun nouvel envoi Discord.
+- Après décision, faire contrôler la clôture par un audit indépendant ; aucune nouvelle publication autorisée.
