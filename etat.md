@@ -1,7 +1,7 @@
 ﻿# État actuel
 - Reprise du dépôt original sur `nightly`, à jour avec le dépôt GitHub.
-- Phase : cadrage des stocks par défaut et de la reprise sûre d’import.
-- Le code initialise la box personnelle avec des stocks inconnus ; la valeur souhaitée est zéro.
+- Phase : implémentation de l’initialisation des stocks à zéro (#1).
+- Issue #1 confiée : initialiser à zéro les stocks pris en charge pour une box neuve, sans altérer imports et sauvegardes existants.
 - L’import photo remplace l’état entier après validation ; le cas d’un tableau `characters` vide doit être protégé.
 - Le catalogue contient les identifiants natifs et la référence d’import est générée au build.
 - `docs/contexte/`, les sept captures et `ma-box-blazing.json` ne sont pas présents dans ce clone.
@@ -33,8 +33,8 @@
 - Le contrôle visuel de l’import attend les sources manquantes.
 
 # Prochaines étapes
-- Faire valider le plan et obtenir le fichier « Référence pour ChatGPT », les sept captures et le JSON partiel, ou leur emplacement.
-- Traiter d’abord l’initialisation des stocks à zéro avec compatibilité des sauvegardes.
+- Attendre la réponse déjà sollicitée : validation du plan et accès au fichier « Référence pour ChatGPT », aux sept captures et au JSON partiel.
+- Relire le résultat de l’issue #1 ; poursuivre ensuite la protection des imports partiels.
 - Protéger l’import des données existantes et ajouter les tests ciblés.
 - Vérifier les sources disponibles, clarifier les ressources et produire/importer le JSON seulement avec les identifiants étayés.
 - Exécuter build et validation dans le site ; aucune production avant accord humain.
