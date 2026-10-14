@@ -1,5 +1,7 @@
 # Issue #3 — Sources accessibles pour l’import de la box
 
+Les [six critères de clôture actuels](criteres-cloture.md) consignent les remplacements de 2 et 3 à 17:33, l’approbation limitée de 17:51 et son périmètre Git, ainsi que le nouveau critère Discord de 17:56, toujours ouvert. Les transcriptions proviennent des consignes fournies au cycle manager ; aucun lien original de discussion n’est disponible.
+
 État des lieux initial effectué le 14 octobre 2026 dans le clone de travail `nightly` et dans la session accessible à l’agent. Les constats ci-dessous sont conservés comme historique de cette vérification, pas comme une nouvelle consultation ni comme des conditions de clôture actuelles.
 
 Le périmètre actuel est celui décidé par le PDG le 14 octobre 2026 et précisé dans l’issue #12 : références natives et limites documentées (critère 2), prompt réutilisable et import sûr (critère 3). Cette mise à jour est documentaire seulement : aucune demande ni consultation de fichiers personnels, aucune modification fonctionnelle.
