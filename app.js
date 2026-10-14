@@ -317,7 +317,7 @@ function renderNeeds(n,p){if(!canUseResourcePlan(n))return renderFiche(n,p);cons
 function syncArosa(){notify('La version publique utilise ta box personnelle.');}
 function exportBackup(){const blob=new Blob([JSON.stringify(backup(state),null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`${isPersonalAccount()?'blazing-collection':'arosa-collection'}-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Sauvegarde JSON exportée.');}
 function restore(text){
-  let next,raw,photo;try{raw=JSON.parse(text);photo=raw?.format==='naruto-blazing-box';next=photo?importPhotoBox(raw,catalogue):validateBackup(raw,catalogue,profile);next.training.mixedRamen=true;}catch(error){
+  let next,raw,photo;try{raw=JSON.parse(text);photo=raw?.format==='naruto-blazing-box';next=photo?importPhotoBox(raw,catalogue,state):validateBackup(raw,catalogue,profile);next.training.mixedRamen=true;}catch(error){
     importFeedback={error:true,message:(error.message||'JSON invalide.')+' Ta box actuelle est conservée.'};
     const status=$('#box-import-status');if(status){status.innerHTML=`<p>${esc(importFeedback.message)}</p>`;status.classList.add('error');status.setAttribute('role','alert');status.focus();}notify(importFeedback.message);return false;
   }
