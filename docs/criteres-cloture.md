@@ -24,6 +24,22 @@ Transcription fidèle fournie dans l’issue #17, provenance : consignes du PDG 
 
 Les trois manques personnels repris par l’audit sont **abandonnés, jamais déclarés réalisés** : obtenir les sept captures et `ma-box-blazing.json` ; vérifier personnages, quantités et monnaie du compte ; produire puis importer un JSON personnel. Ils ne conditionnent plus la clôture. Les constats historiques du rapport de sources restent non vérifiés ; la monnaie premium et les ressources ambiguës restent en suspens. Aucune consultation personnelle n’est effectuée pour cette documentation.
 
+## Réconciliation séparée des trois manques de #119 — #58
+
+Provenance commune : décision du PDG du **14 octobre 2026 à 17:33**, transcrite dans [#17](https://github.com/arosaRe/naruto-blazing-revival/issues/17) et reproduite ci-dessus, sans lien original de discussion. L’audit manager « #119 » est rapporté par [#58](https://github.com/arosaRe/naruto-blazing-revival/issues/58) et `journal.md` ; aucune issue ou PR de ce numéro n’est accessible dans ce dépôt. Il ne rétablit pas les exigences abandonnées.
+
+| Manque personnel | Décision et provenance | Inconnues maintenues | Livrable réutilisable de remplacement |
+| --- | --- | --- | --- |
+| Obtenir les sept captures et le JSON personnel | **Abandon approuvé**, décision de 17:33 transcrite dans #17 ; jamais satisfait ni à réaliser. Aucune pièce demandée, recherchée ou consultée pour #58. | Contenu et couverture des pièces inconnus ; constats d’absence du rapport initial seulement historiques. | Critère 2 : références natives accessibles et limites documentées. Critère 3 : prompt réutilisable avec références et repli si elles sont inaccessibles à l’outil. |
+| Vérifier personnages, 36 stocks, ryō et premium | **Abandon approuvé**, même décision de 17:33 ; aucune vérification personnelle revendiquée ou attendue. | Identités, progressions et quantités non vérifiées ; « 36 » et « 59 700 950 ryō » sont des annonces non validées. Premium non établi ; `tokens` ne le représente pas ; portraits et ressources ambigus exclus. | Critère 2 : identifiants issus des références sans invention, limites natives explicites. Critère 3 : inconnues null/absentes et exclusions en notes. |
+| Produire puis importer le JSON personnel | **Abandon approuvé**, même décision de 17:33 ; aucun JSON personnel produit ou importé, aucune tâche personnelle restante. | Aucune couverture, compatibilité ou restauration du compte personnel prouvée. | Critère 3 : prompt copiable/téléchargeable demandant un JSON photo compatible et téléchargeable, repli UTF-8, sauvegarde préalable, fusion et contrôle après import ; vérification exclusivement synthétique. |
+
+Le [rapport #58](issue-58-reconciliation.md) attribue les contrôles des critères 2/3 et leurs limites. Ils ne prouvent aucune possession personnelle et ne prononcent aucune clôture globale.
+
+### Grille actuelle — réserve CORS pour le critère 6
+
+La réception Discord historique et l’acceptation humaine avec réserve restent consignées. La disponibilité MakeProject est toutefois **bloquée** par le refus CORS distant relevé par #119/#57, malgré la correction préparée et fusionnée sur `nightly` par [#59](https://github.com/arosaRe/naruto-blazing-revival/pull/59). La configuration et l’activation distantes ne sont pas exécutées. Ce blocage actuel est distinct des mentions non vérifiées et des confirmations simulées ; aucune clôture globale. Voir les [preuves #58](issue-58-reconciliation.md) et la [procédure #57](issue-57-makeproject-cors.md).
+
 ## Décision du 14.10.2026 à 17:51 — approbation limitée
 
 Transcription fidèle fournie dans l’issue #17, même provenance et même absence de lien original :

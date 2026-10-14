@@ -1,6 +1,6 @@
 # Issue #3 — Sources accessibles pour l’import de la box
 
-Les [six critères de clôture actuels](criteres-cloture.md) consignent les remplacements de 2 et 3 à 17:33, l’approbation limitée de 17:51 et son périmètre Git, ainsi que le critère Discord de 17:56, clos par décision humaine avec réserve le 15.10 à 00:47 : réception confirmée à 00:26, absence de notification de mention non vérifiée. Le défaut du lancement standard relevé par #96 reste ouvert dans #42 ; la clôture globale reste suspendue. Les transcriptions proviennent des consignes fournies au cycle manager ; aucun lien original de discussion n’est disponible.
+Les [sept critères de clôture actuels](criteres-cloture.md) consignent les remplacements de 2 et 3 à 17:33, l’approbation limitée de 17:51 et son périmètre Git, ainsi que le critère Discord de 17:56, clos par décision humaine avec réserve le 15.10 à 00:47 : réception confirmée à 00:26, absence de notification de mention non vérifiée. Le défaut de configuration du lancement #42 a été corrigé par #44 ; le CORS distant relevé par #119/#57 reste bloqué malgré la correction préparée par #59. La clôture globale reste suspendue. Les transcriptions proviennent des consignes fournies au cycle manager ; aucun lien original de discussion n’est disponible.
 
 État des lieux initial effectué le 14 octobre 2026 dans le clone de travail `nightly` et dans la session accessible à l’agent. Les constats ci-dessous sont conservés comme historique de cette vérification, pas comme une nouvelle consultation ni comme des conditions de clôture actuelles.
 
@@ -88,3 +88,9 @@ Cette procédure documente le parcours disponible ; elle n’est pas exécutée 
 5. Distinguer ce relevé photo d’une sauvegarde complète exportée par le site : restaurer cette dernière remplace l’état personnel par celui du fichier. Conserver l’export préalable pour pouvoir revenir à l’état antérieur.
 
 La clôture porte sur ces critères révisés et ces livrables réutilisables, avec un build réussi, sans validation des données personnelles ni changement fonctionnel.
+
+## Réconciliation et contrôle #58
+
+Les [trois abandons séparés](criteres-cloture.md#réconciliation-séparée-des-trois-manques-de-119--58) donnent pour chaque manque la décision de 17:33, sa provenance, les inconnues maintenues et le remplacement réutilisable. Aucun manque personnel n’est satisfait ni à réaliser. Les constats initiaux restent historiques ; aucune nouvelle recherche ou consultation personnelle.
+
+Le [rapport #58](issue-58-reconciliation.md) attribue les GET locaux des références, la copie automatique/manuelle et le téléchargement du même prompt, ainsi que la fusion exclusivement synthétique. Il distingue ces preuves du refus CORS distant actuel, de la réception humaine historique et des mentions non vérifiées. Aucun JSON personnel, POST Discord, déploiement ou clôture globale.
