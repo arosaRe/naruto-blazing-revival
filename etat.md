@@ -1,9 +1,9 @@
 # État actuel
-- Phase : socle général livré sur nightly ; aucune issue ouverte à traiter.
+- Phase : livrables présents sur nightly ; audit sécurité de l’import à lancer avant clôture.
 - Le prompt réutilisable d’import est disponible depuis Sources & sauvegarde.
 - Les stocks d’une box neuve sont initialisés à zéro ; l’import photo fusionne les observations connues avec l’état existant.
 - L’objectif personnel a été remplacé par le prompt réutilisable ; le PDG ne fournira ni captures ni fichier personnel.
-- Les données personnelles restent non vérifiées ; les critères 2 et 3 attendent leur alignement sur le nouvel objectif par le PDG.
+- Les critères 2 et 3 sont remplacés avec validation du PDG ; aucune vérification personnelle n’est exigée ou autorisée.
 - Aucune mise en production sans approbation humaine.
 
 # Retours du PDG
@@ -20,6 +20,11 @@
 - 2026-10-14 — Examiner le format et les références natives du dépôt, expliquer les limites et proposer une procédure sûre ; signaler les incertitudes, ne rien inventer et ne pas présenter un résultat partiel comme complet.
 - 2026-10-14 — Conserver nightly et ne rien publier en production sans approbation humaine.
 
+- 2026-10-14 — Le PDG valide le remplacement du critère 2 : références natives accessibles et limites documentées, sans identifiant inventé.
+- 2026-10-14 — Le PDG valide le remplacement du critère 3 : prompt copiable et téléchargeable depuis Sources & sauvegarde, demandant un JSON photo compatible et téléchargeable, signalant les données inconnues et expliquant une procédure d’import qui préserve les données existantes.
+- 2026-10-14 — Aucune consultation ni vérification des fichiers personnels du PDG n’est exigée ou autorisée ; conserver nightly et ne rien publier en production sans son approbation.
+- 2026-10-14 — Le PDG confirme « oui c’est bon » et demande ce que signifie le critère 2 ; explication : les références permettent de vérifier les identifiants du jeu, sans garantir l’identification d’un portrait ambigu.
+
 # Décisions structurantes
 - Site statique en JavaScript natif, HTML et CSS ; Node.js 24 et Python 3 pour le build.
 - nightly est la branche de travail ; main est la production protégée par approbation humaine.
@@ -34,9 +39,10 @@
 - Un import photo vide ne vide pas la box ; vérifier le comportement réel avant de décrire toute procédure d’import.
 
 # Dette connue
-- Les stocks, 59 700 950 ryō, la monnaie premium et les ressources d’une box personnelle restent non vérifiés faute de captures/fichier fournis.
+- Aucune dette bloquante connue dans le périmètre validé ; la vérification personnelle est abandonnée sur décision du PDG.
 - Les régressions utilisent le lanceur natif de Node.js, sans framework externe.
 
 # Prochaines étapes
-- Faire valider le remplacement des critères 2 et 3 : référence accessible et limites documentées ; prompt copiable/téléchargeable demandant un JSON photo compatible, procédure sûre et conservation des données existantes. Aucune vérification personnelle exigée.
+- Faire auditer la sécurité de l’import JSON et de la conservation des données locales ; transformer chaque faille éventuelle en petite issue avec critères vérifiables.
+- Après traitement des éventuels constats, proposer la clôture au contrôle indépendant de la checklist validée.
 - Ne proposer aucune mise en production avant approbation humaine.
