@@ -1,5 +1,5 @@
 # État actuel
-- Stocks/imports sûrs livrés ; preuves natives, accroche et grille relues.
+- Stocks/imports sûrs, preuves natives et prompt gratuit relus.
 - Critère 7 ouvert ; aucun fichier personnel, envoi Discord ou publication.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
@@ -56,4 +56,4 @@
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Prompt gratuit, puis guides, présentation et audit indépendant final.
+- Guides sans répétitions, présentation et audit indépendant final.

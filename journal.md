@@ -97,3 +97,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 - Formulaire/relais publiés dans le périmètre autorisé ; lancement corrigé ; réception Discord confirmée avec réserve sur les mentions.
 - Accroche Blazing Collection, preuves natives et grille de sept critères relues et intégrées (#45/#46/#49 ; PR #50/#51/#52).
 15.10.2026, cycle manager : #47 choisie après validation des preuves ; #48 attend le parcours révisé. Critère 7 et audit final ouverts ; aucun envoi ni publication.
+
+15.10.2026 : cycle manager — prompt gratuit validé et fusionné ; clôture administrative de #45, #46, #47 et #49. #48 précisée et lancée pour les guides ; critère 7 ouvert. Aucun envoi Discord ni publication.
