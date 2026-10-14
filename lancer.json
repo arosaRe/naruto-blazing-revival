@@ -1,0 +1,1 @@
+﻿{"lancer":"npm run build && python -m http.server %PORT% --directory dist","url":"http://localhost:{PORT}","tester":"npm run build"}
