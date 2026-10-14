@@ -1,6 +1,7 @@
 # État actuel
-- CORS corrigé et relu sur nightly ; activation serveur à approuver, refus distant persistant.
-- Import personnel abandonné ; réconciliation documentaire des critères substitués en cours.
+- Livrables livrés et relus ; réconciliation personnelle validée.
+- Formulaire public confirmé ; CORS local hors périmètre, déploiement refusé.
+- Alignement documentaire avant audit final ; aucune décision attendue du PDG.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -44,6 +45,7 @@
 - 2026-10-15 à 00:59 — Revoir particulièrement prompt et mode d’emploi : réglages ChatGPT selon capacités disponibles à la revue, références à joindre, captures nécessaires. Parcours utilisable gratuitement : aucun modèle payant ni niveau de réflexion réservé aux abonnés ; vérifier les capacités gratuites actuelles, expliquer lots et reprise aux limites de captures, sans promettre une analyse complète en une demande.
 - 2026-10-15 à 00:59 — Exploiter toutes les sources pertinentes (données natives, références, code, documentation) ; vérifier Ultimate, contours rouges et niveaux rouges/jaunes avant déduction, documenter preuves et limites ; distinguer faits vérifiés, déductions justifiées et inconnues.
 - 2026-10-15 à 00:59 — Couvrir tous les champs identifiables sur captures et pris en charge : personnages, versions, niveaux, doublons, Ultimate, stocks, monnaies et autres champs supportés. Ne jamais inventer personnage, unitId, valeur ou règle ; demander des captures complémentaires si nécessaire. JSON téléchargeable compatible, inconnues et box incomplète explicites, procédure sûre et données existantes préservées. nightly ; aucune nouvelle publication ni aucun envoi Discord.
+- 2026-10-15 à 01:54 — Le PDG confirme le formulaire public (« je te confirme il fonctionne »). Déploiement CORS localhost:8101/9101 refusé : MakeProject local non demandé, sans effet sur la clôture ; son utilité était incomprise. Réserve acceptée maintenue : absence de notification de mention indésirable non vérifiée. Aucun nouvel envoi Discord ni publication ; reprendre réconciliation documentaire puis audit restant.
 # Décisions structurantes
 - Dépôt original, nightly ; production sur accord humain. JS ES/HTML/CSS, Node 24/Python 3.
 - Import fusionné ; inconnus null/absents, unitId vérifiés ; sauvegardes compatibles.
@@ -53,5 +55,5 @@
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Réconcilier les trois manques personnels avec les remplacements approuvés ; puis réaudit.
-- Accord demandé : seul module relais + origines localhost:8101/9101, sauvegarde et repli ; OPTIONS seuls. Aucun déploiement/envoi Discord effectué.
+- Aligner les conclusions documentaires sur la confirmation publique et le local hors périmètre.
+- Puis clôture pour audit indépendant des sept critères applicables, avec les réserves acceptées.
