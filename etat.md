@@ -7,7 +7,8 @@
 - Horloge corrigée ; synchronisation mesurée après redémarrage de Chrony et compte rendu relu.
 - Publication du seul formulaire/relais autorisée, à isoler de l’import photo.
 - HTTPS, webhook et réception Discord réelle restent à vérifier.
-- Proxy préparé ; HTTPS et renouvellement non réalisés. Reprise après clarification ACME.
+- Proxy HTTP vérifié localement ; HTTPS et renouvellement bloqués : TCP 80 inaccessible malgré UFW ouvert.
+- Attente du PDG : intervention ou procédure autorisée côté hébergeur pour vérifier filtrage/routage et ouvrir seulement TCP 80/443 si nécessaire.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -49,13 +50,15 @@
 # Pièges et consignes
 - Référence du jeu distincte d’une box personnelle ; aucune consultation des pièces personnelles interdites. Utiliser les critères 2 et 3 révisés.
 - Distinguer observations, catalogue et inconnues ; compter les observations reçues, pas la collection fusionnée. Un import photo vide préserve la box.
+- Ne pas répéter ACME tant que la sonde HTTP-01 externe échoue ; limiter les ouvertures à TCP 80/443 et préserver SSH.
 - CORS ne suffit pas : quotas serveur et frontière proxy explicite, remplacement des en-têtes visiteurs, aucun accès public au port interne. Ne jamais publier webhook, clés ou archives.
 - Après échec, conserver branches et modifications ; contrôler l’identité Git locale autorisée. Identifier comme telles les consignes transcrites.
 - Préserver la sauvegarde protégée du retrait et les ressources incertaines ; procédure de restauration dans le dépôt. Horloge VPS décalée signalée ; ne pas s’y fier pour dater les interventions.
 # Dette connue
 - Échec fwupd-refresh signalé, hors périmètre ; laissé intact, sans impact applicatif établi.
 # Prochaines étapes
-- Configurer HTTPS, renouvellement automatique et proxy ; contrôles externes, SSH préservé et relais arrêté sans secret.
+- Obtenir une intervention ou procédure autorisée côté hébergeur pour lever le blocage réseau probable ; sa localisation exacte reste inconnue.
+- Reprendre HTTPS après réussite de la sonde HTTP-01 externe ; valider renouvellement et proxy, SSH préservé et relais arrêté sans secret.
 - Faire injecter le webhook par terminal SSH privé avec saisie masquée ; jamais en discussion/GitHub.
 - Préparer et faire relire la publication isolée formulaire/relais, sans import photo ni fusion globale de nightly.
 - Vérifier réception Discord réelle, confirmations, erreurs, quotas et frontière réseau ; simulations insuffisantes.

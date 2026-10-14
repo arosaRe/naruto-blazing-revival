@@ -54,3 +54,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, cycle manager : #27 ferm?e apr?s validation et merge de #28. Absence de domaine/DNS consign?e ; solution sslip.io propos?e, #29 cr??e et confi?e pour HTTPS/proxy sans secret ni modification du site. Crit?re 6 toujours ouvert.
 
 14.10.2026 : clarification de #29 : seuls comptes techniques ACME production/staging autorisés, sans achat ni compte utilisateur ; reprise de la branche issue-29-https-proxy et de la PR #30 pour achever HTTPS, renouvellement et contrôles externes. Critère 6 ouvert.
+
+14.10.2026, cycle manager : #29 et PR #30 examinées ; proxy vérifié localement, blocage réseau amont probable. Intervention ou procédure hébergeur demandée au PDG ; aucun nouvel essai ACME ni lancement développeur avant clarification.
