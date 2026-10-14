@@ -1,12 +1,12 @@
 # État actuel
-- Phase : inventaire SSH initial réalisé en lecture seule ; nettoyage à faire valider, critère 6 ouvert.
+- Phase : nettoyage limité du VPS autorisé et confié au développeur ; critère 6 ouvert.
 - Stocks neufs à zéro publiés avec approbation humaine limitée ; sauvegardes et imports existants préservés.
 - Prompt réutilisable, références natives et fusion photo sûre livrés sur nightly ; critères 2 et 3 révisés satisfaits.
 - Formulaire et relais Discord intégrés et validés par relecture ; essais navigateur avec Discord simulé rapportés réussis.
 - Contrôle sécurité indépendant favorable : confiance proxy bornée, adresses validées, quotas séparés et limites globales conservées.
 - Régressions et build réussis selon les jobs développeur et relecteur/app ; non relancés par le manager.
 - Accès SSH et sudo disponibles avec la clé autorisée ; deux services tiers actifs. Webhook indisponible, endpoint non configuré, réception réelle non vérifiée.
-- Aucune nouvelle publication autorisée ; attente du PDG : approbation du périmètre limité aux retours Discord.
+- Publication du seul formulaire et relais Discord autorisée ; changements à isoler. Aucun déploiement dans ce cycle.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -34,6 +34,8 @@
 - 2026-10-14 à 22:20 — Consigne transcrite de discussion : vérifier l’accès SSH autorisé avec la clé de l’ordinateur du PDG ; chemin fourni fictif. Ne jamais afficher ni transmettre de clé privée. Préciser le chemin ou l’accès manquant ; si connexion réussie, inventorier en lecture seule puis présenter le nettoyage avant suppression. Préserver Ubuntu et SSH ; aucune production autorisée.
 - 2026-10-14 à 22:28 — Réponse du PDG : C:\Users\antho\.ssh est le dossier des clés ; vérifier noms et informations publiques sans afficher ni transmettre de contenu privé, ni essayer une clé d’un autre projet sans autorisation. Si aucune clé certaine, demander seulement le nom ; après connexion, inventorier en lecture seule et présenter le nettoyage. Préserver Ubuntu et SSH, aucune production.
 - 2026-10-14 à 22:35 — Consigne transcrite de discussion : clé publique C:\Users\antho\.ssh\id_ed25519_madfut27.pub ; vérifier et utiliser la clé privée correspondante sans afficher ni copier son contenu. Ne pas utiliser le .pub comme clé privée ; connexion limitée à un inventaire en lecture seule, sinon rapporter le blocage précis. Aucune suppression ni publication.
+- 2026-10-14 à 22:38 — Le PDG autorise l’arrêt et la suppression de MADFUT et Tradispo : services/unités systemd, code sous /opt, données sous /var/lib, configurations sous /etc et journaux applicatifs identifiés. Avant suppression : sauvegarde cohérente et restaurable des données, configurations, secrets, unités, code et permissions, hors dépôt en emplacement protégé ; restauration vérifiée. Préserver Ubuntu, SSH, comptes et clés ; aucune purge générale ni modification réseau. Cette autorisation seule ne couvre pas la publication des retours. Message transcrit : « oui tu peux les supprimer ».
+- 2026-10-14 à 22:39 — Le PDG autorise la publication du seul formulaire de retours et de son relais Discord sécurisé : secret serveur, quotas anti-abus, confirmations et erreurs compréhensibles conservés. Exclure l’import photo et toute fusion globale de nightly ; isoler et vérifier les changements publiés. Utiliser le VPS proposé si accès autorisé disponible ; configurer HTTPS et le secret par canal protégé. Vérifier réception Discord réelle, confirmations, erreurs et anti-abus avant de satisfaire le critère 6. Aucune suppression générale : présenter le nettoyage après inventaire, préserver Ubuntu et SSH. Messages transcrits : demande de configuration/VPS, proposition SSH et suppression, clé de l’ordinateur, lancement du manager, chemin public id_ed25519_madfut27.pub, « et oui je valide ce que tu m’avais demandé initialement ».
 # Décisions structurantes
 - Site statique en JavaScript natif, HTML et CSS ; Node.js 24 et Python 3 pour le build.
 - nightly est la branche de travail ; main est la production protégée par approbation humaine. La publication autorisée du 14 octobre isole les stocks neufs à zéro et leurs tests, sans fusion globale de nightly.
@@ -60,8 +62,8 @@
 - Aucune dette mineure identifiée à traiter pour le périmètre révisé ; les données personnelles restent hors périmètre par décision du PDG.
 
 # Prochaines étapes
-- Obtenir l’approbation humaine pour publier uniquement le formulaire de retours et son relais sécurisé ; exclure les travaux d’import photo et toute fusion globale de nightly.
-- Faire valider le nettoyage des deux applications tierces actives ou leur maintien : madfut27-watcher et tradispo ; aucun arrêt ni suppression à ce stade.
+- Publier uniquement le formulaire et son relais sécurisé selon l’autorisation reçue, après préparation et relecture du périmètre isolé ; exclure l’import photo et toute fusion globale de nightly.
+- Exécuter le nettoyage autorisé de madfut27-watcher et tradispo, avec sauvegarde protégée et restauration isolée vérifiée avant suppression ; conserver toute ressource partagée ou incertaine.
 - Nettoyage proposé après accord et sauvegarde restaurable protégée hors dépôt : services et unités systemd madfut27-watcher/tradispo, répertoires /opt et /var/lib associés, configurations /etc associées (variantes MADFUT comprises), journaux applicatifs identifiés. Préserver Ubuntu, SSH, comptes et clés ; aucune purge générale. Sauvegarder SQLite de façon cohérente, états JSON, configurations secrètes, unités, code et permissions ; vérifier la restauration avant suppression.
 - Hébergement observé : environ 52 Go libres, Node 22 installé, Nginx et Docker indisponibles, UFW actif avec SSH seul autorisé. Préparer Node 24, HTTPS et URL publique dans un travail distinct autorisé ; ne pas modifier le réseau durant le nettoyage.
 - Configurer le webhook par un canal serveur protégé, jamais dans une issue, le dépôt ou une discussion publique ; isoler et faire relire le périmètre de publication avant de toucher main.
