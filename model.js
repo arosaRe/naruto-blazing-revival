@@ -90,7 +90,8 @@ export function initialState(catalogue, profile, {applyGifts=true}={}) {
 }
 export function initialPersonalState(catalogue){
   const state=initialState(catalogue,{collection:[]},{applyGifts:false});
-  Object.assign(state,{accountMode:'personal',username:'Ma box',stocks:{},stockDefaultsApplied:true,importNotes:[]});
+  const stocks=Object.fromEntries(resourceStockKeys(catalogCharacters(catalogue)).map(key=>[key,0]));
+  Object.assign(state,{accountMode:'personal',username:'Ma box',stocks,stockDefaultsApplied:true,importNotes:[]});
   for(const p of Object.values(state.characters))Object.assign(p,unknownGiftProgress(),{owned:false,planned:false});
   return state;
 }
