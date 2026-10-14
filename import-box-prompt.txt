@@ -1,37 +1,59 @@
-Je veux relever ma propre box Naruto Blazing depuis les captures que je joins, afin de l’importer dans Naruto Blazing Revival Collection. N’utilise que mes images pour décrire ma collection. Les références ci-dessous décrivent le jeu et ses identifiants, jamais mon compte.
+Je veux relever ma box Naruto Blazing depuis mes captures pour Blazing Collection. Les références décrivent le jeu, jamais mon compte. N’invente aucune identité, valeur ou possession.
 
-RÉFÉRENCES NATIVES
-- Index des formes et personnages : https://arosare.github.io/naruto-blazing-revival/reference-pour-chatgpt.html
-- Ressources, clés de stock et portraits : ouvre « Ressources » dans l’index.
-- Référence JSON filtrable : https://arosare.github.io/naruto-blazing-revival/box-import-reference.json
-- Schéma du fichier : https://arosare.github.io/naruto-blazing-revival/box-import.schema.json
+CHATGPT GRATUIT — vérifié le 15 octobre 2026
+Utilise le choix gratuit proposé dans ChatGPT, sans modèle précis ni réglage payant imposé. Images/fichiers, recherche web et analyse sont disponibles sous limites séparées et variables. Aucun quota fixe, traitement unique ou fichier téléchargeable garanti. Si une limite est atteinte, attends le rétablissement indiqué puis reprends avec le relevé intermédiaire.
+Sources officielles consultées :
+https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq
+https://help.openai.com/en/articles/8555545-file-uploads-faq
+https://help.openai.com/en/articles/8400551-chatgpt-image-inputs-faq
 
-Consulte ces références avant de choisir un unitId ou une clé de stock. Un unitId doit correspondre à la forme précise observée, avec nom, titre, numéro de carte, rareté et élément quand ils sont disponibles. Les portraits aident à comparer les formes mais une ressemblance seule, surtout si elle est ambiguë, ne prouve pas une identité : dans ce cas, exclus la carte de characters et explique l’ambiguïté dans notes. N’invente aucun identifiant, quantité, niveau, bonus, capacité, chance, expérience ou plafond. Une valeur non visible, illisible ou incertaine reste null ou est omise. Zéro signifie que zéro est réellement lisible/confirmé.
+RÉFÉRENCES
+https://arosare.github.io/naruto-blazing-revival/reference-pour-chatgpt.html
+Ressources : ouvre « Ressources » dans cet index.
+https://arosare.github.io/naruto-blazing-revival/box-import-reference.json
+https://arosare.github.io/naruto-blazing-revival/box-import.schema.json
+Consulte les références avant de choisir unitId ou clé de stock. Si les liens sont inaccessibles, demande le JSON et le schéma téléchargés depuis le site ou leurs extraits ciblés collés en texte ; ne prétends pas les avoir lus. Les références jointes consomment aussi le quota de fichiers. Le catalogue fournit identités et plafonds, jamais la progression possédée ni la disponibilité actuelle.
 
-LIMITES DES RÉFÉRENCES
-Le catalogue décrit les formes natives, leurs identifiants, plafonds et ressources du jeu. Il ne décrit ni le contenu de ma box ni mes stocks. Les images de référence peuvent être absentes ou ne pas suffire à lever une ambiguïté. Les plafonds servent à vérifier une observation, ils ne prouvent pas ma progression. Ne prétends pas qu’une valeur déduite d’une capture a été vérifiée dans le jeu.
+CAPTURES
+Utilise des PNG/JPEG directement joints, pas un PDF de captures : la lecture des images intégrées aux documents n’est pas garantie gratuitement. Prépare des vues générales avec léger recouvrement, puis des fiches détaillées pour numéro de carte, titre, étoiles, élément, forme et progression. Lis séparément niveau, EXP dans le niveau, bonus PV/ATK/vitesse, capacités, chance et plafond LB acheté. Pour les stocks : libellé, rareté/élément et quantité possédée, pas coût ou capacité. Numérote lots et images (L1-I1…). Les portraits seuls peuvent être ambigus : exclus toute identité non résolue de characters et indique les candidats dans notes. Si je préfère garder des inconnues, ne rends pas obligatoires des captures supplémentaires.
 
-TRAITEMENT DES CAPTURES
-1. Relève uniquement les cartes et stocks visibles sur mes captures. Pour les personnages, recopie les observations certaines de la copie choisie : forme actuelle, niveau, EXP du niveau actuel, bonus de pilules PV/ATK/vitesse, capacités débloquées, chance et plafond LB déjà débloqué. Ne confonds pas statistiques totales et bonus, niveau MAX de la forme et plafond après LB, ni quantité possédée et coût, manque ou capacité de stockage.
-2. N’ajoute qu’une observation par famille/version. Les doublons dus au chevauchement des captures ne s’additionnent pas ; ne combine pas les valeurs de copies différentes. Si une seule copie ne peut pas être choisie avec certitude, laisse les champs concernés inconnus et explique-le dans notes.
-3. Pour les stocks, utilise seulement les clés exactes de la référence. Les stocks non montrés, masqués, illisibles ou contradictoires restent inconnus (null ou clé absente). Les mêmes objets revus sur plusieurs captures ne s’additionnent pas. N’infère jamais une quantité.
-4. Si je transmets les captures en plusieurs messages/lots, garde les observations précédentes et examine chaque nouveau lot sans produire le JSON final tant que je n’ai pas écrit FIN. Repère les recouvrements et contradictions sans additionner les doublons. À FIN, produis un seul relevé consolidé. Si je ne signale pas d’autres lots, traite les images jointes au message comme l’ensemble reçu. Un lot incomplet reste un relevé partiel.
-5. Signale dans notes les personnages exclus ou non reconnus, les ressources non identifiées, les ambiguïtés et les valeurs à contrôler. Ne présente jamais un relevé partiel ou vide comme une sauvegarde complète. Si rien n’est lisible, demande des captures plus nettes au lieu de produire un fichier vide.
+LOTS, RELEVÉ INTERMÉDIAIRE, REPRISE ET FIN
+Traite de petits lots selon la limite affichée, sans taille garantie. Après CHAQUE lot, fournis un relevé intermédiaire complet à copier en texte : lots/images traités et restants ; observations par unitId avec source Lx-Iy de chaque champ, distinction lu/déduit/inconnu et copie choisie ; stocks avec sources ; candidats ambigus, contradictions, doublons exclus, détails à contrôler. Ce relevé n’est pas le fichier à importer. N’additionne jamais les recouvrements ni les quantités revues.
+En cas de limite, interruption ou nouvelle conversation, je recolle ce prompt, les références utiles et le dernier relevé complet avec « REPRISE après lot N ; prochains lots : … ». Vérifie la liste reçue, ne suppose pas avoir accès aux anciennes images. Conserve les observations rapportées et leur provenance ; demande seulement les images nécessaires aux points non résolus, sans convertir une incertitude en certitude.
+Attends toujours mon message FIN avant le JSON final, même pour un seul lot. À FIN, consolide seulement les lots effectivement traités. Les lots manquants ne sont pas vides. Si rien n’est identifiable, demande des captures plus nettes au lieu de livrer un fichier vide.
 
-JSON À PRODUIRE
-Après l’analyse, fournis un fichier UTF-8 téléchargeable nommé ma-box-blazing.json si tu peux créer un fichier. Sinon, donne le JSON complet dans un seul bloc de code pour que je l’enregistre sous ce nom. Le fichier ne contient que cette structure, sans enveloppe Markdown ni commentaire :
+PREUVES NATIVES ET LIMITES — rapport #46 validé, client NBRC3.00.032
+Un badge Ultimate natif clairement reconnu sur une forme exactement identifiée, avec les règles de ce client confirmées, implique rareté finale d’évolution, niveau final, capacités, bonus PV/ATK et chance aux plafonds de cette forme. La variante rouge du texte Ultimate implique aussi vitesse au plafond ; le badge ordinaire ne donne aucune vitesse exacte. Si badge ou client est ambigu, ne déduis rien. Ni EXP ni stock ne sont prouvés par ce badge ; son absence ne localise pas une condition manquante. Consigne les déductions et leurs conditions dans notes.
+Un contour rouge générique n’a aucune signification établie : ne déduis ni Ultimate, ni capacités, ni pilules, ni LB. Contour, texte Ultimate rouge et niveau rouge sont distincts.
+Dans le jeu natif, un nombre rouge indique au moins un LB acheté, pas le palier exact : unlockedCap reste inconnu si plusieurs paliers conviennent. MAX rouge indique le niveau final de la forme ; MAX jaune indique le niveau final sans LB acheté ni LB à acheter pour cette forme. MAX ne prouve pas Ultimate. Le site calcule autrement sa couleur (rouge au-dessus du niveau de base) et son MAX (niveau final) : ne transpose pas son affichage au jeu.
+Les doublons ne sont pas représentables : une seule entrée par famille/version, même si plusieurs formes ou exemplaires sont visibles. Aucun stock copies: n’est accepté par l’import photo. Ne mélange pas les progressions de copies différentes. Choisis une copie seulement si elle est suivie avec certitude ; sinon laisse les champs concernés inconnus et explique les exemplaires et exclusions dans notes.
+
+CONTRAT PHOTO v1
+Valeur absente, illisible ou incertaine : null ou champ omis. Zéro signifie zéro confirmé, jamais une inconnue. Les nombres sont des entiers sûrs de 0 à 9007199254740991, bornés en plus par les plafonds de chaque champ.
+Chaque personnage a unitId entier natif vérifié pour la forme exacte ; nom, titre, carte, rareté et élément aident à identifier mais ne sont pas des propriétés photo. Champs facultatifs :
+- level : niveau actuel, au plus le plafond final de la forme.
+- xp : EXP dans le niveau, pas cumulée ; strictement sous le seuil suivant. Au plafond final ou au plafond explicitement fourni, seul 0 est accepté, mais ne l’invente pas. Sans niveau, ne fournis pas d’EXP positive. Si le seuil n’est pas accessible dans les références, ne prétends pas l’avoir vérifié ; conserve l’inconnue si nécessaire.
+- hp, atk, speed : bonus de pilules, pas statistiques totales ni nombre de pilules consommées ; plafonds propres à la forme.
+- abilities : nombre débloqué, pas liste d’identifiants ou stock de pierres.
+- luck : chance actuelle, pas chance théorique d’une nouvelle copie.
+- unlockedCap : plafond déjà acheté parmi les paliers de référence, au moins égal au niveau connu ; ni nombre de LB ni plafond final théorique.
+Aucun champ owned, stars, ultimate, copyLuck, objectif ou paramètre de fusion.
+stocks : seulement les clés exactes réellement listées dans la référence. Familles prises en charge : ryo ; tokens ; stone ; shard ; pill:hp/atk/speed:2/3 ; ramen:<élément>:1–4 ; scroll:<élément>:1–4 ; element:<élément> ; crystal1 à crystal7:<famille> ; material:<id> ou special:<id>. Ce sont des notations de familles, pas des clés à recopier littéralement. Éléments : Heart, Skill, Body, Bravery, Wisdom. Aucun stock de pilule DEF. Identité exacte exigée pour cristaux personnels et matériaux ; un titre seul ne suffit pas. Deux alias du même objet sont interdits, pas additionnés.
+ryo exige un solde et libellé lisibles. tokens désigne les jetons du site liés aux achats de cristaux : aucune correspondance établie avec une monnaie premium. Aucun champ premium dédié ; ne détourne jamais tokens, stone ou shard pour des perles ou une monnaie ambiguë. stone et shard sont des matériaux distincts. Stocks non observés : null ou clé absente, jamais zéro inventé.
+username facultatif : seulement un pseudo fourni, non vide, 1–80 caractères sans contrôles ; sinon omets-le.
+notes : au plus 200 textes de 2 000 caractères chacun. Indique exclusions, contradictions, observations non représentables et inconnues. Écris explicitement « Relevé incomplet » avec couverture et champs/lots manquants si nécessaire. Même une couverture complète des captures n’est pas une sauvegarde complète du compte.
+
+JSON FINAL À FIN
+Fournis si possible un fichier UTF-8 téléchargeable ma-box-blazing.json. Sinon, donne le JSON complet dans un seul bloc de code à enregistrer dans un fichier texte UTF-8 avec cette extension. Sans commentaires ni enveloppe dans le fichier :
 {
   "format": "naruto-blazing-box",
   "version": 1,
-  "username": "Ma box",
   "characters": [],
   "stocks": {},
   "notes": []
 }
-
-Chaque personnage doit avoir un unitId entier natif vérifié et peut avoir level, xp, hp, atk, speed, abilities, luck et unlockedCap sous forme d’entier observé ou null. Les propriétés inconnues peuvent être null ou absentes. Chaque clé de stocks doit être autorisée par la référence ; sa valeur est un entier observé supérieur ou égal à zéro, ou null. notes est une liste de textes courts. N’ajoute aucune autre propriété. Avant de livrer, vérifie le JSON et le schéma si possible, les identifiants et clés avec la référence, les plafonds et les doublons. Indique hors du fichier le nombre de versions identifiées, les limites du relevé et ce que je dois contrôler. Ne qualifie pas le résultat de sauvegarde complète.
+Ne livre pas cet exemple vide comme résultat. N’ajoute aucune autre propriété. Vérifie syntaxe, schéma si possible, identifiants, plafonds, clés réellement admises et unicité par famille/stock. Hors fichier, indique nombre de versions identifiées, couverture, limites et contrôles restants. Ne prétends pas avoir exécuté le validateur du site si ce n’est pas le cas.
 
 IMPORT PRUDENT
-Enregistre le JSON téléchargé (ou copie le bloc dans un fichier texte UTF-8) avec l’extension .json. Dans Sources & sauvegarde, exporte d’abord une sauvegarde du site comme point de restauration, puis importe le fichier ou colle son contenu. Vérifie le résumé, les notes et les personnages/stocks modifiés après import.
-
-Dans le site, ce format d’observations de captures est fusionné avec la box personnelle existante : seules les valeurs numériques connues des personnages observés et les stocks numériques fournis sont appliqués ; null, champs absents et stocks absents laissent les anciennes valeurs intactes. Un import photo avec characters et stocks vides ne vide donc pas la collection ou les stocks. Les personnages observés sont marqués possédés. Une sauvegarde complète exportée par le site suit un autre format : sa restauration remplace l’état personnel par celui du fichier. Contrôle bien le format avant d’importer et garde une exportation récente avant de restaurer une sauvegarde.
+Enregistre le fichier téléchargé ou le bloc complet en UTF-8. Dans Sources & sauvegarde, exporte d’abord une sauvegarde du site comme point de restauration, puis importe le fichier ou colle son contenu. Contrôle après import le résumé, les notes, formes, valeurs modifiées et personnages/stocks conservés.
+Le relevé photo fusionne seulement les valeurs connues avec la box existante : null et champs/personnages/stocks absents préservent les anciennes valeurs. Les personnages observés deviennent possédés. Les données antérieures conservées ne sont pas des observations des captures. Un relevé vide ne vide pas la box. Une sauvegarde complète exportée par le site suit un autre format et sa restauration remplace l’état personnel : contrôle le format et garde une exportation récente.
