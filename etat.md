@@ -1,10 +1,9 @@
 # État actuel
-- Phase : corrections de lancement ; l’issue #6 est la prochaine tâche.
-- #1 et #2 sont terminées et leurs PR #5 et #7 ont été mergées dans nightly ; #2 est fermée.
-- Aucune validation de ma-box-blazing.json dans le site n’est établie.
-- Le dépôt contient catalogue.json et le générateur de box-import-reference.json ; les sources visuelles personnelles restent absentes.
-- Manquent : « Référence pour ChatGPT », sept captures et ma-box-blazing.json ; ne pas produire la sauvegarde complète avant réception.
-- Les valeurs 36 stocks, 59 700 950 ryō, la monnaie premium et les objets ambigus restent à vérifier.
+- Phase : inventaire des sources accessibles pour l’import personnel (#3).
+- #1 et #6 sont terminées et fermées ; #2 est terminée ; leurs PR ont été mergées dans nightly.
+- Le clone contient catalogue.json et le générateur de référence ; docs/contexte/, les sept captures et ma-box-blazing.json sont absents.
+- L’import personnel n’est pas validé dans le site ; personnages, 36 stocks, ryō, monnaie premium et objets restent à vérifier à partir des sources.
+- Aucune sauvegarde complète ne sera produite avant réception des pièces personnelles manquantes.
 - Aucune mise en production sans approbation humaine.
 
 # Retours du PDG
@@ -15,7 +14,7 @@
 - 2026-10-14 — Examiner la référence, les données natives et les sept captures ; vérifier valeurs et monnaie, signaler les ambiguïtés, tester l’import et ajouter des régressions.
 - 2026-10-14 — Le PDG valide le plan et les quatre issues initiales ; les travaux généraux sur stocks à zéro et protection des imports partiels peuvent commencer immédiatement.
 - 2026-10-14 — La page « Sources & sauvegarde » identifie box-import-reference.json à la racine publiée comme référence pour vérifier les unitId ; la rechercher dans le dépôt.
-- 2026-10-14 — Les sept captures et ma-box-blazing.json ne sont pas joints. Ne pas prétendre les avoir consultés, n’inférer aucun personnage d’un portrait ambigu, et attendre ces pièces avant tout JSON personnel complet.
+- 2026-10-14 — Les sept captures et ma-box-blazing.json ne sont pas joints. Ne pas prétendre les avoir consultés, n’inférer aucun personnage depuis un portrait ambigu, et attendre ces pièces avant tout JSON personnel complet.
 - 2026-10-14 — Vérifier les 36 stocks et 59 700 950 ryō à partir des sources ; clarifier la monnaie premium et les objets ambigus ; aucune production sans approbation.
 
 # Décisions structurantes
@@ -28,7 +27,6 @@
 # Pièges et consignes
 - Un import photo construit un état personnel complet ; un JSON partiel ne doit pas remplacer les observations existantes.
 - La référence d’import est générée par le build ; l’absence de dist dans le dépôt ne signifie pas que les sources externes ont été consultées.
-- lancer.json a été signalé avec un BOM UTF-8 ; l’issue #6 suit sa correction.
 - Aucun fichier personnel fourni par le PDG ni aucune capture n’est présent dans le clone.
 
 # Dette connue
@@ -36,7 +34,6 @@
 - Aucun framework de test séparé n’est configuré.
 
 # Prochaines étapes
-- Traiter #6 pour rendre lancer.json lisible par MakeProject.
-- Rechercher et rapporter les sources accessibles pour #3, sans prétendre avoir consulté les pièces absentes.
+- Terminer #3 : inventorier les fichiers natifs accessibles et préciser les pièces manquantes.
 - Après réception des captures et du JSON, vérifier les valeurs, clarifier les ambiguïtés, puis produire et valider #4.
 - Ne proposer aucune mise en production avant approbation humaine.

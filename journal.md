@@ -6,3 +6,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 2026-10-14 — Cycle 3 : #1 mergée ; #2 choisie pour sécuriser les imports partiels, #6 créée pour le BOM de lancer.json.
 
 2026-10-14 — Cycle 4 : #2 vérifiée mergée puis fermée ; #6 choisie pour corriger lancer.json.
+
+2026-10-14 — Cycle 5 : #6 (PR #8) et #1 (PR #5) confirmées mergées et fermées ; #3 choisie pour inventorier les sources d’import accessibles.
