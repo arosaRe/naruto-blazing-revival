@@ -1,6 +1,6 @@
 # État actuel
-- Les sept critères applicables sont estimés satisfaits ; clôture soumise à l’audit indépendant final.
-- Guides, prompt et grille relus ; audit sécurité sans faille exploitable démontrée dans son périmètre.
+- Clôture suspendue : le relais refuse les origines MakeProject ; correction à préparer sans déploiement.
+- Import personnel abandonné sur décision du PDG ; critères substitués à réconcilier avec l’audit.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -45,16 +45,14 @@
 - 2026-10-15 à 00:59 — Exploiter toutes les sources pertinentes (données natives, références, code, documentation) ; vérifier Ultimate, contours rouges et niveaux rouges/jaunes avant déduction, documenter preuves et limites ; distinguer faits vérifiés, déductions justifiées et inconnues.
 - 2026-10-15 à 00:59 — Couvrir tous les champs identifiables sur captures et pris en charge : personnages, versions, niveaux, doublons, Ultimate, stocks, monnaies et autres champs supportés. Ne jamais inventer personnage, unitId, valeur ou règle ; demander des captures complémentaires si nécessaire. JSON téléchargeable compatible, inconnues et box incomplète explicites, procédure sûre et données existantes préservées. nightly ; aucune nouvelle publication ni aucun envoi Discord.
 # Décisions structurantes
-- Dépôt original ; nightly ; production sur accord humain.
-- JS ES/HTML/CSS, Node 24/Python 3 ; npm test et npm run build vers dist.
-- Import fusionné, inconnus null/absents, unitId vérifiés ; sauvegardes compatibles.
-- Une issue/PR relue ; références du jeu distinctes du compte.
+- Dépôt original, nightly ; production sur accord humain. JS ES/HTML/CSS, Node 24/Python 3.
+- Import fusionné ; inconnus null/absents, unitId vérifiés ; sauvegardes compatibles.
+- Une issue et une PR relue par sujet.
 # Pièges et consignes
-- API/interception ≠ réception Discord ; mentions non vérifiées.
-- Préserver VPS/SSH/secrets ; webhook serveur seul.
-- Tests 9101 puis arrêt ; préserver 8101 ; build sans endpoint implicite.
+- Interception ≠ CORS réel ≠ réception Discord ; mentions non vérifiées, réserve acceptée.
+- Webhook serveur seul ; préserver VPS/SSH/secrets et 8101 ; essais sur 9101 puis arrêt.
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Faire contrôler les sept critères applicables par l’audit indépendant final ; corriger tout manque établi avant clôture.
-- Conserver les réserves documentées et la limite de l’audit sécurité : serveur actif non réinspecté. Aucune publication ni nouvel envoi Discord.
+- Corriger CORS MakeProject puis réconcilier l’audit avec les critères remplacés ; réaudit avant clôture.
+- Aucune publication ni nouvel envoi Discord ; serveur actif non réinspecté par l’audit sécurité.
