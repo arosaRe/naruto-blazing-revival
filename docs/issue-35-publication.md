@@ -31,12 +31,19 @@ dist**, deploy-pages. [Exécution 38644885595](https://github.com/arosaRe/naruto
 déploiement GitHub `7078359579`, artefact `11932061241` (archive ZIP GitHub
 SHA-256 `477ca9fc1c4ca4056c5a92df0f783a9f0f36b590a381a4d0572442f6e97e13b3`).
 URL : https://arosare.github.io/naruto-blazing-revival/.
+Exécution et déploiement **success**, statut enregistré le 14 octobre 2026 à
+22:05:58 UTC. TAR déployé conservé dans `.git/issue35-published/artifact.tar`,
+SHA-256 `21be6f8fe0bee1b2b62c68838c66f1bb7658b981583eb256c378ef8ecb31fa39`.
 
 Build local réussi : 37 fichiers runtime, 3 067 ressources natives ; scan
 des 3 287 fichiers dist sans webhook ni fichiers serveur. Le secret reste
 exclusivement dans la configuration serveur ; aucun contenu de clé, secret,
-environnement ou journal brut consulté. Les fichiers HTML générés portent la
-meta MakeProject Release 33 prévue par le build existant.
+environnement ou journal brut consulté. L'index porte la meta MakeProject
+Release 33. Limite préexistante de la candidate approuvée : les 182 références
+HTML générées depuis main ne portent pas cette meta. Le générateur de nightly
+la prévoit déjà ; il n'a pas été ajouté au patch autorisé. Corriger ces pages
+en production changerait le périmètre relu et nécessite une nouvelle candidate
+et sa relecture. Aucune adaptation supplémentaire publiée.
 
 Contrôles locaux : `npm.cmd test`, **34/34** ; contrôleur candidat Playwright
 réussi sur le port 9101 puis serveur fermé. Stocks neufs : **58 clés à zéro** ;
@@ -53,6 +60,46 @@ stocks et la sauvegarde dans un navigateur vierge, puis les erreurs interceptée
 Par défaut, aucun POST réel ; un contrôle réel exige un identifiant explicite
 et un fichier de preuve créé exclusivement avant la tentative. Ne jamais
 effacer cette preuve pour recommencer un envoi incertain.
+
+## Parcours public et cinq critères d'acceptation
+
+Chromium 145 / Playwright 1.58.2 sur l'URL publique après déploiement : octets
+de l'index, app, feedback, configuration, CSS, modèle et profil strictement
+identiques au TAR **réellement déployé**. La première comparaison avec le dist
+Windows a échoué sur CRLF/LF ; aucun message réel n'avait été envoyé. La
+comparaison avec l'artefact Linux réussit sans normalisation ni modification.
+Navigateur vierge : stocks persistés tous à zéro ; sauvegarde synthétique
+`ryo=12345` rechargée et conservée à l'identique pendant erreurs et envoi.
+Mobile 390 px, formulaire accessible, focus restauré, validation vide, sept
+erreurs HTTP/réseau **interceptées et simulées**, double soumission bloquée,
+texte conservé, pas de nouvelle tentative automatique. Aucun appel au relais
+pour ces scénarios, aucune saturation des quotas publics.
+
+Un seul POST valide réel depuis le formulaire public, le **14 octobre 2026
+à 22:07:30 UTC** (15 octobre 00:07:30 en Suisse), contenant uniquement :
+**`ISSUE35-CONTROLE-20261014T220717Z`**. HTTP **200**, `{"ok":true}`,
+confirmation affichée « Merci ! Ton retour a été reçu par Discord. », champ
+vidé, sauvegarde inchangée, aucune erreur JavaScript non interceptée. Preuve
+locale `.git/issue35-public-control.json`, réservée avant la tentative unique.
+Cela établit la réponse réelle du relais et l'interface ; pas le constat
+visuel du salon. Aucun accès au salon disponible, aucun nouvel envoi pour
+obtenir le constat. Les mentions neutralisées sont contrôlées par les tests
+du module serveur déjà déployé, pas observées visuellement dans le salon ici.
+
+| Critère #35 | Résultat et limite |
+| --- | --- |
+| 1 | Satisfait : confirmation humaine #33 consignée ; base exacte, patch et diff inchangés de la candidate relue. |
+| 2 | Satisfait : version, run, déploiement et artefact identifiés ; seul dist isolé publié, sans secret ni ajout d'import photo. |
+| 3 | Satisfait dans les contrôles décrits : parcours public et confirmation réels ; erreurs/quotas et concurrence simulés ; stocks zéro et sauvegarde contrôlés dans le navigateur public. Les limites proxy réelles documentées en #33 ne sont pas saturées à nouveau. |
+| 4 | Attente explicitement consignée : réponse API positive, contrôle public identifié ; constat humain du salon requis, sans répétition. |
+| 5 | Satisfait : version et artefact précédents conservés, procédure ci-dessous ; préservation VPS contrôlée. |
+
+**Le critère 6 global reste ouvert et n'est pas déclaré satisfait.** Le PDG
+doit constater dans le salon prévu `ISSUE35-CONTROLE-20261014T220717Z`, y
+compris l'absence de mention effective ; ne pas renvoyer ce message. La
+confirmation précédente de #33 ne remplace pas cette observation publique.
+Build de nightly également réussi pour la PR de compte rendu ; il n'est pas
+publié. `lancer.json` et `CLAUDE.md` restent alignés et inchangés.
 
 ## VPS préservé
 
