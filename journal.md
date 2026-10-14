@@ -60,3 +60,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, synthèse des phases achevées : stocks neufs à zéro publiés ; références natives, prompt et import photo sûr sur nightly.
 14.10.2026, synthèse infrastructure : formulaire/relais relus et simulés ; retrait ciblé sauvegardé avec restauration vérifiée ; Node isolé, horloge corrigée ; proxy local vérifié, HTTPS suspendu au réseau.
 14.10.2026, cycle manager : intervention Infomaniak confirmée ; reprise #29/PR #30 prescrite, HTTP externe avant ACME ; critère 6 ouvert. État condensé, retours du PDG conservés.
+
+14.10.2026, cycle manager : #29 close après validation et merge #30 ; HTTPS externe et renouvellement acquis. #31 créée pour préparer et relire une candidate isolée sans publication ni secret ; critère 6 ouvert.

@@ -3,9 +3,9 @@
 - Stocks neufs à zéro publiés ; références, prompt et import photo sûr sur nightly.
 - Formulaire/relais relus et audités en simulation ; publication isolée autorisée.
 - VPS nettoyé, sauvegarde protégée et restauration vérifiée ; horloge corrigée.
-- Node 24 isolé sur loopback ; relais arrêté/désactivé sans secret ; proxy HTTP vérifié localement.
-- Intervention réseau hébergeur confirmée ; HTTP externe à recontrôler avant HTTPS.
-- Restent HTTPS/renouvellement, secret protégé, publication isolée et réception Discord réelle.
+- HTTPS externe, renouvellement et frontière proxy validés et relus.
+- Node 24 isolé sur loopback ; relais arrêté/désactivé sans secret.
+- Candidate isolée à préparer ; restent secret protégé, publication et réception Discord réelle.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -55,8 +55,7 @@
 # Dette connue
 - Échec fwupd-refresh signalé, hors périmètre ; laissé intact, sans impact applicatif établi.
 # Prochaines étapes
-- Recontrôler HTTP externe après intervention hébergeur ; rapporter les observations si échec.
-- Reprendre HTTPS après réussite de la sonde HTTP-01 externe ; valider renouvellement et proxy, SSH préservé et relais arrêté sans secret.
+- Préparer et faire relire une candidate reproductible depuis main limitée au formulaire et à son endpoint HTTPS ; vérifier son build et son parcours navigateur en simulation.
 - Faire injecter le webhook par terminal SSH privé avec saisie masquée ; jamais en discussion/GitHub.
-- Préparer et faire relire la publication isolée formulaire/relais, sans import photo ni fusion globale de nightly.
+- Activer le relais et publier uniquement le périmètre relu autorisé, sans import photo ni fusion globale de nightly.
 - Vérifier réception Discord réelle, confirmations, erreurs, quotas et frontière réseau ; simulations insuffisantes.
