@@ -7,7 +7,7 @@
 - Horloge corrigée ; synchronisation mesurée après redémarrage de Chrony et compte rendu relu.
 - Publication du seul formulaire/relais autorisée, à isoler de l’import photo.
 - HTTPS, webhook et réception Discord réelle restent à vérifier.
-- Prochaine tâche : HTTPS gratuit sur retours.179-237-102-19.sslip.io et proxy.
+- Proxy préparé ; HTTPS et renouvellement non réalisés. Reprise après clarification ACME.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -45,6 +45,7 @@
 - Import photo : fusion des champs observés, préservation des absents/nulls ; restauration complète distincte.
 - Relais Node 24 séparé de GitHub Pages ; POST /feedback, endpoint public configurable, secret serveur, une seule instance et quotas globaux conservés.
 - HTTPS gratuit retenu pour préparation : retours.179-237-102-19.sslip.io, DNS automatique sans compte ; dépendance au fournisseur, nom lié à l’IP et quotas ACME. Vérifier certificat et renouvellement avant usage ; aucun achat.
+- Comptes techniques ACME Let’s Encrypt production/staging autorisés pour HTTPS et son renouvellement, conditions techniques incluses ; aucun achat ni compte utilisateur. Clés protégées côté serveur, aucune adresse personnelle réutilisée sans accord.
 # Pièges et consignes
 - Référence du jeu distincte d’une box personnelle ; aucune consultation des pièces personnelles interdites. Utiliser les critères 2 et 3 révisés.
 - Distinguer observations, catalogue et inconnues ; compter les observations reçues, pas la collection fusionnée. Un import photo vide préserve la box.

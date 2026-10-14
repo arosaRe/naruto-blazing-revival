@@ -52,3 +52,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, cycle manager : service interne relu via PR #26, issue #25 fermée. #27 créée pour synchroniser l’horloge avant TLS ; choix du nom public demandé au PDG. Relais arrêté sans secret, critère 6 ouvert ; aucune publication.
 
 14.10.2026, cycle manager : #27 ferm?e apr?s validation et merge de #28. Absence de domaine/DNS consign?e ; solution sslip.io propos?e, #29 cr??e et confi?e pour HTTPS/proxy sans secret ni modification du site. Crit?re 6 toujours ouvert.
+
+14.10.2026 : clarification de #29 : seuls comptes techniques ACME production/staging autorisés, sans achat ni compte utilisateur ; reprise de la branche issue-29-https-proxy et de la PR #30 pour achever HTTPS, renouvellement et contrôles externes. Critère 6 ouvert.
