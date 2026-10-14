@@ -1,9 +1,9 @@
-# État actuel
-- Phase : inventaire des sources accessibles pour l’import personnel (#3).
-- #1 et #6 sont terminées et fermées ; #2 est terminée ; leurs PR ont été mergées dans nightly.
-- Le clone contient catalogue.json et le générateur de référence ; docs/contexte/, les sept captures et ma-box-blazing.json sont absents.
-- L’import personnel n’est pas validé dans le site ; personnages, 36 stocks, ryō, monnaie premium et objets restent à vérifier à partir des sources.
-- Aucune sauvegarde complète ne sera produite avant réception des pièces personnelles manquantes.
+﻿# État actuel
+- Phase : attente des sources personnelles nécessaires à la sauvegarde vérifiée (#4).
+- #1, #2, #3 et #6 sont terminées ; les PR correspondantes ont été mergées dans nightly.
+- Le rapport #3 confirme que le catalogue et la référence locale permettent de vérifier des identifiants natifs, pas le contenu du compte.
+- Les sept captures et ma-box-blazing.json manquent ; les 36 stocks, 59 700 950 ryō, personnages et monnaie premium ne sont pas vérifiés.
+- #4 ne peut pas produire de sauvegarde personnelle complète avant réception des pièces ; ne rien inférer des portraits.
 - Aucune mise en production sans approbation humaine.
 
 # Retours du PDG
@@ -26,14 +26,14 @@
 
 # Pièges et consignes
 - Un import photo construit un état personnel complet ; un JSON partiel ne doit pas remplacer les observations existantes.
-- La référence d’import est générée par le build ; l’absence de dist dans le dépôt ne signifie pas que les sources externes ont été consultées.
-- Aucun fichier personnel fourni par le PDG ni aucune capture n’est présent dans le clone.
+- La référence d’import est générée par le build ; l’absence des sources personnelles ne signifie pas que les comptes ou captures ont été consultés.
+- Le rapport #3 distingue les fichiers effectivement consultés des fichiers manquants ; aucune pièce personnelle n’est présente dans le clone.
 
 # Dette connue
-- Le contrôle de l’import personnel attend les sources manquantes.
+- La validation de l’import personnel attend les captures et ma-box-blazing.json.
 - Aucun framework de test séparé n’est configuré.
 
 # Prochaines étapes
-- Terminer #3 : inventorier les fichiers natifs accessibles et préciser les pièces manquantes.
-- Après réception des captures et du JSON, vérifier les valeurs, clarifier les ambiguïtés, puis produire et valider #4.
+- Attendre que le PDG fournisse les sept captures et ma-box-blazing.json.
+- À réception, vérifier les valeurs dans les sources, clarifier les ambiguïtés et reprendre #4 pour produire puis valider l’import.
 - Ne proposer aucune mise en production avant approbation humaine.
