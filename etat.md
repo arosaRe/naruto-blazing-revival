@@ -1,10 +1,11 @@
 # État actuel
-- Phase : intégration du formulaire de retours Discord ; critère 6 encore ouvert.
+- Phase : correction de la protection anti-abus des retours Discord ; critère 6 encore ouvert.
 - Stocks neufs à zéro publiés avec approbation humaine limitée ; imports et sauvegardes existants préservés.
 - Prompt réutilisable, références natives et fusion photo sûre livrés sur nightly ; critères 2 et 3 remplacés par décision du PDG.
 - Critères applicables et approbation limitée documentés, avec provenance et limites de preuve.
 - Relais Discord séparé livré et validé par relecture ; validations réussies rapportées par le développeur, résultat du tester de l’app non connu.
-- Formulaire conservé en reprise ; validations et relecture à terminer, puis audit sécurité du parcours complet.
+- Formulaire intégré sur nightly et validé par relecture ; essais navigateur et Discord simulé réussis rapportés, sans relance par le relecteur.
+- Audit sécurité : quota partagé derrière le proxy, permettant à un visiteur de bloquer les autres ; correction prioritaire avant présentation.
 - Webhook et accès d’hébergement non accessibles ; aucune réception dans le salon réel vérifiée.
 - Aucune nouvelle publication autorisée ; aucune décision immédiate attendue du PDG.
 # Retours du PDG
@@ -48,6 +49,7 @@
 - Le résumé doit compter les observations validées reçues, pas la collection après fusion.
 
 - CORS ne suffit pas contre les abus ; limiter les envois côté serveur et maîtriser les adresses IP derrière un proxy. Ne jamais recopier le webhook en issue, log ou artefact.
+- Un quota fondé sur la socket du reverse proxy pénalise tous ses visiteurs ; distinguer les clients seulement via une frontière de confiance explicite, sans accepter les en-têtes falsifiés en accès direct.
 - Après un échec de job, examiner les branches de secours et conserver le travail ; vérifier la configuration Git locale autorisée avant commit.
 - Une transcription de consigne fournie au manager doit être identifiée comme telle ; ne pas fabriquer de lien vers une discussion originale inaccessible.
 
@@ -55,8 +57,8 @@
 - Aucune dette mineure identifiée à traiter pour le périmètre révisé ; les données personnelles restent hors périmètre par décision du PDG.
 
 # Prochaines étapes
-- Terminer le formulaire conservé et sa relecture sur le contrat du relais : endpoint public configurable, états de succès/échec, conservation du texte et essais navigateur avec Discord simulé.
-- Faire auditer la sécurité après intégration ; corriger les constats avant présentation au PDG.
+- Corriger le quota partagé derrière le proxy : identité client fiable, configuration de confiance explicite, quotas globaux conservés et régressions sur deux IP et les en-têtes falsifiés.
+- Faire relire la correction de sécurité et vérifier la levée du constat avant présentation au PDG.
 - Préparer une présentation concrète et une demande d’approbation avec besoins d’hébergement/configuration protégée ; ne jamais demander le secret dans une issue publique.
 - Configurer et vérifier la réception réelle seulement dans le périmètre autorisé ; une simulation ne remplit pas à elle seule le critère 6 sur le site réel.
 - Contrôler ensuite les six critères, avec 2 et 3 révisés ; ne demander ni consulter aucune pièce personnelle du PDG. Toute publication supplémentaire nécessite son approbation.

@@ -34,3 +34,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, cycle de reprise : identit? Git locale autoris?e confirm?e ; travail de secours f537663 conserv? et rattach? ? issue-16-feedback, branche pouss?e. #16 relanc?e pour finalisation et relecture, puis audit s?curit? ; aucune publication.
 
 14.10.2026, même cycle : correction de la mémoire ; identité locale autorisée configurée, travail conservé et poussé sur issue-16-feedback ; finalisation puis audit programmés.
+
+14.10.2026, cycle manager : formulaire intégré et relu (#16 fermée) ; audit pris en compte, #21 précisée et confiée au développeur sécurité. Aucune publication ni réception Discord réelle.
