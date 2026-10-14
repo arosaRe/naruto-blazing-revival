@@ -86,3 +86,6 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 
 15.10.2026, synthèse : stocks/formulaire publiés ; import/prompt sur nightly ; publication HTML isolée vérifiée.
 15.10.2026, cycle manager : validation à 00:47 consignée ; critère 6 clos avec absence de mention non vérifiée. Audit indépendant demandé ; aucun envoi Discord ni publication. Retours conservés.
+
+15.10.2026, synthèse des phases : stocks neufs et import sûr livrés ; prompt substitué à l’import personnel ; formulaire/relais puis balises HTML publiés sur accords limités. Réception Discord confirmée, mentions non vérifiées.
+15.10.2026, cycle après audit #96 : #41 créée pour aligner critères et preuves, #42 pour FEEDBACK_ENDPOINT au lancement MakeProject ; capture 004907 consultée, indisponibilité confirmée. Clôture suspendue, aucun envoi Discord ni publication. Retours conservés intégralement ; formulation générale main autorisé corrigée.
