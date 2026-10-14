@@ -38,3 +38,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, cycle manager : formulaire intégré et relu (#16 fermée) ; audit pris en compte, #21 précisée et confiée au développeur sécurité. Aucune publication ni réception Discord réelle.
 
 14.10.2026, cycle manager : correction proxy intégrée et validée (PR #22), #21 fermée ; régressions et build réussis selon les jobs. Contrôle sécurité indépendant ciblé demandé avant présentation au PDG. Aucun déploiement ni réception Discord réelle.
+
+14.10.2026, cycle manager : audit sécurité #54 favorable, correction du quota proxy confirmée sans nouvelle faille. Présentation du formulaire et demande d’approbation de publication limitée aux retours Discord ; hébergement et réception réelle restent à configurer et vérifier. Aucun déploiement.
