@@ -321,7 +321,7 @@ function restore(text){
     importFeedback={error:true,message:(error.message||'JSON invalide.')+' Ta box actuelle est conservée.'};
     const status=$('#box-import-status');if(status){status.innerHTML=`<p>${esc(importFeedback.message)}</p>`;status.classList.add('error');status.setAttribute('role','alert');status.focus();}notify(importFeedback.message);return false;
   }
-  state=next;const count=owned().length,unknown=accountStockKeys().filter(key=>stockFor(key,state.stocks)===null).length;
+  state=next;const count=photo?raw.characters.length:owned().length,unknown=accountStockKeys().filter(key=>stockFor(key,state.stocks)===null).length;
   importFeedback={message:photo?`${count} version${count===1?' observée importée':'s observées importées'} dans ${accountName()}. ${unknown} stock${unknown===1?' reste inconnu':'s restent inconnus'} et se renseigne${unknown===1?'':'nt'} dans Plan & stocks.`:`Sauvegarde restaurée pour ${accountName()}. Collection, progression et stocks conservés.`,notes:state.importNotes||[]};
   ui.scope='owned';ui=resetCollectionFilters(ui);resetPlanFilters();ui.resourceSearch='';if($('#character-dialog').open)$('#character-dialog').close();persist();renderPage();const status=$('#box-import-status');(status||$('#main')).focus();notify(photo?'Box importée. Vérifie les informations à compléter.':'Collection, progression et stocks restaurés.');return true;
 }
