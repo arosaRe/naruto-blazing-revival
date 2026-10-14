@@ -1,5 +1,24 @@
 import http from 'node:http';
+import {isIP} from 'node:net';
 import {pathToFileURL} from 'node:url';
+
+// Canonical IPv6 keys also unify IPv4 and IPv4-mapped socket addresses.
+function addressKey(value) {
+  if (typeof value !== 'string' || value.includes('%') || !isIP(value)) return null;
+  const address = isIP(value) === 4 ? `::ffff:${value}` : value;
+  return new URL(`http://[${address}]/`).hostname;
+}
+function trustedAddresses(values) {
+  if (!Array.isArray(values) || values.length > 32 || values.some(value => !addressKey(value))) throw new Error('Invalid relay configuration');
+  return new Set(values.map(addressKey));
+}
+function clientAddress(req, trusted) {
+  const peer = addressKey(req.socket.remoteAddress);
+  if (!peer || !trusted.has(peer)) return peer;
+  // Inspect raw headers too: duplicate fields must never become a chosen identity.
+  const fields = req.rawHeaders.filter((_, i) => i % 2 === 0 && req.rawHeaders[i].toLowerCase() === 'x-real-ip');
+  return fields.length === 1 ? addressKey(req.headers['x-real-ip']) : null;
+}
 
 const defaults = {maxBytes: 8192, maxMessage: 1800, timeoutMs: 5000, bodyTimeoutMs: 5000, concurrency: 4, clientLimit: 3, globalLimit: 30, windowMs: 60000, maxClients: 10000};
 export function readConfig(env = process.env) {
@@ -10,13 +29,16 @@ export function readConfig(env = process.env) {
     if (!origins.length || origins.some(origin => { const u = new URL(origin); return u.protocol !== 'https:' || u.origin !== origin || u.username || u.password; })) throw Error();
     const port = Number(env.FEEDBACK_PORT || 9101);
     if (!Number.isInteger(port) || port < 1 || port > 65535) throw Error();
-    return {...defaults, webhook: url.href, origins, port, host: env.FEEDBACK_HOST || '127.0.0.1'};
+    const trustedProxies = env.FEEDBACK_TRUSTED_PROXIES === undefined ? [] : env.FEEDBACK_TRUSTED_PROXIES.split(',').map(value => value.trim());
+    trustedAddresses(trustedProxies);
+    return {...defaults, webhook: url.href, origins, port, host: env.FEEDBACK_HOST || '127.0.0.1', trustedProxies};
   } catch { throw new Error('Invalid relay configuration'); }
 }
 
 // Injection is for local tests only; the executable always uses readConfig.
 export function createRelay(config, {fetchImpl = fetch, now = Date.now} = {}) {
   const c = {...defaults, ...config};
+  const trusted = trustedAddresses(c.trustedProxies || []);
   const clients = new Map();
   let global = {start: now(), count: 0}, active = 0;
   const server = http.createServer(async (req, res) => {
@@ -38,6 +60,8 @@ export function createRelay(config, {fetchImpl = fetch, now = Date.now} = {}) {
       return reply(204);
     }
     if (req.method !== 'POST') return reply(400, 'invalid_method');
+    const key = clientAddress(req, trusted);
+    if (!key) return reply(400, 'invalid_client_address');
     if (!/^application\/json(?:\s*;\s*charset=utf-8)?$/i.test(req.headers['content-type'] || '') || req.headers['content-encoding']) return reply(400, 'invalid_content_type');
     if (Number(req.headers['content-length']) > c.maxBytes) return reply(413, 'body_too_large');
     let bytes = 0, chunks = [];
@@ -60,8 +84,6 @@ export function createRelay(config, {fetchImpl = fetch, now = Date.now} = {}) {
     const time = now();
     for (const [key, bucket] of clients) if (time - bucket.start >= c.windowMs) clients.delete(key);
     if (time - global.start >= c.windowMs) global = {start: time, count: 0};
-    // Forwarded headers are intentionally ignored, including behind a proxy.
-    const key = req.socket.remoteAddress;
     const bucket = clients.get(key) || {start: time, count: 0};
     if (bucket.count >= c.clientLimit || global.count >= c.globalLimit || (!clients.has(key) && clients.size >= c.maxClients)) {
       res.setHeader('Retry-After', String(Math.ceil(c.windowMs / 1000)));
