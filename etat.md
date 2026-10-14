@@ -1,8 +1,6 @@
 # État actuel
-- Stocks neufs à zéro et protection des imports livrés ; parcours réutilisable à réviser selon les nouvelles exigences.
-- Formulaire/relais accessibles ; lancement MakeProject corrigé et relu. Réception Discord confirmée, absence de mention indésirable non vérifiée.
-- Critère 7 en cours : preuves visuelles, parcours ChatGPT gratuit et guides sans répétitions ; audit indépendant final à reprendre ensuite.
-- Aucune pièce personnelle attendue du PDG : consultation interdite ; aucune nouvelle publication ni aucun envoi Discord.
+- Stocks/imports sûrs livrés ; preuves natives, accroche et grille relues.
+- Critère 7 ouvert ; aucun fichier personnel, envoi Discord ou publication.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -47,17 +45,15 @@
 - 2026-10-15 à 00:59 — Exploiter toutes les sources pertinentes (données natives, références, code, documentation) ; vérifier Ultimate, contours rouges et niveaux rouges/jaunes avant déduction, documenter preuves et limites ; distinguer faits vérifiés, déductions justifiées et inconnues.
 - 2026-10-15 à 00:59 — Couvrir tous les champs identifiables sur captures et pris en charge : personnages, versions, niveaux, doublons, Ultimate, stocks, monnaies et autres champs supportés. Ne jamais inventer personnage, unitId, valeur ou règle ; demander des captures complémentaires si nécessaire. JSON téléchargeable compatible, inconnues et box incomplète explicites, procédure sûre et données existantes préservées. nightly ; aucune nouvelle publication ni aucun envoi Discord.
 # Décisions structurantes
-- Dépôt original ; nightly pour le travail, main sur approbation humaine du périmètre.
-- Site statique JS natif ES/HTML/CSS, Node.js 24 et Python 3 ; npm test et npm run build, sortie dist.
-- Sauvegardes compatibles ; import photo fusionné sans effacer les données absentes ; inconnus null/absents et unitId natifs vérifiés.
-- Références décrivant le jeu, jamais le compte ; données personnelles non vérifiées, livrable réutilisable substitué à leur import.
-- Une issue courte par PR, avec revue ; le prompt attend les preuves, les guides attendent le parcours révisé.
+- Dépôt original ; nightly ; production sur accord humain.
+- JS ES/HTML/CSS, Node 24/Python 3 ; npm test et npm run build vers dist.
+- Import fusionné, inconnus null/absents, unitId vérifiés ; sauvegardes compatibles.
+- Une issue/PR relue ; références du jeu distinctes du compte.
 # Pièges et consignes
-- Interceptions navigateur et réponse API ne prouvent pas la réception Discord ; garder la confirmation humaine et la réserve sur les mentions.
-- Aucun envoi/publication ; préserver VPS, SSH, secrets et sauvegardes ; aucun webhook côté navigateur.
-- Essais sur 9101, serveur arrêté ensuite ; préserver 8101. Build seul sans endpoint par défaut.
+- API/interception ≠ réception Discord ; mentions non vérifiées.
+- Préserver VPS/SSH/secrets ; webhook serveur seul.
+- Tests 9101 puis arrêt ; préserver 8101 ; build sans endpoint implicite.
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Corriger l’accroche, documenter les preuves natives et actualiser la grille pour sept critères.
-- Réviser ensuite prompt/parcours gratuit, puis guides ; relire les livrables et reprendre l’audit indépendant.
+- Prompt gratuit, puis guides, présentation et audit indépendant final.
