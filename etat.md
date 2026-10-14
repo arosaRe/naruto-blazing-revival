@@ -1,7 +1,7 @@
 # État actuel
 - Critères 1 à 5 satisfaits (2/3 révisés) ; critère 6 ouvert.
 - Stocks zéro publiés ; import sûr et prompt sur nightly.
-- Relais HTTPS actif, relu, non activé au boot ; réception Discord à confirmer.
+- Relais HTTPS actif, relu, non activé au boot ; réception du contrôle confirmée par le PDG.
 - Candidate isolée validée ; publication autorisée, non réalisée.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
@@ -35,6 +35,7 @@
 - 2026-10-14 à 22:58 — Le PDG n’a pas de domaine ni d’accès DNS ; proposer un sous-domaine gratuit adapté au VPS avec contraintes et démarches. Si aucune solution ne convient, présenter achat et coût avant engagement. Correction de l’horloge indépendante. Messages transcrits : « j’ai pas de nom de domaine » et « mais pourquoi besoin d’https ? » (répété).
 - 2026-10-14 à 23:19 — Le PDG confirme « c’est fait » : filtrage Infomaniak vérifié et TCP entrant 80/443 ouvert si nécessaire, SSH et autres règles préservés. Reprendre #29 et la PR #30 existantes : contrôler HTTP externe avant HTTPS et renouvellement ; si toujours bloqué, rapporter les observations précises. Publication limitée au formulaire/relais sécurisé, sans import photo ni fusion globale de nightly. Critère 6 seulement après vérifications réelles, dont réception Discord.
 - 2026-10-14 à 23:53 — Le PDG confirme l’injection privée via le script masqué (injection faite), après une première commande échouée avec un point final ajouté à inject-secret.py. Reprendre la mise en service sécurisée, puis publier la candidate isolée validée. Secret uniquement serveur ; conserver quotas, confirmations et erreurs compréhensibles ; exclure import photo et fusion globale de nightly. Critère 6 seulement après parcours public vérifié et réception réelle observée dans le salon Discord, distincte de la réponse API.
+- 2026-10-15 à 00:00 — Le PDG confirme voir ISSUE33-CONTROLE-20261014T215551Z dans le salon Discord prévu (« oui »). Reprendre la publication de la seule candidate isolée autorisée : formulaire et relais sécurisé, sans import photo ni fusion globale de nightly. Critère 6 seulement après parcours public, confirmations, erreurs et protections anti-abus vérifiés.
 # Décisions structurantes
 - Dépôt original ; nightly au travail ; main limité au périmètre approuvé, sans fusion globale.
 - JS natif/HTML/CSS, Node 24, Python 3 ; lancer.json aligné sur build/PORT.
@@ -49,6 +50,5 @@
 # Dette connue
 - fwupd-refresh en échec, hors périmètre, sans impact applicatif établi.
 # Prochaines étapes
-- Attendre le constat humain du contrôle Discord identifié, sans nouvel envoi.
 - Publier la candidate isolée après contrôle de base et relecture ; exclure import photo et fusion globale de nightly.
 - Vérifier le parcours public, erreurs, quotas et réception réelle avant de satisfaire le critère 6.
