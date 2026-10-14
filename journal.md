@@ -50,3 +50,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, cycle manager : retrait MADFUT/Tradispo validé et documenté par PR #24 ; #23 fermée. #25 créée et confiée pour préparer le service interne Node 24. Critère 6 ouvert ; aucun déploiement public. État condensé, retours du PDG conservés intégralement.
 
 14.10.2026, cycle manager : service interne relu via PR #26, issue #25 fermée. #27 créée pour synchroniser l’horloge avant TLS ; choix du nom public demandé au PDG. Relais arrêté sans secret, critère 6 ouvert ; aucune publication.
+
+14.10.2026, cycle manager : #27 ferm?e apr?s validation et merge de #28. Absence de domaine/DNS consign?e ; solution sslip.io propos?e, #29 cr??e et confi?e pour HTTPS/proxy sans secret ni modification du site. Crit?re 6 toujours ouvert.
