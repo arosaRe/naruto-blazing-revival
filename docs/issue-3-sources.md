@@ -1,6 +1,6 @@
 # Issue #3 — Sources accessibles pour l’import de la box
 
-Les [six critères de clôture actuels](criteres-cloture.md) consignent les remplacements de 2 et 3 à 17:33, l’approbation limitée de 17:51 et son périmètre Git, ainsi que le nouveau critère Discord de 17:56, toujours ouvert. Les transcriptions proviennent des consignes fournies au cycle manager ; aucun lien original de discussion n’est disponible.
+Les [six critères de clôture actuels](criteres-cloture.md) consignent les remplacements de 2 et 3 à 17:33, l’approbation limitée de 17:51 et son périmètre Git, ainsi que le critère Discord de 17:56, clos par décision humaine avec réserve le 15.10 à 00:47 : réception confirmée à 00:26, absence de notification de mention non vérifiée. Le défaut du lancement standard relevé par #96 reste ouvert dans #42 ; la clôture globale reste suspendue. Les transcriptions proviennent des consignes fournies au cycle manager ; aucun lien original de discussion n’est disponible.
 
 État des lieux initial effectué le 14 octobre 2026 dans le clone de travail `nightly` et dans la session accessible à l’agent. Les constats ci-dessous sont conservés comme historique de cette vérification, pas comme une nouvelle consultation ni comme des conditions de clôture actuelles.
 
@@ -10,7 +10,7 @@ Le périmètre actuel est celui décidé par le PDG le 14 octobre 2026 et préci
 
 Aucune des sept captures annoncées ni aucun fichier `ma-box-blazing.json` n’est présent dans le dépôt ou dans `docs/contexte/`. L’énumération du dépôt ne révèle que `arosa.json`, qui contient `{"publicDefaults":true,"collection":[]}` : c’est un état de démonstration/public par défaut, pas une sauvegarde personnelle exploitable. Les consignes du prompt ne sont pas des observations de la box.
 
-En conséquence, aucune entrée de personnage ni aucun stock appartenant au PDG n’a été vérifié dans cet état des lieux. Les identités, progressions, quantités et monnaie personnelles restent non vérifiées ; aucune valeur inconnue ne devient zéro ou une valeur déduite. Aucun unitId ne peut être retenu pour sa box à partir de ces références seules, et aucun portrait n’a été utilisé pour en déduire un personnage. La remise de pièces personnelles n’est plus attendue dans le périmètre actuel.
+En conséquence, aucune entrée de personnage ni aucun stock appartenant au PDG n’a été vérifié dans cet état des lieux. Les identités, progressions, quantités et monnaie personnelles restent non vérifiées ; aucune valeur inconnue ne devient zéro ou une valeur déduite. Aucun unitId ne peut être retenu pour sa box à partir de ces références seules, et aucun portrait n’a été utilisé pour en déduire un personnage. Les personnages personnels, les 36 stocks et les 59 700 950 ryō restent non vérifiés : les nombres annoncés ne constituent pas des valeurs validées. La monnaie premium et les objets ambigus restent non vérifiés, avec leurs incertitudes de référence native. La remise de pièces personnelles n’est plus attendue et leur consultation est interdite dans le périmètre actuel.
 
 ## État des lieux initial — sources effectivement vérifiées
 

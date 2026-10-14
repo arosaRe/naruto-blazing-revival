@@ -58,8 +58,10 @@ Aucun parcours de soumission, POST Discord ou accès au secret.
 
 ## Preuves précédentes et retour arrière
 
-[Le rapport #35](issue-35-publication.md), `docs/feedback-candidate/` et
-`docs/generator-candidate/` restent inchangés. Empreintes précédentes revérifiées :
+Lors de #39, [le rapport #35](issue-35-publication.md),
+`docs/feedback-candidate/` et `docs/generator-candidate/` sont restés inchangés.
+Le rapport #35 est ensuite actualisé dans #41 ; les preuves et candidates
+historiques sont conservées. Empreintes précédentes revérifiées :
 
 | Preuve | SHA-256 |
 | --- | --- |
@@ -89,5 +91,15 @@ L'ancienne restauration #35 reste disponible sans écrasement.
 | 4 | Présent rapport versionné, preuves antérieures préservées, restauration conservée. |
 
 La réception Discord confirmée est distincte de l'absence de mention :
-**l'absence de mention reste non vérifiée et le critère 6 global reste ouvert**.
+**l’absence de notification de mention indésirable reste non vérifiée**.
+Actualisation #41 : selon les transcriptions du PDG dans `etat.md` et
+`journal.md`, réception de `ISSUE35-CONTROLE-20261014T220717Z` confirmée
+le 15.10 à 00:26 (« oui je le vois »), puis clôture humaine du critère 6
+avec cette réserve à 00:47 (« alors oui c'est bon on confirme le critère 6 »).
+Ces confirmations transcrites ne sont ni une réponse API ni un contrôle
+indépendant du salon ; aucun lien original de discussion disponible.
+Le défaut du lancement standard relevé par #96 reste ouvert dans
+[#42](https://github.com/arosaRe/naruto-blazing-revival/issues/42), et la
+clôture globale reste suspendue. Voir la [grille actuelle](criteres-cloture.md).
+Cette actualisation documentaire ne publie rien.
 Aucun nouveau message de contrôle envoyé. Aucun accès VPS ou secret nécessaire.

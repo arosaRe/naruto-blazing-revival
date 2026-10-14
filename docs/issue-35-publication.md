@@ -82,7 +82,7 @@ confirmation affichée « Merci ! Ton retour a été reçu par Discord. », cham
 vidé, sauvegarde inchangée, aucune erreur JavaScript non interceptée. Preuve
 locale `.git/issue35-public-control.json`, réservée avant la tentative unique.
 Cela établit la réponse réelle du relais et l'interface ; pas le constat
-visuel du salon. Aucun accès au salon disponible, aucun nouvel envoi pour
+visuel du salon. À ce stade du contrôle initial, aucun accès au salon disponible ; aucun nouvel envoi pour
 obtenir le constat. Les mentions neutralisées sont contrôlées par les tests
 du module serveur déjà déployé, pas observées visuellement dans le salon ici.
 
@@ -91,15 +91,34 @@ du module serveur déjà déployé, pas observées visuellement dans le salon ic
 | 1 | Satisfait : confirmation humaine #33 consignée ; base exacte, patch et diff inchangés de la candidate relue. |
 | 2 | Satisfait : version, run, déploiement et artefact identifiés ; seul dist isolé publié, sans secret ni ajout d'import photo. |
 | 3 | Satisfait dans les contrôles décrits : parcours public et confirmation réels ; erreurs/quotas et concurrence simulés ; stocks zéro et sauvegarde contrôlés dans le navigateur public. Les limites proxy réelles documentées en #33 ne sont pas saturées à nouveau. |
-| 4 | Attente explicitement consignée : réponse API positive, contrôle public identifié ; constat humain du salon requis, sans répétition. |
+| 4 | Réception humaine confirmée à 00:26 le 15.10 ; clôture humaine du critère 6 avec réserve à 00:47. Absence de notification de mention indésirable non vérifiée ; réponse API et contrôle indépendant distincts. |
 | 5 | Satisfait : version et artefact précédents conservés, procédure ci-dessous ; préservation VPS contrôlée. |
 
-**Le critère 6 global reste ouvert et n'est pas déclaré satisfait.** Le PDG
-doit constater dans le salon prévu `ISSUE35-CONTROLE-20261014T220717Z`, y
-compris l'absence de mention effective ; ne pas renvoyer ce message. La
-confirmation précédente de #33 ne remplace pas cette observation publique.
-Build de nightly également réussi pour la PR de compte rendu ; il n'est pas
-publié. `lancer.json` et `CLAUDE.md` restent alignés et inchangés.
+## Actualisation documentaire du 15.10 — réception et réserve
+
+Le constat humain demandé ci-dessus est ensuite consigné à **00:26** :
+le PDG voit `ISSUE35-CONTROLE-20261014T220717Z` dans le salon prévu
+(« oui je le vois »). À **00:47**, il accepte la clôture du critère 6
+(« alors oui c'est bon on confirme le critère 6 »), **avec réserve : absence
+de notification de mention indésirable non vérifiée**.
+
+Provenance : [#41](https://github.com/arosaRe/naruto-blazing-revival/issues/41)
+et transcriptions du cycle manager dans `etat.md` et `journal.md`, heures
+Europe/Zurich ; aucun lien original de discussion disponible. La réponse
+HTTP 200 et `{"ok":true}` ci-dessus est une preuve API historique ; la
+confirmation de 00:26 est une réception humaine transcrite. Aucune des deux
+ne constitue une observation indépendante du salon par cet agent. Les tests
+simulés de neutralisation des mentions ne vérifient pas l’absence de
+notification effective. Le réaudit indépendant demandé reste distinct de
+cette acceptation humaine et de cette mise à jour documentaire.
+
+Le défaut du lancement standard relevé par #96 (`feedbackEndpoint` vide,
+formulaire désactivé sur 9101) reste ouvert dans
+[#42](https://github.com/arosaRe/naruto-blazing-revival/issues/42), jusqu’à
+correction et vérification. La clôture globale reste suspendue.
+Voir la [grille actuelle](criteres-cloture.md).
+Aucun nouvel envoi Discord, aucune modification fonctionnelle ni publication
+pour #41 ; `lancer.json` et `CLAUDE.md` ne sont pas modifiés.
 
 ## VPS préservé
 
