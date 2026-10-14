@@ -106,3 +106,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 
 15.10.2026, synthèse des phases antérieures : stocks neufs à zéro et imports protégés ; import personnel abandonné au profit des références et du prompt réutilisable ; formulaire/relais et balises publiés dans les seuls périmètres approuvés ; guides/prompt relus sur nightly, audit sécurité limité sans faille démontrée.
 15.10.2026, cycle après audit #119 : clôture suspendue pour refus CORS réel MakeProject ; #57 créée et confiée au développement, sans déploiement. #58 créée pour traiter séparément les trois manques personnels abandonnés et réconcilier les critères approuvés, sans demander les fichiers interdits. Retours du PDG conservés intégralement ; état condensé. Aucun test Discord ni publication.
+
+15.10.2026, cycle manager : #57 fermée après fusion et revue de #59 ; correction prête, activation distante non autorisée et CORS toujours bloquant selon dernier contrôle. #58 lancée pour réconcilier les trois manques personnels abandonnés. Accord demandé pour le seul module relais et deux origines locales, sauvegarde/repli et OPTIONS sans POST. Aucun déploiement ni envoi Discord.

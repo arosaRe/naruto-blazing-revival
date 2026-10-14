@@ -1,6 +1,6 @@
 # État actuel
-- Clôture bloquée : CORS MakeProject refusé.
-- Import personnel abandonné ; réaudit des critères substitués.
+- CORS corrigé et relu sur nightly ; activation serveur à approuver, refus distant persistant.
+- Import personnel abandonné ; réconciliation documentaire des critères substitués en cours.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -53,5 +53,5 @@
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Corriger CORS puis réconcilier et réauditer les critères.
-- Aucun déploiement/envoi Discord ; serveur actif non réinspecté.
+- Réconcilier les trois manques personnels avec les remplacements approuvés ; puis réaudit.
+- Accord demandé : seul module relais + origines localhost:8101/9101, sauvegarde et repli ; OPTIONS seuls. Aucun déploiement/envoi Discord effectué.
