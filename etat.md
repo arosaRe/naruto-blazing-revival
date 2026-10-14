@@ -1,5 +1,5 @@
 # État actuel
-- Phase : livrables présents sur nightly ; audit sécurité de l’import à lancer avant clôture.
+- Phase : livrables sur nightly ; audit de sécurité terminé sans faille relevée ; contrôle indépendant de clôture demandé.
 - Le prompt réutilisable d’import est disponible depuis Sources & sauvegarde.
 - Les stocks d’une box neuve sont initialisés à zéro ; l’import photo fusionne les observations connues avec l’état existant.
 - L’objectif personnel a été remplacé par le prompt réutilisable ; le PDG ne fournira ni captures ni fichier personnel.
@@ -43,6 +43,6 @@
 - Les régressions utilisent le lanceur natif de Node.js, sans framework externe.
 
 # Prochaines étapes
-- Faire auditer la sécurité de l’import JSON et de la conservation des données locales ; transformer chaque faille éventuelle en petite issue avec critères vérifiables.
-- Après traitement des éventuels constats, proposer la clôture au contrôle indépendant de la checklist validée.
-- Ne proposer aucune mise en production avant approbation humaine.
+- Soumettre la checklist révisée au contrôle indépendant de clôture : stocks neufs à zéro, sauvegardes compatibles, références et limites documentées, prompt accessible, import conservant les données, régressions et build validés.
+- Si ce contrôle relève des critères manquants, créer une petite issue par manque avant de reprendre les travaux.
+- Aucune mise en production avant approbation humaine.

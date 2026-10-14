@@ -22,4 +22,4 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 
 14.10.2026 : crit?res 2 et 3 remplac?s avec accord du PDG ; explication du crit?re 2 fournie. R?gressions et build r?ussis ; audit s?curit? de l?import demand? avant cl?ture. Aucune publication en production.
 
-14.10.2026 : audit s?curit? sans faille relev?e ; checklist r?vis?e couverte, contr?le ind?pendant de cl?ture demand?. Aucune publication en production.
+14.10.2026 : audit de sécurité sans faille relevée ; checklist révisée couverte, contrôle indépendant de clôture demandé. Aucune publication en production.
