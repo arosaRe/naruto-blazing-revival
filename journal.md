@@ -10,3 +10,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 2026-10-14 — Cycle 5 : #6 (PR #8) et #1 (PR #5) confirmées mergées et fermées ; #3 choisie pour inventorier les sources d’import accessibles.
 
 2026-10-14 — Cycle 6 : #3 clôturée après fusion du rapport ; #4 attend les sources personnelles.
+
+2026-10-14 — Cycle 7 : #4 toujours bloquée par les sources personnelles ; aucun nouvel élément fourni.

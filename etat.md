@@ -34,6 +34,6 @@
 - Aucun framework de test séparé n’est configuré.
 
 # Prochaines étapes
-- Attendre que le PDG fournisse les sept captures et ma-box-blazing.json.
+- La demande de fourniture des sept captures et de ma-box-blazing.json reste en attente ; ne pas la reposer.
 - À réception, vérifier les valeurs dans les sources, clarifier les ambiguïtés et reprendre #4 pour produire puis valider l’import.
 - Ne proposer aucune mise en production avant approbation humaine.
