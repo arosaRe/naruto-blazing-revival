@@ -1,4 +1,70 @@
-﻿# Issue #29 — HTTP préparé, validation HTTPS bloquée par le réseau
+# Issue #29 — HTTPS et renouvellement validés extérieurement
+
+## État actuel : quatre critères couverts, 14 octobre 2026, 21:24–21:32 UTC
+
+Le bilan ci-dessous est conservé comme historique. Le blocage réseau est levé
+après confirmation du PDG concernant Infomaniak ; PR #30 proposée à la revue.
+Relais arrêté/désactivé, sans secret, sans envoi Discord ; aucun changement du
+site, de main ou du lancement. Versions inchangées.
+
+1. **HTTPS externe satisfait.** Windows curl sans proxy reçoit HTTP 308 sur
+   `/` et 404 sur un jeton absent. Le webroot et `.well-known` étaient 0700 :
+   correction ciblée à 0755 pour la lecture Nginx des seuls challenges publics.
+   Sonde HTTP-01 externe : 200 et contenu exact
+   `issue29-http-probe-20261014`, jeton ensuite supprimé. Aucun ACME relancé
+   avant ce succès. A public via 1.1.1.1 : 179.237.102.19. Une validation
+   staging avec le compte existant puis une émission production réussies,
+   sans email/achat, sans contournement des quotas. Certificat Let's Encrypt
+   YE2, SAN exact, du 14 octobre 2026 20:27:24 UTC au 12 janvier 2027
+   20:27:23 UTC. Curl Windows et Python `ssl.create_default_context()`
+   valident chaîne, nom et dates depuis l'extérieur sans désactiver TLS.
+   Aucun certificat staging servi.
+2. **Renouvellement satisfait.** Hook root:root 0700 et unités root:root 0644
+   installés ; timer dédié enabled/active, deux passages/jour avec délai
+   aléatoire, prochaine échéance constatée : 14 octobre 22:59:09 UTC.
+   Timer général disabled. `certbot renew --cert-name
+   retours.179-237-102-19.sslip.io --dry-run --run-deploy-hooks` : toutes les
+   simulations réussies, hook exécuté, nginx -t OK, ReloadResult=success.
+   Le message « error output » accompagne les diagnostics de succès de
+   nginx -t sur stderr, sans échec. Dry-run : compte technique staging créé
+   aussi sous Certbot production ; tous les comptes protégés root. Parent
+   `/etc/letsencrypt`, accounts/live/archive, hook, work/logs privés (0700).
+   La lineage conserve l'URL ACME production ; contrôle expiration 30 jours OK.
+3. **Frontière et limites satisfaites.** `python -u
+   relay/ops/check-external-29.py` exécuté depuis Windows sur le vrai HTTPS.
+   Récepteur sans sortie réseau, une requête, attente 20 s, processus borné
+   par timeout 25 s, exclusivement 127.0.0.1:9101, puis arrêté. X-Real-IP
+   égale l'IP source de la connexion SSH externe ; en-têtes visiteurs testés
+   et Cookie/Authorization supprimés, liste blanche conservée. Port 9101
+   inaccessible extérieurement pendant l'écoute. Sans backend : 503 JSON
+   exact, aucune confirmation de réception ; mauvais Host/chemin 404,
+   8193 octets 413, en-tête 9000 octets 400, rafale 429. En-têtes et corps
+   incomplets fermés après environ 5 s (TLS EOF observé ; contrôle admet aussi
+   408). Récepteur lent séparé borné : délai backend 12 s, 503 contrôlée,
+   puis arrêt. Quota IP vérifié extérieurement ; quotas globaux 60/min burst
+   10 et simultanéité 4/IP, 32 globales vérifiés dans la configuration chargée.
+   Seuils multi-IP et saturation non mesurés dynamiquement depuis ce client
+   unique : portée explicite, aucun test distribué revendiqué. Les délais
+   restent par inactivité et les limites NAT ci-dessous restent applicables.
+4. **Préservation satisfaite.** `preserved.sha256` conforme, nouvelle connexion
+   SSH et sshd -t OK ; relais inactive/disabled, secret absent, aucune écoute
+   9101 après nettoyage. UFW inchangé : SSH et TCP 80/443 IPv4 seulement,
+   SSH IPv6 conservé. Écoutes publiques 22/80/443, 22 IPv6 aussi. Clé SSH
+   imposée seule utilisée sans affichage/copie. Sauvegardes privées conservées ;
+   HTTP avant TLS sauvegardé dans
+   `/root/feedback-proxy-29/feedback.http-before-tls.conf`. nginx -t/reload OK.
+   Fichiers de transfert temporaires retirés. `npm.cmd test` : 34 réussis.
+
+Contrôle opérationnel : timer ciblé et journaux de son service, commande
+expiration ci-dessous et HTTPS externe avec validation TLS. En cas d'échec,
+respecter Retry-After, examiner les logs privés, ne pas multiplier les demandes.
+Retour arrière : sauvegarder le nouvel état hors dépôt, désactiver d'abord le
+timer dédié, restaurer uniquement le HTTP sauvegardé avec nginx -t/reload si
+nécessaire, ou arrêter Nginx et retirer seulement ses ouvertures 80/443.
+Préserver SSH, comptes et sauvegardes ; aucune restauration globale de `/`.
+Publication du formulaire/relais et injection de secret hors de cette tâche.
+
+## Historique avant reprise
 
 Observations du 14 octobre 2026, 21:02–21:13 UTC. **Issue incomplète ; PR #30
 reste en brouillon, sans demande de revue.** Autorisation reçue pour les seuls
