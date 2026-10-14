@@ -15,3 +15,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 
 2026-10-14 — Cycle 8 : objectif de #4 réorienté, à la demande du PDG, vers le prompt réutilisable et la procédure d’import sûre ; captures personnelles non fournies ni consultées.
 
+2026-10-14 — Cycle 9 : PR #10 fusionnée et issue #4 fermée ; prompt réutilisable livré, données personnelles toujours non vérifiables ; état actualisé sur nightly.
+

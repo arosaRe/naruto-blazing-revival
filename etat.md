@@ -1,9 +1,9 @@
-﻿# État actuel
-- Phase : rendre le prompt d’import personnel réutilisable et sûr (#4).
-- #1, #2, #3 et #6 sont terminées et mergées dans nightly.
-- Le prompt et la référence native sont disponibles dans le dépôt ; le site expose déjà le prompt depuis Sources & sauvegarde.
-- Aucune box personnelle du PDG ne sera fournie ni consultée ; aucune sauvegarde personnelle ne sera produite.
-- Le contenu d’une box, les captures, les stocks annoncés et la monnaie premium ne sont pas vérifiés.
+# État actuel
+- Phase : socle général livré sur nightly ; aucune issue ouverte à traiter.
+- Le prompt réutilisable d’import est disponible depuis Sources & sauvegarde.
+- Les stocks d’une box neuve sont initialisés à zéro ; l’import photo fusionne les observations connues avec l’état existant.
+- L’objectif personnel a été remplacé par le prompt réutilisable ; le PDG ne fournira ni captures ni fichier personnel.
+- Les personnages, stocks, ryō et monnaie premium d’une box personnelle ne sont donc pas vérifiés.
 - Aucune mise en production sans approbation humaine.
 
 # Retours du PDG
@@ -14,10 +14,10 @@
 - 2026-10-14 — Examiner la référence, les données natives et les sept captures ; vérifier valeurs et monnaie, signaler les ambiguïtés, tester l’import et ajouter des régressions.
 - 2026-10-14 — Le PDG valide le plan et les quatre issues initiales ; les travaux généraux sur stocks à zéro et protection des imports partiels peuvent commencer immédiatement.
 - 2026-10-14 — La page « Sources & sauvegarde » identifie box-import-reference.json à la racine publiée comme référence pour vérifier les unitId ; la rechercher dans le dépôt.
-- 2026-10-14 — Les sept captures et ma-box-blazing.json ne sont pas joints. Ne pas prétendre les avoir consultés, n’inférer aucun personnage depuis un portrait ambigu, et attendre ces pièces avant tout JSON personnel complet.
+- 2026-10-14 — Les sept captures et ma-box-blazing.json ne sont pas joints. Ne pas prétendre les avoir consultés et n’inférer aucun personnage depuis un portrait ambigu. Indiquer précisément les pièces manquantes et attendre avant tout JSON personnel complet.
 - 2026-10-14 — Vérifier les 36 stocks et 59 700 950 ryō à partir des sources ; clarifier la monnaie premium et les objets ambigus ; aucune production sans approbation.
-- 2026-10-14 — Le PDG ne fournira pas ses captures ni ma-box-blazing.json et n’autorise pas leur consultation ; le nouvel objectif est un prompt réutilisable pour que chacun joigne ses propres captures à ChatGPT, reçoive un JSON importable, le télécharge puis l’importe.
-- 2026-10-14 — Examiner le format et les références natives du dépôt, expliquer les limites et proposer une procédure d’import sûre ; signaler les données incertaines ou manquantes, ne rien inventer et ne pas présenter un résultat partiel comme sauvegarde complète.
+- 2026-10-14 — Le PDG ne fournira pas ses captures ni ma-box-blazing.json et n’autorise pas leur consultation ; nouvel objectif : un prompt réutilisable pour que chacun joigne ses propres captures à ChatGPT, obtienne un JSON importable, le télécharge puis l’importe.
+- 2026-10-14 — Examiner le format et les références natives du dépôt, expliquer les limites et proposer une procédure sûre ; signaler les incertitudes, ne rien inventer et ne pas présenter un résultat partiel comme complet.
 - 2026-10-14 — Conserver nightly et ne rien publier en production sans approbation humaine.
 
 # Décisions structurantes
@@ -26,17 +26,17 @@
 - Sauvegardes compatibles ; une donnée absente, illisible ou ambiguë reste inconnue.
 - Les identifiants de personnages viennent des identifiants natifs vérifiés du catalogue ; jamais d’inférence depuis un portrait ambigu.
 - lancer.json décrit le build et le serveur statique ; son manifeste doit être un JSON lisible par MakeProject et utiliser PORT.
+- L’import photo fusionne les champs observés et préserve les valeurs absentes ou nulles ; la restauration d’une sauvegarde complète est distincte.
 
 # Pièges et consignes
-- Un import photo construit un état personnel ; vérifier exactement comment les observations absentes et un tableau characters vide affectent les données enregistrées.
-- La référence d’import décrit le jeu, pas la box personnelle ; ne jamais laisser croire que les captures ou le compte du PDG ont été consultés.
-- Le prompt doit distinguer les données lues dans les images des références de catalogue et des inférences impossibles.
+- La référence d’import décrit le jeu, pas une box personnelle ; ne jamais laisser croire que des captures ou un compte ont été consultés.
+- Le prompt distingue les observations d’image, les références du catalogue et les inférences impossibles.
+- Un import photo vide ne vide pas la box ; vérifier le comportement réel avant de décrire toute procédure d’import.
 
 # Dette connue
-- La monnaie premium et les ressources non identifiées ne sont pas clarifiées pour une box personnelle.
+- Les stocks, 59 700 950 ryō, la monnaie premium et les ressources d’une box personnelle restent non vérifiés faute de captures/fichier fournis.
 - Aucun framework de test séparé n’est configuré.
 
 # Prochaines étapes
-- Faire traiter l’issue #4 réorientée vers le prompt réutilisable, l’explication des limites et la procédure d’import sûre.
-- Garder les données du compte et les captures du PDG hors du travail.
+- Attendre une nouvelle priorité ; le prompt réutilisable demandé est livré et aucune issue n’est ouverte.
 - Ne proposer aucune mise en production avant approbation humaine.
