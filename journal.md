@@ -42,3 +42,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, cycle manager : audit sécurité #54 favorable, correction du quota proxy confirmée sans nouvelle faille. Présentation du formulaire et demande d’approbation de publication limitée aux retours Discord ; hébergement et réception réelle restent à configurer et vérifier. Aucun déploiement.
 
 14.10.2026, cycle SSH VPS : nightly synchronis?e ; VPS joignable mais authentification refus?e (publickey), aucun agent SSH disponible ni cl? autoris?e identifi?e pour ce VPS. Chemin de cl? demand? ; aucun inventaire, nettoyage ou d?ploiement. Consignes de 22:17 et 22:20 enregistr?es.
+
+14.10.2026, cycle manager : SSH r?ussi avec la cl? express?ment autoris?e ; inventaire initial en lecture seule. Services madfut27-watcher et tradispo actifs ; donn?es respectives 56 Ko et 960 Mo sous /var/lib, code sous /opt, configurations sous /etc. Environ 52 Go libres, Node 22, UFW SSH seul ; Nginx/Docker indisponibles. Contenus secrets non lus ; aucun arr?t, sauvegarde, nettoyage ni d?ploiement. Nettoyage et sauvegardes soumis au PDG ; publication des retours toujours en attente.
