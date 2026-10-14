@@ -30,3 +30,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026 à 18:00, cycle manager : consigne Discord de 17:56 enregistrée ; issues #15 (relais), #16 (formulaire) et #17 (critères et approbation) créées. Audit repris avec critères 2/3 remplacés et autorisation de 17:51 fournie dans le cycle ; pièces personnelles hors périmètre. #17 puis #15 confiées, #16 attend le relais ; aucune publication.
 
 14.10.2026 : cycle manager — documentation des critères et relais Discord livrés ; issues #17 et #15 clôturées. Formulaire #16 confié ensuite, puis audit sécurité prévu. Validations rapportées par les jobs développeur/relecteur ; tester app non connu. Aucun déploiement.
+
+14.10.2026, cycle de reprise : identit? Git locale autoris?e confirm?e ; travail de secours f537663 conserv? et rattach? ? issue-16-feedback, branche pouss?e. #16 relanc?e pour finalisation et relecture, puis audit s?curit? ; aucune publication.

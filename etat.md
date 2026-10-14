@@ -46,6 +46,7 @@
 - Le résumé doit compter les observations validées reçues, pas la collection après fusion.
 
 - CORS ne suffit pas contre les abus ; limiter les envois côté serveur et maîtriser les adresses IP derrière un proxy. Ne jamais recopier le webhook en issue, log ou artefact.
+- Apr?s un ?chec de job, examiner aussi les branches de secours avant toute reprise ; conserver le travail et v?rifier l?identit? Git locale autoris?e avant commit.
 - Une transcription de consigne fournie au manager doit être identifiée comme telle ; ne pas fabriquer de lien vers une discussion originale inaccessible.
 
 # Dette connue
