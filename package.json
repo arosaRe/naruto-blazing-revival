@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-github-site.mjs"
+    "build": "node scripts/build-github-site.mjs",
+    "test": "node --test"
   }
 }
