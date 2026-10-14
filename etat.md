@@ -1,11 +1,10 @@
 # État actuel
-- Phase : protection des imports partiels (#2), autorisée par le PDG ; à confier au prochain développeur.
-- #1 est terminée et sa PR #5 a été mergée dans nightly.
+- Phase : corrections de lancement ; l’issue #6 est la prochaine tâche.
+- #1 et #2 sont terminées et leurs PR #5 et #7 ont été mergées dans nightly ; #2 est fermée.
 - Aucune validation de ma-box-blazing.json dans le site n’est établie.
 - Le dépôt contient catalogue.json et le générateur de box-import-reference.json ; les sources visuelles personnelles restent absentes.
 - Manquent : « Référence pour ChatGPT », sept captures et ma-box-blazing.json ; ne pas produire la sauvegarde complète avant réception.
 - Les valeurs 36 stocks, 59 700 950 ryō, la monnaie premium et les objets ambigus restent à vérifier.
-- Issue #6 ouverte pour retirer le BOM UTF-8 de lancer.json signalé par MakeProject.
 - Aucune mise en production sans approbation humaine.
 
 # Retours du PDG
@@ -29,7 +28,7 @@
 # Pièges et consignes
 - Un import photo construit un état personnel complet ; un JSON partiel ne doit pas remplacer les observations existantes.
 - La référence d’import est générée par le build ; l’absence de dist dans le dépôt ne signifie pas que les sources externes ont été consultées.
-- lancer.json contient un BOM UTF-8, cause cohérente avec l’erreur de parsing signalée ; issue #6 ouverte.
+- lancer.json a été signalé avec un BOM UTF-8 ; l’issue #6 suit sa correction.
 - Aucun fichier personnel fourni par le PDG ni aucune capture n’est présent dans le clone.
 
 # Dette connue
@@ -37,8 +36,7 @@
 - Aucun framework de test séparé n’est configuré.
 
 # Prochaines étapes
-- Confier #2 pour fusion/refus sûr des imports partiels et tests ciblés ; restaurer une sauvegarde complète doit rester compatible.
-- Traiter #6 pour corriger le manifeste de lancement.
+- Traiter #6 pour rendre lancer.json lisible par MakeProject.
 - Rechercher et rapporter les sources accessibles pour #3, sans prétendre avoir consulté les pièces absentes.
 - Après réception des captures et du JSON, vérifier les valeurs, clarifier les ambiguïtés, puis produire et valider #4.
 - Ne proposer aucune mise en production avant approbation humaine.
