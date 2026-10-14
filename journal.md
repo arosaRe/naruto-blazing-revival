@@ -62,3 +62,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, cycle manager : intervention Infomaniak confirmée ; reprise #29/PR #30 prescrite, HTTP externe avant ACME ; critère 6 ouvert. État condensé, retours du PDG conservés.
 
 14.10.2026, cycle manager : #29 close après validation et merge #30 ; HTTPS externe et renouvellement acquis. #31 créée pour préparer et relire une candidate isolée sans publication ni secret ; critère 6 ouvert.
+
+14.10.2026 : candidate relue, #31 fermée ; #33 créée pour la mise en service, en attente de confirmation de l’injection privée par le PDG. Critère 6 ouvert.

@@ -5,7 +5,7 @@
 - VPS nettoyé, sauvegarde protégée et restauration vérifiée ; horloge corrigée.
 - HTTPS externe, renouvellement et frontière proxy validés et relus.
 - Node 24 isolé sur loopback ; relais arrêté/désactivé sans secret.
-- Candidate isolée à préparer ; restent secret protégé, publication et réception Discord réelle.
+- Candidate isolée relue et validée ; restent injection privée, mise en service, publication et réception Discord réelle.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -55,7 +55,7 @@
 # Dette connue
 - Échec fwupd-refresh signalé, hors périmètre ; laissé intact, sans impact applicatif établi.
 # Prochaines étapes
-- Préparer et faire relire une candidate reproductible depuis main limitée au formulaire et à son endpoint HTTPS ; vérifier son build et son parcours navigateur en simulation.
-- Faire injecter le webhook par terminal SSH privé avec saisie masquée ; jamais en discussion/GitHub.
-- Activer le relais et publier uniquement le périmètre relu autorisé, sans import photo ni fusion globale de nightly.
-- Vérifier réception Discord réelle, confirmations, erreurs, quotas et frontière réseau ; simulations insuffisantes.
+- Attendre la confirmation d’injection privée du webhook via le script masqué existant ; aucun secret en discussion ou GitHub.
+- Faire mettre en service et relire le relais ; confirmer la réception réelle dans le salon, sans confondre réponse API et observation Discord.
+- Publier la candidate isolée déjà validée dans le périmètre autorisé, après contrôle de sa base ; aucune fusion globale de nightly ni import photo.
+- Vérifier le parcours public, confirmations, erreurs, quotas et frontière réseau avant de satisfaire le critère 6.
