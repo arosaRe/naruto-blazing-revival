@@ -1,5 +1,5 @@
 # État actuel
-- Clôture suspendue : formulaire local désactivé ; critères 1–5 satisfaits (2/3 révisés).
+- Audit à reprendre ; formulaire local indisponible.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -38,12 +38,10 @@
 - 2026-10-15 à 00:36 — Notifications acceptables pour les vrais retours du formulaire. Absence de notification de mention indésirable sur ISSUE35-CONTROLE-20261014T220717Z non confirmée : ne pas la présenter comme vérifiée ; consigner sans nouveau test. N’autorise pas les balises HTML. Messages : « alors pour l'issues c'est chiant mais si c'est pour des vrai retours envoyer par le formularie alors ça va » ; deux messages Captain Hook reçus (#33 et #35).
 - 2026-10-15 à 00:47 — Clôture du critère 6 validée : réception Discord confirmée ; absence de notification de mention indésirable non vérifiée. Conserver cette réserve au rapport sans la présenter comme vérifiée. Aucun nouveau test Discord ; audit indépendant requis ; aucune publication autorisée. Messages : « quand tu veux dire mention non désirable tu parles de quoi ? » ; « alors oui c'est bon on confirme le critère 6 ».
 # Décisions structurantes
-- Original/nightly ; production sur accord limité. JS natif, Node 24/Python 3.
-- Sauvegardes compatibles ; inconnus null ; unitId vérifiés ; photo fusionnée.
-- Relais HTTPS, secret serveur, quotas.
+- nightly ; main sur accord limité. Inconnus null, unitId vérifiés, sauvegardes compatibles.
 # Pièges et consignes
-- Privés interdits ; aucun envoi Discord ni publication. Préserver VPS/SSH/sauvegardes/certificats ; horloge douteuse ; CORS insuffisant.
+- Aucun envoi/publication ; préserver VPS/SSH/secrets/sauvegardes.
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Aligner audit/preuves, corriger lancement, réaudit.
+- Grille d’audit, lancement, réaudit.
