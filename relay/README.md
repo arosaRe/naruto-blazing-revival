@@ -25,7 +25,7 @@ Exemple de variables **serveur** (les valeurs ci-dessous sont des exemples sans 
 
 ```text
 DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/123/EXEMPLE_NON_FONCTIONNEL
-FEEDBACK_ORIGINS=https://arosare.github.io
+FEEDBACK_ORIGINS=https://arosare.github.io,http://localhost:8101,http://localhost:9101
 FEEDBACK_HOST=127.0.0.1
 FEEDBACK_PORT=9101
 FEEDBACK_TRUSTED_PROXIES=127.0.0.1
@@ -69,3 +69,9 @@ En mono-instance : 3 transmissions par adresse client validée (ou socket sans p
 ## Vérification locale sans webhook réel
 
 `node --test tests/feedback-relay.test.js` lance le relais sur 9101 et un Discord HTTP simulé sur un port éphémère, puis ferme les serveurs. L'injection de destination existe dans l'API de test ; l'exécutable conserve la validation HTTPS stricte. `npm test` puis `npm run build` vérifient le projet. Le build utilise SITE_FILES.json et n'inclut ni relay/, ni tests/, ni configuration serveur. Le test d'artefact ci-dessous contrôle aussi dist après build.
+
+## Contrôle MakeProject et approbation #57
+
+`node scripts/check-feedback-preflight.mjs` effectue uniquement deux OPTIONS réels vers le relais public, sans interception ni POST. Il rapporte le statut et les en-têtes de chaque origine et sort avec code 1 si un prévol échoue (réseau/TLS compris). Aucun serveur local n’est nécessaire. `node scripts/check-makeproject-feedback.mjs` lance également ce contrôle, puis les scénarios navigateur interceptés sur 9101 ; un succès simulé ne peut effacer un blocage distant. Les simulations ne prouvent aucune réception Discord. Voir le [rapport et la procédure minimale à approuver](../docs/issue-57-makeproject-cors.md).
+
+Les exceptions HTTP sont limitées à `http://localhost:8101` et `http://localhost:9101`, uniquement si explicitement présentes dans `FEEDBACK_ORIGINS`. Aucun ajout automatique, joker, autre port, alias IP ou HTTP distant. Toutes les autres origines doivent rester HTTPS et exactes.

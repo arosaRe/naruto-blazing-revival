@@ -8,6 +8,8 @@
 - Vérifier avec `npm test` et `npm run build`. Le contrôle Windows `node scripts/check-makeproject-feedback.mjs` utilise une installation externe de Playwright indiquée par `PLAYWRIGHT_MODULE`, lance la commande réelle sur 9101, intercepte les soumissions et arrête son serveur. Ses confirmations simulées ne prouvent aucune réception Discord.
 
 ## Conventions
+
+Le contrôle `node scripts/check-feedback-preflight.mjs` effectue les OPTIONS publics réels pour localhost:8101 et localhost:9101, sans interception ni POST. Le contrôle MakeProject l’inclut et reste en échec si le prévol distant échoue, même si les simulations passent. Les deux origines HTTP exigent une configuration serveur explicite ; voir `relay/README.md` et `docs/issue-57-makeproject-cors.md`. `lancer.json` reste inchangé.
 - Le modèle métier et les sauvegardes sont dans `model.js` ; import photo et référence d’import dans `box-import.js`.
 - Garder les sauvegardes compatibles et ne jamais déduire un identifiant natif depuis un portrait ambigu.
 - Les champs absents ou illisibles restent inconnus (`null`/absents selon le format), pas inventés.
