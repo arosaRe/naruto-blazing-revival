@@ -1,6 +1,6 @@
 # Relais de retours — contrat pour #16
 
-Service Node.js 24 sans dépendance, séparé de GitHub Pages. Aucun déploiement n'est réalisé. Le lancement statique et les fichiers manager restent inchangés.
+Service Node.js 24 sans dépendance, séparé de GitHub Pages. Le service interne VPS est préparé et arrêté : voir [compte rendu #25](../docs/issue-25-service-interne.md). Le lancement statique et les fichiers manager restent inchangés.
 
 ## Contrat public
 
