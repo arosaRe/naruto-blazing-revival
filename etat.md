@@ -4,8 +4,8 @@
 - Formulaire/relais relus et audités en simulation ; publication isolée autorisée.
 - VPS nettoyé, sauvegarde protégée et restauration vérifiée ; horloge corrigée.
 - HTTPS externe, renouvellement et frontière proxy validés et relus.
-- Node 24 isolé sur loopback ; relais arrêté/désactivé sans secret.
-- Candidate isolée relue et validée ; restent injection privée, mise en service, publication et réception Discord réelle.
+- Node 24 isolé sur loopback ; injection privée confirmée, mise en service non vérifiée.
+- Candidate isolée relue et validée ; restent mise en service, publication et réception Discord réelle.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -37,6 +37,7 @@
 - 2026-10-14 à 22:39 — Le PDG autorise la publication du seul formulaire de retours et de son relais Discord sécurisé : secret serveur, quotas anti-abus, confirmations et erreurs compréhensibles conservés. Exclure l’import photo et toute fusion globale de nightly ; isoler et vérifier les changements publiés. Utiliser le VPS proposé si accès autorisé disponible ; configurer HTTPS et le secret par canal protégé. Vérifier réception Discord réelle, confirmations, erreurs et anti-abus avant de satisfaire le critère 6. Aucune suppression générale : présenter le nettoyage après inventaire, préserver Ubuntu et SSH. Messages transcrits : demande de configuration/VPS, proposition SSH et suppression, clé de l’ordinateur, lancement du manager, chemin public id_ed25519_madfut27.pub, « et oui je valide ce que tu m’avais demandé initialement ».
 - 2026-10-14 à 22:58 — Le PDG n’a pas de domaine ni d’accès DNS ; proposer un sous-domaine gratuit adapté au VPS avec contraintes et démarches. Si aucune solution ne convient, présenter achat et coût avant engagement. Correction de l’horloge indépendante. Messages transcrits : « j’ai pas de nom de domaine » et « mais pourquoi besoin d’https ? » (répété).
 - 2026-10-14 à 23:19 — Le PDG confirme « c’est fait » : filtrage Infomaniak vérifié et TCP entrant 80/443 ouvert si nécessaire, SSH et autres règles préservés. Reprendre #29 et la PR #30 existantes : contrôler HTTP externe avant HTTPS et renouvellement ; si toujours bloqué, rapporter les observations précises. Publication limitée au formulaire/relais sécurisé, sans import photo ni fusion globale de nightly. Critère 6 seulement après vérifications réelles, dont réception Discord.
+- 2026-10-14 à 23:53 — Le PDG confirme l’injection privée via le script masqué (injection faite), après une première commande échouée avec un point final ajouté à inject-secret.py. Reprendre la mise en service sécurisée, puis publier la candidate isolée validée. Secret uniquement serveur ; conserver quotas, confirmations et erreurs compréhensibles ; exclure import photo et fusion globale de nightly. Critère 6 seulement après parcours public vérifié et réception réelle observée dans le salon Discord, distincte de la réponse API.
 # Décisions structurantes
 - Dépôt original ; nightly au travail, main pour le périmètre approuvé sans fusion globale.
 - JavaScript natif, HTML/CSS, Node 24, Python 3 ; lancer.json aligné sur build et PORT.
@@ -55,7 +56,7 @@
 # Dette connue
 - Échec fwupd-refresh signalé, hors périmètre ; laissé intact, sans impact applicatif établi.
 # Prochaines étapes
-- Attendre la confirmation d’injection privée du webhook via le script masqué existant ; aucun secret en discussion ou GitHub.
+- Mettre en service le relais après contrôle de présence et permissions du secret, sans lecture ; faire relire les observations avant publication.
 - Faire mettre en service et relire le relais ; confirmer la réception réelle dans le salon, sans confondre réponse API et observation Discord.
 - Publier la candidate isolée déjà validée dans le périmètre autorisé, après contrôle de sa base ; aucune fusion globale de nightly ni import photo.
 - Vérifier le parcours public, confirmations, erreurs, quotas et frontière réseau avant de satisfaire le critère 6.
