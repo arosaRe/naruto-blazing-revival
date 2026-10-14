@@ -2,3 +2,5 @@
 Reprise du dépôt original sur `nightly` : inventaire du code, des sources accessibles et des travaux à planifier. Le plan et les fichiers de référence manquants sont soumis au PDG.
 
 2026-10-14 — Cycle 2 : issue #1 confiée pour initialiser les stocks à zéro sur une box neuve.
+
+2026-10-14 — Cycle 3 : #1 mergée ; #2 choisie pour sécuriser les imports partiels, #6 créée pour le BOM de lancer.json.
