@@ -1,10 +1,11 @@
 # État actuel
-- Phase : reprise après audit et préparation du formulaire de retours Discord, nouveau critère 6.
+- Phase : intégration du formulaire de retours Discord ; critère 6 encore ouvert.
 - Stocks neufs à zéro publiés avec approbation humaine limitée ; imports et sauvegardes existants préservés.
 - Prompt réutilisable, références natives et fusion photo sûre livrés sur nightly ; critères 2 et 3 remplacés par décision du PDG.
-- Les validations pertinentes déjà rapportées passent ; aucun code modifié par ce cycle manager.
-- L’audit a utilisé des exigences personnelles abandonnées ; sa demande de preuve d’approbation reçoit une transcription datée des consignes fournies.
-- Le formulaire et son relais restent à réaliser ; webhook et accès d’hébergement non accessibles dans cette session.
+- Critères applicables et approbation limitée documentés, avec provenance et limites de preuve.
+- Relais Discord séparé livré et validé par relecture ; validations réussies rapportées par le développeur, résultat du tester de l’app non connu.
+- Formulaire et audit sécurité du parcours complet restent à réaliser.
+- Webhook et accès d’hébergement non accessibles ; aucune réception dans le salon réel vérifiée.
 - Aucune nouvelle publication autorisée ; aucune décision immédiate attendue du PDG.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
@@ -51,8 +52,8 @@
 - Aucune dette mineure identifiée à traiter pour le périmètre révisé ; les données personnelles restent hors périmètre par décision du PDG.
 
 # Prochaines étapes
-- Traiter l’issue #17 : critères de clôture applicables, transcription des décisions de 17:33 et 17:51, périmètre publié vérifiable. Les manques personnels de l’audit sont abandonnés, pas réalisés.
-- Traiter l’issue #15 : relais Discord secret, validation, limites anti-abus et tests avec service simulé ; documentation d’hébergement, aucun déploiement.
-- Après validation du relais, confier l’issue #16 : formulaire accessible, configuration endpoint, succès et échecs vérifiés dans le navigateur.
-- Faire auditer la sécurité après intégration ; corriger les constats avant présentation au PDG. Préparer une demande d’approbation concrète avec besoins d’hébergement/configuration protégée ; ne jamais demander le secret dans une issue publique.
-- Puis contrôler la clôture sur les six critères, avec 2 et 3 révisés ; ne demander ni consulter aucune pièce personnelle du PDG. Toute publication supplémentaire nécessite son approbation.
+- Réaliser le formulaire accessible sur le contrat du relais : endpoint public configurable, états de succès/échec, conservation du texte et essais navigateur avec Discord simulé.
+- Faire auditer la sécurité après intégration ; corriger les constats avant présentation au PDG.
+- Préparer une présentation concrète et une demande d’approbation avec besoins d’hébergement/configuration protégée ; ne jamais demander le secret dans une issue publique.
+- Configurer et vérifier la réception réelle seulement dans le périmètre autorisé ; une simulation ne remplit pas à elle seule le critère 6 sur le site réel.
+- Contrôler ensuite les six critères, avec 2 et 3 révisés ; ne demander ni consulter aucune pièce personnelle du PDG. Toute publication supplémentaire nécessite son approbation.

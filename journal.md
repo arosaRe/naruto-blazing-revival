@@ -28,3 +28,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026 : corrections #11 et #12 livrées et issues fermées ; approbation de production limitée enregistrée. Version 6877400 publiée, uniquement stocks neufs à zéro et tests associés : régressions et build réussis, Pages réussi, modèle distant vérifié. Validations nightly réussies ; contrôle de clôture demandé sur les critères révisés.
 
 14.10.2026 à 18:00, cycle manager : consigne Discord de 17:56 enregistrée ; issues #15 (relais), #16 (formulaire) et #17 (critères et approbation) créées. Audit repris avec critères 2/3 remplacés et autorisation de 17:51 fournie dans le cycle ; pièces personnelles hors périmètre. #17 puis #15 confiées, #16 attend le relais ; aucune publication.
+
+14.10.2026 : cycle manager — documentation des critères et relais Discord livrés ; issues #17 et #15 clôturées. Formulaire #16 confié ensuite, puis audit sécurité prévu. Validations rapportées par les jobs développeur/relecteur ; tester app non connu. Aucun déploiement.
