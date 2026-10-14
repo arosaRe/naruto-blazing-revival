@@ -465,3 +465,21 @@ button.filter-chip { min-height: 44px; }
   .guide-reference dl { grid-template-columns: 1fr; gap: 0; }
   .guide-reference dd { margin-bottom: 8px; }
 }
+
+/* Feedback remains independent of collection rendering and personal state. */
+#feedback-dialog { width: min(620px, calc(100% - 24px)); padding: 24px; }
+.feedback-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+#feedback-dialog p { margin: 10px 0; color: var(--ink); }
+#feedback-form { margin-top: 20px; }
+#feedback-form label { display: block; font-weight: 650; }
+#feedback-message { width: 100%; resize: vertical; margin-top: 6px; }
+#feedback-count { text-align: right; font-variant-numeric: tabular-nums; }
+#feedback-status { min-height: 3em; }
+#feedback-message[aria-invalid="true"] { border: 2px solid #f29787; }
+#feedback-dialog :focus-visible { outline: 3px solid #f8c965; outline-offset: 3px; }
+#feedback-send:disabled { cursor: default; }
+@media (max-width: 480px) {
+  #feedback-dialog { padding: 18px; }
+  #feedback-title { font-size: 21px; }
+  #feedback-send { width: 100%; }
+}

@@ -3,6 +3,9 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {execFileSync} from 'node:child_process';
 
+import {publicFeedbackEndpoint} from '../feedback.js';
+const configuredFeedback = process.env.FEEDBACK_ENDPOINT || '';
+if (configuredFeedback && !publicFeedbackEndpoint(configuredFeedback)) throw Error('FEEDBACK_ENDPOINT must be a public HTTPS relay URL, never a Discord webhook');
 const root=fileURLToPath(new URL('../',import.meta.url));
 const output=path.resolve(root,'dist');
 if(path.dirname(output)!==path.resolve(root)||path.basename(output)!=='dist')throw Error('Unsafe build destination');
@@ -15,6 +18,7 @@ for(const name of files){
   const source=path.join(root,name);if((await fs.lstat(source)).isSymbolicLink())throw Error('Runtime files must not be symlinks');
   await fs.copyFile(source,path.join(output,name));
 }
+await fs.writeFile(path.join(output,'feedback-config.js'), `export const feedbackEndpoint = ${JSON.stringify(publicFeedbackEndpoint(configuredFeedback))};\n`);
 let python;
 for(const candidate of process.env.PYTHON?[process.env.PYTHON]:process.platform==='win32'?['python','python3']:['python3','python']){
   try{execFileSync(candidate,['--version'],{stdio:'pipe'});python=candidate;break;}catch{}
