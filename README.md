@@ -1,4 +1,4 @@
-# Naruto Blazing Revival
+# Blazing Collection
 
 ## Formulaire de retours
 
@@ -34,19 +34,16 @@ dans Settings → Pages ; chaque push sur `main` reconstruit et publie le site.
 
 ## Ma box et mes captures
 
-La version publique démarre avec une box vide et des stocks inconnus. Les saisies
-restent dans le stockage local de ton navigateur ; elles ne sont envoyées ni à
-GitHub ni au jeu. Exporte régulièrement une sauvegarde JSON pour les conserver.
+Blazing Collection démarre avec une box vide et des stocks initialisés à zéro.
+Ces zéros ne sont pas des observations du jeu : efface une quantité inconnue.
+Les saisies restent dans ton navigateur, sans envoi à GitHub ni au jeu.
 
-Pour lire tes captures avec ChatGPT, utilise le [prompt d’import](https://arosare.github.io/naruto-blazing-revival/import-box-prompt.txt)
-et la [référence publique](https://arosare.github.io/naruto-blazing-revival/reference-pour-chatgpt.html).
-Vérifie les identifications proposées avant d’importer le JSON dans le site.
-Les données illisibles et ambiguïtés restent à renseigner.
+- Pour préparer tes ressources : ouvre [Guide & missions](https://arosare.github.io/naruto-blazing-revival/#guide).
+- Pour importer tes captures : suis le parcours gratuit de [Sources & sauvegarde](https://arosare.github.io/naruto-blazing-revival/#sources), point de référence pour le prompt validé, les références, les lots, les limites et les imports partiels. Les observations illisibles restent inconnues ; elles ne remplacent pas les valeurs antérieures lors d’un import photo.
+- Pour transférer ou restaurer ta box : suis « Sauvegarder et restaurer » sur cette même page. Exporte une sauvegarde avant tout import. Une sauvegarde complète restaure l’état du fichier ; un relevé photo fusionne les valeurs connues.
 
-Pour transférer une box depuis l’ancien site : exporte sa sauvegarde JSON, ouvre
-Sources & sauvegarde sur GitHub Pages puis importe le fichier. Le profil devient
-personnel ; tes personnages, niveaux, stocks et notes sont conservés. Les anciennes
-photos et confirmations du compte de démonstration ne sont pas réappliquées.
+Une sauvegarde de l’ancien site peut être restaurée au même endroit : le profil
+devient personnel, sans réappliquer les photos et confirmations du compte de démonstration.
 
 ## Construction
 
