@@ -1,8 +1,10 @@
 # État actuel
 - Critères 1 à 5 satisfaits (2/3 révisés) ; critère 6 ouvert.
-- Stocks zéro publiés ; import sûr et prompt sur nightly.
-- Relais HTTPS actif, relu, non activé au boot ; réception du contrôle confirmée par le PDG.
-- Candidate isolée validée ; publication autorisée, non réalisée.
+- Stocks zéro et formulaire publiés ; import sûr et prompt sur nightly.
+- Parcours public et confirmation vérifiés ; erreurs/quotas simulés, sans rafale.
+- Constat Discord du contrôle public attendu du PDG, sans nouvel envoi.
+- Relais HTTPS actif et relu, non activé au boot.
+- Balises des références HTML : candidate corrective à préparer et relire, sans publication.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -50,5 +52,6 @@
 # Dette connue
 - fwupd-refresh en échec, hors périmètre, sans impact applicatif établi.
 # Prochaines étapes
-- Publier la candidate isolée après contrôle de base et relecture ; exclure import photo et fusion globale de nightly.
-- Vérifier le parcours public, erreurs, quotas et réception réelle avant de satisfaire le critère 6.
+- Demander le constat du message ISSUE35-CONTROLE-20261014T220717Z dans le salon prévu ; aucun renvoi.
+- Préparer et faire relire la candidate limitée aux balises des références HTML, sans déploiement.
+- Garder le critère 6 ouvert jusqu’au constat humain du parcours public.

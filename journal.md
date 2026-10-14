@@ -72,3 +72,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, cycle manager : #33 fermée ; #35 préparée pour publication isolée après constat Discord et relecture finale.
 
 15.10.2026 : r?ception Discord confirm?e par le PDG ; #35 confi?e pour publication isol?e autoris?e et contr?les publics. Crit?re 6 toujours ouvert.
+
+15.10.2026 : publication isolée de #35 relue et réalisée, issue fermée ; constat humain du contrôle public demandé sans renvoi. #37 créée pour une candidate limitée aux balises HTML, sans publication ; critère 6 ouvert.
