@@ -1,1 +1,1 @@
-{"lancer":"npm run build && python -m http.server %PORT% --directory dist","url":"http://localhost:{PORT}","tester":"npm test && npm run build"}
+{"lancer":"set \"FEEDBACK_ENDPOINT=https://retours.179-237-102-19.sslip.io/feedback\" && npm run build && python -m http.server %PORT% --directory dist","url":"http://localhost:{PORT}","tester":"npm test && npm run build"}
