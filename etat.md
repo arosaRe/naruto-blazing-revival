@@ -1,5 +1,5 @@
 # État actuel
-- Phase : livrables sur nightly ; audit de sécurité terminé sans faille relevée ; contrôle indépendant de clôture demandé.
+- Phase : corrections ciblées avant clôture ; résumé d’import à corriger et rapport de sources à aligner sur les critères validés.
 - Le prompt réutilisable d’import est disponible depuis Sources & sauvegarde.
 - Les stocks d’une box neuve sont initialisés à zéro ; l’import photo fusionne les observations connues avec l’état existant.
 - L’objectif personnel a été remplacé par le prompt réutilisable ; le PDG ne fournira ni captures ni fichier personnel.
@@ -37,12 +37,16 @@
 - La référence d’import décrit le jeu, pas une box personnelle ; ne jamais laisser croire que des captures ou un compte ont été consultés.
 - Le prompt distingue les observations d’image, les références du catalogue et les inférences impossibles.
 - Un import photo vide ne vide pas la box ; vérifier le comportement réel avant de décrire toute procédure d’import.
+- Les contrôles doivent utiliser les critères 2 et 3 remplacés par le PDG ; ne pas réintroduire les demandes personnelles abandonnées et interdites.
+- Le résumé doit compter les observations validées reçues, pas la collection après fusion.
 
 # Dette connue
-- Aucune dette bloquante connue dans le périmètre validé ; la vérification personnelle est abandonnée sur décision du PDG.
+- Le résumé photo compte la collection finale au lieu des observations reçues ; correction confiée en issue. La vérification personnelle est abandonnée sur décision du PDG.
 - Les régressions utilisent le lanceur natif de Node.js, sans framework externe.
 
 # Prochaines étapes
-- Soumettre la checklist révisée au contrôle indépendant de clôture : stocks neufs à zéro, sauvegardes compatibles, références et limites documentées, prompt accessible, import conservant les données, régressions et build validés.
-- Si ce contrôle relève des critères manquants, créer une petite issue par manque avant de reprendre les travaux.
+- Corriger le compteur du résumé photo et couvrir le cas d’une box préexistante par une régression.
+- Aligner le rapport de sources sur les critères 2 et 3 validés ; conserver les limites vérifiées sans demander de fichiers personnels.
+- Après corrections et relecture, demander un contrôle de clôture explicitement fondé sur la checklist révisée.
+- Les demandes personnelles de l’audit sont caduques par décision du PDG ; traiter le défaut du résumé et la consigne documentaire obsolète.
 - Aucune mise en production avant approbation humaine.
