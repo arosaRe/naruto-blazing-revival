@@ -1,0 +1,12 @@
+{
+  "issue": 37,
+  "base": "f6b841367c583560d36bed7b6dc23a3d4eaf8bb5",
+  "observedRef": "origin/main",
+  "observedAtUtc": "2026-10-14T22:11:59.578667+00:00",
+  "patchSha256": "5915819b71a69174c67c1b40225fe4330bcf82b84683d8f667e41c85a0433981",
+  "files": [
+    "scripts/build-import-reference.mjs"
+  ],
+  "generator": "<meta name=\"generator\" content=\"MakeProject · Release 33\">",
+  "expectedReferencePages": 182
+}
