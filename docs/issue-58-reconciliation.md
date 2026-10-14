@@ -6,10 +6,10 @@ Contrôle documentaire du 15 octobre 2026, branche dédiée depuis `nightly`. Le
 
 1. **Trois abandons explicites** : pièces personnelles ; vérification personnages/36 stocks/ryō/premium ; production et import du JSON personnel. La grille donne pour chacun provenance, inconnues conservées et remplacement réutilisable. Aucun manque n’est présenté comme réalisé ou restant à réaliser.
 2. **Remplacements 2/3 contrôlés** : références accessibles et limites sans identifiant inventé ; prompt copiable/téléchargeable depuis Sources & sauvegarde, demandant un JSON photo compatible et téléchargeable, inconnues explicites et import préservant les données. La transcription exacte reste dans la grille ; contrôles locaux ci-dessous, aucune validation personnelle.
-3. **Preuves distinctes** : import synthétique et simulations techniques ; réception humaine historique du contrôle #35 à 00:26, transcrite par le manager ; mentions non vérifiées acceptées avec réserve à 00:47 ; CORS public actuellement bloqué. Aucun succès simulé assimilé à une transmission.
+3. **Preuves distinctes** : import synthétique et simulations techniques ; réception humaine historique du contrôle #35 à 00:26, transcrite par le manager ; mentions non vérifiées acceptées avec réserve à 00:47 ; échecs CORS locaux historiques, hors périmètre depuis 01:54 ; confirmation publique humaine distincte. Aucun succès simulé assimilé à une transmission.
 4. **Documentation seule** : aucune modification du code, du launcher, de `main`, d’`etat.md` ou de `journal.md`. Aucun POST public/Discord, déploiement ni clôture globale. Liens locaux contrôlés dans les sources ou dans `dist/` pour les références générées.
 
-## Références et prompt — contrôle local reproductible
+## Références et prompt — contrôles historiques rapportés pour #58
 
 `npm.cmd run build` réussit : 3 067 ressources natives, 1 114 formes, 371 ressources, 182 pages. Serveur Python temporaire sur **9101**, arrêté après les GET ; aucun serveur sur 8101. Les cinq cibles de la rubrique Sources & sauvegarde ont répondu HTTP 200, avec contenu identique aux fichiers de `dist/` :
 
@@ -33,8 +33,12 @@ Les régressions existantes vérifient aussi import vide, import partiel, refus 
 
 Vérification finale : les 32 liens locaux des trois documents modifiés sont résolus, y compris les ancres Markdown et les cibles générées dans `dist/`. `git diff --check` réussit ; une réécoute temporaire confirme que 9101 est libéré.
 
-## CORS réel et réception historique
+## CORS local historique et confirmation publique actuelle
 
-`node scripts/check-feedback-preflight.mjs`, à **2026-10-14T23:41:25.832Z** (15 octobre, Zurich), effectue uniquement deux OPTIONS publics, sans interception ni POST. Les origines `http://localhost:8101` et `http://localhost:9101` reçoivent **400**, sans Access-Control-Allow-Origin/Methods/Headers ; code de sortie **1**, blocage attendu. Les autres en-têtes sont `cache-control: no-store, no-store`, `connection: keep-alive`, `content-type: application/json`, `date: Wed, 14 Oct 2026 23:41:26 GMT`, `server: nginx`, `transfer-encoding: chunked`, `vary: Origin`, `x-content-type-options: nosniff, nosniff`.
+`node scripts/check-feedback-preflight.mjs`, à **2026-10-14T23:41:25.832Z** (15 octobre, Zurich), effectue uniquement deux OPTIONS publics, sans interception ni POST. Les origines `http://localhost:8101` et `http://localhost:9101` reçoivent **400**, sans Access-Control-Allow-Origin/Methods/Headers ; code de sortie **1**, échec historique du contrôle local. Les autres en-têtes sont `cache-control: no-store, no-store`, `connection: keep-alive`, `content-type: application/json`, `date: Wed, 14 Oct 2026 23:41:26 GMT`, `server: nginx`, `transfer-encoding: chunked`, `vary: Origin`, `x-content-type-options: nosniff, nosniff`.
 
 La correction de [#59](https://github.com/arosaRe/naruto-blazing-revival/pull/59) est fusionnée sur `nightly`, mais sa configuration et son déploiement distants restent non exécutés selon le [rapport #57](issue-57-makeproject-cors.md). Les prévols locaux et confirmations simulées ne lèvent pas ce refus. La réception humaine historique et la réserve sur les mentions sont attribuées dans le [rapport #35](issue-35-publication.md) et la [grille](criteres-cloture.md) ; elles ne prouvent pas le fonctionnement actuel depuis MakeProject. Aucun nouvel envoi, aucune observation directe de Discord, aucune clôture globale.
+
+**Décision du 15.10.2026 à 01:54** : le PDG confirme le fonctionnement du formulaire public. MakeProject local n’est pas demandé et n’a aucun effet sur la clôture ; le déploiement CORS `localhost:8101/9101` est refusé. Confirmation attribuée aux **consignes du PDG fournies au cycle manager**, consignées dans [#61](https://github.com/arosaRe/naruto-blazing-revival/issues/61), `etat.md` et `journal.md`, sans lien original de discussion ni preuve indépendante nouvelle. La réserve acceptée sur l’absence de notification de mention indésirable **non vérifiée** reste maintenue. L’audit indépendant final reste à effectuer.
+
+Les sept critères et les remplacements personnels approuvés restent dans la [grille pour l’audit final](criteres-cloture.md#grille-pour-laudit-indépendant-final--61). Le refus local ne conditionne plus la clôture et ne contredit pas le fonctionnement public confirmé.

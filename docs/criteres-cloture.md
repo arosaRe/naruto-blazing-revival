@@ -13,7 +13,7 @@ Cette grille rassemble les exigences du projet consignées dans les issues et le
 | 3 | **Remplacé à 17:33** : prompt copiable et téléchargeable depuis Sources & sauvegarde, demandant un JSON photo compatible et téléchargeable, signalant les inconnues et expliquant un import préservant les données existantes. | [Parcours et procédure](issue-3-sources.md#critère-3-révisé--prompt-réutilisable-et-json-photo-compatible), [#4](https://github.com/arosaRe/naruto-blazing-revival/issues/4) et [#12](https://github.com/arosaRe/naruto-blazing-revival/issues/12). Livrable réutilisable sur `nightly`, sans production ni import de JSON personnel requis. |
 | 4 | L’import partiel ou vide préserve les données existantes non observées ; les entrées invalides sont refusées et les sauvegardes complètes restent compatibles. Tests de non-régression, build et contrôle de sécurité accompagnent la validation ; le rapport sépare explicitement le vérifié de l’inaccessible et du non vérifié. | [#2](https://github.com/arosaRe/naruto-blazing-revival/issues/2), [#11](https://github.com/arosaRe/naruto-blazing-revival/issues/11), tests d’import et de stocks. L’audit sans faille relevée est rapporté dans `journal.md`, pas réexécuté ni certifié ici. |
 | 5 | Toute publication en production exige une approbation humaine du périmètre, des vérifications pertinentes et un rapport de version publiée. `nightly` reste la branche de travail. | Approbation de 17:51 limitée aux stocks neufs à zéro ; commit et limites de preuve ci-dessous. Aucun accord général pour publier `nightly`. |
-| 6 | Formulaire de retours accessible sur le site, transmission vers Discord par relais serveur avec webhook secret, protection anti-abus et retour de succès ou d’échec compréhensible ; présentation avant publication. | **Clos par décision humaine avec réserve le 15.10 à 00:47** : [rapport #35](issue-35-publication.md), réception confirmée à 00:26 ; absence de notification de mention indésirable non vérifiée. Le défaut #42 est corrigé par [#44](https://github.com/arosaRe/naruto-blazing-revival/pull/44), avec contrôles locaux interceptés, sans nouvelle réception Discord prouvée. La clôture globale reste suspendue à l’audit indépendant final, y compris sur les livrables du critère 7. |
+| 6 | Formulaire de retours accessible sur le site, transmission vers Discord par relais serveur avec webhook secret, protection anti-abus et retour de succès ou d’échec compréhensible ; présentation avant publication. | **Clos par décision humaine avec réserve le 15.10 à 00:47** : [rapport #35](issue-35-publication.md), réception confirmée à 00:26 ; absence de notification de mention indésirable non vérifiée. Le défaut #42 est corrigé par [#44](https://github.com/arosaRe/naruto-blazing-revival/pull/44), avec contrôles locaux interceptés, sans nouvelle réception Discord prouvée. Le formulaire public est confirmé humainement à 01:54 ; MakeProject local est hors périmètre et son déploiement CORS refusé. La clôture globale reste suspendue à l’audit indépendant final, y compris sur les livrables du critère 7. |
 | 7 | **Livré et relu sur `nightly` — consignes de 00:59** : guides clairs sous Blazing Collection, prompt et mode d’emploi utilisables avec ChatGPT gratuit, règles visuelles prouvées dans les limites natives documentées, inconnues explicites et JSON photo compatible préservant les données existantes ; textes et prompt relus avec vérifications pertinentes. | [Preuves #46](issue-46-preuves-natives.md), [revue du prompt gratuit #47](issue-47-revue-import.md), [guides et revue #48](issue-48-guides.md). Les trois livrables sont livrés et relus ; vérifications attribuées et limites détaillées ci-dessous. La clôture globale attend l’audit indépendant final. Aucune autorisation de publication en production n’en découle. |
 
 ## Décision du 14.10.2026 à 17:33 — remplacement de 2 et 3
@@ -36,9 +36,11 @@ Provenance commune : décision du PDG du **14 octobre 2026 à 17:33**, transcrit
 
 Le [rapport #58](issue-58-reconciliation.md) attribue les contrôles des critères 2/3 et leurs limites. Ils ne prouvent aucune possession personnelle et ne prononcent aucune clôture globale.
 
-### Grille actuelle — réserve CORS pour le critère 6
+### Décision du 15.10.2026 à 01:54 — périmètre actuel
 
-La réception Discord historique et l’acceptation humaine avec réserve restent consignées. La disponibilité MakeProject est toutefois **bloquée** par le refus CORS distant relevé par #119/#57, malgré la correction préparée et fusionnée sur `nightly` par [#59](https://github.com/arosaRe/naruto-blazing-revival/pull/59). La configuration et l’activation distantes ne sont pas exécutées. Ce blocage actuel est distinct des mentions non vérifiées et des confirmations simulées ; aucune clôture globale. Voir les [preuves #58](issue-58-reconciliation.md) et la [procédure #57](issue-57-makeproject-cors.md).
+**Décision du 15.10.2026 à 01:54** : le PDG confirme le fonctionnement du formulaire public. MakeProject local n’est pas demandé et n’a aucun effet sur la clôture ; le déploiement CORS `localhost:8101/9101` est refusé. Confirmation attribuée aux **consignes du PDG fournies au cycle manager**, consignées dans [#61](https://github.com/arosaRe/naruto-blazing-revival/issues/61), `etat.md` et `journal.md`, sans lien original de discussion ni preuve indépendante nouvelle. La réserve acceptée sur l’absence de notification de mention indésirable **non vérifiée** reste maintenue. L’audit indépendant final reste à effectuer.
+
+Les échecs locaux historiques restent dans les [preuves #58](issue-58-reconciliation.md) et le [rapport #57](issue-57-makeproject-cors.md). Ils ne contredisent pas la confirmation publique humaine et ne conditionnent plus la clôture. Aucune demande d’accord CORS ne reste ouverte.
 
 ## Décision du 14.10.2026 à 17:51 — approbation limitée
 
@@ -97,7 +99,7 @@ Les preuves **rapportées par #44**, non rejouées pour #49, sont :
 
 #42 est donc corrigé ; cette preuve locale reste distincte de la réception humaine historique de #35 à 00:26 et de l’acceptation avec réserve de 00:47. L’absence de notification de mention indésirable reste **non vérifiée**. La correction ne clôt ni le critère 7 ni l’audit indépendant final à reprendre ; elle n’autorise aucun nouvel envoi ou publication.
 
-**#57 : disponibilité MakeProject encore bloquée.** Les OPTIONS publics réels du 15 octobre 2026 (Zurich), sans interception, reçoivent 400 pour les deux origines locales, sans `Access-Control-Allow-Origin`. Les prévols locaux de la correction passent ; les simulations ne lèvent pas ce refus distant. Configuration et déploiement restent soumis à approbation, non exécutés : [rapport #57](issue-57-makeproject-cors.md).
+**#57 — échec CORS local historique, hors périmètre actuel.** Les OPTIONS réels du 15 octobre ont reçu 400 pour les deux origines locales, sans `Access-Control-Allow-Origin`. Les prévols locaux et simulations ne lèvent pas ce refus distant. Configuration et déploiement non exécutés, désormais refusés à 01:54 et sans effet sur la clôture : [rapport #57](issue-57-makeproject-cors.md).
 
 ## Consignes du 15.10.2026 à 00:59 — exigences du critère 7
 
@@ -130,3 +132,17 @@ Sur la branche dédiée issue de `nightly` : `npm.cmd test` réussit (34/34), `n
 ## Vérifications de #49 — 15 octobre 2026
 
 Sur la branche dédiée issue de `nightly`, `npm.cmd test` réussit (35/35), `npm.cmd run build` réussit (3 067 ressources natives, 1 114 formes, 371 ressources de référence, 182 pages HTML générées) et `git diff --check` réussit. Seul `docs/criteres-cloture.md` est modifié. Les tests de relais utilisent des simulations locales ; aucun envoi Discord, aucune publication, aucun fichier personnel demandé ou consulté. Aucun serveur de site lancé ; le contrôle navigateur de #44 n’est pas rejoué. Sept critères sont représentés, le critère 7 reste ouvert, les remplacements de 2/3 et la réserve sur les mentions restent explicites. La réception humaine historique et les preuves locales interceptées restent distinctes ; aucun réaudit indépendant final n’est revendiqué ici.
+
+## Grille pour l’audit indépendant final — #61
+
+Les sept critères restent applicables ; cette grille prépare l’audit sans le déclarer réalisé. Les preuves rapportées ne sont pas rejouées pour cette documentation.
+
+| Critère | Contrôle à examiner par l’audit final |
+| --- | --- |
+| 1 | Stocks neufs à zéro, imports et sauvegardes préservés ; régressions et périmètre publié rapportés. |
+| 2 | Références natives et limites sans identifiant inventé ; remplacement personnel approuvé maintenu. |
+| 3 | Copie/téléchargement du prompt, JSON compatible, inconnues et fusion ; aucun JSON personnel exigé. |
+| 4 | Validations d’import, compatibilité, tests/build et limites du contrôle de sécurité rapporté. |
+| 5 | Publications rapportées et approbations humaines limitées ; aucune nouvelle publication autorisée. |
+| 6 | Confirmation publique humaine à 01:54, réception historique à 00:26 et réserve mentions acceptée à 00:47 distinctes des simulations. CORS localhost exclu des conditions de clôture, déploiement refusé. |
+| 7 | Livrables et revues #46/#47/#48, inconnues natives et limites conservées. |
