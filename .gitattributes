@@ -1,0 +1,2 @@
+# Preserve the exact candidate patch bytes and its manifest SHA-256 on Windows.
+docs/feedback-candidate/candidate.patch -text whitespace=-blank-at-eol,cr-at-eol
