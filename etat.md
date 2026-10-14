@@ -1,9 +1,9 @@
 ﻿# État actuel
-- Phase : attente des sources personnelles nécessaires à la sauvegarde vérifiée (#4).
-- #1, #2, #3 et #6 sont terminées ; les PR correspondantes ont été mergées dans nightly.
-- Le rapport #3 confirme que le catalogue et la référence locale permettent de vérifier des identifiants natifs, pas le contenu du compte.
-- Les sept captures et ma-box-blazing.json manquent ; les 36 stocks, 59 700 950 ryō, personnages et monnaie premium ne sont pas vérifiés.
-- #4 ne peut pas produire de sauvegarde personnelle complète avant réception des pièces ; ne rien inférer des portraits.
+- Phase : rendre le prompt d’import personnel réutilisable et sûr (#4).
+- #1, #2, #3 et #6 sont terminées et mergées dans nightly.
+- Le prompt et la référence native sont disponibles dans le dépôt ; le site expose déjà le prompt depuis Sources & sauvegarde.
+- Aucune box personnelle du PDG ne sera fournie ni consultée ; aucune sauvegarde personnelle ne sera produite.
+- Le contenu d’une box, les captures, les stocks annoncés et la monnaie premium ne sont pas vérifiés.
 - Aucune mise en production sans approbation humaine.
 
 # Retours du PDG
@@ -16,6 +16,9 @@
 - 2026-10-14 — La page « Sources & sauvegarde » identifie box-import-reference.json à la racine publiée comme référence pour vérifier les unitId ; la rechercher dans le dépôt.
 - 2026-10-14 — Les sept captures et ma-box-blazing.json ne sont pas joints. Ne pas prétendre les avoir consultés, n’inférer aucun personnage depuis un portrait ambigu, et attendre ces pièces avant tout JSON personnel complet.
 - 2026-10-14 — Vérifier les 36 stocks et 59 700 950 ryō à partir des sources ; clarifier la monnaie premium et les objets ambigus ; aucune production sans approbation.
+- 2026-10-14 — Le PDG ne fournira pas ses captures ni ma-box-blazing.json et n’autorise pas leur consultation ; le nouvel objectif est un prompt réutilisable pour que chacun joigne ses propres captures à ChatGPT, reçoive un JSON importable, le télécharge puis l’importe.
+- 2026-10-14 — Examiner le format et les références natives du dépôt, expliquer les limites et proposer une procédure d’import sûre ; signaler les données incertaines ou manquantes, ne rien inventer et ne pas présenter un résultat partiel comme sauvegarde complète.
+- 2026-10-14 — Conserver nightly et ne rien publier en production sans approbation humaine.
 
 # Décisions structurantes
 - Site statique en JavaScript natif, HTML et CSS ; Node.js 24 et Python 3 pour le build.
@@ -25,15 +28,15 @@
 - lancer.json décrit le build et le serveur statique ; son manifeste doit être un JSON lisible par MakeProject et utiliser PORT.
 
 # Pièges et consignes
-- Un import photo construit un état personnel complet ; un JSON partiel ne doit pas remplacer les observations existantes.
-- La référence d’import est générée par le build ; l’absence des sources personnelles ne signifie pas que les comptes ou captures ont été consultés.
-- Le rapport #3 distingue les fichiers effectivement consultés des fichiers manquants ; aucune pièce personnelle n’est présente dans le clone.
+- Un import photo construit un état personnel ; vérifier exactement comment les observations absentes et un tableau characters vide affectent les données enregistrées.
+- La référence d’import décrit le jeu, pas la box personnelle ; ne jamais laisser croire que les captures ou le compte du PDG ont été consultés.
+- Le prompt doit distinguer les données lues dans les images des références de catalogue et des inférences impossibles.
 
 # Dette connue
-- La validation de l’import personnel attend les captures et ma-box-blazing.json.
+- La monnaie premium et les ressources non identifiées ne sont pas clarifiées pour une box personnelle.
 - Aucun framework de test séparé n’est configuré.
 
 # Prochaines étapes
-- La demande de fourniture des sept captures et de ma-box-blazing.json reste en attente ; ne pas la reposer.
-- À réception, vérifier les valeurs dans les sources, clarifier les ambiguïtés et reprendre #4 pour produire puis valider l’import.
+- Faire traiter l’issue #4 réorientée vers le prompt réutilisable, l’explication des limites et la procédure d’import sûre.
+- Garder les données du compte et les captures du PDG hors du travail.
 - Ne proposer aucune mise en production avant approbation humaine.

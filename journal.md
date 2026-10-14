@@ -12,3 +12,6 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 2026-10-14 — Cycle 6 : #3 clôturée après fusion du rapport ; #4 attend les sources personnelles.
 
 2026-10-14 — Cycle 7 : #4 toujours bloquée par les sources personnelles ; aucun nouvel élément fourni.
+
+2026-10-14 — Cycle 8 : objectif de #4 réorienté, à la demande du PDG, vers le prompt réutilisable et la procédure d’import sûre ; captures personnelles non fournies ni consultées.
+
