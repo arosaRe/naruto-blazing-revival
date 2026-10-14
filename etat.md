@@ -1,11 +1,8 @@
 # État actuel
-- Critères 1 à 5 satisfaits, avec 2 et 3 révisés ; critère 6 ouvert.
-- Stocks neufs à zéro publiés ; références, prompt et import photo sûr sur nightly.
-- Formulaire/relais relus et audités en simulation ; publication isolée autorisée.
-- VPS nettoyé, sauvegarde protégée et restauration vérifiée ; horloge corrigée.
-- HTTPS externe, renouvellement et frontière proxy validés et relus.
-- Node 24 isolé sur loopback ; injection privée confirmée, mise en service non vérifiée.
-- Candidate isolée relue et validée ; restent mise en service, publication et réception Discord réelle.
+- Critères 1 à 5 satisfaits (2/3 révisés) ; critère 6 ouvert.
+- Stocks zéro publiés ; import sûr et prompt sur nightly.
+- Relais HTTPS actif, relu, non activé au boot ; réception Discord à confirmer.
+- Candidate isolée validée ; publication autorisée, non réalisée.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -39,24 +36,19 @@
 - 2026-10-14 à 23:19 — Le PDG confirme « c’est fait » : filtrage Infomaniak vérifié et TCP entrant 80/443 ouvert si nécessaire, SSH et autres règles préservés. Reprendre #29 et la PR #30 existantes : contrôler HTTP externe avant HTTPS et renouvellement ; si toujours bloqué, rapporter les observations précises. Publication limitée au formulaire/relais sécurisé, sans import photo ni fusion globale de nightly. Critère 6 seulement après vérifications réelles, dont réception Discord.
 - 2026-10-14 à 23:53 — Le PDG confirme l’injection privée via le script masqué (injection faite), après une première commande échouée avec un point final ajouté à inject-secret.py. Reprendre la mise en service sécurisée, puis publier la candidate isolée validée. Secret uniquement serveur ; conserver quotas, confirmations et erreurs compréhensibles ; exclure import photo et fusion globale de nightly. Critère 6 seulement après parcours public vérifié et réception réelle observée dans le salon Discord, distincte de la réponse API.
 # Décisions structurantes
-- Dépôt original ; nightly au travail, main pour le périmètre approuvé sans fusion globale.
-- JavaScript natif, HTML/CSS, Node 24, Python 3 ; lancer.json aligné sur build et PORT.
-- Sauvegardes compatibles ; inconnus absents/null ; unitId natifs vérifiés uniquement.
-- Import photo : fusion des observations préservant absents/nulls ; restauration complète distincte.
-- Relais Node 24 séparé de GitHub Pages : POST /feedback, endpoint configurable, secret serveur, instance unique et quotas globaux.
-- HTTPS gratuit : retours.179-237-102-19.sslip.io ; dépendance fournisseur/IP et quotas ACME ; aucun achat.
-- Comptes ACME production/staging et conditions autorisés ; clés protégées, aucune adresse personnelle sans accord.
+- Dépôt original ; nightly au travail ; main limité au périmètre approuvé, sans fusion globale.
+- JS natif/HTML/CSS, Node 24, Python 3 ; lancer.json aligné sur build/PORT.
+- Sauvegardes compatibles ; inconnus absents/null ; unitId vérifiés ; import photo fusionné, restauration complète distincte.
+- Relais Node séparé de Pages : POST /feedback, secret serveur, instance unique, quotas globaux.
+- HTTPS gratuit retours.179-237-102-19.sslip.io ; dépendance IP/fournisseur/ACME ; comptes staging/production et conditions autorisés, aucun achat ni adresse personnelle sans accord.
 # Pièges et consignes
-- Référence native distincte d’une box personnelle ; pièces personnelles interdites, critères 2/3 révisés.
-- Distinguer observations/catalogue/inconnues ; compter les observations reçues ; import photo vide préserve la box.
-- Aucun nouvel ACME avant HTTP-01 externe réussi ; ouvertures TCP 80/443 seulement, SSH préservé.
-- CORS insuffisant : quotas serveur, remplacement des en-têtes visiteurs, port interne inaccessible ; aucun secret ni archive publié.
-- Conserver le travail après échec ; identité Git locale autorisée ; identifier les consignes transcrites.
-- Préserver sauvegarde protégée, restauration documentée et ressources incertaines ; anciennes dates VPS non fiables.
+- Pièces personnelles interdites ; catalogue distinct des observations ; import vide préserve la box.
+- CORS insuffisant : quotas, en-têtes remplacés, loopback ; aucun secret/archive publié.
+- Préserver Ubuntu, SSH, sauvegardes protégées et certificats ; anciennes dates VPS non fiables.
+- ACME après HTTP-01 externe ; identité Git locale autorisée ; conserver le travail après échec.
 # Dette connue
-- Échec fwupd-refresh signalé, hors périmètre ; laissé intact, sans impact applicatif établi.
+- fwupd-refresh en échec, hors périmètre, sans impact applicatif établi.
 # Prochaines étapes
-- Mettre en service le relais après contrôle de présence et permissions du secret, sans lecture ; faire relire les observations avant publication.
-- Faire mettre en service et relire le relais ; confirmer la réception réelle dans le salon, sans confondre réponse API et observation Discord.
-- Publier la candidate isolée déjà validée dans le périmètre autorisé, après contrôle de sa base ; aucune fusion globale de nightly ni import photo.
-- Vérifier le parcours public, confirmations, erreurs, quotas et frontière réseau avant de satisfaire le critère 6.
+- Attendre le constat humain du contrôle Discord identifié, sans nouvel envoi.
+- Publier la candidate isolée après contrôle de base et relecture ; exclure import photo et fusion globale de nightly.
+- Vérifier le parcours public, erreurs, quotas et réception réelle avant de satisfaire le critère 6.
