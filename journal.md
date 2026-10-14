@@ -24,3 +24,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 
 14.10.2026 : audit de sécurité sans faille relevée ; checklist révisée couverte, contrôle indépendant de clôture demandé. Aucune publication en production.
 14.10.2026 : audit confronté aux critères révisés ; demandes personnelles caduques. Issues #11 (compteur photo) et #12 (alignement documentaire) créées pour traitement successif. Aucune production.
+
+14.10.2026 : corrections #11 et #12 livrées et issues fermées ; approbation de production limitée enregistrée. Version 6877400 publiée, uniquement stocks neufs à zéro et tests associés : régressions et build réussis, Pages réussi, modèle distant vérifié. Validations nightly réussies ; contrôle de clôture demandé sur les critères révisés.

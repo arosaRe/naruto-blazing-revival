@@ -1,11 +1,10 @@
 # État actuel
-- Phase : corrections ciblées avant clôture ; résumé d’import à corriger et rapport de sources à aligner sur les critères validés.
-- Le prompt réutilisable d’import est disponible depuis Sources & sauvegarde.
-- Les stocks d’une box neuve sont initialisés à zéro ; l’import photo fusionne les observations connues avec l’état existant.
-- L’objectif personnel a été remplacé par le prompt réutilisable ; le PDG ne fournira ni captures ni fichier personnel.
-- Les critères 2 et 3 sont remplacés avec validation du PDG ; aucune vérification personnelle n’est exigée ou autorisée.
-- Aucune mise en production sans approbation humaine.
-
+- Phase : livrables prêts pour le contrôle indépendant de clôture sur la checklist révisée.
+- Les stocks neufs à zéro sont seuls autorisés et promus en production ; déploiement GitHub Pages réussi et modèle servi vérifié.
+- Sur nightly, le prompt réutilisable et la fusion photo sûre sont livrés ; le résumé compte les observations reçues.
+- Le rapport des sources suit les critères 2 et 3 révisés, sans demande ni consultation des fichiers personnels du PDG.
+- Les validations pertinentes passent sur la version limitée et sur nightly.
+- Aucun autre changement n’est autorisé en production ; aucune décision attendue du PDG.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -25,9 +24,10 @@
 - 2026-10-14 — Aucune consultation ni vérification des fichiers personnels du PDG n’est exigée ou autorisée ; conserver nightly et ne rien publier en production sans son approbation.
 - 2026-10-14 — Le PDG confirme « oui c’est bon » et demande ce que signifie le critère 2 ; explication : les références permettent de vérifier les identifiants du jeu, sans garantir l’identification d’un portrait ambigu.
 
+- 2026-10-14 — Approbation humaine de publication limitée aux stocks initialisés à zéro pour une nouvelle box, avec préservation des imports et sauvegardes existants. Vérifier le contenu et les validations avant publication ; exclure les travaux d’import photo et les corrections des issues 11 et 12. Si d’autres changements fonctionnels sont nécessaires, présenter le périmètre au PDG avant publication. Rapporter la version publiée et les vérifications effectuées.
 # Décisions structurantes
 - Site statique en JavaScript natif, HTML et CSS ; Node.js 24 et Python 3 pour le build.
-- nightly est la branche de travail ; main est la production protégée par approbation humaine.
+- nightly est la branche de travail ; main est la production protégée par approbation humaine. La publication autorisée du 14 octobre isole les stocks neufs à zéro et leurs tests, sans fusion globale de nightly.
 - Sauvegardes compatibles ; une donnée absente, illisible ou ambiguë reste inconnue.
 - Les identifiants de personnages viennent des identifiants natifs vérifiés du catalogue ; jamais d’inférence depuis un portrait ambigu.
 - lancer.json décrit le build et le serveur statique ; son manifeste doit être un JSON lisible par MakeProject et utiliser PORT.
@@ -41,12 +41,8 @@
 - Le résumé doit compter les observations validées reçues, pas la collection après fusion.
 
 # Dette connue
-- Le résumé photo compte la collection finale au lieu des observations reçues ; correction confiée en issue. La vérification personnelle est abandonnée sur décision du PDG.
-- Les régressions utilisent le lanceur natif de Node.js, sans framework externe.
+- Aucune dette mineure identifiée à traiter pour le périmètre révisé ; les données personnelles restent hors périmètre par décision du PDG.
 
 # Prochaines étapes
-- Corriger le compteur du résumé photo et couvrir le cas d’une box préexistante par une régression.
-- Aligner le rapport de sources sur les critères 2 et 3 validés ; conserver les limites vérifiées sans demander de fichiers personnels.
-- Après corrections et relecture, demander un contrôle de clôture explicitement fondé sur la checklist révisée.
-- Les demandes personnelles de l’audit sont caduques par décision du PDG ; traiter le défaut du résumé et la consigne documentaire obsolète.
-- Aucune mise en production avant approbation humaine.
+- Faire contrôler la clôture sur les critères 1, 2 et 3 révisés, 4 et 5 ; aucune pièce personnelle ne doit être demandée ou consultée.
+- Conserver les travaux d’import sur nightly ; toute publication supplémentaire nécessite une nouvelle approbation humaine.
