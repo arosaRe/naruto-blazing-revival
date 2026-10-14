@@ -1,6 +1,6 @@
 # État actuel
-- Les sept critères sont estimés satisfaits ; clôture indépendante encore attendue.
-- Guides et prompt relus sur nightly ; grille documentaire à aligner, audit sécurité à effectuer avant clôture.
+- Les sept critères applicables sont estimés satisfaits ; clôture soumise à l’audit indépendant final.
+- Guides, prompt et grille relus ; audit sécurité sans faille exploitable démontrée dans son périmètre.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -56,4 +56,5 @@
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Aligner la grille de clôture sur les livrables relus, puis audit sécurité et clôture indépendante ; aucune publication ni nouvel envoi Discord.
+- Faire contrôler les sept critères applicables par l’audit indépendant final ; corriger tout manque établi avant clôture.
+- Conserver les réserves documentées et la limite de l’audit sécurité : serveur actif non réinspecté. Aucune publication ni nouvel envoi Discord.
