@@ -1,4 +1,4 @@
-﻿## 2026-10-14 — Reprise
+## 2026-10-14 — Reprise
 Reprise du dépôt original sur `nightly` : inventaire du code, des sources accessibles et des travaux à planifier. Le plan et les fichiers de référence manquants sont soumis au PDG.
 
 2026-10-14 — Cycle 2 : issue #1 confiée pour initialiser les stocks à zéro sur une box neuve.
@@ -83,3 +83,6 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 15.10.2026, cycle manager : #39 créée pour publier exclusivement la candidate HTML autorisée ; préférence notifications consignée, aucun nouveau test Discord ; critère 6 ouvert. État condensé sans retrait des retours du PDG.
 
 15.10.2026, cycle manager : #39 fermée après validation de #40 ; Release 33 publiée sur 87ff642 et preuves publiques relues. Critère 6 ouvert : décision demandée sur l’acceptation de la limite de vérification des mentions, sans nouvel envoi Discord.
+
+15.10.2026, synthèse : stocks/formulaire publiés ; import/prompt sur nightly ; publication HTML isolée vérifiée.
+15.10.2026, cycle manager : validation à 00:47 consignée ; critère 6 clos avec absence de mention non vérifiée. Audit indépendant demandé ; aucun envoi Discord ni publication. Retours conservés.

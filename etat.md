@@ -1,7 +1,5 @@
 # État actuel
-- Critères 1–5 satisfaits (2/3 révisés) ; 6 ouvert : mention non vérifiée.
-- Stocks/formulaire publiés ; import/prompt sur nightly. Réception Discord confirmée.
-- Balises HTML autorisées publiées et vérifiées ; relais actif, sans démarrage au boot.
+- Critères 1–6 satisfaits (2/3 révisés) ; audit de clôture attendu.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -38,16 +36,15 @@
 - 2026-10-15 à 00:26 — Le PDG confirme voir ISSUE35-CONTROLE-20261014T220717Z dans le salon prévu (« oui je le vois »), sans préciser la présence éventuelle d’une notification de mention indésirable. Consigner la réception sans nouvel envoi ; vérifier les éléments restants avant de satisfaire le critère 6. Cette confirmation n’autorise pas la publication de la correction des balises HTML.
 - 2026-10-15 à 00:35 — Publication autorisée de la candidate relue : seule balise generator « MakeProject · Release 33 » aux 182 références HTML ; 3 105 autres fichiers identiques. Exclure import photo et fusion globale de nightly ; vérifier et rapporter la version publiée. Ne clôture pas le critère 6 : absence de mention indésirable à confirmer, sans nouvel envoi Discord. Messages : « j’ai pas compris », « accepter ».
 - 2026-10-15 à 00:36 — Notifications acceptables pour les vrais retours du formulaire. Absence de notification de mention indésirable sur ISSUE35-CONTROLE-20261014T220717Z non confirmée : ne pas la présenter comme vérifiée ; consigner sans nouveau test. N’autorise pas les balises HTML. Messages : « alors pour l'issues c'est chiant mais si c'est pour des vrai retours envoyer par le formularie alors ça va » ; deux messages Captain Hook reçus (#33 et #35).
+- 2026-10-15 à 00:47 — Clôture du critère 6 validée : réception Discord confirmée ; absence de notification de mention indésirable non vérifiée. Conserver cette réserve au rapport sans la présenter comme vérifiée. Aucun nouveau test Discord ; audit indépendant requis ; aucune publication autorisée. Messages : « quand tu veux dire mention non désirable tu parles de quoi ? » ; « alors oui c'est bon on confirme le critère 6 ».
 # Décisions structurantes
-- Dépôt original/nightly ; main autorisé seulement.
-- JS natif, Node 24/Python 3 ; build/PORT.
+- Dépôt original/nightly ; main autorisé. JS natif, Node 24/Python 3.
 - Sauvegardes compatibles ; inconnus null ; unitId vérifiés ; photo fusionnée.
-- Relais Node unique ; secret serveur/quotas ; HTTPS sslip.io/IP/ACME.
+- Relais Node, secret serveur/quotas, HTTPS sslip.io.
 # Pièges et consignes
-- Pièces privées interdites ; vide préserve la box ; CORS insuffisant ; quotas/loopback.
-- Préserver Ubuntu/SSH/sauvegardes/certificats ; dates VPS douteuses ; ACME après HTTP externe.
+- Privés interdits ; vide préserve la box ; CORS insuffisant.
+- Préserver Ubuntu/SSH/sauvegardes/certificats ; dates VPS douteuses.
 # Dette connue
-- fwupd-refresh en échec, hors périmètre.
+- fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Attendre la décision du PDG sur la clôture du critère 6 avec absence de mention explicitement non vérifiée ; aucun nouvel envoi Discord.
-- Après décision, faire contrôler la clôture par un audit indépendant ; aucune nouvelle publication autorisée.
+- Audit indépendant ; aucun envoi Discord ni publication.
