@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "clientVersion": "NBRC3.00.032",
+  "extractedAt": "2026-10-14T00:33:28.126174+00:00",
+  "verified": true,
+  "summaryFr": "179 recettes d’éveil de matériaux sont présentes et vérifiées dans le client :15 ramen,46 matériaux d’éveil et118 cristaux Limit Break. Les ramen augmentent l’EXP disponible. Les autres conversions produisent un matériau de rang supérieur dont une amélioration peut avoir besoin ; leur rentabilité en temps de farm ne peut pas être chiffrée sans les récompenses et disponibilités actuelles.",
+  "materialCount": 369,
+  "materialRecipeCount": 179,
+  "countsByCategory": {
+    "91": 46,
+    "90": 15,
+    "94": 118
+  },
+  "groups": [
+    {
+      "kind": "standardScrollUpgrade",
+      "recipeCount": 15,
+      "summaries": [
+        {
+          "fromStars": 1,
+          "toStars": 2,
+          "totalInputItems": 6,
+          "ryoCost": 500,
+          "recipeCount": 5
+        },
+        {
+          "fromStars": 2,
+          "toStars": 3,
+          "totalInputItems": 6,
+          "ryoCost": 500,
+          "recipeCount": 5
+        },
+        {
+          "fromStars": 3,
+          "toStars": 4,
+          "totalInputItems": 6,
+          "ryoCost": 500,
+          "recipeCount": 5
+        }
+      ]
+    },
+    {
+      "kind": "ramenExpGain",
+      "recipeCount": 15,
+      "summaries": [
+        {
+          "fromStars": 1,
+          "toStars": 2,
+          "totalInputItems": 3,
+          "ryoCost": 200,
+          "recipeCount": 5
+        },
+        {
+          "fromStars": 2,
+          "toStars": 3,
+          "totalInputItems": 3,
+          "ryoCost": 200,
+          "recipeCount": 5
+        },
+        {
+          "fromStars": 3,
+          "toStars": 4,
+          "totalInputItems": 6,
+          "ryoCost": 500,
+          "recipeCount": 5
+        }
+      ]
+    },
+    {
+      "kind": "limitBreakCrystalUpgrade",
+      "recipeCount": 118,
+      "summaries": [
+        {
+          "fromStars": 5,
+          "toStars": 6,
+          "totalInputItems": 6,
+          "ryoCost": 500,
+          "recipeCount": 118
+        }
+      ]
+    },
+    {
+      "kind": "acquisitionShardToStone",
+      "recipeCount": 1,
+      "summaries": [
+        {
+          "fromStars": 5,
+          "toStars": 6,
+          "totalInputItems": 6,
+          "ryoCost": 500,
+          "recipeCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "awakeningBeadUpgrade",
+      "recipeCount": 29,
+      "summaries": [
+        {
+          "fromStars": 4,
+          "toStars": 5,
+          "totalInputItems": 6,
+          "ryoCost": 500,
+          "recipeCount": 29
+        }
+      ]
+    },
+    {
+      "kind": "specialAwakeningScrollUpgrade",
+      "recipeCount": 1,
+      "summaries": [
+        {
+          "fromStars": 5,
+          "toStars": 6,
+          "totalInputItems": 6,
+          "ryoCost": 500,
+          "recipeCount": 1
+        }
+      ]
+    }
+  ],
+  "nativeGeneralRule": {
+    "normalTargetField": "evoId",
+    "alternativeMaterialTargetsObserved": false,
+    "evo2IdAndDegIdAllZero": true,
+    "baseItemConsumed": true,
+    "recipeFields": [
+      "sozaiId0",
+      "sozaiId1",
+      "sozaiId2",
+      "sozaiId3",
+      "sozaiId4"
+    ],
+    "ryoFormula": "100 × sourceMaxLevel × positiveRecipeMaterialCount",
+    "sourceLevelAllRecipes": 1,
+    "targetLevelAllRecipes": 1,
+    "positiveIngredientCountChoices": [
+      2,
+      5
+    ],
+    "costChoices": [
+      200,
+      500
+    ],
+    "characterAwakeningExcluded": true
+  },
+  "findings": {
+    "ramen": {
+      "recipeCount": 15,
+      "expGainPercentByStage": {
+        "1to2": 21.21212121212121,
+        "2to3": 41.666666666666664,
+        "3to4": 7.8431372549019605
+      },
+      "details": "ramen-awakening-audit.json"
+    },
+    "standardScrolls": {
+      "recipeCount": 15,
+      "elements": 5,
+      "stages": [
+        "1to2",
+        "2to3",
+        "3to4"
+      ],
+      "eachRecipe": "1 base +5 identical source scrolls →1 next-rarity scroll",
+      "ryoCost": 500,
+      "full1To4": {
+        "oneStarScrolls": 216,
+        "ryoCost": 21500,
+        "derivedComposition": true
+      },
+      "usefulnessFr": "Permet d’utiliser le surplus du rang inférieur pour combler un besoin du rang supérieur. Conserver d’abord les parchemins nécessaires aux éveils et cristaux encore prévus."
+    },
+    "limitBreakCrystals": {
+      "recipeCount": 118,
+      "stage": "5to6",
+      "eachRecipe": "1 base crystal5★ +3 identical crystal5★ +1 same-element scroll3★ +1 same-element scroll4★ →1 matching crystal6★",
+      "totalMatchingFiveStarCrystals": 4,
+      "ryoCost": 500,
+      "usefulnessFr": "Fabriquer seulement le cristal6★ requis par le Limit Break ciblé. Les cristaux5★ et les parchemins peuvent être nécessaires à d’autres étapes."
+    },
+    "elementCrystals": {
+      "unitIds": [
+        12544,
+        12554,
+        12564,
+        12574,
+        12584
+      ],
+      "rarity": 4,
+      "awakeningRecipesFound": 0,
+      "directUse": true
+    },
+    "acquisitionStone": {
+      "sourceUnitId": 13555,
+      "targetUnitId": 12966,
+      "totalShards": 6,
+      "producedStones": 1,
+      "ryoCost": 500,
+      "usefulnessFr": "Utiliser six fragments pour obtenir une pierre lorsque des capacités restent à débloquer. Une pierre existante n’a pas de recette d’éveil supplémentaire."
+    },
+    "awakeningBeads": {
+      "recipeCount": 29,
+      "genericElementRecipes": 5,
+      "characterSpecificRecipes": 24,
+      "stage": "4to5",
+      "eachRecipe": "6 identical source beads →1 target bead",
+      "ryoCost": 500,
+      "usefulnessFr": "Conversion conditionnelle aux matériaux de l’éveil visé ; aucun bonus de pilule ou gain EXP supplémentaire n’est affirmé."
+    },
+    "specialAwakeningScroll": {
+      "recipeCount": 1,
+      "sourceUnitId": 16975,
+      "targetUnitId": 16866,
+      "stage": "5to6",
+      "totalSourceScrolls": 6,
+      "ryoCost": 500,
+      "usefulnessFr": "Produit le matériau6★ Book of Victor à partir de son rang5★. Les utilisations exactes figurent dans targetUsage du JSON des recettes."
+    },
+    "pills": {
+      "itemCount": 6,
+      "awakeningRecipesFound": 0,
+      "directUseEquivalent": "2 small2★ pills have the same boost as1 large3★ pill of the same stat.",
+      "pairs": [
+        {
+          "smallUnitId": 11812,
+          "largeUnitId": 11813,
+          "stat": "hp",
+          "smallGain": 5,
+          "largeGain": 10
+        },
+        {
+          "smallUnitId": 11822,
+          "largeUnitId": 11823,
+          "stat": "atk",
+          "smallGain": 2,
+          "largeGain": 4
+        },
+        {
+          "smallUnitId": 13682,
+          "largeUnitId": 13683,
+          "stat": "speed",
+          "smallGain": 1,
+          "largeGain": 2
+        }
+      ],
+      "noteFr": "Les pilules2★ restent utiles directement. Ne pas inventer un éveil2★→3★ ; compter les points manquants de chaque personnage avant tout arrondi pour éviter le double comptage."
+    }
+  },
+  "plannerAdviceFr": [
+    "Réserver d’abord les ingrédients déjà requis par les améliorations prévues.",
+    "Fabriquer seulement le manque réel du matériau supérieur et ajouter les ryō d’éveil.",
+    "Partager une seule fois les stocks entre tous les personnages sélectionnés.",
+    "Distinguer stock inconnu et stock nul ; un stock vide ne prouve pas qu’une fabrication est possible.",
+    "Ne pas convertir les matériaux sans recette et ne pas supposer que toutes les ressources sont actuellement farmables."
+  ],
+  "nativeEvidence": {
+    "validation": "material-native-validation.json",
+    "recipes": "material-recipes.json",
+    "baseMethodAudit": "ramen-awakening-audit.json",
+    "recipesVerified": 179,
+    "nativeAssertionsVerified": 1432,
+    "validationScope": "Native Unit.GetRecipe/GetSozaiUnitId, GetMaxLevel/GetParamData, IsEvoMixEnabled and ExternalData.getEvolveCost execute offline against each copied material conversion. The final level/material/coin branch of GetCharaEvolveMaterialState (0x234cefc onward) is exercised with independently verified cost and source cap supplied. Managed list allocation/ToArray/indexing, selected-character and Unit providers, coin provider and inventory existence are local stubs. No network method or game action executes.",
+    "libil2cppSha256": "16539b1f2cc5e8b11dfcf52cfca667d101891531ca27da5bd54abbefeffc97e5",
+    "unitListSha256": "0af6b9fe67453d96b5f1ed70904a60df69bb7f6b229fd60ef643cc2f6263c818"
+  },
+  "readOnly": {
+    "noGameRequests": true,
+    "noStockSpent": true,
+    "noGameFilesModified": true,
+    "noWebsiteFilesModified": true
+  },
+  "limitations": [
+    "Only copied client material recipes are covered; mandatory character awakening recipes remain separate.",
+    "Stock, farming rewards, event schedules, server master-data filtering and recipe availability were not read live.",
+    "No numeric farm-profit claim is made for scrolls, crystals or beads because their input and output serve different recipe requirements."
+  ]
+}

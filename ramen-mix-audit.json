@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-14",
+  "revision": "20261014-planning-scrolls1",
+  "solver": "ramen-optimizer.js",
+  "calculationScope": "Chaque plafond de niveau est calculé séparément, depuis le début du niveau affiché, jusqu’à 6 étoiles maximum.",
+  "allowedFeedingStars": [
+    3,
+    4
+  ],
+  "objectiveOrder": [
+    {
+      "id": "farm-ratio-one-four-two-three",
+      "meaning": "Hypothèse indiquée par le joueur : un tiers de ramen 4★ et deux tiers de ramen 3★."
+    },
+    {
+      "id": "cover-stage-experience",
+      "meaning": "Arrondir le nombre de lots complets au supérieur à chaque plafond ; le surplus ne change pas la répartition."
+    }
+  ],
+  "nativeFeedingExperienceByStars": {
+    "3": 34000,
+    "4": 220000
+  },
+  "sameElementMultiplier": 1.5,
+  "integerNormalizedValues": [
+    17,
+    110
+  ],
+  "proof": {
+    "approach": "farm-ratio-whole-batches",
+    "constantMemory": true,
+    "batchExperienceSameElement": 432000,
+    "batchExperienceWithoutElementBonus": 288000,
+    "formula": "lots = ceil(EXP nécessaire / (gain4 + 2*gain3)) ; n4=lots ; n3=2*lots",
+    "minimalityScope": "Nombre minimum de lots pour couvrir le besoin sous le ratio fixé ; aucune minimisation du gaspillage."
+  },
+  "validation": {
+    "testSuitePassed": 168,
+    "independentWholeBatchTargets": 20001,
+    "differences": 0
+  },
+  "examples": [
+    {
+      "neededExperience": 408000,
+      "providedExperience": 432000,
+      "surplus": 24000,
+      "counts": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 1
+      }
+    },
+    {
+      "neededExperience": 333300,
+      "providedExperience": 432000,
+      "surplus": 98700,
+      "counts": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 1
+      }
+    },
+    {
+      "neededExperience": 637000,
+      "providedExperience": 864000,
+      "surplus": 227000,
+      "counts": {
+        "1": 0,
+        "2": 0,
+        "3": 4,
+        "4": 2
+      }
+    }
+  ],
+  "stockAllocation": "Les besoins directs des raretés inférieures sont réservés et leurs déficits sont comblés avant les conversions supérieures. Les stocks partagés ne sont utilisés qu’une fois et ne sont pas modifiés.",
+  "smallRamenPurpose": "Les stocks de ramen 1 et 2 étoiles peuvent servir uniquement d’ingrédients pour fabriquer les 3 et 4 étoiles manquants.",
+  "scrollLedger": "Le besoin affiché reste le besoin initial des personnages. Les surplus utilisés pour fusion, la production et le stock après fusion sont séparés ; les ingrédients de fusion ne sont pas ajoutés au besoin de parchemins. Le manque tient compte des parchemins obtenus sans consommer deux fois les stocks.",
+  "stockOptimal": false,
+  "limitations": [
+    "Le ratio 1:2 est approximatif, fourni par le joueur ; les lots arrondis par plafond peuvent produire un surplus important. Aucune mission ni nombre de runs n’est inféré. Les ingrédients d’éveil peuvent ajouter des ramen 3★ aux besoins et sont distingués des ramen destinés à nourrir.",
+    "Les 1 et 2 étoiles ne sont jamais utilisés pour nourrir, même s’ils réduiraient le surplus.",
+    "Le coût global en ingrédients, le farm et le temps de farm ne sont pas des objectifs minimisés.",
+    "Les bonus fractionnels ne conservant pas les proportions entières natives des 3 et 4 étoiles sont signalés comme non confirmés.",
+    "Le ryō de fusion dépend de l’ordre des opérations et n’est pas inclus dans le budget."
+  ],
+  "farmRatio": {
+    "3": 2,
+    "4": 1,
+    "origin": "player-estimate",
+    "verifiedServerDropRate": false
+  }
+}

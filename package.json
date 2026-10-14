@@ -1,0 +1,8 @@
+{
+  "name": "naruto-blazing-revival",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-github-site.mjs"
+  }
+}

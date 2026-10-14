@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "asOfClientDate": "2026-10-14",
+  "timezone": "Europe/Zurich",
+  "inspectedAtUtc": "2026-10-13T22:45:50.086508+00:00",
+  "clientVersion": "NBRC3.00.032",
+  "currentAvailabilityConfirmed": false,
+  "reason": "serverResStartUpValuesMissing",
+  "conclusionFr": "Les tables et médias du cache ne suffisent pas à identifier tous les personnages actuellement obtenables dans Revival. Les valeurs datées des contenus ouverts et leurs pools de récompenses restent côté serveur.",
+  "readOnly": {
+    "gameFilesModified": false,
+    "gameActionsExecuted": false,
+    "authenticatedApiRequestsSent": false,
+    "rootOrSecurityChanges": false,
+    "sessionSecretsExported": false
+  },
+  "localEvidence": {
+    "characterMaster": {
+      "forms": 1114,
+      "enabledTrue": 1114,
+      "enabledFalse": 0,
+      "meaning": "Le drapeau enabled vaut true pour les 1 114 formes ; il ne sépare pas les unités sorties, futures, variantes ou données spéciales."
+    },
+    "stageMaster": {
+      "stages": 309,
+      "enabledTrue": 309,
+      "enabledFalse": 0,
+      "activationDateFieldsPresent": false,
+      "containsHistoricalAndDebugStages": true,
+      "meaning": "Les 309 stages sont activés dans le master, y compris des stages historiques et de test ; les fenêtres de rotation ne sont pas stockées dans ces définitions."
+    },
+    "missionMaster": {
+      "missions": 900,
+      "characterFormsReferencedInRewardsOrDrops": 142,
+      "uniqueCatalogueVersionsReferenced": 136,
+      "activationDateFieldsPresent": false,
+      "meaning": "Les recettes de récompenses et drops relient des personnages à des missions définies ; elles ne prouvent pas que la mission est ouverte aujourd’hui."
+    },
+    "unitDropMissionMaster": {
+      "rows": 186,
+      "categories": {
+        "91": 73,
+        "94": 113
+      },
+      "playableCharacterForms": 0,
+      "meaning": "Cette table associe uniquement des matériaux (catégories 91 et 94) à des missions ; son enabled ne constitue pas une liste de personnages actuellement obtenables."
+    },
+    "ticketMasters": {
+      "gashaTicketRows": 31,
+      "lotteryTicketRows": 10,
+      "meaning": "Noms et illustrations de tickets, sans pool complet ni dates d’ouverture des invocations actuelles."
+    },
+    "banners": {
+      "images": 58,
+      "dimensions": {
+        "1000x1700": 1,
+        "512x130": 55,
+        "367x118": 2
+      },
+      "observedEventExamples": [
+        "Kushina Uzumaki — The Red Hot Habanero",
+        "Jirobo — Brute Strength",
+        "Kidomaru — A Cruel Game",
+        "Haku — The Icy Mask’s Blades"
+      ],
+      "evidenceStrength": "Illustrations téléchargées lors de sessions récentes ; preuve de présence dans le cache, sans garantie d’activité actuelle ni exhaustivité."
+    },
+    "apkBootstrapStages": {
+      "stages": 1,
+      "meaning": "Le fichier stages embarqué dans l’APK contient un stage de démarrage/debug ; le cache téléchargé ajoute des définitions de contenu, mais pas les fenêtres actives."
+    }
+  },
+  "cacheDates": {
+    "cacheMarkerUtc": "2026-10-12T15:20:54+00:00",
+    "freshMasterReads": [
+      {
+        "name": "UnitList",
+        "sourceAssetPath": "assets/importassets/language/en/unitdata/unitlist.bytes",
+        "bundleSha256": "16c9d72be47bc83e75610afb7a26bd5f5c5ebd1164543b448cf12258c77c4649",
+        "unchangedSinceOriginalPull": true,
+        "bundleBytes": 4546365,
+        "cacheFileMtimeUtc": "2026-10-12T17:22:24+00:00"
+      },
+      {
+        "name": "assetbundlelist_en",
+        "sourceAssetPath": "assets/inappgame/assetbundlelistbin/assetbundlelist_en.bytes",
+        "bundleSha256": "36081629cbdb66f1b66ace767cfb60490248b4c814b69dfb461bd2562fe3e599",
+        "unchangedSinceOriginalPull": true,
+        "bundleBytes": 1501789,
+        "cacheFileMtimeUtc": "2026-10-12T17:22:18+00:00"
+      },
+      {
+        "name": "Stages",
+        "sourceAssetPath": "assets/importassets/stagedatabin/stages.bytes",
+        "bundleSha256": "e530707440f57ff5f1d0bbe2fce0dc5838b2b348b7b2cedd9c6f890abbae7942",
+        "unchangedSinceOriginalPull": true,
+        "bundleBytes": 95491,
+        "cacheFileMtimeUtc": "2026-10-12T17:22:24+00:00"
+      },
+      {
+        "name": "MissionDataList",
+        "sourceAssetPath": "assets/importassets/missiondatalistbin/missiondatalist.bytes",
+        "bundleSha256": "21b6ccf5fbbe404ba3b972be9806803499e3096bd1e7a4ce29d8961f3a55cc15",
+        "unchangedSinceOriginalPull": true,
+        "bundleBytes": 3761629,
+        "cacheFileMtimeUtc": "2026-10-12T17:22:24+00:00"
+      }
+    ],
+    "representativeAssetManifestMissionUtc": "2020-05-25T07:18:43+00:00",
+    "dateLimit": "Les dates du manifeste sont des dates d’assets, et les dates de fichiers du cache des dates de stockage. Elles ne sont pas les op_date/ed_date des contenus actifs."
+  },
+  "freshCache": {
+    "previousFiles": 1982,
+    "currentFiles": 1994,
+    "newFiles": 12,
+    "allNewFilesMatchKnownPublicAssets": true,
+    "newAssetCategories": {
+      "storypicture": 8,
+      "story": 3,
+      "card": 1
+    },
+    "serverAvailabilityResponseFound": false
+  },
+  "serverContractIdentified": {
+    "responseType": "NetworkManager.ResStartUp",
+    "responseValuesAvailableLocally": false,
+    "requiredSnapshotFields": [
+      "date",
+      "status_code",
+      "main_revision",
+      "assetbundle_revision"
+    ],
+    "requiredContentTables": {
+      "m_mission_stage_open": {
+        "type": "Net.StageOpenData",
+        "fields": [
+          "mission_stage_id",
+          "op_date",
+          "ed_date",
+          "weeks",
+          "hours",
+          "group_ids"
+        ],
+        "use": "Choisir les stages réellement ouverts à la date du serveur, puis joindre leur missionList aux récompenses du master."
+      },
+      "m_gasha_rare": {
+        "type": "Net.GashaRareData",
+        "fields": [
+          "gasha_rare_id",
+          "op_date",
+          "ed_date",
+          "banner_chara_ids",
+          "detail_url"
+        ],
+        "use": "Identifier les invocations rares ouvertes ; les portraits de bannière ne représentent pas le pool complet."
+      },
+      "m_gasha_friend": {
+        "type": "Net.GashaFriendData",
+        "fields": [
+          "gasha_friend_id",
+          "op_date",
+          "ed_date",
+          "banner_chara_ids",
+          "detail_url"
+        ]
+      },
+      "m_gasha_g_ticket": {
+        "type": "Net.GashaTicketOpenData",
+        "fields": [
+          "gasha_g_ticket_id",
+          "gasha_rare_id",
+          "op_date",
+          "ed_date",
+          "banner_chara_ids",
+          "detail_url"
+        ]
+      },
+      "m_gasha_stepup": {
+        "type": "Net.GashaStepupData",
+        "fields": [
+          "gasha_stepup_id",
+          "gasha_rare_ids",
+          "op_date",
+          "ed_date"
+        ]
+      },
+      "m_gasha_free": {
+        "type": "Net.GashaFreeData",
+        "fields": [
+          "gasha_free_id",
+          "base_gasha_rare_id",
+          "change_gasha_rare_id",
+          "op_date",
+          "ed_date"
+        ]
+      }
+    },
+    "additionalMissingData": [
+      "Pool complet de chaque invocation ouverte, avec identifiants d’unités et probabilités non nulles",
+      "Offres actuellement ouvertes des boutiques de personnages, récompenses de connexion/événement et éventuelle liste officielle des unités déjà sorties",
+      "Restrictions d’accès ou déverrouillage propres au compte si la question porte sur ce qu’Arosa peut obtenir immédiatement"
+    ],
+    "howAvailabilityWouldBeProven": "Un instantané récent et réussi des données de contenus du serveur, daté par son champ date, permettrait de filtrer op_date/ed_date et les rotations ; les pools et récompenses ensuite joints aux unitId prouveraient les formes obtenables à cet instant.",
+    "missingSnapshotCouldBeProvidedAs": "Export officiel ou copie expurgée de la réponse, sans identité de compte, jetons ou secrets de session."
+  },
+  "accessLimits": {
+    "externalCacheContains": "Assets Unity et médias publics, pas de réponse courante ResStartUp découverte",
+    "privateCacheReadableWithAdbShell": false,
+    "runAsResult": "package not debuggable",
+    "meaning": "Le cache privé est inaccessible en lecture normale ; aucun contournement n’a été appliqué."
+  },
+  "imageFollowup": {
+    "existingLargeCardForms": 149,
+    "newLargeCardForms": 1,
+    "totalLargeCardForms": 150,
+    "totalCharacterForms": 1114,
+    "allFormsHavePortraitAndIcon": true,
+    "newCard": {
+      "unitId": 11281,
+      "cardImageId": 10005,
+      "width": 380,
+      "height": 672,
+      "file": "card-10005.png"
+    },
+    "additionalLargeCharacterArtFoundInBannerCache": false,
+    "publicMediaBaseUrlConfirmed": false,
+    "mediaUrlLimit": "Le client reçoit base_url_assetbundle au démarrage ; aucune valeur actuelle ni URL publique complète de téléchargement n’a été confirmée dans ce cache."
+  },
+  "catalogueDecision": "Conserver les 578 fiches supplémentaires comme client_only / disponibilité non confirmée. Le nombre 88 demeure une donnée du catalogue communautaire, pas un résultat prouvé par cette inspection locale."
+}

@@ -1,0 +1,7284 @@
+{
+ "ultimate": "/naruto-blazing/lb/card-1142.webp",
+ "elements": {
+  "Heart": {
+   "crystal": "/naruto-blazing/lb/card-0947.webp",
+   "scroll3": "/naruto-blazing/lb/card-0902.webp",
+   "scroll4": "/naruto-blazing/lb/card-0952.webp",
+   "trial": "Discipline of the Heart"
+  },
+  "Skill": {
+   "crystal": "/naruto-blazing/lb/card-0948.webp",
+   "scroll3": "/naruto-blazing/lb/card-0905.webp",
+   "scroll4": "/naruto-blazing/lb/card-0953.webp",
+   "trial": "Cultivation of Skill"
+  },
+  "Body": {
+   "crystal": "/naruto-blazing/lb/card-0949.webp",
+   "scroll3": "/naruto-blazing/lb/card-0908.webp",
+   "scroll4": "/naruto-blazing/lb/card-0954.webp",
+   "trial": "Application of the Body"
+  },
+  "Bravery": {
+   "crystal": "/naruto-blazing/lb/card-0950.webp",
+   "scroll3": "/naruto-blazing/lb/card-0911.webp",
+   "scroll4": "/naruto-blazing/lb/card-0955.webp",
+   "trial": "Demonstration of Bravery"
+  },
+  "Wisdom": {
+   "crystal": "/naruto-blazing/lb/card-0951.webp",
+   "scroll3": "/naruto-blazing/lb/card-0914.webp",
+   "scroll4": "/naruto-blazing/lb/card-0956.webp",
+   "trial": "Accumulation of Wisdom"
+  }
+ },
+ "recipes": {
+  "star5": {
+   "from": 70,
+   "to": 100,
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "scroll3": 3,
+      "scroll4": 1,
+      "elemental": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "scroll3": 1,
+      "scroll4": 2,
+      "elemental": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "scroll4": 3,
+      "elemental": 2
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "scroll4": 2,
+      "elemental": 3
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "scroll4": 1,
+      "elemental": 4
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ],
+   "total": {
+    "items": {
+     "scroll3": 4,
+     "scroll4": 9,
+     "elemental": 17
+    },
+    "ryo": 497600
+   }
+  },
+  "star6": {
+   "from": 100,
+   "to": 150,
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "scroll3": 2,
+      "scroll4": 2,
+      "elemental": 1
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "scroll4": 2,
+      "elemental": 2,
+      "own5": 1
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "scroll4": 2,
+      "elemental": 1,
+      "own5": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "scroll4": 1,
+      "own5": 4
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "scroll3": 1,
+      "scroll4": 3,
+      "elemental": 1,
+      "own5": 5,
+      "own6": 1
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "scroll3": 2,
+      "scroll4": 3,
+      "elemental": 1,
+      "own5": 9,
+      "own6": 2
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "scroll3": 3,
+      "scroll4": 3,
+      "own5": 10,
+      "own6": 2
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "scroll3": 4,
+      "scroll4": 4,
+      "own5": 17,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "scroll3": 5,
+      "scroll4": 5,
+      "own5": 20,
+      "own6": 5
+     }
+    }
+   ],
+   "total": {
+    "items": {
+     "scroll3": 17,
+     "scroll4": 25,
+     "elemental": 6,
+     "own5": 73,
+     "own6": 14
+    },
+    "ryo": 5769600
+   }
+  },
+  "festival": {
+   "from": 100,
+   "to": 150,
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 282240,
+     "items": {
+      "scroll4": 2,
+      "elemental": 2,
+      "ultimate": 1
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 295680,
+     "items": {
+      "scroll4": 2,
+      "elemental": 2,
+      "ultimate": 1
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 353280,
+     "items": {
+      "scroll4": 1,
+      "elemental": 3,
+      "ultimate": 1
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "scroll4": 1,
+      "elemental": 3,
+      "ultimate": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 384000,
+     "items": {
+      "scroll4": 1,
+      "elemental": 3,
+      "ultimate": 1
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "scroll4": 1,
+      "elemental": 3,
+      "ultimate": 1
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 622080,
+     "items": {
+      "scroll4": 1,
+      "elemental": 2,
+      "ultimate": 2
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 645120,
+     "items": {
+      "scroll4": 1,
+      "elemental": 2,
+      "ultimate": 2
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 668160,
+     "items": {
+      "scroll4": 1,
+      "elemental": 2,
+      "ultimate": 2
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 979200,
+     "items": {
+      "elemental": 2,
+      "ultimate": 3
+     }
+    }
+   ],
+   "total": {
+    "items": {
+     "scroll4": 11,
+     "elemental": 24,
+     "ultimate": 15
+    },
+    "ryo": 4997760
+   }
+  }
+ },
+ "festival": [
+  "minato-namikaze-rapid-lightning"
+ ],
+ "ninjas": {
+  "naruto-uzumaki-no-1-maverick": {
+   "5": "/naruto-blazing/lb/card-0939.webp",
+   "6": "/naruto-blazing/lb/card-0940.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "sasuke-uchiha-lone-survivor": {
+   "5": "/naruto-blazing/lb/card-0941.webp",
+   "6": "/naruto-blazing/lb/card-0942.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "kakashi-hatake-copier-of-1k-techniques": {
+   "5": "/naruto-blazing/lb/card-0943.webp",
+   "6": "/naruto-blazing/lb/card-0944.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "gaara-sand-defense": {
+   "5": "/naruto-blazing/lb/card-0945.webp",
+   "6": "/naruto-blazing/lb/card-0946.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "haku-a-frozen-heart": {
+   "5": "/naruto-blazing/lb/card-0958.webp",
+   "6": "/naruto-blazing/lb/card-0959.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "zabuza-momochi-silent-madness": {
+   "5": "/naruto-blazing/lb/card-0960.webp",
+   "6": "/naruto-blazing/lb/card-0961.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "sakura-haruno-hardened-resolve": {
+   "5": "/naruto-blazing/lb/card-0962.webp",
+   "6": "/naruto-blazing/lb/card-0963.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "kakashi-hatake-hidden-left-eye": {
+   "5": "/naruto-blazing/lb/card-0964.webp",
+   "6": "/naruto-blazing/lb/card-0965.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "neji-hyuga-a-caged-bird": {
+   "5": "/naruto-blazing/lb/card-0974.webp",
+   "6": "/naruto-blazing/lb/card-0975.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "rock-lee-the-eight-gates": {
+   "5": "/naruto-blazing/lb/card-0978.webp",
+   "6": "/naruto-blazing/lb/card-0979.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "sasuke-uchiha-chidori-a-new-skill": {
+   "5": "/naruto-blazing/lb/card-0982.webp",
+   "6": "/naruto-blazing/lb/card-0983.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "sasuke-uchiha-ready-for-the-curse-mark": {
+   "5": "/naruto-blazing/lb/card-0990.webp",
+   "6": "/naruto-blazing/lb/card-0991.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "naruto-uzumaki-rasengan-mastered": {
+   "5": "/naruto-blazing/lb/card-0980.webp",
+   "6": "/naruto-blazing/lb/card-0981.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "choji-akimichi-a-life-bet-on-two-wings": {
+   "5": "/naruto-blazing/lb/card-1006.webp",
+   "6": "/naruto-blazing/lb/card-1007.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "tsunade-the-slug-ninja": {
+   "5": "/naruto-blazing/lb/card-0976.webp",
+   "6": "/naruto-blazing/lb/card-0977.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "gaara-the-sands-final-weapon": {
+   "5": "/naruto-blazing/lb/card-0984.webp",
+   "6": "/naruto-blazing/lb/card-0985.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "hiruzen-sarutobi-ninja-clothes": {
+   "5": "/naruto-blazing/lb/card-0992.webp",
+   "6": "/naruto-blazing/lb/card-0993.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "itachi-uchiha-beyond-the-sharingan": {
+   "5": "/naruto-blazing/lb/card-0994.webp",
+   "6": "/naruto-blazing/lb/card-0995.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "deidara-ephemeral-art": {
+   "5": "/naruto-blazing/lb/card-1002.webp",
+   "6": "/naruto-blazing/lb/card-1003.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "sasori-eternal-art": {
+   "5": "/naruto-blazing/lb/card-1004.webp",
+   "6": "/naruto-blazing/lb/card-1005.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   },
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ]
+  },
+  "asuma-sarutobi-all-powerful-infighter": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "choji-akimichi-glutton": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "gaara-protector-of-the-sands": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 282240,
+     "items": {
+      "ultimate": 1,
+      "elemental": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 295680,
+     "items": {
+      "ultimate": 1,
+      "elemental": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 353280,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 384000,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 622080,
+     "items": {
+      "ultimate": 2,
+      "elemental": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 645120,
+     "items": {
+      "ultimate": 2,
+      "elemental": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 668160,
+     "items": {
+      "ultimate": 2,
+      "elemental": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 979200,
+     "items": {
+      "ultimate": 3,
+      "elemental": 2
+     }
+    }
+   ]
+  },
+  "gaara-sand-clad-demon": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "gengo-master-of-silence": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-0998.webp",
+   "6": "/naruto-blazing/lb/card-0999.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "haku-the-icy-masks-blades": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "hashirama-senju-father-of-leaf-village": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1008.webp",
+   "6": "/naruto-blazing/lb/card-1009.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "hinata-hyuga-blooming-talent": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1025.webp",
+   "6": "/naruto-blazing/lb/card-1026.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "hinata-hyuga-nice-girl": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "hinata-hyuga-proof-of-resolution": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "hiruzen-sarutobi-the-third-hokage": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "ino-yamanaka-i-dont-want-to-lose": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "ino-yamanaka-like-a-peony": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1038.webp",
+   "6": "/naruto-blazing/lb/card-1039.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "ino-yamanaka-truly-wise": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "itachi-uchiha-a-cold-hearted-criminal": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "itachi-uchiha-limits-of-his-ability": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "itachi-uchiha-shuras-truth": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1000.webp",
+   "6": "/naruto-blazing/lb/card-1001.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "jiraiya-enter-the-sage": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "jirobo-herculean-appetite": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "jirobo-jirobo-of-the-south-gate": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "kabuto-yakushi-surprising-regeneration": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "kabuto-yakushi-the-sounds-spy": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "kakashi-hatake-a-fathers-blade": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1032.webp",
+   "6": "/naruto-blazing/lb/card-1033.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "kankuro-orchestrator-of-tragedy": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "karin-acute-perception": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1054.webp",
+   "6": "/naruto-blazing/lb/card-1055.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "kiba-inuzuka-two-headed-fangs": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "kiba-inuzuka-wild-partners": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "kidomaru-kidomaru-of-the-east-gate": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "kidomaru-solid-flexible-threads": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "kimimaro-kimimaro-of-the-earth": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "kisame-hoshigaki-monster-of-the-mist": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "kurenai-yuhi-illusionary-expert": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "naruto-uzumaki-nine-tails-shroud": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 282240,
+     "items": {
+      "ultimate": 1,
+      "elemental": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 295680,
+     "items": {
+      "ultimate": 1,
+      "elemental": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 353280,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 384000,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 622080,
+     "items": {
+      "ultimate": 2,
+      "elemental": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 645120,
+     "items": {
+      "ultimate": 2,
+      "elemental": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 668160,
+     "items": {
+      "ultimate": 2,
+      "elemental": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 979200,
+     "items": {
+      "ultimate": 3,
+      "elemental": 2
+     }
+    }
+   ]
+  },
+  "naruto-uzumaki-power-of-the-fourth-tail": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-0988.webp",
+   "6": "/naruto-blazing/lb/card-0989.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "naruto-uzumaki-unshakeable-will": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1019.webp",
+   "6": "/naruto-blazing/lb/card-1020.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "neji-hyuga-an-unchangeable-destiny": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "obito-uchiha-to-protect-his-allies": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1034.webp",
+   "6": "/naruto-blazing/lb/card-1035.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "orochimaru-corrupt-rebirth": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-0986.webp",
+   "6": "/naruto-blazing/lb/card-0987.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "orochimaru-the-horror-returns": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "rin-nohara-overflowing-kindness": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1036.webp",
+   "6": "/naruto-blazing/lb/card-1037.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "rock-lee-never-gives-up": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "sakon-grotesque-ninja": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "sakon-sakon-of-the-west-gate": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "sakura-haruno-maiden-in-love": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "sakura-haruno-unrelenting-commitment": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1021.webp",
+   "6": "/naruto-blazing/lb/card-1022.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "sasuke-uchiha-avenger": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1052.webp",
+   "6": "/naruto-blazing/lb/card-1053.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "sasuke-uchiha-curse-mark-2nd-state": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-0972.webp",
+   "6": "/naruto-blazing/lb/card-0973.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "sasuke-uchiha-soul-shrouded-in-sorrow": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1023.webp",
+   "6": "/naruto-blazing/lb/card-1024.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "shikamaru-nara-beyond-silence": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1048.webp",
+   "6": "/naruto-blazing/lb/card-1049.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "shikamaru-nara-lazy-guy": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "shikamaru-nara-the-decoy": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "shino-aburame-cold-beetle-user": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "tayuya-aggressive-strategist": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "tayuya-tayuya-of-the-north-gate": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "temari-high-winds": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1050.webp",
+   "6": "/naruto-blazing/lb/card-1051.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "temari-sand-hurricane": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "tenten-ninja-tool-specialist": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  },
+  "tenten-valiant-warrior": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1040.webp",
+   "6": "/naruto-blazing/lb/card-1041.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "tobirama-senju-father-of-reanimation": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1010.webp",
+   "6": "/naruto-blazing/lb/card-1011.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "utakata-fleeting-tranquility": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 282240,
+     "items": {
+      "ultimate": 1,
+      "elemental": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 295680,
+     "items": {
+      "ultimate": 1,
+      "elemental": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 353280,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 384000,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "ultimate": 1,
+      "elemental": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 622080,
+     "items": {
+      "ultimate": 2,
+      "elemental": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 645120,
+     "items": {
+      "ultimate": 2,
+      "elemental": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 668160,
+     "items": {
+      "ultimate": 2,
+      "elemental": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 979200,
+     "items": {
+      "ultimate": 3,
+      "elemental": 2
+     }
+    }
+   ]
+  },
+  "yamato-heartless-thought": {
+   "steps": [
+    {
+     "from": 100,
+     "to": 105,
+     "ryo": 40320,
+     "items": {
+      "elemental": 1,
+      "scroll3": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 105,
+     "to": 110,
+     "ryo": 168960,
+     "items": {
+      "elemental": 2,
+      "own5": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 110,
+     "to": 115,
+     "ryo": 220800,
+     "items": {
+      "elemental": 1,
+      "own5": 2,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 115,
+     "to": 120,
+     "ryo": 368640,
+     "items": {
+      "own5": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 120,
+     "to": 125,
+     "ryo": 480000,
+     "items": {
+      "own5": 5
+     }
+    },
+    {
+     "from": 125,
+     "to": 130,
+     "ryo": 399360,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 130,
+     "to": 135,
+     "ryo": 673920,
+     "items": {
+      "elemental": 1,
+      "own5": 1,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "ryo": 752640,
+     "items": {
+      "own5": 2,
+      "own6": 2,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 140,
+     "to": 145,
+     "ryo": 1224960,
+     "items": {
+      "own5": 1,
+      "own6": 4
+     }
+    },
+    {
+     "from": 145,
+     "to": 150,
+     "ryo": 1440000,
+     "items": {
+      "own6": 5
+     }
+    }
+   ],
+   "5": "/naruto-blazing/lb/card-1046.webp",
+   "6": "/naruto-blazing/lb/card-1047.webp",
+   "awaken": {
+    "own5": 3,
+    "scroll3": 1,
+    "scroll4": 1
+   }
+  },
+  "zabuza-momochi-the-demon-returns": {
+   "steps": [
+    {
+     "from": 70,
+     "to": 75,
+     "ryo": 24000,
+     "items": {
+      "elemental": 1,
+      "scroll3": 3,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 75,
+     "to": 80,
+     "ryo": 51200,
+     "items": {
+      "elemental": 2,
+      "scroll3": 1,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 80,
+     "to": 85,
+     "ryo": 54400,
+     "items": {
+      "elemental": 2,
+      "scroll4": 3
+     }
+    },
+    {
+     "from": 85,
+     "to": 90,
+     "ryo": 86400,
+     "items": {
+      "elemental": 3,
+      "scroll4": 2
+     }
+    },
+    {
+     "from": 90,
+     "to": 95,
+     "ryo": 121600,
+     "items": {
+      "elemental": 4,
+      "scroll4": 1
+     }
+    },
+    {
+     "from": 95,
+     "to": 100,
+     "ryo": 160000,
+     "items": {
+      "elemental": 5
+     }
+    }
+   ]
+  }
+ },
+ "source": "https://naruto-blazing.fandom.com/wiki/Limit_Break",
+ "license": "CC BY-SA 3.0"
+}

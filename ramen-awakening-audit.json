@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "clientVersion": "NBRC3.00.032",
+  "extractedAt": "2026-10-14T00:28:33.050148+00:00",
+  "verified": true,
+  "summaryFr": "L’éveil standard 3★→4★ consomme exactement 6 ramen du même élément au total : 1 ramen de base et 5 matériaux. Il coûte500 ryō et transforme204 000 EXP de base en220 000 (+16 000 ; +7,84%). Pour un personnage du même élément :306 000→330 000 (+24 000). Les éveils1★→2★ et2★→3★ coûtent200 ryō et consomment chacun3 ramen source au total.",
+  "recipeCount": 15,
+  "standardRamenForms": 20,
+  "elements": {
+    "1": "Heart",
+    "2": "Skill",
+    "3": "Body",
+    "4": "Bravery",
+    "5": "Wisdom"
+  },
+  "awakeningRecipeRule": {
+    "baseItemConsumed": true,
+    "sourceQuantity": 1,
+    "recipeFields": [
+      "sozaiId0",
+      "sozaiId1",
+      "sozaiId2",
+      "sozaiId3",
+      "sozaiId4"
+    ],
+    "targetField": "evoId",
+    "degId": "0 for all standard ramen; it is not the awakening target.",
+    "sameElementRequired": true,
+    "sameSourceUnitIdRequired": true,
+    "normalAwakeningType": 1,
+    "recipeArrayContainsZeroSlots": true,
+    "costOnlyCountsPositiveUnitIds": true
+  },
+  "awakeningCoinRule": {
+    "coefficient": 100,
+    "formula": "100 × Unit.GetMaxLevel(selectedCharaData) × number of positive recipe material IDs",
+    "sourceCapUsed": true,
+    "targetCapUsed": false,
+    "baseItemIncludedInPaidMaterialCount": false,
+    "arithmetic": "32-bit integer multiplication; no floating-point rounding in the inspected formula.",
+    "growthCampaignMultiplierApplied": false,
+    "successMultiplierApplied": false,
+    "sameElementBonusApplied": false,
+    "sellPriceUsed": false
+  },
+  "levelCondition": {
+    "minimumSourceLevel": 1,
+    "sourceNormalMaxLevel": 1,
+    "targetTemplateStartLevel": 1,
+    "targetMaxLevel": 1,
+    "preTrainingNeeded": false,
+    "proof": "Native normal-awakening gate compares selectedCharaData.level with Unit.GetMaxLevel(index0). All standard ramen source and target parameter ranges are1..1.",
+    "afterLevelScope": "Template metadata establishes target range1..1. No live server response or awakening action was performed."
+  },
+  "profitability": [
+    {
+      "fromStars": 1,
+      "toStars": 2,
+      "sourceCount": 1,
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "experience": {
+        "sourceEachBase": 2200,
+        "sourceTotalBase": 6600,
+        "targetBase": 8000,
+        "gainBase": 1400,
+        "sourceTotalSameElement": 9900,
+        "targetSameElement": 12000,
+        "gainSameElement": 2100,
+        "increasePercent": 21.21212121212121
+      }
+    },
+    {
+      "fromStars": 2,
+      "toStars": 3,
+      "sourceCount": 1,
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "experience": {
+        "sourceEachBase": 8000,
+        "sourceTotalBase": 24000,
+        "targetBase": 34000,
+        "gainBase": 10000,
+        "sourceTotalSameElement": 36000,
+        "targetSameElement": 51000,
+        "gainSameElement": 15000,
+        "increasePercent": 41.666666666666664
+      }
+    },
+    {
+      "fromStars": 3,
+      "toStars": 4,
+      "sourceCount": 1,
+      "materialCount": 5,
+      "totalConsumedSourceItems": 6,
+      "producedTargetItems": 1,
+      "ryoCost": 500,
+      "sourceRequiredLevel": 1,
+      "experience": {
+        "sourceEachBase": 34000,
+        "sourceTotalBase": 204000,
+        "targetBase": 220000,
+        "gainBase": 16000,
+        "sourceTotalSameElement": 306000,
+        "targetSameElement": 330000,
+        "gainSameElement": 24000,
+        "increasePercent": 7.8431372549019605
+      }
+    }
+  ],
+  "experienceRule": {
+    "field": "Unit.mixExp",
+    "sameElementMultiplier": 1.5,
+    "normalSuccessAndNoCampaignBaseline": true,
+    "perItemRounding": "Native ceiling after material-level/element arithmetic. All tested level1 standard ramen outputs are exact integers.",
+    "multiplierScope": "Campaign EXP and success boosts, when supplied by an actual scenario/result, multiply feeding EXP; they do not change the deterministic awakening recipe or getEvolveCost.",
+    "currentCampaignKnown": false,
+    "currentSuccessOutcomeKnown": false,
+    "comparisonAssumption": "Both choices use the same feeding EXP scenario. Random outcomes of separate feeding actions are not assumed identical.",
+    "wasteCautionFr": "Le gain reste utile seulement si le personnage a besoin de cette EXP : le dépassement du plafond ne devient pas une ressource récupérable."
+  },
+  "fullChain1To4": {
+    "sourceOneStarTotal": 54,
+    "craftedTwoStarItems": 18,
+    "craftedThreeStarItems": 6,
+    "craftedFourStarItems": 1,
+    "ryoCost": 5300,
+    "directBaseExp": 118800,
+    "craftedBaseExp": 220000,
+    "gainBaseExp": 101200,
+    "directSameElementExp": 178200,
+    "craftedSameElementExp": 330000,
+    "gainSameElementExp": 151800,
+    "scope": "Derived by composing the three verified recipes; not an additional native recipe."
+  },
+  "stockMappingNote": {
+    "wisdomAwakeningTargetUnitId": 12714,
+    "mechanicalRamenUnitId": 15854,
+    "sharedCategoryStockKey": "ramen:Wisdom:4",
+    "sameExpAndElement": true,
+    "note": "The recipe creates Ichiraku Ramen XXL12714, not Mechanical Ramen15854. A category stock may group both for EXP because both have Wisdom attribute and220 000 base EXP."
+  },
+  "otherItemsScope": "The type3=90 category also contains5 treasure chests with150 000 EXP and one Mechanical Ramen with220 000. They have no awakening recipe in the copied table. The standard ladder covers20 Ichiraku Ramen forms.",
+  "nativeEvidence": {
+    "getEvolveCost": {
+      "rawOffset": "0x22fdc94",
+      "nativeVA": "0x2301c94",
+      "length": "0x3a8",
+      "terminalMultiplicationsVA": [
+        "0x230200c",
+        "0x2302014"
+      ]
+    },
+    "GetRecipe": {
+      "class": "Unit",
+      "rawOffset": "0x2980a20",
+      "nativeVA": "0x2984a20",
+      "length": "0x1e4"
+    },
+    "GetCharaEvolveMaterialState": {
+      "rawOffset": "0x2348d38",
+      "nativeVA": "0x234cd38",
+      "length": "0x320",
+      "normalLevelComparisonVA": "0x234cf0c",
+      "exactCoinComparisonVA": "0x234cfd4"
+    },
+    "get_getMixAddExp": {
+      "rawOffset": "0x22c680c",
+      "nativeVA": "0x22ca80c",
+      "length": "0x588",
+      "sameElementConstantField": "$TbA+0x9c0 =1.5",
+      "ceilInstructionsVA": [
+        "0x22cac98",
+        "0x22caca0"
+      ]
+    },
+    "awakeningRouteEvidence": "ExternalData.EvolveStart calls Unit.CanBattle; non-battle materials use NetworkManager.CharaAwakeMaterial. No network method was called in this audit.",
+    "integerConstantSource": {
+      "class": "$wbA",
+      "cctorRawOffset": "0x21593f4",
+      "poolField": "0x3028",
+      "costConstantOffset": "0x7b0",
+      "decodedValue": 100,
+      "feedCostConstantOffset": "0x4c0",
+      "feedCostDecodedValue": 100
+    },
+    "sourceHashes": {
+      "libil2cpp.so": "16539b1f2cc5e8b11dfcf52cfca667d101891531ca27da5bd54abbefeffc97e5",
+      "UnitList.json": "0af6b9fe67453d96b5f1ed70904a60df69bb7f6b229fd60ef643cc2f6263c818",
+      "scalar-values.json": "7918bebbb417d2de2bb59b14f0795e40d202a0e5e969f52dcc1fbfb8ee121baa"
+    },
+    "recipesVerified": 15,
+    "experienceCasesVerified": 40,
+    "nativeAssertionsVerified": 160,
+    "validationScope": "Native Unit.GetRecipe/GetSozaiUnitId, GetMaxLevel/GetParamData, IsEvoMixEnabled and ExternalData.getEvolveCost execute offline against copied ramen data. The final level/material/coin branch of GetCharaEvolveMaterialState (0x234cefc onward) is exercised with the independently verified cost and source level cap supplied. The single-item arithmetic branch of ExternalData.get_getMixAddExp (0x22caa0c..0x22cacb8), including Unit.IsMaterialUnit and ceiling conversion, executes for each standard ramen with same/different elements. Managed list allocation/ToArray/indexing, selected-character and Unit providers, coin provider, and the inventory-existence result are local stubs. Obfuscated integer constants are decrypted with copied local client keys. The full GetCharaEvolveMaterialState method/dispatch and EXP enumeration are not claimed emulated. No NetworkManager/awakening request or game action is executed."
+  },
+  "artifacts": {
+    "recipes": "ramen-recipes.json",
+    "validation": "native-validation.json",
+    "inspection": "native-inspection.json"
+  },
+  "readOnly": {
+    "noGameActions": true,
+    "noGameRequests": true,
+    "noStockSpent": true,
+    "noGameFilesModified": true,
+    "noWebsiteFilesModified": true
+  },
+  "limitations": [
+    "Copied client code and master data establish recipe and displayed costs; no server awakening response was captured.",
+    "Stocks, current campaigns and random success results remain unknown unless entered by the user.",
+    "Native inventory lookup is stubbed as present/absent in boundary tests; exact recipe multiplicities are independently established from copied UnitList and native GetRecipe."
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "clientVersion": "NBRC3.00.032",
+  "extractedAt": "2026-10-13T23:53:16.387102+00:00",
+  "verified": true,
+  "summaryFr": "Le client colore le nombre ou MAX en rouge quand au moins un Limit Break a été acheté. MAX apparaît seulement lorsque le niveau atteint le plafond actuel et que tous les Limit Break de la forme actuelle sont achetés. L’affichage de la collection demandé par le joueur déduit seulement ce que le niveau prouve, sans saisir un plafond débloqué.",
+  "nativeRule": {
+    "currentFormOnly": true,
+    "inputs": [
+      "CharaData.level",
+      "CharaData.exLimit",
+      "Unit.exLimitMax",
+      "Unit.paramDatas"
+    ],
+    "unlockedCap": "Unit.GetMaxLevel(CharaData) = Unit.paramDatas[clamp(CharaData.exLimit,0,Count-1)].endLevel",
+    "showMax": "level >= unlockedCap && exLimit >= Unit.exLimitMax",
+    "red": "exLimit > 0",
+    "yellow": "showMax && exLimit == 0",
+    "white": "!showMax && exLimit == 0",
+    "format": "localized(common_name_85) + space + colorMarkup + (showMax ? localized(system_576) : level.ToString())",
+    "prefixColor": "The prefix and separator precede the color tag, so they retain the UILabel default white.",
+    "laterAwakeningFormRequiredForMax": false,
+    "otherRequirementsAffectLabel": false,
+    "notAnUltimateBadgeRule": "Luck, pills, abilities and maximum evolution rarity are absent from this level-label branch."
+  },
+  "collectionLevelOnlyRule": {
+    "requestedByUser": true,
+    "usesLegacyUnlockedCapInput": false,
+    "usesCurrentFormUnitId": true,
+    "inputs": [
+      "Known current form",
+      "Known current level",
+      "Current form.client.baseCap",
+      "Current form.client.finalCap"
+    ],
+    "showMax": "Known level >= currentForm.client.finalCap",
+    "red": "Known level > currentForm.client.baseCap",
+    "yellow": "showMax && currentForm.client.finalCap == currentForm.client.baseCap",
+    "white": "Known level <= currentForm.client.baseCap && !showMax",
+    "unknownLevel": "Do not substitute a starting level; render an unknown label.",
+    "unknownForm": "Do not infer the cap from a later awakening form; resolve the current form or keep status unknown.",
+    "distinctionFromNative": "A purchased Limit Break can make the native number red even when the actual level is still below or equal to baseCap. Level alone cannot prove that purchase, so the requested collection rule keeps such a number white. It is an inference from level, not a claim that runtime exLimit was retrieved.",
+    "maxInference": "For valid current client data, reaching finalCap proves that all level-cap steps needed to reach it were bought. All copied character forms have exLimitMax in their paramDatas range.",
+    "fullCapRelationVerifiedAcrossForms": 1114
+  },
+  "colors": {
+    "white": {
+      "hex": "#FFFFFF",
+      "markup": "[FFFFFFFF]"
+    },
+    "red": {
+      "hex": "#FC566A",
+      "markup": "[FC566AFF]"
+    },
+    "yellow": {
+      "hex": "#FFEF37",
+      "markup": "[FFEF37FF]"
+    }
+  },
+  "localization": {
+    "levelPrefix": {
+      "key": "common_name_85",
+      "fr": "Niv.",
+      "en": "Lv"
+    },
+    "max": {
+      "key": "system_576",
+      "fr": "MAX",
+      "en": "MAX"
+    },
+    "separator": " ",
+    "frenchSource": "Copied APK TextAsset resource-fr.bin, assets/bin/Data/9b99bfdb83964ebc950be012a6f639ef; tab-separated locale table."
+  },
+  "examples": [
+    {
+      "unitId": 10476,
+      "rare": 6,
+      "baseCap": 100,
+      "finalCap": 150,
+      "exLimitMax": 10
+    },
+    {
+      "unitId": 13455,
+      "rare": 5,
+      "baseCap": 70,
+      "finalCap": 70,
+      "exLimitMax": 0
+    },
+    {
+      "unitId": 11065,
+      "rare": 5,
+      "baseCap": 70,
+      "finalCap": 70,
+      "exLimitMax": 0
+    },
+    {
+      "unitId": 11066,
+      "rare": 6,
+      "baseCap": 100,
+      "finalCap": 150,
+      "exLimitMax": 10
+    },
+    {
+      "unitId": 12236,
+      "rare": 6,
+      "baseCap": 100,
+      "finalCap": 100,
+      "exLimitMax": 0
+    }
+  ],
+  "nativeLabelCasesVerified": 35,
+  "validationScope": "Native level-label branch of UnitIconBase.GetSortLabelNameFromType and Unit.GetMaxLevel(CharaData)/GetParamData execute offline. Managed list indexing, number/string allocation and concatenation, localization provider and string-reader are stubbed. Constants were independently decoded from the native string pool; French values come from the copied APK resource-fr.bin. The SortType dispatch and Unity rendering are not emulated. No game/server or website files modified.",
+  "nativeEvidence": {
+    "GetSortLabelNameFromType": {
+      "class": "UnitIconBase",
+      "rawOffset": "0x29c1990",
+      "nativeVA": "0x29c5990",
+      "length": "0xe48",
+      "levelBranchVA": "0x29c5be8",
+      "branchTailVA": "0x29c5e6c"
+    },
+    "SetSortLabel": {
+      "class": "UnitIconBase",
+      "rawOffset": "0x29c5040",
+      "nativeVA": "0x29c9040",
+      "length": "0x1c4",
+      "effect": "Applies label text and shows statusBgSprite when the label is non-empty."
+    },
+    "GetMaxLevelChara": {
+      "class": "Unit",
+      "rawOffset": "0x297f328",
+      "nativeVA": "0x2983328",
+      "length": "0x24"
+    },
+    "GetParamData": {
+      "class": "Unit",
+      "rawOffset": "0x297f14c",
+      "nativeVA": "0x298314c",
+      "effect": "Clamps supplied exLimit index to the paramDatas range."
+    },
+    "GetMaxLevelNoArgs": {
+      "class": "Unit",
+      "rawOffset": "0x297f2ec",
+      "nativeVA": "0x29832ec",
+      "effect": "Uses Unit.exLimitMax to select the final cap."
+    },
+    "fields": {
+      "CharaData.level": "0x14 uint32",
+      "CharaData.exLimit": "0x34 uint16",
+      "Unit.paramDatas": "0x90 List<ParamData>",
+      "Unit.exLimitMax": "0xa4 uint16",
+      "ParamData.endLevel": "0x14 uint32",
+      "UnitIconBase.statusBgSprite": "0xb8 UISprite",
+      "UnitIconBase.sortlabel": "0xc0 UILabel"
+    },
+    "constantsSource": {
+      "class": "$ABA",
+      "cctorRawOffset": "0x215b1b4",
+      "poolField": "0x1810",
+      "decodedConstants": "label-constants.json"
+    },
+    "sourceHashes": {
+      "libil2cpp.so": "16539b1f2cc5e8b11dfcf52cfca667d101891531ca27da5bd54abbefeffc97e5",
+      "UnitList.json": "0af6b9fe67453d96b5f1ed70904a60df69bb7f6b229fd60ef643cc2f6263c818",
+      "resource-fr.bin": "4afc9412c8565fc779989b1c0ea2b0d8edccd0df2311cd97c0217b6835f47b61"
+    }
+  },
+  "visualEvidence": {
+    "manifest": "manifest.json",
+    "nativeBar": "CommonAtlas(907) charaicon_parameter_box; exact crop and original sliced borders.",
+    "labelDefault": "20px regular; white; centered pivot; Outline8 black, distance1.5x1.5.",
+    "fontDefault": "APK prefab font LegacyRuntime/Liberation Sans Regular. Runtime locale SubFont replacement is not proven; see manifest.json.",
+    "exactRuntimeTypefaceClaimed": false
+  },
+  "readOnly": {
+    "noGameRequests": true,
+    "noGameFilesModified": true,
+    "noWebsiteFilesModified": true
+  },
+  "limitations": [
+    "Copied NBRC3.00.032 data and native code establish these rules; no live runtime exLimit or font selection was read.",
+    "The level-only collection convention intentionally omits a purchased LB that cannot be proved by the entered level.",
+    "Conditions outside the level branch and Unity rendering are not covered by the offline branch test."
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "clientVersion": "NBRC3.00.032",
+  "scope": "Offline native card fit audit; no Site or client state changed",
+  "finding": "The source icon is a128x128 RGBA foreground. The current CSS scales it to120x120, which scales transparent side margins into the frame opening and reveals an artificial band of background. The initial prefab108x108 is overridden by native runtime code.",
+  "verifiedRuntimeGeometry": {
+    "method": "UnitIconBase.<SetUV>b__122_0",
+    "sourceIconTexture": {
+      "width": 128,
+      "height": 128,
+      "uvRect": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "shader": "Unlit/Transparent Colored"
+    },
+    "portraitWidget": {
+      "width": 128,
+      "height": 128,
+      "centerX": 0,
+      "centerY": 5,
+      "depth": 75
+    },
+    "frameWidget": {
+      "width": 120,
+      "height": 120,
+      "centerX": 0,
+      "centerY": 1.2000000476837158,
+      "depth": 70
+    },
+    "portraitRelativeToFrame": {
+      "left": -4,
+      "top": -7.799999952316284,
+      "width": 128,
+      "height": 128
+    },
+    "cssRelativeToFramePercent": {
+      "left": -3.3333333333333335,
+      "top": -6.49999996026357,
+      "width": 106.66666666666667,
+      "height": 106.66666666666667
+    },
+    "nativeCondition": "The configured UnitId is present in ExternalData.units; all catalogue character rows qualify when their table is loaded.",
+    "proof": [
+      "Runtime width and height derive from (scalar[0x4ec]+0xc82b8530)&0xffffffff =128.",
+      "Runtime position constants in global pool class ABA: float0x724=0.0 and float0x728=5.0.",
+      "Prefab Frame transform center y=1.2, width/height120, pivotCenter4.",
+      "UnitIconTextrue serialized UV rectangle(0,0,1,1); SetUV and loader do not perform per-character alpha bounding-box crops."
+    ]
+  },
+  "nativeFrameWindow": {
+    "width": 120,
+    "height": 120,
+    "straightEdgeOpening": {
+      "left": 8,
+      "top": 8,
+      "right": 112,
+      "bottom": 112,
+      "width": 104,
+      "height": 104
+    },
+    "straightEdgeBorderPixels": 8,
+    "insetPercent": 6.666666666666667,
+    "scope": "Verified pixel boundaries on all seven extracted native combined background/frame sprites. The polygon corners require preserving native chamfers; they are not defined by a serialized inner-window rectangle.",
+    "whitePixels": "Native frames4..7 contain real bright outer strokes. E.g6-star midrow x2..3 isRGB254/254/254, inside the8px border. This thin highlight is part of the game image, not an unwanted gap.",
+    "integration": "Keep the untouched combined native frame as background. Place the full128px icon with the verified runtime position. Preserve the native8px border above the portrait when using the combined frame PNG in HTML. Use a separate inner clipping wrapper or matching SVG/CSS clip so foreground cannot paint over the frame."
+  },
+  "rarityMapping": {
+    "1": {
+      "frame": "charaicon_r01.png",
+      "portraitGeometry": "verifiedRuntimeGeometry",
+      "straightOpening": [
+        8,
+        8,
+        104,
+        104
+      ]
+    },
+    "2": {
+      "frame": "charaicon_r02.png",
+      "portraitGeometry": "verifiedRuntimeGeometry",
+      "straightOpening": [
+        8,
+        8,
+        104,
+        104
+      ]
+    },
+    "3": {
+      "frame": "charaicon_r03.png",
+      "portraitGeometry": "verifiedRuntimeGeometry",
+      "straightOpening": [
+        8,
+        8,
+        104,
+        104
+      ]
+    },
+    "4": {
+      "frame": "charaicon_r04.png",
+      "portraitGeometry": "verifiedRuntimeGeometry",
+      "straightOpening": [
+        8,
+        8,
+        104,
+        104
+      ]
+    },
+    "5": {
+      "frame": "charaicon_r05.png",
+      "portraitGeometry": "verifiedRuntimeGeometry",
+      "straightOpening": [
+        8,
+        8,
+        104,
+        104
+      ]
+    },
+    "6": {
+      "frame": "charaicon_r06.png",
+      "portraitGeometry": "verifiedRuntimeGeometry",
+      "straightOpening": [
+        8,
+        8,
+        104,
+        104
+      ]
+    },
+    "7": {
+      "frame": "charaicon_r07.png",
+      "portraitGeometry": "verifiedRuntimeGeometry",
+      "straightOpening": [
+        8,
+        8,
+        104,
+        104
+      ],
+      "decoration": "existing7-star decoration retained"
+    },
+    "6_blazing": {
+      "inherits": "6",
+      "changes": "rarity label only; native pink star label"
+    },
+    "7_blazing": {
+      "inherits": "7",
+      "changes": "rarity label only; native pink star label; existing7-star decoration retained"
+    },
+    "7_legendary": {
+      "inherits": "7",
+      "changes": "rarity label only; native legendary label; existing7-star decoration retained"
+    }
+  },
+  "samples": [
+    {
+      "unitId": 10476,
+      "icon": "icon-4.png",
+      "alphaBounds": [
+        12,
+        0,
+        120,
+        120
+      ],
+      "currentCssAlphaLeft": 11.25,
+      "runtimeAlphaLeft": 8
+    },
+    {
+      "unitId": 10486,
+      "icon": "icon-7.png",
+      "alphaBounds": [
+        12,
+        0,
+        116,
+        120
+      ],
+      "currentCssAlphaLeft": 11.25,
+      "runtimeAlphaLeft": 8
+    },
+    {
+      "unitId": 10956,
+      "icon": "icon-77.png",
+      "alphaBounds": [
+        12,
+        0,
+        116,
+        120
+      ],
+      "currentCssAlphaLeft": 11.25,
+      "runtimeAlphaLeft": 8
+    },
+    {
+      "unitId": 12236,
+      "icon": "icon-195.png",
+      "alphaBounds": [
+        12,
+        0,
+        116,
+        120
+      ],
+      "currentCssAlphaLeft": 11.25,
+      "runtimeAlphaLeft": 8
+    },
+    {
+      "unitId": 10045,
+      "icon": "icon-245.png",
+      "alphaBounds": [
+        12,
+        0,
+        116,
+        120
+      ],
+      "currentCssAlphaLeft": 11.25,
+      "runtimeAlphaLeft": 8
+    }
+  ],
+  "limitations": [
+    "The foreground is a genuine cutout, so some patterned native background around its silhouette remains intentionally visible.",
+    "The source icon may contain transparent RGB values; they are not white bands. Alpha must be preserved.",
+    "No frame textures or portraits were repainted, filled, or individually stretched/cropped.",
+    "Only five source icons were pixel-audited; universal portrait size/position follows the verified native code, not a blanket assumption from those samples."
+  ],
+  "validation": {
+    "checkedForms": 1114,
+    "allFormsHaveNativeIcon": true,
+    "uniqueNativeIconDimensions": {
+      "(128, 128)": 992
+    },
+    "cssClipFrameCoordinates": [
+      8.0,
+      8.0,
+      112.0,
+      112.0
+    ],
+    "clipEqualsNativeStraightOpening": true,
+    "frames": {
+      "1": {
+        "size": [
+          120,
+          120
+        ],
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "2": {
+        "size": [
+          120,
+          120
+        ],
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "3": {
+        "size": [
+          120,
+          120
+        ],
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "4": {
+        "size": [
+          120,
+          120
+        ],
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "5": {
+        "size": [
+          120,
+          120
+        ],
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "6": {
+        "size": [
+          120,
+          120
+        ],
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "7": {
+        "size": [
+          120,
+          120
+        ],
+        "alphaRange": [
+          0,
+          255
+        ]
+      }
+    },
+    "previewInspected": "preview-cadres-corriges.png",
+    "previewResult": "Visible portraits meet the native inside border. No artificial constant pale background strip remains on the inspected Naruto/Gaara/Sakura/Choji portraits. Thin native bright outer stroke is preserved.",
+    "limitations": "Native foreground transparency remains; the current opening mask is rectangular and does not reproduce an independently proven corner UV mask."
+  }
+}

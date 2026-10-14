@@ -1,0 +1,972 @@
+{
+  "schemaVersion": 1,
+  "clientVersion": "NBRC3.00.032",
+  "verified": true,
+  "sameElementMultiplier": 1.5,
+  "recipes": [
+    {
+      "sourceUnitId": 11511,
+      "targetUnitId": 11522,
+      "sourceStockKey": "ramen:Heart:1",
+      "targetStockKey": "ramen:Heart:2",
+      "elementId": 1,
+      "element": "Heart",
+      "fromStars": 1,
+      "toStars": 2,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11511,
+          "quantity": 2
+        }
+      ],
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 11522,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 2200,
+        "sourceTotalBase": 6600,
+        "targetBase": 8000,
+        "gainBase": 1400,
+        "sourceTotalSameElement": 9900,
+        "targetSameElement": 12000,
+        "gainSameElement": 2100,
+        "increasePercent": 21.21212121212121
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 3",
+        "awakenThenFeed": "200 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 2",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11522,
+      "targetUnitId": 11533,
+      "sourceStockKey": "ramen:Heart:2",
+      "targetStockKey": "ramen:Heart:3",
+      "elementId": 1,
+      "element": "Heart",
+      "fromStars": 2,
+      "toStars": 3,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11522,
+          "quantity": 2
+        }
+      ],
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 11533,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 8000,
+        "sourceTotalBase": 24000,
+        "targetBase": 34000,
+        "gainBase": 10000,
+        "sourceTotalSameElement": 36000,
+        "targetSameElement": 51000,
+        "gainSameElement": 15000,
+        "increasePercent": 41.666666666666664
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 3",
+        "awakenThenFeed": "200 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 2",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11533,
+      "targetUnitId": 12674,
+      "sourceStockKey": "ramen:Heart:3",
+      "targetStockKey": "ramen:Heart:4",
+      "elementId": 1,
+      "element": "Heart",
+      "fromStars": 3,
+      "toStars": 4,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11533,
+          "quantity": 5
+        }
+      ],
+      "materialCount": 5,
+      "totalConsumedSourceItems": 6,
+      "producedTargetItems": 1,
+      "ryoCost": 500,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 12674,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 34000,
+        "sourceTotalBase": 204000,
+        "targetBase": 220000,
+        "gainBase": 16000,
+        "sourceTotalSameElement": 306000,
+        "targetSameElement": 330000,
+        "gainSameElement": 24000,
+        "increasePercent": 7.8431372549019605
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 6",
+        "awakenThenFeed": "500 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 5",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11541,
+      "targetUnitId": 11552,
+      "sourceStockKey": "ramen:Skill:1",
+      "targetStockKey": "ramen:Skill:2",
+      "elementId": 2,
+      "element": "Skill",
+      "fromStars": 1,
+      "toStars": 2,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11541,
+          "quantity": 2
+        }
+      ],
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 11552,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 2200,
+        "sourceTotalBase": 6600,
+        "targetBase": 8000,
+        "gainBase": 1400,
+        "sourceTotalSameElement": 9900,
+        "targetSameElement": 12000,
+        "gainSameElement": 2100,
+        "increasePercent": 21.21212121212121
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 3",
+        "awakenThenFeed": "200 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 2",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11552,
+      "targetUnitId": 11563,
+      "sourceStockKey": "ramen:Skill:2",
+      "targetStockKey": "ramen:Skill:3",
+      "elementId": 2,
+      "element": "Skill",
+      "fromStars": 2,
+      "toStars": 3,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11552,
+          "quantity": 2
+        }
+      ],
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 11563,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 8000,
+        "sourceTotalBase": 24000,
+        "targetBase": 34000,
+        "gainBase": 10000,
+        "sourceTotalSameElement": 36000,
+        "targetSameElement": 51000,
+        "gainSameElement": 15000,
+        "increasePercent": 41.666666666666664
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 3",
+        "awakenThenFeed": "200 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 2",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11563,
+      "targetUnitId": 12684,
+      "sourceStockKey": "ramen:Skill:3",
+      "targetStockKey": "ramen:Skill:4",
+      "elementId": 2,
+      "element": "Skill",
+      "fromStars": 3,
+      "toStars": 4,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11563,
+          "quantity": 5
+        }
+      ],
+      "materialCount": 5,
+      "totalConsumedSourceItems": 6,
+      "producedTargetItems": 1,
+      "ryoCost": 500,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 12684,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 34000,
+        "sourceTotalBase": 204000,
+        "targetBase": 220000,
+        "gainBase": 16000,
+        "sourceTotalSameElement": 306000,
+        "targetSameElement": 330000,
+        "gainSameElement": 24000,
+        "increasePercent": 7.8431372549019605
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 6",
+        "awakenThenFeed": "500 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 5",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11571,
+      "targetUnitId": 11582,
+      "sourceStockKey": "ramen:Body:1",
+      "targetStockKey": "ramen:Body:2",
+      "elementId": 3,
+      "element": "Body",
+      "fromStars": 1,
+      "toStars": 2,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11571,
+          "quantity": 2
+        }
+      ],
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 11582,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 2200,
+        "sourceTotalBase": 6600,
+        "targetBase": 8000,
+        "gainBase": 1400,
+        "sourceTotalSameElement": 9900,
+        "targetSameElement": 12000,
+        "gainSameElement": 2100,
+        "increasePercent": 21.21212121212121
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 3",
+        "awakenThenFeed": "200 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 2",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11582,
+      "targetUnitId": 11593,
+      "sourceStockKey": "ramen:Body:2",
+      "targetStockKey": "ramen:Body:3",
+      "elementId": 3,
+      "element": "Body",
+      "fromStars": 2,
+      "toStars": 3,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11582,
+          "quantity": 2
+        }
+      ],
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 11593,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 8000,
+        "sourceTotalBase": 24000,
+        "targetBase": 34000,
+        "gainBase": 10000,
+        "sourceTotalSameElement": 36000,
+        "targetSameElement": 51000,
+        "gainSameElement": 15000,
+        "increasePercent": 41.666666666666664
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 3",
+        "awakenThenFeed": "200 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 2",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11593,
+      "targetUnitId": 12694,
+      "sourceStockKey": "ramen:Body:3",
+      "targetStockKey": "ramen:Body:4",
+      "elementId": 3,
+      "element": "Body",
+      "fromStars": 3,
+      "toStars": 4,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11593,
+          "quantity": 5
+        }
+      ],
+      "materialCount": 5,
+      "totalConsumedSourceItems": 6,
+      "producedTargetItems": 1,
+      "ryoCost": 500,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 12694,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 34000,
+        "sourceTotalBase": 204000,
+        "targetBase": 220000,
+        "gainBase": 16000,
+        "sourceTotalSameElement": 306000,
+        "targetSameElement": 330000,
+        "gainSameElement": 24000,
+        "increasePercent": 7.8431372549019605
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 6",
+        "awakenThenFeed": "500 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 5",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11601,
+      "targetUnitId": 11612,
+      "sourceStockKey": "ramen:Bravery:1",
+      "targetStockKey": "ramen:Bravery:2",
+      "elementId": 4,
+      "element": "Bravery",
+      "fromStars": 1,
+      "toStars": 2,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11601,
+          "quantity": 2
+        }
+      ],
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 11612,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 2200,
+        "sourceTotalBase": 6600,
+        "targetBase": 8000,
+        "gainBase": 1400,
+        "sourceTotalSameElement": 9900,
+        "targetSameElement": 12000,
+        "gainSameElement": 2100,
+        "increasePercent": 21.21212121212121
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 3",
+        "awakenThenFeed": "200 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 2",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11612,
+      "targetUnitId": 11623,
+      "sourceStockKey": "ramen:Bravery:2",
+      "targetStockKey": "ramen:Bravery:3",
+      "elementId": 4,
+      "element": "Bravery",
+      "fromStars": 2,
+      "toStars": 3,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11612,
+          "quantity": 2
+        }
+      ],
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 11623,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 8000,
+        "sourceTotalBase": 24000,
+        "targetBase": 34000,
+        "gainBase": 10000,
+        "sourceTotalSameElement": 36000,
+        "targetSameElement": 51000,
+        "gainSameElement": 15000,
+        "increasePercent": 41.666666666666664
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 3",
+        "awakenThenFeed": "200 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 2",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11623,
+      "targetUnitId": 12704,
+      "sourceStockKey": "ramen:Bravery:3",
+      "targetStockKey": "ramen:Bravery:4",
+      "elementId": 4,
+      "element": "Bravery",
+      "fromStars": 3,
+      "toStars": 4,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11623,
+          "quantity": 5
+        }
+      ],
+      "materialCount": 5,
+      "totalConsumedSourceItems": 6,
+      "producedTargetItems": 1,
+      "ryoCost": 500,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 12704,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 34000,
+        "sourceTotalBase": 204000,
+        "targetBase": 220000,
+        "gainBase": 16000,
+        "sourceTotalSameElement": 306000,
+        "targetSameElement": 330000,
+        "gainSameElement": 24000,
+        "increasePercent": 7.8431372549019605
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 6",
+        "awakenThenFeed": "500 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 5",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11631,
+      "targetUnitId": 11642,
+      "sourceStockKey": "ramen:Wisdom:1",
+      "targetStockKey": "ramen:Wisdom:2",
+      "elementId": 5,
+      "element": "Wisdom",
+      "fromStars": 1,
+      "toStars": 2,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11631,
+          "quantity": 2
+        }
+      ],
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 11642,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 2200,
+        "sourceTotalBase": 6600,
+        "targetBase": 8000,
+        "gainBase": 1400,
+        "sourceTotalSameElement": 9900,
+        "targetSameElement": 12000,
+        "gainSameElement": 2100,
+        "increasePercent": 21.21212121212121
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 3",
+        "awakenThenFeed": "200 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 2",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11642,
+      "targetUnitId": 11653,
+      "sourceStockKey": "ramen:Wisdom:2",
+      "targetStockKey": "ramen:Wisdom:3",
+      "elementId": 5,
+      "element": "Wisdom",
+      "fromStars": 2,
+      "toStars": 3,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11642,
+          "quantity": 2
+        }
+      ],
+      "materialCount": 2,
+      "totalConsumedSourceItems": 3,
+      "producedTargetItems": 1,
+      "ryoCost": 200,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 11653,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 8000,
+        "sourceTotalBase": 24000,
+        "targetBase": 34000,
+        "gainBase": 10000,
+        "sourceTotalSameElement": 36000,
+        "targetSameElement": 51000,
+        "gainSameElement": 15000,
+        "increasePercent": 41.666666666666664
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 3",
+        "awakenThenFeed": "200 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 2",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    },
+    {
+      "sourceUnitId": 11653,
+      "targetUnitId": 12714,
+      "sourceStockKey": "ramen:Wisdom:3",
+      "targetStockKey": "ramen:Wisdom:4",
+      "elementId": 5,
+      "element": "Wisdom",
+      "fromStars": 3,
+      "toStars": 4,
+      "sourceCount": 1,
+      "materials": [
+        {
+          "unitId": 11653,
+          "quantity": 5
+        }
+      ],
+      "materialCount": 5,
+      "totalConsumedSourceItems": 6,
+      "producedTargetItems": 1,
+      "ryoCost": 500,
+      "sourceRequiredLevel": 1,
+      "sourceMaxLevel": 1,
+      "targetTemplateStartLevel": 1,
+      "targetMaxLevel": 1,
+      "evoId": 12714,
+      "evo2Id": 0,
+      "degId": 0,
+      "experience": {
+        "sourceEachBase": 34000,
+        "sourceTotalBase": 204000,
+        "targetBase": 220000,
+        "gainBase": 16000,
+        "sourceTotalSameElement": 306000,
+        "targetSameElement": 330000,
+        "gainSameElement": 24000,
+        "increasePercent": 7.8431372549019605
+      },
+      "feedCostComparisonNoCampaignAtSameStartingLevel": {
+        "direct": "100 × recipientLevel × 6",
+        "awakenThenFeed": "500 + 100 × recipientLevel",
+        "savedRyo": "100 × (recipientLevel - 1) × 5",
+        "note": "Comparison fixes the same recipient starting level and campaign cost multiplier1; actual multi-batch feeding can increase the recipient level between batches."
+      }
+    }
+  ],
+  "standardRamen": [
+    {
+      "unitId": 11511,
+      "elementId": 1,
+      "element": "Heart",
+      "stars": 1,
+      "baseExp": 2200,
+      "sameElementExp": 3300,
+      "evoId": 11522,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15000
+    },
+    {
+      "unitId": 11522,
+      "elementId": 1,
+      "element": "Heart",
+      "stars": 2,
+      "baseExp": 8000,
+      "sameElementExp": 12000,
+      "evoId": 11533,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15001
+    },
+    {
+      "unitId": 11533,
+      "elementId": 1,
+      "element": "Heart",
+      "stars": 3,
+      "baseExp": 34000,
+      "sameElementExp": 51000,
+      "evoId": 12674,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15002
+    },
+    {
+      "unitId": 11541,
+      "elementId": 2,
+      "element": "Skill",
+      "stars": 1,
+      "baseExp": 2200,
+      "sameElementExp": 3300,
+      "evoId": 11552,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15003
+    },
+    {
+      "unitId": 11552,
+      "elementId": 2,
+      "element": "Skill",
+      "stars": 2,
+      "baseExp": 8000,
+      "sameElementExp": 12000,
+      "evoId": 11563,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15004
+    },
+    {
+      "unitId": 11563,
+      "elementId": 2,
+      "element": "Skill",
+      "stars": 3,
+      "baseExp": 34000,
+      "sameElementExp": 51000,
+      "evoId": 12684,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15005
+    },
+    {
+      "unitId": 11571,
+      "elementId": 3,
+      "element": "Body",
+      "stars": 1,
+      "baseExp": 2200,
+      "sameElementExp": 3300,
+      "evoId": 11582,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15006
+    },
+    {
+      "unitId": 11582,
+      "elementId": 3,
+      "element": "Body",
+      "stars": 2,
+      "baseExp": 8000,
+      "sameElementExp": 12000,
+      "evoId": 11593,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15007
+    },
+    {
+      "unitId": 11593,
+      "elementId": 3,
+      "element": "Body",
+      "stars": 3,
+      "baseExp": 34000,
+      "sameElementExp": 51000,
+      "evoId": 12694,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15008
+    },
+    {
+      "unitId": 11601,
+      "elementId": 4,
+      "element": "Bravery",
+      "stars": 1,
+      "baseExp": 2200,
+      "sameElementExp": 3300,
+      "evoId": 11612,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15012
+    },
+    {
+      "unitId": 11612,
+      "elementId": 4,
+      "element": "Bravery",
+      "stars": 2,
+      "baseExp": 8000,
+      "sameElementExp": 12000,
+      "evoId": 11623,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15013
+    },
+    {
+      "unitId": 11623,
+      "elementId": 4,
+      "element": "Bravery",
+      "stars": 3,
+      "baseExp": 34000,
+      "sameElementExp": 51000,
+      "evoId": 12704,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15014
+    },
+    {
+      "unitId": 11631,
+      "elementId": 5,
+      "element": "Wisdom",
+      "stars": 1,
+      "baseExp": 2200,
+      "sameElementExp": 3300,
+      "evoId": 11642,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15009
+    },
+    {
+      "unitId": 11642,
+      "elementId": 5,
+      "element": "Wisdom",
+      "stars": 2,
+      "baseExp": 8000,
+      "sameElementExp": 12000,
+      "evoId": 11653,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15010
+    },
+    {
+      "unitId": 11653,
+      "elementId": 5,
+      "element": "Wisdom",
+      "stars": 3,
+      "baseExp": 34000,
+      "sameElementExp": 51000,
+      "evoId": 12714,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15011
+    },
+    {
+      "unitId": 12674,
+      "elementId": 1,
+      "element": "Heart",
+      "stars": 4,
+      "baseExp": 220000,
+      "sameElementExp": 330000,
+      "evoId": 0,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15015
+    },
+    {
+      "unitId": 12684,
+      "elementId": 2,
+      "element": "Skill",
+      "stars": 4,
+      "baseExp": 220000,
+      "sameElementExp": 330000,
+      "evoId": 0,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15016
+    },
+    {
+      "unitId": 12694,
+      "elementId": 3,
+      "element": "Body",
+      "stars": 4,
+      "baseExp": 220000,
+      "sameElementExp": 330000,
+      "evoId": 0,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15017
+    },
+    {
+      "unitId": 12704,
+      "elementId": 4,
+      "element": "Bravery",
+      "stars": 4,
+      "baseExp": 220000,
+      "sameElementExp": 330000,
+      "evoId": 0,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15019
+    },
+    {
+      "unitId": 12714,
+      "elementId": 5,
+      "element": "Wisdom",
+      "stars": 4,
+      "baseExp": 220000,
+      "sameElementExp": 330000,
+      "evoId": 0,
+      "templateLevelMin": 1,
+      "templateLevelMax": 1,
+      "iconId": 15018
+    }
+  ],
+  "otherType90Items": [
+    {
+      "unitId": 14704,
+      "name": "Ultimate Treasure Chest",
+      "title": "True Heart Treasure",
+      "elementId": 1,
+      "stars": 4,
+      "baseExp": 150000,
+      "evoId": 0,
+      "hasAwakeningRecipe": false
+    },
+    {
+      "unitId": 14714,
+      "name": "Ultimate Treasure Chest",
+      "title": "Expert Skill Treasure",
+      "elementId": 2,
+      "stars": 4,
+      "baseExp": 150000,
+      "evoId": 0,
+      "hasAwakeningRecipe": false
+    },
+    {
+      "unitId": 14724,
+      "name": "Ultimate Treasure Chest",
+      "title": "Mighty Body Treasure",
+      "elementId": 3,
+      "stars": 4,
+      "baseExp": 150000,
+      "evoId": 0,
+      "hasAwakeningRecipe": false
+    },
+    {
+      "unitId": 14734,
+      "name": "Ultimate Treasure Chest",
+      "title": "Fighting Bravery Treasure",
+      "elementId": 4,
+      "stars": 4,
+      "baseExp": 150000,
+      "evoId": 0,
+      "hasAwakeningRecipe": false
+    },
+    {
+      "unitId": 14744,
+      "name": "Ultimate Treasure Chest",
+      "title": "Brilliant Wisdom Treasure",
+      "elementId": 5,
+      "stars": 4,
+      "baseExp": 150000,
+      "evoId": 0,
+      "hasAwakeningRecipe": false
+    },
+    {
+      "unitId": 15854,
+      "name": "Mechanical Ramen",
+      "title": "Initializing Cup",
+      "elementId": 5,
+      "stars": 4,
+      "baseExp": 220000,
+      "evoId": 0,
+      "hasAwakeningRecipe": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://arosare.github.io/naruto-blazing-revival/box-import.schema.json",
+  "title": "Naruto Blazing — observations d’une box personnelle",
+  "description": "Un nouveau compte entier, identifié par les unités natives de box-import-reference.json. Les observations non visibles sont null ou absentes ; les stocks non observés restent inconnus. Une seule observation par famille de version, sans fusion de captures. Le validateur du site applique les plafonds de la forme et canonicalise les clés des mêmes objets natifs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "version", "characters", "stocks"],
+  "properties": {
+    "format": {"const": "naruto-blazing-box"},
+    "version": {"const": 1},
+    "username": {"type": "string", "minLength": 1, "maxLength": 80, "pattern": "^[^\\u0000-\\u001f\\u007f]*\\S[^\\u0000-\\u001f\\u007f]*$"},
+    "characters": {"type": "array", "items": {"$ref": "#/$defs/character"}},
+    "stocks": {"type": "object", "propertyNames": {"pattern": "^(ryo|tokens|stone|shard|pill:(hp|atk|speed):[23]|ramen:(Heart|Skill|Body|Bravery|Wisdom):[1-4]|scroll:(Heart|Skill|Body|Bravery|Wisdom):[1-4]|element:(Heart|Skill|Body|Bravery|Wisdom)|crystal[1-7]:[a-z0-9-]+|copies:[a-z0-9-]+|material:[0-9]+|special:.+)$"}, "additionalProperties": {"$ref": "#/$defs/observation"}},
+    "notes": {"type": "array", "maxItems": 200, "items": {"type": "string", "maxLength": 2000}}
+  },
+  "$defs": {
+    "observation": {"type": ["integer", "null"], "minimum": 0, "maximum": 9007199254740991},
+    "character": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unitId"],
+      "properties": {
+        "unitId": {"type": "integer", "minimum": 1, "maximum": 9007199254740991},
+        "level": {"$ref": "#/$defs/observation"},
+        "xp": {"$ref": "#/$defs/observation"},
+        "hp": {"$ref": "#/$defs/observation"},
+        "atk": {"$ref": "#/$defs/observation"},
+        "speed": {"$ref": "#/$defs/observation"},
+        "abilities": {"$ref": "#/$defs/observation"},
+        "luck": {"$ref": "#/$defs/observation"},
+        "unlockedCap": {"$ref": "#/$defs/observation"}
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#11141b">
+  <meta name="description" content="Prépare ta progression dans Naruto Blazing Revival : collection personnelle, import de captures avec ChatGPT, stocks, filtres F2P et ressources manquantes.">
+  <meta property="og:title" content="Naruto Blazing Revival · Collection">
+  <meta property="og:description" content="Importe ta box depuis tes captures et prépare tes personnages avec tes stocks réels.">
+  <meta property="og:url" content="https://arosare.github.io/naruto-blazing-revival/">
+  <title>Naruto Blazing Revival · Collection</title>
+  <link rel="stylesheet" href="style.css?v=20261014-public-import1">
+  <link rel="stylesheet" href="collection-theme.css?v=20261014-public-import1">
+  <link rel="stylesheet" href="player-experience.css?v=20261014-public-import1">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="app-header">
+    <a class="brand" href="#collection" aria-label="Blazing Collection, accueil"><span class="brand-symbol">✦</span><span>BLAZING<span class="brand-small">COLLECTION</span></span></a>
+    <nav aria-label="Navigation principale">
+      <button data-nav="collection" class="nav-item active"><span>◫</span> Ma collection <small id="nav-owned">—</small></button>
+      <button data-nav="plan" class="nav-item"><span>↗</span> Plan & stocks</button>
+      <button data-nav="guide" class="nav-item"><span>?</span> Guide & missions</button>
+      <button data-nav="sources" class="nav-item"><span>◎</span> Sources & sauvegarde</button>
+    </nav>
+    <button class="button compact" data-action="export">↓ Sauvegarder</button>
+  </header>
+  <div class="workspace">
+    <header class="topbar"><span id="breadcrumb">Collection / Ma box</span><div class="topbar-actions"><span id="save-status" class="save-status" role="status">Sauvegarde locale</span><button class="button compact" data-action="export">↓ Sauvegarder</button></div></header>
+    <main id="main" tabindex="-1"><div class="loading"><span class="brand-symbol">✦</span><h1>Ta collection arrive…</h1><p>Chargement de ta box et des fiches.</p></div></main>
+    <footer>Naruto Blazing Revival · Client NBRC3.00.032 & références communautaires · <button data-nav="sources">Sources et limites des calculs</button></footer>
+  </div>
+  <dialog id="character-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js?v=20261014-public-import1"></script>
+</body>
+</html>
