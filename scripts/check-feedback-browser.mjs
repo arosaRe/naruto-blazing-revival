@@ -14,14 +14,15 @@ const discord = http.createServer(async (req,res) => {
   calls.push(JSON.parse(body)); await new Promise(r=>setTimeout(r,200));
   res.writeHead(discordMode); res.end();
 });
-const relay = createRelay({webhook:'http://127.0.0.1:9103/mock',origins:['http://localhost:9101'],clientLimit:100,globalLimit:100});
+let relay;
 const site = spawn('python',['-m','http.server','9101','--bind','127.0.0.1','--directory','dist'],{stdio:'ignore',windowsHide:true});
 try {
-  discord.listen(9103,'127.0.0.1'); await once(discord,'listening');
-  relay.listen(9102,'127.0.0.1'); await once(relay,'listening');
-  browser = await chromium.launch();
+  discord.listen(0,'127.0.0.1'); await once(discord,'listening');
+  relay = createRelay({webhook:`http://127.0.0.1:${discord.address().port}/mock`,origins:['http://localhost:9101'],clientLimit:100,globalLimit:100});
+  relay.listen(0,'127.0.0.1'); await once(relay,'listening');
+  browser = await chromium.launch(process.env.PLAYWRIGHT_CHANNEL ? {channel:process.env.PLAYWRIGHT_CHANNEL} : {});
   const page = await browser.newPage({viewport:{width:1440,height:900}});
-  for(let i=0;i<40;i++){try{await page.goto('http://localhost:9101');break;}catch{await new Promise(r=>setTimeout(r,100));}}
+  for(let i=0;i<40;i++){try{const response=await page.goto('http://127.0.0.1:9101',{waitUntil:'domcontentloaded',timeout:2000}); assert.equal(response.status(),200);break;}catch(error){if(i===39)throw error;await new Promise(r=>setTimeout(r,100));}}
   await page.locator('#feedback-open').focus(); await page.keyboard.press('Enter');
   await page.locator('#feedback-dialog').waitFor({state:'visible'});
   assert.equal(await page.locator('#feedback-message').evaluate(el=>el===document.activeElement),true);
@@ -36,13 +37,18 @@ try {
     assert.equal(req.headers()['cookie'],undefined);
     if(mode==='network') return route.abort();
     if(mode==='relay') {
-      const response=await fetch('http://127.0.0.1:9102/feedback',{method:'POST',headers:{Origin:'http://localhost:9101','Content-Type':'application/json'},body:req.postData()});
+      const response=await fetch(`http://127.0.0.1:${relay.address().port}/feedback`,{method:'POST',headers:{Origin:'http://localhost:9101','Content-Type':'application/json'},body:req.postData()});
       return route.fulfill({status:response.status,contentType:'application/json',body:await response.text()});
     }
     return route.fulfill({status:typeof mode==='number'?mode:200,contentType:'application/json',body:mode==='badjson'?'invalid':JSON.stringify({ok:false})});
   });
   await page.reload(); await page.locator('#feedback-open').click();
   const field=page.locator('#feedback-message'), send=page.locator('#feedback-send'), status=page.locator('#feedback-status');
+  assert.equal(await page.getByLabel('Ton message (obligatoire)').count(),1);
+  assert.equal(await field.getAttribute('maxlength'),'1800');
+  assert.match(await page.locator('#feedback-limit').textContent(),/unités UTF-16/);
+  assert.match(await page.locator('#feedback-privacy').textContent(),/aucune donnée sensible/);
+  await page.evaluate(()=>localStorage.setItem('feedback-test-box','private-box-sentinel'));
   await send.click(); assert.match(await status.textContent(),/Écris/); assert.equal(requests.length,0);
   await field.fill(' \n '); await send.click(); assert.equal(requests.length,0);
   await field.evaluate(el=>{el.value='😀'.repeat(901);}); await send.click(); assert.equal(requests.length,0);
@@ -52,7 +58,7 @@ try {
   await page.waitForFunction(()=>document.querySelector('#feedback-status').textContent.includes('Merci'));
   assert.equal(requests.length,1); assert.equal(calls.length,1); assert.equal(await field.inputValue(),'');
   assert.equal(calls[0].content,requests[0].message); assert.deepEqual(calls[0].allowed_mentions.parse,[]);
-  for(const scenario of [400,413,429,503,'network','badjson','falseok','relay']) {
+  for(const scenario of [201,204,400,413,429,500,503,'network','badjson','falseok','relay']) {
     mode=scenario; discordMode=500;
     await field.fill('Message conservé'); await send.click();
     await page.waitForFunction(()=>!document.querySelector('#feedback-send').disabled);
@@ -60,6 +66,11 @@ try {
     assert.doesNotMatch(await status.textContent(),/Merci/);
     const n=requests.length; await page.waitForTimeout(250); assert.equal(requests.length,n);
   }
+  mode='relay'; discordMode=204;
+  await send.click();
+  await page.waitForFunction(()=>document.querySelector('#feedback-status').textContent.includes('Merci'));
+  assert.equal(await field.inputValue(),'');
+  assert.ok(requests.every(body=>Object.keys(body).length===1&&!JSON.stringify(body).includes('private-box-sentinel')));
   assert.equal(await status.getAttribute('role'),'status'); assert.equal(await status.getAttribute('aria-live'),'polite');
   await page.screenshot({path:path.join(os.tmpdir(),'issue16-desktop.png'),fullPage:true});
   await page.setViewportSize({width:390,height:844});
@@ -67,7 +78,9 @@ try {
   const bounds=await page.locator('#feedback-dialog').boundingBox(); assert.ok(bounds.x>=0&&bounds.x+bounds.width<=390);
   await page.screenshot({path:path.join(os.tmpdir(),'issue16-mobile.png'),fullPage:true});
   // Native modal focus remains inside through keyboard navigation.
+  await field.focus();
   for(let i=0;i<8;i++){await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.querySelector('#feedback-dialog').contains(document.activeElement)),true);}
+  for(let i=0;i<8;i++){await page.keyboard.press('Shift+Tab');assert.equal(await page.evaluate(()=>document.querySelector('#feedback-dialog').contains(document.activeElement)),true);}
   await page.keyboard.press('Escape');
   console.log('Browser checks passed: keyboard, live status, mobile, validation, double submit, real relay + mock Discord, 400/413/429/502/503/network/invalid success; screenshots in '+os.tmpdir());
 } finally {
