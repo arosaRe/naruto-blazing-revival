@@ -4,7 +4,7 @@
 - Prompt réutilisable, références natives et fusion photo sûre livrés sur nightly ; critères 2 et 3 remplacés par décision du PDG.
 - Critères applicables et approbation limitée documentés, avec provenance et limites de preuve.
 - Relais Discord séparé livré et validé par relecture ; validations réussies rapportées par le développeur, résultat du tester de l’app non connu.
-- Formulaire et audit sécurité du parcours complet restent à réaliser.
+- Formulaire conservé en reprise ; validations et relecture à terminer, puis audit sécurité du parcours complet.
 - Webhook et accès d’hébergement non accessibles ; aucune réception dans le salon réel vérifiée.
 - Aucune nouvelle publication autorisée ; aucune décision immédiate attendue du PDG.
 # Retours du PDG
@@ -28,6 +28,8 @@
 
 - 2026-10-14 à 17:51 — Approbation humaine de publication limitée aux stocks initialisés à zéro pour une nouvelle box, avec préservation des imports et sauvegardes existants. Vérifier le contenu et les validations avant publication ; exclure les travaux d’import photo et les corrections des issues 11 et 12. Si d’autres changements fonctionnels sont nécessaires, présenter le périmètre au PDG avant publication. Rapporter la version publiée et les vérifications effectuées.
 - 2026-10-14 à 17:56 — Priorité : formulaire accessible sur le site pour envoyer les retours au PDG dans le salon Discord associé au webhook fourni en discussion. Webhook secret côté serveur dans une configuration protégée, jamais dans le dépôt, le JavaScript navigateur ou les fichiers publiés. Prévoir un relais adapté au site statique et une protection anti-abus ; confirmer la réception ou afficher une erreur compréhensible. Travailler sur nightly. L’approbation précédente ne couvre que les stocks neufs à zéro ; présenter cette fonctionnalité avant toute publication en production.
+- 2026-10-14 à 21:42 — Consigne transcrite de discussion : reprendre #16 après l’échec d’identité Git ; examiner et conserver branche et modifications. Configurer une identité autorisée localement, sans configuration globale ni identité inventée ; demander nom et adresse seulement si aucune identité autorisée disponible. Reprendre commit et PR vers nightly ; aucune production sans approbation.
+- 2026-10-14 à 21:44 — Consigne transcrite de discussion : user.email = anthonypchlbh@gmail.com ; user.name = arosare, autorisés pour la configuration Git locale au dépôt, sans --global. Conserver le travail existant et reprendre commit et PR vers nightly ; aucune publication de cette fonctionnalité sans approbation.
 # Décisions structurantes
 - Site statique en JavaScript natif, HTML et CSS ; Node.js 24 et Python 3 pour le build.
 - nightly est la branche de travail ; main est la production protégée par approbation humaine. La publication autorisée du 14 octobre isole les stocks neufs à zéro et leurs tests, sans fusion globale de nightly.
@@ -46,14 +48,14 @@
 - Le résumé doit compter les observations validées reçues, pas la collection après fusion.
 
 - CORS ne suffit pas contre les abus ; limiter les envois côté serveur et maîtriser les adresses IP derrière un proxy. Ne jamais recopier le webhook en issue, log ou artefact.
-- Apr?s un ?chec de job, examiner aussi les branches de secours avant toute reprise ; conserver le travail et v?rifier l?identit? Git locale autoris?e avant commit.
+- Après un échec de job, examiner les branches de secours et conserver le travail ; vérifier la configuration Git locale autorisée avant commit.
 - Une transcription de consigne fournie au manager doit être identifiée comme telle ; ne pas fabriquer de lien vers une discussion originale inaccessible.
 
 # Dette connue
 - Aucune dette mineure identifiée à traiter pour le périmètre révisé ; les données personnelles restent hors périmètre par décision du PDG.
 
 # Prochaines étapes
-- Réaliser le formulaire accessible sur le contrat du relais : endpoint public configurable, états de succès/échec, conservation du texte et essais navigateur avec Discord simulé.
+- Terminer le formulaire conservé et sa relecture sur le contrat du relais : endpoint public configurable, états de succès/échec, conservation du texte et essais navigateur avec Discord simulé.
 - Faire auditer la sécurité après intégration ; corriger les constats avant présentation au PDG.
 - Préparer une présentation concrète et une demande d’approbation avec besoins d’hébergement/configuration protégée ; ne jamais demander le secret dans une issue publique.
 - Configurer et vérifier la réception réelle seulement dans le périmètre autorisé ; une simulation ne remplit pas à elle seule le critère 6 sur le site réel.
