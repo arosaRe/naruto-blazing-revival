@@ -1,11 +1,11 @@
 # État actuel
-- Phase : présentation des retours Discord après contrôle sécurité favorable ; critère 6 ouvert.
+- Phase : accès SSH au VPS à débloquer avant inventaire en lecture seule ; critère 6 ouvert.
 - Stocks neufs à zéro publiés avec approbation humaine limitée ; sauvegardes et imports existants préservés.
 - Prompt réutilisable, références natives et fusion photo sûre livrés sur nightly ; critères 2 et 3 révisés satisfaits.
 - Formulaire et relais Discord intégrés et validés par relecture ; essais navigateur avec Discord simulé rapportés réussis.
 - Contrôle sécurité indépendant favorable : confiance proxy bornée, adresses validées, quotas séparés et limites globales conservées.
 - Régressions et build réussis selon les jobs développeur et relecteur/app ; non relancés par le manager.
-- Webhook et accès d’hébergement non accessibles ; endpoint public non configuré et aucune réception Discord réelle vérifiée.
+- VPS joignable mais SSH refusé (publickey) ; aucun agent SSH disponible ni clé autorisée identifiée pour ce VPS. Webhook indisponible, endpoint non configuré, réception réelle non vérifiée.
 - Aucune nouvelle publication autorisée ; attente du PDG : approbation du périmètre limité aux retours Discord.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
@@ -30,6 +30,8 @@
 - 2026-10-14 à 17:56 — Priorité : formulaire accessible sur le site pour envoyer les retours au PDG dans le salon Discord associé au webhook fourni en discussion. Webhook secret côté serveur dans une configuration protégée, jamais dans le dépôt, le JavaScript navigateur ou les fichiers publiés. Prévoir un relais adapté au site statique et une protection anti-abus ; confirmer la réception ou afficher une erreur compréhensible. Travailler sur nightly. L’approbation précédente ne couvre que les stocks neufs à zéro ; présenter cette fonctionnalité avant toute publication en production.
 - 2026-10-14 à 21:42 — Consigne transcrite de discussion : reprendre #16 après l’échec d’identité Git ; examiner et conserver branche et modifications. Configurer une identité autorisée localement, sans configuration globale ni identité inventée ; demander nom et adresse seulement si aucune identité autorisée disponible. Reprendre commit et PR vers nightly ; aucune production sans approbation.
 - 2026-10-14 à 21:44 — Consigne transcrite de discussion : user.email = anthonypchlbh@gmail.com ; user.name = arosare, autorisés pour la configuration Git locale au dépôt, sans --global. Conserver le travail existant et reprendre commit et PR vers nightly ; aucune publication de cette fonctionnalité sans approbation.
+- 2026-10-14 à 22:17 — Consigne transcrite de discussion : VPS Infomaniak ubuntu@179.237.102.19 proposé pour le relais ; nettoyage autorisé sous réserve d’un inventaire des applications, services et données puis présentation du périmètre concret et des sauvegardes nécessaires avant suppression. Préserver Ubuntu et SSH ; préparer ensuite HTTPS, Node.js 24 et le webhook par un canal serveur protégé. Aucune approbation de publication du formulaire.
+- 2026-10-14 à 22:20 — Consigne transcrite de discussion : vérifier l’accès SSH autorisé avec la clé de l’ordinateur du PDG ; chemin fourni fictif. Ne jamais afficher ni transmettre de clé privée. Préciser le chemin ou l’accès manquant ; si connexion réussie, inventorier en lecture seule puis présenter le nettoyage avant suppression. Préserver Ubuntu et SSH ; aucune production autorisée.
 # Décisions structurantes
 - Site statique en JavaScript natif, HTML et CSS ; Node.js 24 et Python 3 pour le build.
 - nightly est la branche de travail ; main est la production protégée par approbation humaine. La publication autorisée du 14 octobre isole les stocks neufs à zéro et leurs tests, sans fusion globale de nightly.
@@ -57,7 +59,8 @@
 
 # Prochaines étapes
 - Obtenir l’approbation humaine pour publier uniquement le formulaire de retours et son relais sécurisé ; exclure les travaux d’import photo et toute fusion globale de nightly.
-- Après approbation, définir avec le PDG l’hébergement HTTPS mono-instance, l’URL publique et les accès autorisés ; aucune infrastructure accessible actuellement.
+- Obtenir le chemin local de la clé SSH autorisée pour ce VPS ou un accès provisionné ; ne jamais demander le contenu privé ni essayer une clé liée à un autre projet sans autorisation.
+- Après accès, inventorier le VPS en lecture seule puis présenter le périmètre de nettoyage et les sauvegardes avant toute suppression ; préparer ensuite HTTPS et URL publique sans publication.
 - Configurer le webhook par un canal serveur protégé, jamais dans une issue, le dépôt ou une discussion publique ; isoler et faire relire le périmètre de publication avant de toucher main.
 - Après autorisation et configuration, vérifier la réception dans le salon réel, la confirmation et les erreurs sur le site ainsi que les protections réseau et anti-abus ; les simulations ne suffisent pas au critère 6.
 - Contrôler les six critères avec 2 et 3 révisés ; aucune consultation des pièces personnelles du PDG.
