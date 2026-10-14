@@ -40,3 +40,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 14.10.2026, cycle manager : correction proxy intégrée et validée (PR #22), #21 fermée ; régressions et build réussis selon les jobs. Contrôle sécurité indépendant ciblé demandé avant présentation au PDG. Aucun déploiement ni réception Discord réelle.
 
 14.10.2026, cycle manager : audit sécurité #54 favorable, correction du quota proxy confirmée sans nouvelle faille. Présentation du formulaire et demande d’approbation de publication limitée aux retours Discord ; hébergement et réception réelle restent à configurer et vérifier. Aucun déploiement.
+
+14.10.2026, cycle SSH VPS : nightly synchronis?e ; VPS joignable mais authentification refus?e (publickey), aucun agent SSH disponible ni cl? autoris?e identifi?e pour ce VPS. Chemin de cl? demand? ; aucun inventaire, nettoyage ou d?ploiement. Consignes de 22:17 et 22:20 enregistr?es.
