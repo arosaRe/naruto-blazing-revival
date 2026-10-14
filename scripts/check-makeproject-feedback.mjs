@@ -1,12 +1,16 @@
-// Windows: exercises lancer.json unchanged. All external browser traffic is blocked
-// or fulfilled locally; a simulated confirmation is not a Discord receipt.
+// Windows: exercises lancer.json unchanged. Browser traffic is blocked or
+// fulfilled locally; separate Node OPTIONS requests probe the real public relay.
 import assert from 'node:assert/strict';
+import {checkPublicPreflights} from './check-feedback-preflight.mjs';
 import {readFile} from 'node:fs/promises';
 import {spawn, execFileSync} from 'node:child_process';
 import {once} from 'node:events';
 import net from 'node:net';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
+
+const publicPreflight = await checkPublicPreflights();
+if (!publicPreflight.passed) process.exitCode = 1;
 
 assert.equal(process.platform, 'win32', 'The MakeProject launcher uses cmd');
 assert.ok(process.env.PLAYWRIGHT_MODULE, 'Set PLAYWRIGHT_MODULE to an external Playwright installation');
@@ -80,7 +84,7 @@ try {
   await page.keyboard.press('Escape');
   assert.ok(await page.locator('#feedback-open').evaluate(el => el === document.activeElement));
   assert.deepEqual(errors, []);
-  console.log('PASS: standard launcher PORT=9101, actual public endpoint, keyboard, validation, simulated confirmation/429/503/network failure. No external submission or Discord receipt.');
+  console.log('SIMULATION PASS: standard launcher PORT=9101, configured public endpoint, keyboard, validation, simulated confirmation/429/503/network failure. No external submission or Discord receipt.');
 } finally {
   await browser?.close();
   if (server.exitCode === null) execFileSync('taskkill', ['/pid', String(server.pid), '/t', '/f'], {stdio:'ignore'});
@@ -88,3 +92,5 @@ try {
 const closed = net.createServer(); closed.listen(9101); await once(closed, 'listening');
 await new Promise(resolve => closed.close(resolve));
 console.log('PASS: test server stopped; port 9101 released.');
+
+assert.ok(publicPreflight.passed, 'BLOCKED: real public preflights failed despite simulated UI checks');

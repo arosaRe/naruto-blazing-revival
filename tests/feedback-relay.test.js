@@ -6,6 +6,49 @@ import {spawnSync} from 'node:child_process';
 import {createRelay, readConfig} from '../relay/server.mjs';
 
 const origin = 'https://example.test';
+const localOrigins = ['http://localhost:8101', 'http://localhost:9101'];
+const configuration = origins => readConfig({DISCORD_WEBHOOK_URL: 'https://discord.com/api/webhooks/1/example', FEEDBACK_ORIGINS: origins.join(',')});
+
+test('MakeProject configuration accepts only explicitly listed exact local HTTP origins', () => {
+  assert.deepEqual(configuration([origin, ...localOrigins]).origins, [origin, ...localOrigins]);
+  assert.deepEqual(configuration([origin]).origins, [origin]);
+  assert.deepEqual(configuration([localOrigins[0]]).origins, [localOrigins[0]]);
+  for (const invalid of ['http://example.test', 'http://localhost:8102', 'http://localhost:9102', 'http://localhost', 'http://127.0.0.1:9101', 'http://[::1]:9101', '*', 'http://localhost:*', 'null', 'http://LOCALHOST:9101', 'http://localhost:09101', 'http://localhost:9101/', 'http://localhost:9101/path', 'http://localhost:9101?x=1', 'http://localhost:9101#x', 'http://user@localhost:9101', ' https://example.test', 'https://example.test/', '']) {
+    assert.throws(() => configuration([origin, invalid]), /Invalid relay configuration/);
+  }
+});
+
+test('MakeProject real local preflights use validated configuration and never call upstream', async t => {
+  let calls = 0;
+  const relay = createRelay(configuration([origin, ...localOrigins]), {fetchImpl: () => { calls++; throw Error('Unexpected upstream'); }});
+  t.after(async () => { relay.closeAllConnections(); await new Promise(resolve => relay.close(resolve)); });
+  relay.listen(9101, '127.0.0.1'); await once(relay, 'listening');
+  const preflight = (value, method = 'POST', headers = 'content-type') => fetch('http://127.0.0.1:9101/feedback', {method: 'OPTIONS', headers: {Origin: value, 'Access-Control-Request-Method': method, 'Access-Control-Request-Headers': headers}});
+  for (const value of localOrigins) {
+    const response = await preflight(value);
+    assert.equal(response.status, 204);
+    assert.equal(response.headers.get('access-control-allow-origin'), value);
+    assert.equal(response.headers.get('access-control-allow-methods'), 'POST');
+    assert.equal(response.headers.get('access-control-allow-headers'), 'Content-Type');
+    assert.equal(response.headers.get('vary'), 'Origin');
+    assert.equal(await response.text(), '');
+    assert.equal((await preflight(value, 'DELETE')).status, 400);
+    assert.equal((await preflight(value, 'POST', 'authorization')).status, 400);
+  }
+  for (const value of ['http://localhost:8102', 'http://localhost:9102', 'http://localhost:9101/', 'http://localhost:9101.evil.test', 'http://evil.test', 'https://unlisted.test', 'null', '*']) {
+    const response = await preflight(value);
+    assert.equal(response.status, 400);
+    assert.equal(response.headers.get('access-control-allow-origin'), null);
+    assert.deepEqual(await response.json(), {error: 'invalid_origin'});
+  }
+  assert.equal(calls, 0);
+});
+
+test('MakeProject local origins are not implicitly enabled', async t => {
+  const f = await fixture(t, configuration([origin]));
+  for (const value of localOrigins) assert.equal((await f.send(undefined, {Origin: value, 'Access-Control-Request-Method': 'POST'}, 'OPTIONS')).status, 400);
+  assert.equal(f.calls.length, 0);
+});
 async function fixture(t, overrides = {}, mode = 'ok') {
   const calls = [];
   let accept;

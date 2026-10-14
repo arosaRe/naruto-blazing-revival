@@ -81,6 +81,8 @@ Les preuves **rapportées par #44**, non rejouées pour #49, sont :
 
 #42 est donc corrigé ; cette preuve locale reste distincte de la réception humaine historique de #35 à 00:26 et de l’acceptation avec réserve de 00:47. L’absence de notification de mention indésirable reste **non vérifiée**. La correction ne clôt ni le critère 7 ni l’audit indépendant final à reprendre ; elle n’autorise aucun nouvel envoi ou publication.
 
+**#57 : disponibilité MakeProject encore bloquée.** Les OPTIONS publics réels du 15 octobre 2026 (Zurich), sans interception, reçoivent 400 pour les deux origines locales, sans `Access-Control-Allow-Origin`. Les prévols locaux de la correction passent ; les simulations ne lèvent pas ce refus distant. Configuration et déploiement restent soumis à approbation, non exécutés : [rapport #57](issue-57-makeproject-cors.md).
+
 ## Consignes du 15.10.2026 à 00:59 — exigences du critère 7
 
 Synthèse des deux consignes de 00:59 fournies au cycle manager, transcrites dans `etat.md` et réparties entre #46, #47 et #48 ; même limite de provenance que ci-dessus, sans lien original de discussion. Les livrables attendus sont :

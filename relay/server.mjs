@@ -20,13 +20,15 @@ function clientAddress(req, trusted) {
   return fields.length === 1 ? addressKey(req.headers['x-real-ip']) : null;
 }
 
+const makeProjectOrigins = new Set(['http://localhost:8101', 'http://localhost:9101']);
+
 const defaults = {maxBytes: 8192, maxMessage: 1800, timeoutMs: 5000, bodyTimeoutMs: 5000, concurrency: 4, clientLimit: 3, globalLimit: 30, windowMs: 60000, maxClients: 10000};
 export function readConfig(env = process.env) {
   try {
     const url = new URL(env.DISCORD_WEBHOOK_URL);
     if (url.protocol !== 'https:' || url.hostname !== 'discord.com' || url.port || url.username || url.password || url.search || url.hash || !/^\/api\/webhooks\/\d+\/[A-Za-z0-9_-]+$/.test(url.pathname)) throw Error();
     const origins = (env.FEEDBACK_ORIGINS || '').split(',');
-    if (!origins.length || origins.some(origin => { const u = new URL(origin); return u.protocol !== 'https:' || u.origin !== origin || u.username || u.password; })) throw Error();
+    if (!origins.length || origins.some(origin => { const u = new URL(origin); return (u.protocol !== 'https:' && !makeProjectOrigins.has(origin)) || u.origin !== origin || u.username || u.password; })) throw Error();
     const port = Number(env.FEEDBACK_PORT || 9101);
     if (!Number.isInteger(port) || port < 1 || port > 65535) throw Error();
     const trustedProxies = env.FEEDBACK_TRUSTED_PROXIES === undefined ? [] : env.FEEDBACK_TRUSTED_PROXIES.split(',').map(value => value.trim());
