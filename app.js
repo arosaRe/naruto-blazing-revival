@@ -1,3 +1,6 @@
+import {mountFeedback} from './feedback.js';
+import {feedbackEndpoint} from './feedback-config.js';
+mountFeedback(document, feedbackEndpoint);
 import {ELEMENTS,STORAGE_KEY,initialPersonalState,validateBackup,resourcePlanFor,aggregateResourcePlan,resourceInfo as baseResourceInfo,resourceStockKeys,stockFor,maximumStat,backup,catalogCharacters,ultimateStatus,planningCharacter,canPlanCharacter,CURRENT_MAX_STARS} from './model.js?v=20261014-public-import1';
 import {displayForm,levelDisplay,addedProgress} from './card-state.js?v=20261014-public-import1';
 import {normalizeSearch,createCharacterSearchIndex,matchesCharacterSearch,collectionFilterSummary,resetCollectionFilters} from './collection-search.js?v=20261014-public-import1';
