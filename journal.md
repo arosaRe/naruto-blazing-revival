@@ -74,3 +74,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 15.10.2026 : r?ception Discord confirm?e par le PDG ; #35 confi?e pour publication isol?e autoris?e et contr?les publics. Crit?re 6 toujours ouvert.
 
 15.10.2026 : publication isolée de #35 relue et réalisée, issue fermée ; constat humain du contrôle public demandé sans renvoi. #37 créée pour une candidate limitée aux balises HTML, sans publication ; critère 6 ouvert.
+
+15.10.2026, cycle manager : réception Discord publique consignée ; absence de mention encore à confirmer. #37 fermée après validation et fusion de #38 ; candidate HTML en attente d’autorisation, aucune publication ni nouvel envoi.

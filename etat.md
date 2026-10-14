@@ -2,9 +2,9 @@
 - Critères 1 à 5 satisfaits (2/3 révisés) ; critère 6 ouvert.
 - Stocks zéro et formulaire publiés ; import sûr et prompt sur nightly.
 - Parcours public et confirmation vérifiés ; erreurs/quotas simulés, sans rafale.
-- Constat Discord du contrôle public attendu du PDG, sans nouvel envoi.
+- Réception Discord publique confirmée ; absence de mention indésirable non confirmée.
 - Relais HTTPS actif et relu, non activé au boot.
-- Balises des références HTML : candidate corrective à préparer et relire, sans publication.
+- Candidate des balises HTML validée ; publication non autorisée.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -38,6 +38,7 @@
 - 2026-10-14 à 23:19 — Le PDG confirme « c’est fait » : filtrage Infomaniak vérifié et TCP entrant 80/443 ouvert si nécessaire, SSH et autres règles préservés. Reprendre #29 et la PR #30 existantes : contrôler HTTP externe avant HTTPS et renouvellement ; si toujours bloqué, rapporter les observations précises. Publication limitée au formulaire/relais sécurisé, sans import photo ni fusion globale de nightly. Critère 6 seulement après vérifications réelles, dont réception Discord.
 - 2026-10-14 à 23:53 — Le PDG confirme l’injection privée via le script masqué (injection faite), après une première commande échouée avec un point final ajouté à inject-secret.py. Reprendre la mise en service sécurisée, puis publier la candidate isolée validée. Secret uniquement serveur ; conserver quotas, confirmations et erreurs compréhensibles ; exclure import photo et fusion globale de nightly. Critère 6 seulement après parcours public vérifié et réception réelle observée dans le salon Discord, distincte de la réponse API.
 - 2026-10-15 à 00:00 — Le PDG confirme voir ISSUE33-CONTROLE-20261014T215551Z dans le salon Discord prévu (« oui »). Reprendre la publication de la seule candidate isolée autorisée : formulaire et relais sécurisé, sans import photo ni fusion globale de nightly. Critère 6 seulement après parcours public, confirmations, erreurs et protections anti-abus vérifiés.
+- 2026-10-15 à 00:26 — Le PDG confirme voir ISSUE35-CONTROLE-20261014T220717Z dans le salon prévu (« oui je le vois »), sans préciser la présence éventuelle d’une notification de mention indésirable. Consigner la réception sans nouvel envoi ; vérifier les éléments restants avant de satisfaire le critère 6. Cette confirmation n’autorise pas la publication de la correction des balises HTML.
 # Décisions structurantes
 - Dépôt original ; nightly au travail ; main limité au périmètre approuvé, sans fusion globale.
 - JS natif/HTML/CSS, Node 24, Python 3 ; lancer.json aligné sur build/PORT.
@@ -52,6 +53,6 @@
 # Dette connue
 - fwupd-refresh en échec, hors périmètre, sans impact applicatif établi.
 # Prochaines étapes
-- Demander le constat du message ISSUE35-CONTROLE-20261014T220717Z dans le salon prévu ; aucun renvoi.
-- Préparer et faire relire la candidate limitée aux balises des références HTML, sans déploiement.
-- Garder le critère 6 ouvert jusqu’au constat humain du parcours public.
+- Confirmer uniquement l’absence de notification de mention indésirable sur le message public déjà reçu ; aucun renvoi.
+- Obtenir une décision humaine sur la publication de la candidate limitée aux balises HTML, déjà validée.
+- Garder le critère 6 ouvert jusqu’à la levée du dernier constat attendu ; puis proposer la clôture indépendante.
