@@ -1,5 +1,6 @@
 # État actuel
-- Livrables prêts pour réaudit indépendant ; aucun accord attendu.
+- Réaudit applicable attendu ; constats traités selon les exclusions explicites du PDG.
+
 # Retours du PDG
 **14.10.2026**
 - Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
@@ -52,4 +53,4 @@
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Réaudit des sept critères actualisés.
+- Réaudit selon les consignes directes du PDG : import personnel abandonné, CORS local exclu ; aucun envoi ni déploiement.
