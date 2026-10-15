@@ -1,5 +1,5 @@
 # État actuel
-- Réaudit applicable attendu ; constats traités selon les exclusions explicites du PDG.
+- Audit applicable attendu.
 
 # Retours du PDG
 **14.10.2026**
@@ -46,11 +46,15 @@
 - 01:54 — Le PDG confirme le formulaire public (« je te confirme il fonctionne »). Déploiement CORS localhost:8101/9101 refusé : MakeProject local non demandé, sans effet sur la clôture ; son utilité était incomprise. Réserve acceptée maintenue : absence de notification de mention indésirable non vérifiée. Aucun nouvel envoi Discord ni publication ; reprendre réconciliation documentaire puis audit restant.
 - 02:12 — Pour #63–#66 et le prochain audit indépendant, appliquer les critères actualisés validés ; ne réintroduire aucun import personnel, ne demander ni consulter les fichiers du PDG. Premium et ressources ambiguës restent des inconnues documentées, sans invention. Localhost/MakeProject hors périmètre : déploiement CORS refusé, échec non bloquant. Tenir compte des confirmations humaines des contrôles Discord identifiés et du fonctionnement public, distinctes d’une observation indépendante. Maintenir la réserve acceptée sur les mentions non vérifiées. Aucun nouvel envoi Discord ni publication. Évaluer les livrables de remplacement et uniquement les manques encore applicables.
 - 02:23 — Demande/checklist modifiée : relire et adapter les issues et etat.md.
+
 # Décisions structurantes
-- Original/nightly ; production sur accord. JS natif, Node 24/Python 3.
+- Original/nightly ; JS natif, Node 24/Python 3.
+
 # Pièges et consignes
-- Inconnus préservés ; ni fichiers personnels, ni envoi Discord, ni déploiement.
+- Ni fichiers personnels, ni Discord, ni publication.
+
 # Dette connue
-- fwupd-refresh en échec ; relais sans démarrage au boot.
+- fwupd-refresh en échec ; relais sans boot.
+
 # Prochaines étapes
-- Réaudit selon les consignes directes du PDG : import personnel abandonné, CORS local exclu ; aucun envoi ni déploiement.
+- Audit actualisé avec réserves.
