@@ -139,3 +139,6 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 15.10.2026, cycle manager 19:16 : six critères V2 acceptés ; #80 et #81 précisés, #80 confiée pour audit ciblé et plan A–M ; aucune implémentation ni publication dans ce cycle.
 
 15.10.2026 : #80 validée par revue #162 et close manuellement ; incident de fusion du brouillon #82 consigné. #81 précisée et lancée sur branche V2, revue sans fusion ; aucun critère fonctionnel satisfait.
+
+15.10.2026 : synthèse des phases antérieures — stocks/import sûr et formulaire public traités ; guides/import photo conservés ; ancien chantier abandonné pour V2 isolée.
+15.10.2026 : architecture puis domaine V2 relus favorablement ; #81 close sans fusion, #82 reste brouillon à 7c9c640. Tests/build rapportés réussis, non relancés par manager/relecteur. #83 prépare la conversion pure (L2 scindé) ; attribution suspendue après seconde tentative de merge interdite (#165 après #162), correction orchestration demandée. Consignes 19:48 intégrées.

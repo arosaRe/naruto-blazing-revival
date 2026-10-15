@@ -1,9 +1,7 @@
 # État actuel
-- Refonte V2 : six critères acceptés, aucun encore satisfait.
-- Audit ciblé et architecture relus et validés ; contrat des exemplaires prêt à démarrer.
-- Branche V2 isolée ; revue en brouillon uniquement, sans fusion ni publication.
-- Ancien chantier abandonné, historique conservé.
-- Aucun arbitrage PDG attendu.
+- V2 : domaine relu favorablement ; aucun des six critères complet.
+- Attribution suspendue : orchestration tente de fusionner après validation.
+- Attendu : fin de revue sans merge ; prochain lot préparé.
 
 # Retours du PDG
 **14.10.2026**
@@ -44,22 +42,22 @@
 - 19:16 — Six critères ajoutés à la checklist : (1) V2 exécutable sur branche dédiée, sans déploiement/fusion automatique, stockage isolé et migrations préservant les sauvegardes ; (2) collection complète sans pagination, exemplaires distincts, fiches françaises à URL propre et soutiens conformes à B–E et I ; (3) manques du plan entier sans double dépense et scores pondérés vérifiés selon F/J ; (4) adaptateurs/synchronisation selon G–H, absent = zéro seulement pour inventaire complet validé, aucune API officielle supposée ; (5) OAuth Discord serveur et persistance durable multiappareil selon K–L, configurations et essais réels manquants explicites ; (6) parcours locaux mobile/ordinateur selon M, tests, captures, architecture, limites et retour arrière reproductibles.
 
 - 19:31 — Revue documentaire validée ; échec du job lors de la fusion interdite. Garder le brouillon sans fusion nightly/clôture par fusion, consigner la validation et poursuivre les exemplaires sur branche V2 selon le plan relu. Adapter les jobs sans fusion automatique. Aucune fonctionnalité V2 validée ; ni déploiement, workflow de production, Discord, main ni paiement.
+- 19:48 — Vérifier la revue #81 et poursuivre selon verdict ; #82 reste brouillon sur feat/collection-v2-discord-api-ready, sans fusion nightly. Échec « Pull Request is still a draft » : ni passage prête ni contournement. Rapporter verdict, vérifications et limites séparément ; validation sans tentative de merge. Si automatisation incompatible, signaler le blocage sans relancer la boucle. Ni déploiement, workflow de production, Discord, main ni paiement.
 
 # Décisions structurantes
-- Dépôt original ; JS natif, Node 24/Python 3 ; préserver build et intégrité des ressources natives.
-- V2 : feat/collection-v2-discord-api-ready depuis c51bbe0379e14ec84075044c7a9961e814540081 ; mémoire nightly ; revue brouillon sans fusion.
-- Quatre entrées : Ma collection, À farmer, Soutiens, Profil ; fiches à URL propre et français intégral. Versions/formes/exemplaires distincts ; annonces éditoriales séparées ; score provisoire versionné.
-- Inventaire complet validé : absent = zéro uniquement dans le périmètre couvert, application atomique. Partiel/capture/progression inconnue : aucune mise à zéro implicite.
+- Dépôt original ; JS natif, Node 24/Python 3 ; build/assets préservés.
+- V2 feat/collection-v2-discord-api-ready, base c51bbe0379e14ec84075044c7a9961e814540081 ; mémoire nightly.
+- Ma collection, À farmer, Soutiens, Profil ; fiches françaises à URL propre ; version/forme/exemplaire distincts, annonces séparées, score versionné.
+- Complet validé : absent=0 dans son périmètre, atomiquement ; partiel/progression inconnue sans zéro implicite.
 
 # Pièges et consignes
-- Ni fichiers personnels du PDG, ni envoi Discord, ni déploiement, ni main, ni engagement payant.
-- Revue V2 : verdict seul, sans fusion/retrait du brouillon ; échec de fusion ≠ refus de contenu.
-- Pages autorise workflow_dispatch : ne jamais le déclencher pour vérifier V2. Secrets, stockage, bases, fixtures et configuration de test isolés de la production.
+- Brouillon sans fusion ; verdict favorable ≠ job réussi.
+- Ni fichiers personnels, Discord, déploiement/workflow Pages, main ni paiement ; secrets, bases, stockage et tests isolés.
 
 # Dette connue
 - fwupd-refresh en échec ; relais sans boot.
 
 # Prochaines étapes
-- Contrat version/forme/exemplaire, validation et regroupement sans perte ; tests D et fixtures isolées, sans migration ni interface.
-- Après revue du contrat : migrations, score, vues, backend durable/OAuth et synchronisation ; redécouper les lots du plan avant attribution.
-- Revue de chaque lot sans fusion ; audit sécurité après authentification/persistance ; validation locale mobile/ordinateur, sans déploiement.
+- Revue seule puis format V2/conversion pure, stockage/migrations avec aperçu/restauration.
+- Score, vues, backend durable/OAuth, synchronisation : petits lots relus sans fusion.
+- Audit sécurité puis parcours mobile/ordinateur et retour arrière locaux.
