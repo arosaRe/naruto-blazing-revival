@@ -118,3 +118,6 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 
 15.10.2026, cycle manager après jobs 132–133 : #63 relue et fusionnée (#67) ; suite documentaire #64–#66 choisie, successivement avec revue. Consigne PDG de 02:12 consignée pour audit actualisé ; aucun envoi ni déploiement.
 15.10.2026, synthèse des phases antérieures : reprise du dépôt original et stocks neufs ; import personnel remplacé par parcours réutilisable ; formulaire/relais public autorisé et réception confirmée ; guides révisés ; réconciliation du périmètre et réserves avant audit. Retours PDG conservés intégralement dans etat.md.
+
+15.10.2026, synthèse de phase : réconciliation documentaire achevée ; exigences personnelles abandonnées, monnaies inconnues, CORS local exclu et confirmations Discord avec réserve qualifiés.
+15.10.2026, cycle manager après jobs 135–140 : #64–#66 fermées après livraisons relues et fusionnées (#68–#70). Sept critères actualisés estimés remplis ; nouvel audit indépendant proposé, sans envoi ni publication. Retours PDG conservés intégralement (12 311 octets à eux seuls) ; autres sections réduites, léger dépassement du plafond indicatif nécessaire pour les préserver.

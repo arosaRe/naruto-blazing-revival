@@ -1,5 +1,5 @@
 # État actuel
-- Réconciliation documentaire en cours ; trois qualifications restantes avant audit actualisé. Aucune décision attendue.
+- Livrables relus ; clôture proposée à l’audit indépendant.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -49,8 +49,8 @@
 - Dépôt original, nightly ; production sur accord humain. JS/HTML/CSS, Node 24/Python 3.
 - Imports fusionnés, inconnus null/absents, unitId vérifiés, sauvegardes compatibles.
 # Pièges et consignes
-- Appliquer les remplacements approuvés. Simulation ≠ réception humaine ≠ observation indépendante. Aucun envoi/déploiement.
+- Critères actualisés ; simulations, confirmations humaines et observations indépendantes distinctes. Aucun envoi ni déploiement.
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Qualifier monnaies, CORS exclu et preuves Discord ; relecture de chaque livraison puis audit actualisé.
+- Audit indépendant des sept critères actualisés, réserve mentions et CORS local exclu.
