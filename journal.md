@@ -124,3 +124,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 
 15.10.2026, synthèse des phases : stocks neufs et imports protégés ; import personnel abandonné pour le prompt réutilisable ; formulaire/relais publiés sur accords limités ; réception confirmée avec réserve mentions ; guides relus ; CORS local refusé et réconciliation livrée.
 15.10.2026, cycle après audit #142 : issues #71–#73 créées pour traiter chaque manque selon la consigne de 02:12 avant réaudit. Retours entiers conservés, dates regroupées pour réduire etat.md. Aucun envoi Discord ni publication.
+
+15.10.2026, cycle manager : #71 cl?tur?e apr?s fusion valid?e de #74 ; reprise de #72 sur PR #75 apr?s interruption technique du relecteur, puis #73 apr?s interruption du d?veloppeur. Aucun refus de fond ni nouvelle d?cision du PDG. Crit?res remplac?s et exclusion CORS maintenus ; r?audit apr?s int?gration, aucun envoi Discord ni publication.
