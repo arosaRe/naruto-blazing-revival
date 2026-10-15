@@ -45,19 +45,17 @@
 - 19:48 — Vérifier la revue #81 et poursuivre selon verdict ; #82 reste brouillon sur feat/collection-v2-discord-api-ready, sans fusion nightly. Échec « Pull Request is still a draft » : ni passage prête ni contournement. Rapporter verdict, vérifications et limites séparément ; validation sans tentative de merge. Si automatisation incompatible, signaler le blocage sans relancer la boucle. Ni déploiement, workflow de production, Discord, main ni paiement.
 
 # Décisions structurantes
-- Dépôt original ; JS natif, Node 24/Python 3 ; build/assets préservés.
-- V2 feat/collection-v2-discord-api-ready, base c51bbe0379e14ec84075044c7a9961e814540081 ; mémoire nightly.
-- Ma collection, À farmer, Soutiens, Profil ; fiches françaises à URL propre ; version/forme/exemplaire distincts, annonces séparées, score versionné.
-- Complet validé : absent=0 dans son périmètre, atomiquement ; partiel/progression inconnue sans zéro implicite.
+- Dépôt original, JS natif, Node 24/Python 3 ; build/assets préservés.
+- V2 : feat/collection-v2-discord-api-ready depuis c51bbe0379e14ec84075044c7a9961e814540081 ; mémoire nightly.
+- Ma collection, À farmer, Soutiens, Profil ; fiches françaises à URL propre ; annonces séparées, score versionné.
+- Complet validé : absent=0 dans son périmètre atomique ; partiel/progression inconnue sans zéro implicite.
 
 # Pièges et consignes
-- Brouillon sans fusion ; verdict favorable ≠ job réussi.
-- Ni fichiers personnels, Discord, déploiement/workflow Pages, main ni paiement ; secrets, bases, stockage et tests isolés.
+- Brouillon sans fusion ; ni fichiers personnels, Discord, déploiement/workflow Pages, main ni paiement ; données/secrets/tests isolés.
 
 # Dette connue
 - fwupd-refresh en échec ; relais sans boot.
 
 # Prochaines étapes
-- Revue seule puis format V2/conversion pure, stockage/migrations avec aperçu/restauration.
-- Score, vues, backend durable/OAuth, synchronisation : petits lots relus sans fusion.
-- Audit sécurité puis parcours mobile/ordinateur et retour arrière locaux.
+- Débloquer revue seule ; conversion pure, stockage/migrations sûrs, score, vues, backend durable/OAuth, synchronisation par petits lots.
+- Audit sécurité, parcours locaux mobile/ordinateur et retour arrière.
