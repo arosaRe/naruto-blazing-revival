@@ -1,5 +1,5 @@
 # État actuel
-- Quatre manques à qualifier selon le périmètre approuvé. Aucune décision attendue.
+- Réconciliation documentaire en cours ; trois qualifications restantes avant audit actualisé. Aucune décision attendue.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -44,13 +44,13 @@
 - 2026-10-15 à 00:59 — Exploiter toutes les sources pertinentes (données natives, références, code, documentation) ; vérifier Ultimate, contours rouges et niveaux rouges/jaunes avant déduction, documenter preuves et limites ; distinguer faits vérifiés, déductions justifiées et inconnues.
 - 2026-10-15 à 00:59 — Couvrir tous les champs identifiables sur captures et pris en charge : personnages, versions, niveaux, doublons, Ultimate, stocks, monnaies et autres champs supportés. Ne jamais inventer personnage, unitId, valeur ou règle ; demander des captures complémentaires si nécessaire. JSON téléchargeable compatible, inconnues et box incomplète explicites, procédure sûre et données existantes préservées. nightly ; aucune nouvelle publication ni aucun envoi Discord.
 - 2026-10-15 à 01:54 — Le PDG confirme le formulaire public (« je te confirme il fonctionne »). Déploiement CORS localhost:8101/9101 refusé : MakeProject local non demandé, sans effet sur la clôture ; son utilité était incomprise. Réserve acceptée maintenue : absence de notification de mention indésirable non vérifiée. Aucun nouvel envoi Discord ni publication ; reprendre réconciliation documentaire puis audit restant.
+- 2026-10-15 à 02:12 — Pour #63–#66 et le prochain audit indépendant, appliquer les critères actualisés validés ; ne réintroduire aucun import personnel, ne demander ni consulter les fichiers du PDG. Premium et ressources ambiguës restent des inconnues documentées, sans invention. Localhost/MakeProject hors périmètre : déploiement CORS refusé, échec non bloquant. Tenir compte des confirmations humaines des contrôles Discord identifiés et du fonctionnement public, distinctes d’une observation indépendante. Maintenir la réserve acceptée sur les mentions non vérifiées. Aucun nouvel envoi Discord ni publication. Évaluer les livrables de remplacement et uniquement les manques encore applicables.
 # Décisions structurantes
-- Dépôt original ; nightly ; production sur accord humain. JS/HTML/CSS, Node 24/Python 3.
-- Imports fusionnés ; inconnus null/absents ; unitId vérifiés ; sauvegardes compatibles.
+- Dépôt original, nightly ; production sur accord humain. JS/HTML/CSS, Node 24/Python 3.
+- Imports fusionnés, inconnus null/absents, unitId vérifiés, sauvegardes compatibles.
 # Pièges et consignes
-- Audit : appliquer les remplacements approuvés, sans rétablir les exigences abandonnées.
-- Simulation ≠ Discord ; mentions non vérifiées. CORS local exclu. Aucun envoi/déploiement ; secrets/VPS/SSH/8101 préservés.
+- Appliquer les remplacements approuvés. Simulation ≠ réception humaine ≠ observation indépendante. Aucun envoi/déploiement.
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Qualifier les quatre manques ; revue puis audit du périmètre applicable.
+- Qualifier monnaies, CORS exclu et preuves Discord ; relecture de chaque livraison puis audit actualisé.
