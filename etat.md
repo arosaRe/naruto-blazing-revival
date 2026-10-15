@@ -1,5 +1,7 @@
 # État actuel
-- Réaudit à préparer.
+- Réconciliation documentaire en cours ; rapport à finaliser et grille du réaudit à compléter.
+- Interruptions techniques des jobs, sans refus de fond. Aucun accord du PDG attendu.
+- Aucun envoi Discord ni publication autorisés.
 # Retours du PDG
 **14.10.2026**
 - Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
@@ -53,4 +55,5 @@
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Réconciliation, puis réaudit.
+- Finaliser le rapport premium/ressources existant, puis la grille des sept critères applicables.
+- Proposer ensuite le réaudit indépendant, sans import personnel ni CORS local exigés.
