@@ -36,6 +36,23 @@ Provenance commune : décision du PDG du **14 octobre 2026 à 17:33**, transcrit
 
 Le [rapport #58](issue-58-reconciliation.md) attribue les contrôles des critères 2/3 et leurs limites. Ils ne prouvent aucune possession personnelle et ne prononcent aucune clôture globale.
 
+## Constat personnel de l’audit #142 — disposition pour #71
+
+**Exigence remplacée, jamais déclarée réalisée.** [#71](https://github.com/arosaRe/naruto-blazing-revival/issues/71) rapporte que l’audit #142 réintroduit les sept captures, `ma-box-blazing.json` et les quantités personnelles. La provenance est ce compte rendu et [le journal du manager](../journal.md), pas le texte original de l’audit, indisponible ici ; #142 n’est pas présenté comme une issue ou PR accessible.
+
+Les **consignes du PDG du 14.10.2026 à 17:33**, transcrites dans #17 et reproduites ci-dessus, remplacent les critères 2/3. La **consigne du PDG du 15.10.2026 à 02:12**, transcrite dans [etat.md](../etat.md) et consignée dans le journal du manager, confirme leur application pour #63–#66 et le prochain audit indépendant : aucun import personnel à réintroduire, aucun fichier du PDG à demander ou consulter ; seuls les livrables de remplacement et les manques encore applicables sont à évaluer. Aucun lien original de discussion ni preuve externe indépendante n’est disponible. Cette consigne maintient aussi premium et ressources ambiguës inconnus, CORS localhost hors périmètre et refusé, confirmations humaines Discord distinctes d’une observation indépendante et réserve sur les mentions non vérifiées ; aucun nouvel envoi Discord ni publication.
+
+Les **sept captures, le JSON personnel, les personnages personnels, les 36 stocks et les 59 700 950 ryō restent explicitement non vérifiés**. Les nombres annoncés ne sont pas validés. Aucune pièce personnelle demandée, recherchée ou consultée, aucun JSON personnel produit ou importé pour #71. Ce constat ne constitue plus un manque applicable des critères 2/3.
+
+| Critère applicable à examiner | Liens de contrôle existants et limites |
+| --- | --- |
+| 2 — Références natives accessibles et limites documentées, sans identifiant inventé | [Sources et limites](issue-3-sources.md), [preuves natives](issue-46-preuves-natives.md), [GET locaux historiques et références générées](issue-58-reconciliation.md). Aucun portrait ambigu utilisé pour déduire un `unitId`, aucune possession personnelle prouvée. |
+| 3 — Prompt copiable et téléchargeable depuis Sources & sauvegarde | [Prompt téléchargeable](../import-box-prompt.txt), [tests de copie](../tests/import-prompt.test.js), [revue du parcours gratuit](issue-47-revue-import.md). Les preuves historiques distinguent copie simulée et téléchargement effectif dans un outil externe non vérifié. |
+| 3 — JSON photo compatible, téléchargeable, inconnues explicites | [Schéma](../box-import.schema.json), [prompt](../import-box-prompt.txt), [contrôles synthétiques rapportés](issue-58-reconciliation.md). Champs inconnus `null` ou absents selon le format ; repli JSON UTF-8 si le fichier ne peut être créé ; aucun JSON personnel attesté. |
+| 3/4 — Fusion sûre et sauvegardes compatibles | [Procédure et preuves synthétiques](issue-58-reconciliation.md), [détail des preuves et limites](issue-130-pieces-personnelles.md). Export préalable, fusion préservant les données non observées, contrôle du résumé et restauration complète distincte de la fusion. Aucun essai sur une box personnelle. |
+
+Cette disposition prépare le réaudit ; **elle ne déclare ni le réaudit réalisé ni la clôture globale**. Les contrôles historiques liés restent attribués à leurs rapports, sans nouvelle validation personnelle, modification fonctionnelle, soumission Discord ou publication.
+
 ### Décision du 15.10.2026 à 01:54 — périmètre actuel
 
 **Décision du 15.10.2026 à 01:54** : le PDG confirme le fonctionnement du formulaire public. MakeProject local n’est pas demandé et n’a aucun effet sur la clôture ; le déploiement CORS `localhost:8101/9101` est refusé. Confirmation attribuée aux **consignes du PDG fournies au cycle manager**, consignées dans [#61](https://github.com/arosaRe/naruto-blazing-revival/issues/61), `etat.md` et `journal.md`, sans lien original de discussion ni preuve indépendante nouvelle. La réserve acceptée sur l’absence de notification de mention indésirable **non vérifiée** reste maintenue. L’audit indépendant final reste à effectuer.

@@ -8,6 +8,18 @@ La demande accessible est celle rapportée exactement dans #63 : « L’audit ma
 
 Le [rapport de sources #3](issue-3-sources.md) conserve les constats initiaux comme historique, sans nouvelle recherche de pièces. Le [rapport de réconciliation #58](issue-58-reconciliation.md) distingue déjà les demandes abandonnées des preuves techniques réutilisables. La [grille applicable](criteres-cloture.md) conserve les critères révisés et les limites de provenance.
 
+## Actualisation pour #71 — constat personnel de l’audit #142
+
+Le 15 octobre 2026, [#71](https://github.com/arosaRe/naruto-blazing-revival/issues/71) rapporte : « L’audit #142 réintroduit les sept captures, ma-box-blazing.json et les quantités personnelles malgré les remplacements approuvés et la consigne du 15.10.2026 à 02:12. » [Le journal du manager](../journal.md) consigne la création de #71–#73 après cet audit. Le texte original de #142 n’est pas disponible ; ce numéro désigne l’audit manager, sans lien inventé vers une issue ou PR #142.
+
+**Disposition : exigence remplacée**, par les consignes du PDG du **14.10.2026 à 17:33** transcrites dans #17 et reproduites ci-dessous, puis confirmées par celles du **15.10.2026 à 02:12** transcrites dans [etat.md](../etat.md) et consignées dans le journal. La consigne de 02:12 impose les critères actualisés pour #63–#66 et le prochain audit indépendant : ne réintroduire aucun import personnel, ne demander ni consulter les fichiers du PDG ; évaluer les livrables de remplacement et uniquement les manques encore applicables. Ces transcriptions proviennent des consignes du PDG au cycle manager, sans lien original de discussion ni preuve externe indépendante.
+
+Les sept captures, `ma-box-blazing.json`, les personnages personnels, les **36 stocks et les 59 700 950 ryō restent non vérifiés**. Premium et ressources ambiguës restent inconnus, sans invention. Ni les références natives ni les essais synthétiques ne prouvent les possessions du compte. L’exigence personnelle est remplacée, jamais satisfaite ni à rétablir comme tâche restante ; aucune pièce personnelle demandée, recherchée ou consultée, aucun JSON personnel produit ou importé pour #71.
+
+Le contrôle applicable porte sur les critères 2/3 révisés : références et limites, prompt copiable/téléchargeable, JSON compatible avec inconnues et fusion sûre. Le tableau « Preuves accessibles du remplacement » ci-dessous conserve les liens de contrôle existants et leurs limites ; la [grille #71](criteres-cloture.md#constat-personnel-de-laudit-142--disposition-pour-71) en donne la lecture pour le prochain audit. Les résultats historiques de #58 et #63 ne sont pas présentés comme rejoués pour #71.
+
+La consigne de 02:12 maintient également localhost/MakeProject hors périmètre, le déploiement CORS refusé, les confirmations humaines Discord distinctes d’une observation indépendante et la réserve acceptée sur les mentions non vérifiées. Cette actualisation documentaire ne réalise pas le réaudit et ne prononce aucune clôture globale. Aucun changement fonctionnel, fichier personnel consulté, nouvel envoi Discord ou publication.
+
 ## Décision applicable — 14.10.2026 à 17:33
 
 Transcription dans [#17](https://github.com/arosaRe/naruto-blazing-revival/issues/17), provenant des **consignes du PDG fournies au cycle manager**, également reproduite dans la grille. Aucun lien original de discussion n’est disponible ; aucune preuve externe indépendante n’est inventée :
