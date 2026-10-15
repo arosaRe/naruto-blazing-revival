@@ -126,3 +126,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 15.10.2026, cycle après audit #142 : issues #71–#73 créées pour traiter chaque manque selon la consigne de 02:12 avant réaudit. Retours entiers conservés, dates regroupées pour réduire etat.md. Aucun envoi Discord ni publication.
 
 15.10.2026, cycle manager : #71 cl?tur?e apr?s fusion valid?e de #74 ; reprise de #72 sur PR #75 apr?s interruption technique du relecteur, puis #73 apr?s interruption du d?veloppeur. Aucun refus de fond ni nouvelle d?cision du PDG. Crit?res remplac?s et exclusion CORS maintenus ; r?audit apr?s int?gration, aucun envoi Discord ni publication.
+
+15.10.2026, cycle manager après jobs 151–152 : réconciliation documentaire achevée ; #75/#76 fusionnées, #72/#73 contrôlées et closes. Grille des sept critères actualisés prête pour réaudit indépendant ; inconnues premium/ressources, exclusion CORS local et réserve mentions maintenues. Aucun envoi ni publication. Mémoire condensée hors retours du PDG, conservés intégralement.

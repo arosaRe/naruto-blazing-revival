@@ -1,7 +1,5 @@
 # État actuel
-- Réconciliation documentaire en cours ; rapport à finaliser et grille du réaudit à compléter.
-- Interruptions techniques des jobs, sans refus de fond. Aucun accord du PDG attendu.
-- Aucun envoi Discord ni publication autorisés.
+- Livrables prêts pour réaudit indépendant ; aucun accord attendu.
 # Retours du PDG
 **14.10.2026**
 - Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
@@ -48,12 +46,10 @@
 - 02:12 — Pour #63–#66 et le prochain audit indépendant, appliquer les critères actualisés validés ; ne réintroduire aucun import personnel, ne demander ni consulter les fichiers du PDG. Premium et ressources ambiguës restent des inconnues documentées, sans invention. Localhost/MakeProject hors périmètre : déploiement CORS refusé, échec non bloquant. Tenir compte des confirmations humaines des contrôles Discord identifiés et du fonctionnement public, distinctes d’une observation indépendante. Maintenir la réserve acceptée sur les mentions non vérifiées. Aucun nouvel envoi Discord ni publication. Évaluer les livrables de remplacement et uniquement les manques encore applicables.
 - 02:23 — Demande/checklist modifiée : relire et adapter les issues et etat.md.
 # Décisions structurantes
-- Original/nightly ; production sur accord ; JS/HTML/CSS, Node 24/Python 3.
-- Fusion ; inconnus null/absents ; unitId vérifiés ; sauvegardes compatibles.
+- Original/nightly ; production sur accord. JS natif, Node 24/Python 3.
 # Pièges et consignes
-- 02:12 prioritaire ; preuves distinctes ; aucun envoi/déploiement.
+- Inconnus préservés ; ni fichiers personnels, ni envoi Discord, ni déploiement.
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Finaliser le rapport premium/ressources existant, puis la grille des sept critères applicables.
-- Proposer ensuite le réaudit indépendant, sans import personnel ni CORS local exigés.
+- Réaudit des sept critères actualisés.
