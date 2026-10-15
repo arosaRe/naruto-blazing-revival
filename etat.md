@@ -1,5 +1,5 @@
 # État actuel
-- Livrables relus ; audit final demandé. Aucune décision attendue.
+- Quatre manques à qualifier selon le périmètre approuvé. Aucune décision attendue.
 # Retours du PDG
 - 2026-10-14 — Reprendre le dépôt GitHub original tel quel ; ne pas créer de dépôt préfixé MP ni de copie. Conserver l’ancien projet MakeProject comme historique.
 - 2026-10-14 — Travailler sur nightly ; ne pas publier en production sans approbation humaine.
@@ -45,12 +45,12 @@
 - 2026-10-15 à 00:59 — Couvrir tous les champs identifiables sur captures et pris en charge : personnages, versions, niveaux, doublons, Ultimate, stocks, monnaies et autres champs supportés. Ne jamais inventer personnage, unitId, valeur ou règle ; demander des captures complémentaires si nécessaire. JSON téléchargeable compatible, inconnues et box incomplète explicites, procédure sûre et données existantes préservées. nightly ; aucune nouvelle publication ni aucun envoi Discord.
 - 2026-10-15 à 01:54 — Le PDG confirme le formulaire public (« je te confirme il fonctionne »). Déploiement CORS localhost:8101/9101 refusé : MakeProject local non demandé, sans effet sur la clôture ; son utilité était incomprise. Réserve acceptée maintenue : absence de notification de mention indésirable non vérifiée. Aucun nouvel envoi Discord ni publication ; reprendre réconciliation documentaire puis audit restant.
 # Décisions structurantes
-- Dépôt original, nightly ; production sur accord humain. JS/HTML/CSS, Node 24/Python 3.
+- Dépôt original ; nightly ; production sur accord humain. JS/HTML/CSS, Node 24/Python 3.
 - Imports fusionnés ; inconnus null/absents ; unitId vérifiés ; sauvegardes compatibles.
 # Pièges et consignes
-- Simulation ≠ réception Discord ; mentions non vérifiées. CORS local hors périmètre.
-- Aucun envoi ni déploiement ; secrets serveur, VPS/SSH et 8101 préservés.
+- Audit : appliquer les remplacements approuvés, sans rétablir les exigences abandonnées.
+- Simulation ≠ Discord ; mentions non vérifiées. CORS local exclu. Aucun envoi/déploiement ; secrets/VPS/SSH/8101 préservés.
 # Dette connue
 - fwupd-refresh en échec ; relais sans démarrage au boot.
 # Prochaines étapes
-- Audit indépendant des sept critères applicables.
+- Qualifier les quatre manques ; revue puis audit du périmètre applicable.

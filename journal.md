@@ -113,3 +113,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 
 15.10.2026, synthèse des phases : livrables et guides relus ; critères personnels réconciliés ; confirmation publique et exclusion du CORS local alignées.
 15.10.2026, cycle manager : #61 fermée après PR #62 validée et fusionnée ; sept critères applicables estimés satisfaits, clôture proposée à l’audit indépendant. Retours du PDG intacts, mémoire condensée ; aucun envoi Discord ni publication.
+
+15.10.2026, cycle manager après audit #130 : quatre manques redonnés en #63–#66 pour qualification documentaire selon les décisions du PDG ; #63 lancée. Exigences personnelles abandonnées, CORS local refusé et réception humaine avec réserve conservés ; aucun envoi ni publication.
