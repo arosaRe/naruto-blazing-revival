@@ -134,3 +134,6 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 15.10.2026, cycle manager après job 156 : phases résumées : stocks et import sûr livrés ; import personnel remplacé par parcours réutilisable ; formulaire public accepté avec réserve ; guides relus ; CORS local exclu. Constats rattachés aux dispositions existantes et consigne directe de 02:12. Retours du PDG conservés intégralement ; aucun code ni déploiement.
 
 15.10.2026, cycle 19:04 : chantier precedent abandonne ; prompt V2 lu, boucle des audits arretee. Branche feat/collection-v2-discord-api-ready creee et poussee depuis c51bbe0379e14ec84075044c7a9961e814540081. Issues #80 et #81 ouvertes ; criteres V2 proposes avant fonctionnalites. Aucun code ni deploiement.
+
+15.10.2026, cycle manager 19:16 : mémoire condensée sans retirer de retour PDG ; phases antérieures : stocks/import sûr, prompt et guides, formulaire/relais, publications ciblées et réconciliation des audits, puis abandon au profit de la V2 isolée.
+15.10.2026, cycle manager 19:16 : six critères V2 acceptés ; #80 et #81 précisés, #80 confiée pour audit ciblé et plan A–M ; aucune implémentation ni publication dans ce cycle.
