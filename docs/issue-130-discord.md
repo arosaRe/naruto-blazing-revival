@@ -1,0 +1,43 @@
+# Audit manager #130 — réception Discord et confirmations autorisées
+
+Rapport documentaire du **15 octobre 2026** pour [#66](https://github.com/arosaRe/naruto-blazing-revival/issues/66). Sources examinées : [publication #35](issue-35-publication.md), [critères de clôture actuels](criteres-cloture.md), [#41](https://github.com/arosaRe/naruto-blazing-revival/issues/41), [#61](https://github.com/arosaRe/naruto-blazing-revival/issues/61) et transcriptions manager accessibles dans [etat.md](../etat.md) et [journal.md](../journal.md), lus sans modification. Le numéro #130 désigne l'audit manager rapporté par #66 ; aucun texte original autonome de cet audit ni lien vers une issue #130 n'est inventé.
+
+## Contrôles identifiés, parcours et confirmations datées
+
+Les heures des consignes humaines sont celles fournies en **Europe/Zurich** (UTC+02:00 à ces dates). Les résultats techniques sont historiques et attribués aux rapports ; ils ne sont pas rejoués pour #66.
+
+| Contrôle | Parcours et preuve technique rapportés | Confirmation humaine et source accessible |
+| --- | --- | --- |
+| `ISSUE33-CONTROLE-20261014T215551Z` | Contrôle de mise en service du relais, accepté par API selon `journal.md`. C'est le préalable à la publication isolée, distinct du contrôle public #35 ; aucun parcours public n'est déduit de son seul identifiant. | **15.10.2026 à 00:00** : le PDG confirme sa présence dans le salon prévu (« oui »), selon `etat.md` et le [commentaire de #35](https://github.com/arosaRe/naruto-blazing-revival/issues/35#issuecomment-6179445001). Cette confirmation ne concerne pas #35. |
+| `ISSUE35-CONTROLE-20261014T220717Z` | Selon le rapport #35 : formulaire sur le site public après publication isolée, Chromium 145 / Playwright 1.58.2 ; **un seul POST réel le 14.10.2026 à 22:07:30 UTC**, soit le **15.10 à 00:07:30** en Suisse, contenant uniquement cet identifiant. HTTP **200**, `{"ok":true}`, confirmation affichée, champ vidé et sauvegarde synthétique conservée. L'horodatage dans l'identifiant n'est pas l'heure rapportée du POST. | **15.10.2026 à 00:26** : le PDG confirme voir ce contrôle dans le salon prévu (« oui je le vois »), selon `etat.md`, #41 et l'actualisation du rapport #35. La confirmation porte sur cet identifiant précis ; elle ne confirme aucune absence de notification de mention. |
+
+Le parcours public rapporté par #35 comprend aussi : comparaison des octets servis à l'artefact réellement déployé, navigateur vierge avec stocks à zéro, sauvegarde synthétique `ryo=12345`, affichage mobile à 390 px, accès au formulaire et focus restauré. Les sept erreurs HTTP/réseau sont **interceptées et simulées** ; texte conservé, double soumission bloquée et absence de nouvelle tentative automatique sont vérifiés dans ces scénarios. Les quotas, la concurrence et la neutralisation des mentions sont couverts par des tests à transport simulé, sans preuve de saturation réelle ni de notification dans le salon. Ces essais ne constituent pas d'autres contrôles reçus sur Discord.
+
+## Nature des preuves et limites de provenance
+
+| Nature | Ce qui est établi dans les sources | Limite maintenue |
+| --- | --- | --- |
+| Acceptation API et interface | #35 rapporte une réponse réelle du relais HTTP 200 / `{"ok":true}` et un message de succès affiché pour le contrôle identifié. | Le libellé affiché ne prouve pas, à lui seul, une réception visuelle dans le salon ou l'absence de notification de mention. La preuve locale `.git/issue35-public-control.json` est citée par le rapport, sans être consultée ici ni présentée comme pièce versionnée accessible. |
+| Simulation | Scénarios d'erreur, anti-abus et mentions de #35 ; succès et erreurs interceptés au lancement MakeProject, rapportés par la grille après #44. | Une réponse simulée, même accompagnée d'une confirmation affichée, ne prouve aucun envoi ni aucune réception Discord réelle. |
+| Confirmation humaine | Le PDG confirme les contrôles #33 à 00:00 et #35 à 00:26, puis le fonctionnement public à 01:54. | Ces confirmations sont accessibles sous forme de transcriptions des consignes fournies au cycle manager ; aucune discussion originale ni lien de message Discord n'est disponible dans les sources examinées. |
+| Observation indépendante | #35 rapporte des vérifications techniques historiques du parcours public ; cet agent vérifie uniquement la cohérence documentaire et les liens. | Aucune observation indépendante du salon n'est disponible ici. Les transcriptions et leur répétition dans les rapports ne sont pas des corroborations indépendantes. Cet ajout ne réalise ni ne proclame l'audit indépendant final. |
+
+`etat.md` conserve les retours datés ; `journal.md` synthétise les cycles manager, notamment l'acceptation API de #33, la validation de 00:47 et la décision de 01:54. Ces documents, les issues et les rapports partagent une provenance manager : ils ne deviennent pas des preuves externes distinctes par multiplication des liens. Le commentaire #35 de 00:00 comporte des caractères dégradés ; `etat.md` et le rapport #35 permettent de lire la date et l'identifiant. Les dates de création GitHub des commentaires sont distinctes des heures des consignes qu'ils transcrivent.
+
+## Décisions conservées et périmètre actuel
+
+- **15.10.2026 à 00:36**, selon `etat.md` : les notifications de vrais retours sont acceptables ; l'absence de notification de mention indésirable sur le contrôle #35 n'est pas confirmée. Consigner sans nouveau test.
+- **15.10.2026 à 00:47** : le PDG accepte la clôture du **critère global 6** (« alors oui c'est bon on confirme le critère 6 »), **avec réserve : absence de notification de mention indésirable non vérifiée**. Sources : `etat.md`, `journal.md`, #41 et les deux rapports documentaires examinés. Aucun nouveau test Discord ni aucune publication ne sont autorisés ; cette acceptation reste distincte de l'audit indépendant.
+- **15.10.2026 à 01:54** : le PDG confirme le formulaire public (« je te confirme il fonctionne »), selon `etat.md` et #61, décision reprise dans la grille. MakeProject local n'est pas exigé et le déploiement CORS `localhost:8101/9101` est refusé ; son échec historique ne bloque plus la clôture. La réserve sur les mentions reste maintenue. **Aucun nouvel envoi Discord ni publication.**
+- **15.10.2026 à 02:12** : la consigne du PDG, transcrite dans [le commentaire de #66](https://github.com/arosaRe/naruto-blazing-revival/issues/66#issuecomment-6181346190) et `etat.md`, impose les critères actualisés, la prise en compte des confirmations humaines identifiées et publiques, distinctes d'une observation indépendante, et le maintien de la réserve. **Aucune nouvelle réception indépendante n'est exigée par invention** ; aucun nouvel envoi ni publication. Les exigences personnelles abandonnées et le CORS local exclu ne sont pas réintroduits.
+
+La phrase historique du rapport #35 laissant #42 ouvert est dépassée par la grille actuelle : correction par #44, contrôles locaux simulés, puis exclusion du CORS local à 01:54. Elle n'est pas reprise comme lacune actuelle. Les données premium et ressources ambiguës restent des inconnues documentées ; aucune pièce personnelle n'est demandée ou consultée.
+
+## Lacunes encore applicables et critères d'acceptation de #66
+
+Le lien documentaire **identifiant #35 → parcours public rapporté → réception humaine de 00:26** est disponible. L'absence de discussion originale, de pièce Discord accessible et d'observation indépendante du salon reste une **limite de provenance explicite**, pas une obligation nouvelle de réception. Les mentions restent non vérifiées sous la réserve acceptée ; aucune vérification supplémentaire n'est revendiquée ou sollicitée. L'audit indépendant final des livrables applicables reste à effectuer, sans rejouer d'envoi ni remettre en cause par invention l'acceptation humaine du critère 6.
+
+1. Identifiants, parcours rapportés et confirmations humaines datées reliés aux sources accessibles ; absence de preuve indépendante du salon explicitée.
+2. Acceptation de clôture de 00:47 et réserve sur les mentions non vérifiées conservées, sans prétendre les vérifier.
+3. Confirmation publique de 01:54 et interdiction de nouveau test/envoi/publication attribuées au PDG ; consigne de 02:12 appliquée.
+4. Liens locaux vérifiés par existence des cibles ; issues #35, #41, #61 et #66 et commentaires cités lus avec `gh`. Seul ce document est ajouté : aucun POST, accès Discord/SSH, secret, code, configuration ou mémoire manager modifié ; aucune publication du site. La suite complète `npm test` n'est pas exécutée, car elle contient des POST locaux dans les tests du relais ; la vérification documentaire et le build ne nécessitent aucun envoi.
