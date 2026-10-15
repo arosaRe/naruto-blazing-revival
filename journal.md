@@ -137,3 +137,5 @@ Reprise du dépôt original sur `nightly` : inventaire du code, des sources acce
 
 15.10.2026, cycle manager 19:16 : mémoire condensée sans retirer de retour PDG ; phases antérieures : stocks/import sûr, prompt et guides, formulaire/relais, publications ciblées et réconciliation des audits, puis abandon au profit de la V2 isolée.
 15.10.2026, cycle manager 19:16 : six critères V2 acceptés ; #80 et #81 précisés, #80 confiée pour audit ciblé et plan A–M ; aucune implémentation ni publication dans ce cycle.
+
+15.10.2026 : #80 validée par revue #162 et close manuellement ; incident de fusion du brouillon #82 consigné. #81 précisée et lancée sur branche V2, revue sans fusion ; aucun critère fonctionnel satisfait.

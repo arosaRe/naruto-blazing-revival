@@ -1,8 +1,9 @@
 # État actuel
-- Refonte V2 : cahier des charges intégral lu ; six critères validés, aucun encore satisfait.
-- Branche dédiée existante ; audit ciblé et architecture à réaliser avant le contrat des exemplaires.
-- Ancien chantier abandonné, anciens audits arrêtés ; travaux et historique conservés.
-- Aucune décision supplémentaire attendue du PDG pour lancer l’audit ciblé.
+- Refonte V2 : six critères acceptés, aucun encore satisfait.
+- Audit ciblé et architecture relus et validés ; contrat des exemplaires prêt à démarrer.
+- Branche V2 isolée ; revue en brouillon uniquement, sans fusion ni publication.
+- Ancien chantier abandonné, historique conservé.
+- Aucun arbitrage PDG attendu.
 
 # Retours du PDG
 **14.10.2026**
@@ -42,20 +43,23 @@
 - 19:11 — Confirmation : le prompt remplace les anciens objectifs et doit être lu intégralement. Après l’audit ciblé, poursuivre implémentation et tests ; backend Discord et persistance réels. Raccordement au jeu non configuré tant que le contrat officiel manque. Isoler aussi la configuration de test ; préserver sauvegardes et historique, avancer malgré les blocages externes documentés. Commits sur branche V2 pour revue, sans fusion automatique ; interdictions de 19:04 maintenues.
 - 19:16 — Six critères ajoutés à la checklist : (1) V2 exécutable sur branche dédiée, sans déploiement/fusion automatique, stockage isolé et migrations préservant les sauvegardes ; (2) collection complète sans pagination, exemplaires distincts, fiches françaises à URL propre et soutiens conformes à B–E et I ; (3) manques du plan entier sans double dépense et scores pondérés vérifiés selon F/J ; (4) adaptateurs/synchronisation selon G–H, absent = zéro seulement pour inventaire complet validé, aucune API officielle supposée ; (5) OAuth Discord serveur et persistance durable multiappareil selon K–L, configurations et essais réels manquants explicites ; (6) parcours locaux mobile/ordinateur selon M, tests, captures, architecture, limites et retour arrière reproductibles.
 
+- 19:31 — Revue documentaire validée ; échec du job lors de la fusion interdite. Garder le brouillon sans fusion nightly/clôture par fusion, consigner la validation et poursuivre les exemplaires sur branche V2 selon le plan relu. Adapter les jobs sans fusion automatique. Aucune fonctionnalité V2 validée ; ni déploiement, workflow de production, Discord, main ni paiement.
+
 # Décisions structurantes
 - Dépôt original ; JS natif, Node 24/Python 3 ; préserver build et intégrité des ressources natives.
-- Implémentation sur feat/collection-v2-discord-api-ready depuis c51bbe0379e14ec84075044c7a9961e814540081 ; mémoire sur nightly. Exception aux règles usuelles : revue en brouillon, aucun merge automatique.
+- V2 : feat/collection-v2-discord-api-ready depuis c51bbe0379e14ec84075044c7a9961e814540081 ; mémoire nightly ; revue brouillon sans fusion.
 - Quatre entrées : Ma collection, À farmer, Soutiens, Profil ; fiches à URL propre et français intégral. Versions/formes/exemplaires distincts ; annonces éditoriales séparées ; score provisoire versionné.
 - Inventaire complet validé : absent = zéro uniquement dans le périmètre couvert, application atomique. Partiel/capture/progression inconnue : aucune mise à zéro implicite.
 
 # Pièges et consignes
 - Ni fichiers personnels du PDG, ni envoi Discord, ni déploiement, ni main, ni engagement payant.
+- Revue V2 : verdict seul, sans fusion/retrait du brouillon ; échec de fusion ≠ refus de contenu.
 - Pages autorise workflow_dispatch : ne jamais le déclencher pour vérifier V2. Secrets, stockage, bases, fixtures et configuration de test isolés de la production.
 
 # Dette connue
 - fwupd-refresh en échec ; relais sans boot.
 
 # Prochaines étapes
-- Confier l’audit ciblé et le plan ; matrice des six critères/scénarios A–M et petits lots ordonnés.
-- Après revue, contrat des exemplaires, puis migrations, score, interface, backend et synchronisation selon dépendances constatées.
+- Contrat version/forme/exemplaire, validation et regroupement sans perte ; tests D et fixtures isolées, sans migration ni interface.
+- Après revue du contrat : migrations, score, vues, backend durable/OAuth et synchronisation ; redécouper les lots du plan avant attribution.
 - Revue de chaque lot sans fusion ; audit sécurité après authentification/persistance ; validation locale mobile/ordinateur, sans déploiement.
