@@ -1,5 +1,8 @@
 # État actuel
-- Audit applicable attendu.
+- Chantier précédent abandonné ; boucle des anciens audits arrêtée.
+- Refonte V2 : cahier des charges docs/contexte/discussion/prompt-codex-refonte-blazing.md lu intégralement.
+- Branche feat/collection-v2-discord-api-ready créée depuis nightly ; aucun code V2 engagé.
+- Critères V2 proposés avant lancement fonctionnel ; architecture puis contrat des exemplaires à traiter.
 
 # Retours du PDG
 **14.10.2026**
@@ -49,12 +52,22 @@
 
 # Décisions structurantes
 - Original/nightly ; JS natif, Node 24/Python 3.
+- 15.10.2026, 18:56 — Demande/checklist modifiée : relire et adapter issues et mémoire ; checklist vide.
+- 15.10.2026, 19:04 — Le PDG abandonne le chantier actuel et le remplace par la refonte intégrale du prompt docs/contexte/discussion/prompt-codex-refonte-blazing.md, à lire avant action. Arrêter les anciens audits ; réconcilier issues, état et plan sans supprimer travaux ni historique.
+- 19:04 — Dépôt original, base nightly identifiée, branche V2 dédiée ; conserver les commits sans fusion automatique. Inspecter code et workflows puis implémenter par étapes avec tests et livrables vérifiables. Isoler stockage, migrations et données de test ; préserver les sauvegardes existantes.
+- 19:04 — Préparer réellement OAuth Discord et persistance serveur ; aucune fausse connexion ni API officielle inventée. Documenter les configurations externes manquantes et avancer ailleurs. Aucun déploiement, workflow de production, nouvel envoi Discord, changement de main ou engagement payant autorisé.
+- Quatre entrées V2 : Ma collection, À farmer, Soutiens, Profil ; fiches à URL propre, français intégral. Versions/formes/exemplaires distincts ; score provisoire versionné ; annonces éditoriales séparées.
+- Inventaire complet validé : absent = zéro dans le seul périmètre couvert, application atomique ; partiel/capture/progression inconnue : aucune mise à zéro implicite.
+- Mémoire de gestion sur nightly ; implémentation V2 sur branche dédiée, exception explicite aux fusions habituelles vers nightly. Revue sans fusion automatique.
 
 # Pièges et consignes
 - Ni fichiers personnels, ni Discord, ni publication.
+- Pages permet workflow_dispatch : ne jamais le déclencher pour vérifier V2. Secrets, fixtures et bases de développement isolés de la production.
 
 # Dette connue
 - fwupd-refresh en échec ; relais sans boot.
 
 # Prochaines étapes
-- Audit actualisé avec réserves.
+- Valider les critères V2 proposés puis traiter l’état des lieux et l’architecture, suivis du contrat interne des exemplaires.
+- Découper ensuite migrations, score, interface, OAuth/persistance et synchronisation selon dépendances ; couvrir tout le prompt A–M sans attendre le contrat officiel du jeu.
+- Revue de chaque lot sans fusion ; audit sécurité après authentification/persistance ; validation locale finale sans déploiement.
