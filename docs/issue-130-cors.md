@@ -22,6 +22,18 @@ La demande d'activation des deux origines locales reprise par l'audit #130 est d
 
 Les échecs des prévols et du contrôle global restent donc des **échecs techniques réels historiques**, sans conditionner la clôture du périmètre public confirmé humainement. Ils ne prouvent pas un dysfonctionnement du formulaire sur son origine publique. Ce rapport ne prononce pas la clôture globale : la grille des sept critères et l'audit final des livrables encore applicables restent ceux des critères de clôture.
 
+## Disposition du constat #142 — #73
+
+[#73](https://github.com/arosaRe/naruto-blazing-revival/issues/73) rapporte que l’audit manager #142 réclame le déploiement CORS local ou une checklist excluant cette exigence. Le texte original de #142 est indisponible ici ; aucun lien vers une issue #142 n’est inventé. **Exigence exclue des conditions de clôture, jamais déclarée réalisée**, selon les refus du PDG du **15.10.2026 à 01:54 et 02:12**, attribués aux transcriptions liées ci-dessus.
+
+Les **HTTP 400 et l’absence des en-têtes CORS** pour `http://localhost:8101` et `http://localhost:9101` restent des **échecs réels historiques non résolus** ; le contrôle global MakeProject reste en échec historique. Aucun déploiement, activation distante ou succès technique n’est revendiqué. Ces échecs localhost/MakeProject sont **explicitement exclus des conditions de clôture**, sans demande d’accord restante. La confirmation humaine du fonctionnement public ne les corrige pas.
+
+La [grille autonome des sept critères actualisés](criteres-cloture.md#grille-autonome-pour-le-réaudit-indépendant--73) porte cette exclusion dans le critère 6. Elle maintient les remplacements personnels approuvés à 17:33 et confirmés à 02:12, sans import personnel requis ; premium et ressources ambiguës restent inconnus.
+
+Les [confirmations humaines identifiées](issue-130-discord.md) concernent `ISSUE33-CONTROLE-20261014T215551Z` à **00:00** et `ISSUE35-CONTROLE-20261014T220717Z` à **00:26**, puis le fonctionnement public à **01:54**. Elles restent distinctes de l’acceptation API, des simulations locales et d’une observation indépendante : aucune observation indépendante du salon n’est disponible ici. L’acceptation humaine du critère 6 à **00:47** conserve sa **réserve sur l’absence de notification de mention indésirable non vérifiée**. Ces limites ne créent aucune obligation nouvelle de réception.
+
+Cette disposition prépare le réaudit sans le déclarer réalisé ; la clôture globale reste soumise au réaudit des livrables encore applicables. Pour #73, seuls ce rapport et `docs/criteres-cloture.md` sont modifiés : aucun envoi Discord, accès VPS, déploiement, changement fonctionnel ou modification de `lancer.json`.
+
 ## Contrôle des quatre critères de #65
 
 1. Refus de 01:54 daté et attribué à la transcription manager de #61 ; réaffirmation de 02:12 liée au commentaire de #65. Aucune activation distante annoncée.
